@@ -1,0 +1,20 @@
+{
+	"Nodes": [],
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Paper"
+		}
+	],
+	"Probability": 50,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

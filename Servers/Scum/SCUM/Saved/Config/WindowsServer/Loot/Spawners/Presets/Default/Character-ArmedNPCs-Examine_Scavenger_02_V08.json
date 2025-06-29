@@ -1,0 +1,38 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "RH_Bycoket_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hoodie_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Motorcycle_Mask_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Beijing_Shoes_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Construction_Gloves_01_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tracksuit_Pants_02_05"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

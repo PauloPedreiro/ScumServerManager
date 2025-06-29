@@ -1,0 +1,31 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sneakers_02_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sneakers_02_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sneakers_02_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sneakers_02_04"
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 5,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

@@ -1,0 +1,33 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Work_Jacket_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Working_pants_01_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Driving_Gloves_01_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hiking_Boots_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 93,
+	"RandomDamage": 3,
+	"InitialUsage": 93,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

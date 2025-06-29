@@ -35,6 +35,7 @@ import {
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
 import { useServerConfig } from '../contexts/ServerConfigContext';
+import ptBR from '../locales/ptBR';
 
 interface ServerSettingsProps {
   showNotification: (message: string, severity?: 'success' | 'error' | 'warning' | 'info') => void;
@@ -101,39 +102,9 @@ function isBooleanField(section: string, key: string) {
   return boolFields[section]?.includes(key);
 }
 
-// Dicionário de nomes amigáveis em português
-const nomesAmigaveis: Record<string, string> = {
-  AllowThirdPerson: "Permitir terceira pessoa",
-  AllowVoting: "Permitir votação",
-  AllowKillClaiming: "Permitir reivindicação de morte",
-  AllowMinesAndTraps: "Permitir minas e armadilhas",
-  AllowEvents: "Permitir eventos",
-  AllowGlobalChat: "Permitir chat global",
-  AllowSquadChat: "Permitir chat de grupo",
-  RustyLocksLogging: "Registrar fechaduras enferrujadas",
-  DisableTimedGifts: "Desativar presentes temporizados",
-  DisableBaseBuilding: "Desativar construção de base",
-  AllowFirstPerson: "Permitir primeira pessoa",
-  AllowCrosshair: "Permitir mira",
-  AllowMapScreen: "Permitir tela do mapa",
-  AllowComa: "Permitir coma",
-  AllowSkillGainInSafeZones: "Permitir ganho de habilidade em zonas seguras",
-  LimitGlobalChat: "Limitar chat global",
-  AllowLocalChat: "Permitir chat local",
-  AllowAdminChat: "Permitir chat de administrador",
-  HideKillNotification: "Ocultar notificação de morte",
-  UseMapBaseBuildingRestriction: "Restringir construção pelo mapa",
-  PlayerMinimalVotingInterest: "Interesse mínimo do jogador para votação",
-  VotingDuration: "Duração da votação",
-  PlayerPositiveVotePercentage: "Porcentagem positiva de votos do jogador",
-  MasterServerUpdateSendInterval: "Intervalo de envio de atualização ao servidor mestre",
-  LogoutTimerInBunker: "Tempo de logout no bunker",
-  // Adicione outros campos conforme necessário
-};
-
 // Função para renderizar campos dinamicamente
 function renderField(section: string, key: string, value: any, updateConfig: any) {
-  const label = nomesAmigaveis[key] || key;
+  const label = ptBR[key] || key;
   if (isBooleanField(section, key)) {
     return (
       <Grid item xs={12} md={6} key={key}>

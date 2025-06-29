@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Tools",
+				"ItemLootTreeNodes.Workshop.RepairToolkits.General",
+				"ItemLootTreeNodes.Workshop.RepairToolkits.Weapons",
+				"ItemLootTreeNodes.Workshop.RepairToolkits.Car"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Masonry.WorkClothes"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 50,
+	"RandomDamage": 25,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

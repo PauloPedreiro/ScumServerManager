@@ -1,0 +1,31 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Pharmacy.Other.Money",
+				"ItemLootTreeNodes.Pharmacy.Other.Drink",
+				"ItemLootTreeNodes.Pharmacy.Other.Backpacks",
+				"ItemLootTreeNodes.Pharmacy.Items",
+				"ItemLootTreeNodes.Pharmacy.Other.Food.Cans",
+				"ItemLootTreeNodes.Pharmacy.Other.Food.Dairy",
+				"ItemLootTreeNodes.Pharmacy.Other.Food.Snacks"
+			]
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"Nodes": [],
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hiking_Boots_01"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Hiking_Boots_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hiking_Boots_03"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Hiking_Boots_04"
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 5,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

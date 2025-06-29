@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_M1_Garand",
+		"M1_Clip",
+		"M1_Clip",
+		"M1_Clip",
+		"M1_Bayonet",
+		"WeaponSights_M1_Experimental",
+		"WeaponSuppressor_M1",
+		"Cal_30-06_Ammobox",
+		"Cal_30-06_Ammobox",
+		"Cal_30-06_Ammobox"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

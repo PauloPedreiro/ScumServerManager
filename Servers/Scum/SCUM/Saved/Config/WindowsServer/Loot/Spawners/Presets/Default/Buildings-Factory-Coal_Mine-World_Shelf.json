@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.CoalMine.Crafting",
+				"ItemLootTreeNodes.CoalMine.LightsFire",
+				"ItemLootTreeNodes.CoalMine.Repair",
+				"ItemLootTreeNodes.CoalMine.Tools",
+				"ItemLootTreeNodes.CoalMine.WorkClothes",
+				"ItemLootTreeNodes.CoalMine.Other.Ammo",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.Belt_Pistol_Holster",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.Hiking.Other",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.Plain.Backpack_02_01",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.School",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.WaistBags",
+				"ItemLootTreeNodes.CoalMine.Other.Flares",
+				"ItemLootTreeNodes.CoalMine.Other.Money"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30
+}

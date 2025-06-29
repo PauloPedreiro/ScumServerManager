@@ -1,0 +1,46 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boonie_Hat_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Halloween_Mask_JohnDoe_05"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Shemagh_Scarf_05"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jock_Jacket_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Wool_Gloves_01_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Stabproof_Vest_01_08"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Waist_Bag_Small_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "MilitaryBoots_JNA"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

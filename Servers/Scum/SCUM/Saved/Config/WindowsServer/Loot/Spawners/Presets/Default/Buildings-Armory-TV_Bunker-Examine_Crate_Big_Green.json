@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Gear",
+				"ItemLootTreeNodes.Military.Weapons.AssaultRifles",
+				"ItemLootTreeNodes.Military.Weapons.GrenadeLaunchers",
+				"ItemLootTreeNodes.Military.Weapons.LMGs",
+				"ItemLootTreeNodes.Military.Weapons.SMGs",
+				"ItemLootTreeNodes.Military.Weapons.Snipers",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_590A11",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_SDASS",
+				"ItemLootTreeNodes.Military.Weapons.Rifles"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 15,
+	"InitialUsage": 0,
+	"RandomUsage": 15,
+	"PostSpawnActions": [
+		"SetAmmoAmount_BigStash",
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

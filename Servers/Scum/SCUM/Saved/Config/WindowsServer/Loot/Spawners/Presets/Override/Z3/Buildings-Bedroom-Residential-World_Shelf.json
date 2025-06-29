@@ -1,0 +1,31 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Drinks",
+				"ItemLootTreeNodes.LivingRoom.Food",
+				"ItemLootTreeNodes.LivingRoom.Items",
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.Hiking",
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.Holsters",
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.Plain",
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.School",
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.WaistBags"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

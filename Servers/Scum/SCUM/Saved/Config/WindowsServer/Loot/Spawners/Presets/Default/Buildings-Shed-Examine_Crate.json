@@ -1,0 +1,35 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Barn.Crafting",
+				"ItemLootTreeNodes.Barn.LightsFire",
+				"ItemLootTreeNodes.Barn.Tools.Heavy",
+				"ItemLootTreeNodes.Barn.WorkClothes",
+				"ItemLootTreeNodes.Barn.Other.Backpacks",
+				"ItemLootTreeNodes.Barn.Other.Flares"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Farm"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 10,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

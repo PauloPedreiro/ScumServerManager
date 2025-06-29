@@ -1,0 +1,52 @@
+{
+	"Subpresets": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Deagle_Judge_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Deagle_Judge_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Viper_357_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Viper_357_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_HS9_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_HS9_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_SF19_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_SF19_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Deagle_05_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Deagle_05_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Deagle_357_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Pistols_Deagle_357_Ammo_Vault_Pack"
+		}
+	]
+}

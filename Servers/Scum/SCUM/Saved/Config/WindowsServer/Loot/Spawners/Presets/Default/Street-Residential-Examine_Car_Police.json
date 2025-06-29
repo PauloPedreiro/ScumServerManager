@@ -1,0 +1,35 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Police.Ammo.12Gauge",
+				"ItemLootTreeNodes.Police.Ammo.Regular",
+				"ItemLootTreeNodes.Police.Clothes",
+				"ItemLootTreeNodes.Police.Gear.Magazines.SMGs",
+				"ItemLootTreeNodes.Police.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Police.Gear.Tools.1H_Police_Baton",
+				"ItemLootTreeNodes.Police.Gear.Tools.Compass",
+				"ItemLootTreeNodes.Police.Gear.Tools.Knives",
+				"ItemLootTreeNodes.Police.Weapons.Handguns",
+				"ItemLootTreeNodes.Police.Weapons.Shotguns"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 60,
+	"RandomDamage": 30,
+	"InitialUsage": 60,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetAmmoAmount_SmallStash",
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

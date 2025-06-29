@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Weapon_98k_Karabiner",
+		"Kar98_Bayonet",
+		"Cal_7_92x57mm_Ammobox",
+		"Cal_7_92x57mm_Ammobox",
+		"Cal_7_92x57mm_Ammobox",
+		"Ghillie_Suit_Jacket_01",
+		"Ghillie_Suit_Pants_01",
+		"WeaponGhillie_Woodland",
+		"WeaponScope_ZF39"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

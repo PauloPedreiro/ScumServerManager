@@ -1,0 +1,36 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Bandages",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Painkillers",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Vitamins",
+				"ItemLootTreeNodes.Pharmacy.Items.Scissors",
+				"ItemLootTreeNodes.Pharmacy.Items.Fabric",
+				"ItemLootTreeNodes.Pharmacy.Other"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 50,
+	"RandomDamage": 40,
+	"InitialUsage": 50,
+	"RandomUsage": 40,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

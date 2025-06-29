@@ -1,0 +1,40 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo",
+				"ItemLootTreeNodes.Military.Weapons.Other",
+				"ItemLootTreeNodes.Military.Weapons.Rifles",
+				"ItemLootTreeNodes.Military.Weapons.SMGs",
+				"ItemLootTreeNodes.Military.Weapons.AssaultRifles",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass_Advanced",
+				"ItemLootTreeNodes.Military.Gear.Tools.Geiger_Counter_Analogue",
+				"ItemLootTreeNodes.Military.Gear.Tools.MetalDetector",
+				"ItemLootTreeNodes.Military.Gear.Tools.GasMasks",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Hunter",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Kunai",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_MK5000_Black",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Scout_Black",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Shuriken",
+				"ItemLootTreeNodes.Military.Gear.Tools.Sewing_kit",
+				"ItemLootTreeNodes.Military.Gear.Tools.Weapon_Cleaning_Kit",
+				"ItemLootTreeNodes.Military.Weapons.Handguns.Revolvers",
+				"ItemLootTreeNodes.Military.Weapons.Handguns.Weapon_FlareGun"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 3,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

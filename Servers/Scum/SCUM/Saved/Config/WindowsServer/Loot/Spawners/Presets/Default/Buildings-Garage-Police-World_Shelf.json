@@ -1,0 +1,45 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Garage.Crafting",
+				"ItemLootTreeNodes.Garage.Fishing",
+				"ItemLootTreeNodes.Garage.LightsFire",
+				"ItemLootTreeNodes.Garage.RepairToolkits",
+				"ItemLootTreeNodes.Garage.Tools",
+				"ItemLootTreeNodes.Garage.WorkClothes",
+				"ItemLootTreeNodes.Garage.VehicleAccesories",
+				"ItemLootTreeNodes.Garage.Other.Ammo",
+				"ItemLootTreeNodes.Garage.Other.Backpacks",
+				"ItemLootTreeNodes.Garage.Other.Bedroll",
+				"ItemLootTreeNodes.Garage.Other.Flares",
+				"ItemLootTreeNodes.Garage.Other.FoodAndDrink",
+				"ItemLootTreeNodes.Garage.Other.Money"
+			]
+		},
+		{
+			"Rarity": "ExtremelyRare",
+			"Ids": [
+				"ItemLootTreeNodes.Police.Clothes",
+				"ItemLootTreeNodes.Police.Gear"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetAmmoAmount_SmallStash",
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Observatory.Ammo.12Gauge",
+				"ItemLootTreeNodes.Observatory.Ammo.Regular.SmallStash",
+				"ItemLootTreeNodes.Observatory.Drinks",
+				"ItemLootTreeNodes.Observatory.Food",
+				"ItemLootTreeNodes.Observatory.Items.Misc",
+				"ItemLootTreeNodes.Observatory.Items.Melee"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 30
+}

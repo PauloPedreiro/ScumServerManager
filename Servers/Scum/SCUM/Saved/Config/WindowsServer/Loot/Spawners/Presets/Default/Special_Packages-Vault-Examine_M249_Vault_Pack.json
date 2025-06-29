@@ -1,0 +1,12 @@
+{
+	"FixedItems": [
+		"Weapon_M249",
+		"WeaponSuppressor_MK18",
+		"WeaponSights_XPS300_Holographic",
+		"WeaponScope_ACOG_01"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

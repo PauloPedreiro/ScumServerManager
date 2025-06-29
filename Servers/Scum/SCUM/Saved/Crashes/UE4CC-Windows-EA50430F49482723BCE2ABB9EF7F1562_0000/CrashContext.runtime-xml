@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+<RuntimeProperties>
+<CrashVersion>3</CrashVersion>
+<ExecutionGuid>7D359A2442F1811CFA76C9AB5269071E</ExecutionGuid>
+<CrashGUID>UE4CC-Windows-EA50430F49482723BCE2ABB9EF7F1562_0000</CrashGUID>
+<IsEnsure>false</IsEnsure>
+<IsAssert>false</IsAssert>
+<CrashType>Hang</CrashType>
+<ErrorMessage>Hang detected on GameThread:
+  0x00007ffb3f220014 ntdll.dll!UnknownFunction []
+  0x00007ffb3f1d82ea ntdll.dll!UnknownFunction []
+  0x00007ffb3c7d7871 KERNELBASE.dll!UnknownFunction []
+  0x00007ff6b8b7bd17 SCUMServer.exe!UnknownFunction []
+  0x00007ff6b8c1f6d7 SCUMServer.exe!UnknownFunction []
+  0x00007ff6b8bc88bb SCUMServer.exe!UnknownFunction []
+  0x00007ff6b8c069bf SCUMServer.exe!UnknownFunction []
+  0x00007ff6b8bfc1f2 SCUMServer.exe!UnknownFunction []
+  0x00007ff6b8b80be0 SCUMServer.exe!UnknownFunction []
+  0x00007ff6b7edd5e2 SCUMServer.exe!UnknownFunction []
+
+Check log for full callstack.</ErrorMessage>
+<CrashReporterMessage></CrashReporterMessage>
+<ProcessId>2772</ProcessId>
+<SecondsSinceStart>1399</SecondsSinceStart>
+<IsInternalBuild>false</IsInternalBuild>
+<IsPerforceBuild>false</IsPerforceBuild>
+<IsSourceDistribution>false</IsSourceDistribution>
+<GameName>UE4-SCUM</GameName>
+<ExecutableName>SCUMServer</ExecutableName>
+<BuildConfiguration>Shipping</BuildConfiguration>
+<GameSessionID></GameSessionID>
+<Symbols>**UE4*Release-4.27-CL-0-Win64-Shipping</Symbols>
+<PlatformName>WindowsServer</PlatformName>
+<PlatformNameIni>Windows</PlatformNameIni>
+<EngineMode>Server</EngineMode>
+<EngineModeEx>Unset</EngineModeEx>
+<DeploymentName></DeploymentName>
+<EngineVersion>4.27.2-0+++UE4+Release-4.27</EngineVersion>
+<CommandLine> -log -port=8900</CommandLine>
+<LanguageLCID>0</LanguageLCID>
+<AppDefaultLocale>pt-BR</AppDefaultLocale>
+<BuildVersion>++UE4+Release-4.27-CL-0</BuildVersion>
+<IsUE4Release>false</IsUE4Release>
+<IsRequestingExit>false</IsRequestingExit>
+<UserName></UserName>
+<BaseDir>C:/Servers/Scum/SCUM/Binaries/Win64/</BaseDir>
+<RootDir>C:/Servers/Scum/</RootDir>
+<MachineId>B43586704177E2B7548C43B5D050C416</MachineId>
+<LoginId>b43586704177e2b7548c43b5d050c416</LoginId>
+<EpicAccountId></EpicAccountId>
+<SourceContext></SourceContext>
+<UserDescription></UserDescription>
+<UserActivityHint></UserActivityHint>
+<CrashDumpMode>0</CrashDumpMode>
+<GameStateName>BP_ConZGameState_C</GameStateName>
+<Misc.NumberOfCores>2</Misc.NumberOfCores>
+<Misc.NumberOfCoresIncludingHyperthreads>4</Misc.NumberOfCoresIncludingHyperthreads>
+<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+<Misc.CPUVendor>GenuineIntel</Misc.CPUVendor>
+<Misc.CPUBrand>Intel(R) Xeon(R) CPU E5-2696 v3 @ 2.30GHz</Misc.CPUBrand>
+<Misc.PrimaryGPUBrand>Microsoft Remote Display Adapter</Misc.PrimaryGPUBrand>
+<Misc.OSVersionMajor>Windows Server 2019 (Release 2009)</Misc.OSVersionMajor>
+<Misc.OSVersionMinor></Misc.OSVersionMinor>
+<MemoryStats.TotalPhysical>25769332736</MemoryStats.TotalPhysical>
+<MemoryStats.TotalVirtual>140737488224256</MemoryStats.TotalVirtual>
+<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+<MemoryStats.TotalPhysicalGB>24</MemoryStats.TotalPhysicalGB>
+<MemoryStats.AvailablePhysical>0</MemoryStats.AvailablePhysical>
+<MemoryStats.AvailableVirtual>0</MemoryStats.AvailableVirtual>
+<MemoryStats.UsedPhysical>0</MemoryStats.UsedPhysical>
+<MemoryStats.PeakUsedPhysical>0</MemoryStats.PeakUsedPhysical>
+<MemoryStats.UsedVirtual>0</MemoryStats.UsedVirtual>
+<MemoryStats.PeakUsedVirtual>0</MemoryStats.PeakUsedVirtual>
+<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+<NumMinidumpFramesToIgnore>0</NumMinidumpFramesToIgnore>
+<CallStack></CallStack>
+<PCallStack>
+ntdll       0x00007ffb3f180000 + a0014           
+ntdll       0x00007ffb3f180000 + 582ea           
+KERNELBASE  0x00007ffb3c7d0000 + 7871            
+SCUMServer  0x00007ff6b6710000 + 246bd17         
+SCUMServer  0x00007ff6b6710000 + 250f6d7         
+SCUMServer  0x00007ff6b6710000 + 24b88bb         
+SCUMServer  0x00007ff6b6710000 + 24f69bf         
+SCUMServer  0x00007ff6b6710000 + 24ec1f2         
+SCUMServer  0x00007ff6b6710000 + 2470be0         
+SCUMServer  0x00007ff6b6710000 + 17cd5e2         
+SCUMServer  0x00007ff6b6710000 + 1bb9609         
+SCUMServer  0x00007ff6b6710000 + 1bb97cc         
+SCUMServer  0x00007ff6b6710000 + 1bb7e99         
+SCUMServer  0x00007ff6b6710000 + 3b88c30         
+SCUMServer  0x00007ff6b6710000 + 4081323         
+SCUMServer  0x00007ff6b6710000 + 40824ad         
+SCUMServer  0x00007ff6b6710000 + 253d2eb         
+SCUMServer  0x00007ff6b6710000 + 2542a67         
+SCUMServer  0x00007ff6b6710000 + 408af4c         
+SCUMServer  0x00007ff6b6710000 + 408d697         
+SCUMServer  0x00007ff6b6710000 + 3da34a8         
+SCUMServer  0x00007ff6b6710000 + 3cc758c         
+SCUMServer  0x00007ff6b6710000 + 8ec430          
+SCUMServer  0x00007ff6b6710000 + 8f170c          
+SCUMServer  0x00007ff6b6710000 + 8f178a          
+SCUMServer  0x00007ff6b6710000 + 8f2754          
+SCUMServer  0x00007ff6b6710000 + 8fa9e4          
+SCUMServer  0x00007ff6b6710000 + 4bd50ae         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</PCallStack>
+<PCallStackHash>5BE7D44C0D46EA825C84D54C498213B76694B69D</PCallStackHash>
+<Threads><Thread><CallStack>ntdll       0x00007ffb3f180000 + a0014           
+ntdll       0x00007ffb3f180000 + 582ea           
+KERNELBASE  0x00007ffb3c7d0000 + 7871            
+SCUMServer  0x00007ff6b6710000 + 246bd17         
+SCUMServer  0x00007ff6b6710000 + 250f6d7         
+SCUMServer  0x00007ff6b6710000 + 24b88bb         
+SCUMServer  0x00007ff6b6710000 + 24f69bf         
+SCUMServer  0x00007ff6b6710000 + 24ec1f2         
+SCUMServer  0x00007ff6b6710000 + 2470be0         
+SCUMServer  0x00007ff6b6710000 + 17cd5e2         
+SCUMServer  0x00007ff6b6710000 + 1bb9609         
+SCUMServer  0x00007ff6b6710000 + 1bb97cc         
+SCUMServer  0x00007ff6b6710000 + 1bb7e99         
+SCUMServer  0x00007ff6b6710000 + 3b88c30         
+SCUMServer  0x00007ff6b6710000 + 4081323         
+SCUMServer  0x00007ff6b6710000 + 40824ad         
+SCUMServer  0x00007ff6b6710000 + 253d2eb         
+SCUMServer  0x00007ff6b6710000 + 2542a67         
+SCUMServer  0x00007ff6b6710000 + 408af4c         
+SCUMServer  0x00007ff6b6710000 + 408d697         
+SCUMServer  0x00007ff6b6710000 + 3da34a8         
+SCUMServer  0x00007ff6b6710000 + 3cc758c         
+SCUMServer  0x00007ff6b6710000 + 8ec430          
+SCUMServer  0x00007ff6b6710000 + 8f170c          
+SCUMServer  0x00007ff6b6710000 + 8f178a          
+SCUMServer  0x00007ff6b6710000 + 8f2754          
+SCUMServer  0x00007ff6b6710000 + 8fa9e4          
+SCUMServer  0x00007ff6b6710000 + 4bd50ae         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>true</IsCrashed>
+<Registers></Registers>
+<ThreadID>5036</ThreadID>
+<ThreadName>GameThread</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3376</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6448</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>1820</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2100</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5252</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6544</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6304</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>7072</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2960</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4772</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6804</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4968</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6316</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2536</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>1476</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>504</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4052</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6700</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2724</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3356</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6824</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3296</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2452</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5684</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4180</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3232</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6272</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3508</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5488</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4248</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2792</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4748</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4268</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>1156</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5968</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6556</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2744</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2828</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5836</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2812</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5524</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5844</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6388</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2708</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5872</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 39bc955         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>7080</ThreadID>
+<ThreadName>FChunkCacheWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 253d411         
+SCUMServer  0x00007ff6b6710000 + 25401dc         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5820</ThreadID>
+<ThreadName>TaskGraphThreadNP 0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 253d411         
+SCUMServer  0x00007ff6b6710000 + 25401dc         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3592</ThreadID>
+<ThreadName>TaskGraphThreadNP 1</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 25a893f         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6152</ThreadID>
+<ThreadName>PoolThread 0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 25a893f         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3772</ThreadID>
+<ThreadName>PoolThread 1</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + a0014           
+ntdll       0x00007ffb3f180000 + 582ea           
+KERNELBASE  0x00007ffb3c7d0000 + 7871            
+SCUMServer  0x00007ff6b6710000 + 264a870         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5288</ThreadID>
+<ThreadName>FAsyncWriter_SCUM</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + a0014           
+ntdll       0x00007ffb3f180000 + 582ea           
+KERNELBASE  0x00007ffb3c7d0000 + 7871            
+SCUMServer  0x00007ff6b6710000 + 35cf776         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5444</ThreadID>
+<ThreadName>HttpManagerThread</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 118e3b6         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6196</ThreadID>
+<ThreadName>OnlineAsyncTaskThreadSteam DefaultInstance</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 25a893f         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2820</ThreadID>
+<ThreadName>PoolThread 2</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 25a893f         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>140</ThreadID>
+<ThreadName>PoolThread 3</ThreadName>
+</Thread>
+<Thread><CallStack>SCUMServer  0x00007ff6b6710000 + 268d223         
+SCUMServer  0x00007ff6b6710000 + 2593d4d         
+SCUMServer  0x00007ff6b6710000 + 2593bea         
+SCUMServer  0x00007ff6b6710000 + 2681ff9         
+SCUMServer  0x00007ff6b6710000 + 268a4f0         
+SCUMServer  0x00007ff6b6710000 + 2569b7d         
+SCUMServer  0x00007ff6b6710000 + 256c40e         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>4392</ThreadID>
+<ThreadName>FHeartBeatThread</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 1c1bbb5         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>5012</ThreadID>
+<ThreadName>FRequestResponseRunnable</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + 9fa14           
+KERNELBASE  0x00007ffb3c7d0000 + 3da3e           
+SCUMServer  0x00007ff6b6710000 + 269b38b         
+SCUMServer  0x00007ff6b6710000 + 17eac34         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3604</ThreadID>
+<ThreadName>UDbAsyncWorker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll       0x00007ffb3f180000 + a0014           
+ntdll       0x00007ffb3f180000 + 582ea           
+KERNELBASE  0x00007ffb3c7d0000 + 7871            
+SCUMServer  0x00007ff6b6710000 + 269a56a         
+SCUMServer  0x00007ff6b6710000 + 1c1c48c         
+SCUMServer  0x00007ff6b6710000 + 2699c97         
+SCUMServer  0x00007ff6b6710000 + 2694861         
+KERNEL32    0x00007ffb3e720000 + 14cb0           
+ntdll       0x00007ffb3f180000 + 7edcb           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>6092</ThreadID>
+<ThreadName>ServerRequestWorkerThread</ThreadName>
+</Thread>
+</Threads>
+</RuntimeProperties>
+<PlatformProperties>
+<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+<IsRunningOnBattery>false</IsRunningOnBattery>
+<PlatformCallbackResult>0</PlatformCallbackResult>
+</PlatformProperties>
+<EngineData>
+<RHI.RHIName>NullRHI</RHI.RHIName>
+<DeviceProfile.Name>WindowsServer</DeviceProfile.Name>
+</EngineData>
+<GameData>
+<Stream>//scum/release-1.0</Stream>
+<GameVersion>1.0.0.1.95114</GameVersion>
+<Level>The_Island</Level>
+<ServerAddress>unreal://:8900</ServerAddress>
+<ServerName>Cangaceiros PVE Vanilla sem Choro</ServerName>
+</GameData>
+</FGenericCrashContext>

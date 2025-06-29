@@ -1,0 +1,26 @@
+"InstallScript"
+{
+	"Run Process"
+	{
+		"x86 14.42.34438.0"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Valve\\Steam\\Apps\\CommonRedist\\vcredist\\2022"
+			"process 1"		"%INSTALLDIR%\\_CommonRedist\\vcredist\\2022\\Microsoft Visual C++ 2022 x86.cmd"
+			"NoCleanUp"		"1"
+		}
+		"x64 14.42.34438.0"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Valve\\Steam\\Apps\\CommonRedist\\vcredist\\2022"
+			"process 1"		"%INSTALLDIR%\\_CommonRedist\\vcredist\\2022\\Microsoft Visual C++ 2022 x64.cmd"
+			"NoCleanUp"		"1"
+			"Requirement_OS"
+			{
+				"Is64BitWindows"		"1"
+			}
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"08bd70d388869eb922eeb8b03c53fa81426ad9e3062202b1c7a7a6fdc779fe2cf391a20acbb9366cd8f255b07ebef60a28c7ee2feb4cead08b4d4cc18e4ac346fbd061ed2e1cebd86c6df990bc33388f8dab72c98f455a6b9b9da72f3ec900c0ad3bb2722ea11979bce26bc2d07510d0e52be797191f9e4b0dc3d7b9e057a4ab"
+}

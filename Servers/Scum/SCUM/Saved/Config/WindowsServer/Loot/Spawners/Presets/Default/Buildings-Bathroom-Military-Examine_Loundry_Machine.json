@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Clothes.Legs",
+				"ItemLootTreeNodes.Military.Clothes.Torso",
+				"ItemLootTreeNodes.Military.Clothes.Hands.TacticalGloves",
+				"ItemLootTreeNodes.Military.Clothes.Hands.OpenFingerGloves",
+				"ItemLootTreeNodes.Military.Clothes.Head.Balaclavas",
+				"ItemLootTreeNodes.Military.Clothes.Head.Beanies",
+				"ItemLootTreeNodes.Military.Clothes.Head.BoonieHats",
+				"ItemLootTreeNodes.Military.Clothes.Head.MarineCaps",
+				"ItemLootTreeNodes.Military.Clothes.Head.MilitaryCaps",
+				"ItemLootTreeNodes.Military.Clothes.Head.Scarfs"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

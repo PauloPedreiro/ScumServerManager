@@ -1,0 +1,54 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Slouch_Camo_Hat_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tactical_Sunglasses_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Motorcycle_Mask_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "MA1_Spitfire_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Driving_Gloves_01_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Waist_Bag_Small_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Belt_Pistol_Holster"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jeans_02_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boots_06_02"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Police_Backpack_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

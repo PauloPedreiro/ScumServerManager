@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Hospital.Clothes",
+				"ItemLootTreeNodes.Hospital.Items.Fabric",
+				"ItemLootTreeNodes.Hospital.Items.Disposable_Mask",
+				"ItemLootTreeNodes.Hospital.Items.Rubber_band",
+				"ItemLootTreeNodes.Hospital.Other.Food.Snacks",
+				"ItemLootTreeNodes.Hospital.Other.Tools",
+				"ItemLootTreeNodes.Hospital.Items.1H_Scalpel"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 50,
+	"RandomDamage": 40,
+	"InitialUsage": 50,
+	"RandomUsage": 40,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

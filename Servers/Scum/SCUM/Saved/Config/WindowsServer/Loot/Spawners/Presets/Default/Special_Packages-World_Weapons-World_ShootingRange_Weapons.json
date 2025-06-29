@@ -1,0 +1,46 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "ExtremelyRare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Weapons.Handguns.M1911s",
+				"ItemLootTreeNodes.Military.Weapons.Handguns.M9s",
+				"ItemLootTreeNodes.Military.Weapons.SMGs",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Weapons.Handguns.DEagles",
+				"ItemLootTreeNodes.WW2.Weapons.Rifles",
+				"ItemLootTreeNodes.WW2.Weapons.Shotguns"
+			]
+		},
+		{
+			"Rarity": "Abundant",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.12Gauge",
+				"ItemLootTreeNodes.Military.Ammo.Regular"
+			]
+		},
+		{
+			"Rarity": "Common",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Rifles",
+				"ItemLootTreeNodes.Military.Gear.Magazines.SMGs",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass_Advanced",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives",
+				"ItemLootTreeNodes.Military.Gear.Tools.Sewing_kit"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

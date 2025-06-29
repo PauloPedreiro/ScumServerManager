@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Weapon_M1911",
+		"Magazine_M1911",
+		"Magazine_M1911",
+		"Magazine_M1911",
+		"Cal_45_Ammobox",
+		"Cal_45_Ammobox",
+		"Cal_45_Ammobox",
+		"WeaponSuppressor_45ACP",
+		"Tactical_Handgun_Holster_03"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

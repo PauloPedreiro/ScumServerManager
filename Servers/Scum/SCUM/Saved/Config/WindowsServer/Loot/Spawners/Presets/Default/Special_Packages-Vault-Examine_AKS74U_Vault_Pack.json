@@ -1,0 +1,11 @@
+{
+	"FixedItems": [
+		"Weapon_AKS_74U",
+		"WeaponSights_V3_Holographic",
+		"ScopeRail_AK47"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

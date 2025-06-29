@@ -1,0 +1,53 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Tools.Blades",
+				"ItemLootTreeNodes.Workshop.Tools.Hand",
+				"ItemLootTreeNodes.Workshop.Tools.Heavy",
+				"ItemLootTreeNodes.Workshop.Tools.Power",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Hands.RubberGloves",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Feet.RubberBoots",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Head.Goggles",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Head.Caps",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Legs.WorkPants",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Torso.Shirts",
+				"ItemLootTreeNodes.Workshop.Other"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Rare",
+			"Id": "Wine"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "WineCork"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Hose"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Glass"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Harmonica"
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50
+}

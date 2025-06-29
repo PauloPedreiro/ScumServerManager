@@ -1,0 +1,35 @@
+{
+	"Items": [
+		{
+			"Rarity": "Common",
+			"Id": "Fuse_200A"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Fuse_400A"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Fuse_600A"
+		},
+		{
+			"Rarity": "VeryRare",
+			"Id": "Fuse_800A"
+		},
+		{
+			"Rarity": "VeryRare",
+			"Id": "Fuse_1000A"
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

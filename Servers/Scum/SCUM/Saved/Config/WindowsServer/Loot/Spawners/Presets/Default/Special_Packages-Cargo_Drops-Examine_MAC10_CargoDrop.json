@@ -1,0 +1,9 @@
+{
+	"FixedItems": [
+		"Weapon_MAC10"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

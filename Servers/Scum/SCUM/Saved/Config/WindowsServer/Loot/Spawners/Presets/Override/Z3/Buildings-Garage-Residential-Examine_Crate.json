@@ -1,0 +1,35 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Garage.Crafting",
+				"ItemLootTreeNodes.Garage.Fishing",
+				"ItemLootTreeNodes.Garage.LightsFire",
+				"ItemLootTreeNodes.Garage.Other",
+				"ItemLootTreeNodes.Garage.Tools",
+				"ItemLootTreeNodes.Garage.VehicleAccesories",
+				"ItemLootTreeNodes.Garage.WorkClothes",
+				"ItemLootTreeNodes.Garage.RepairToolkits.General.Tool_Box_Small",
+				"ItemLootTreeNodes.Garage.RepairToolkits.Car",
+				"ItemLootTreeNodes.Garage.RepairToolkits.Weapons"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetAmmoAmount_SmallStash",
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

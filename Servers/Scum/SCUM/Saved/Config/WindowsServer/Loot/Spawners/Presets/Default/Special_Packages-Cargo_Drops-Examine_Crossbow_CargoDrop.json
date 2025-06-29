@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Weapon_BlackHawk_Crossbow",
+		"Military_Quiver_03",
+		"Ammo_Crossbow_Bolt_Carbon",
+		"Ammo_Crossbow_Bolt_Carbon",
+		"Ammo_Crossbow_Bolt_Carbon",
+		"WeaponSights_RedDot_CA401B"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0,
+	"PostSpawnActions": [
+		"SetAmmoAmount_Arrows_Full"
+	]
+}

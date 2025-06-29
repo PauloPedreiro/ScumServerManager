@@ -1,0 +1,29 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.HuntingStore.Ammo.Hunting.Arrows",
+				"ItemLootTreeNodes.HuntingStore.Bows",
+				"ItemLootTreeNodes.HuntingStore.Firearms.Rifles.Civilian",
+				"ItemLootTreeNodes.HuntingStore.Fishing.Rods",
+				"ItemLootTreeNodes.HuntingStore.Fishing.Floater",
+				"ItemLootTreeNodes.HuntingStore.Fishing.Hooks",
+				"ItemLootTreeNodes.HuntingStore.Fishing.Nylon",
+				"ItemLootTreeNodes.HuntingStore.Fishing.Reels",
+				"ItemLootTreeNodes.HuntingStore.Melee.Knives"
+			]
+		}
+	],
+	"Probability": 10,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

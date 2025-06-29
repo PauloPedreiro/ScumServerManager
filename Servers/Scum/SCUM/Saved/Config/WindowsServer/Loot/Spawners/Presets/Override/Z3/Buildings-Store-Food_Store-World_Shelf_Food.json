@@ -1,0 +1,23 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.FoodStore.Drinks",
+				"ItemLootTreeNodes.FoodStore.Food",
+				"ItemLootTreeNodes.FoodStore.Items.Dish"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 25,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

@@ -1,0 +1,28 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Quarry.LightsFire",
+				"ItemLootTreeNodes.Quarry.WorkClothes",
+				"ItemLootTreeNodes.Quarry.Other.Ammo",
+				"ItemLootTreeNodes.Quarry.Other.Backpacks",
+				"ItemLootTreeNodes.Quarry.Other.Explosives",
+				"ItemLootTreeNodes.Quarry.Other.Flares",
+				"ItemLootTreeNodes.Quarry.Other.Money",
+				"ItemLootTreeNodes.Quarry.Crafting"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 35,
+	"InitialUsage": 10,
+	"RandomUsage": 35
+}

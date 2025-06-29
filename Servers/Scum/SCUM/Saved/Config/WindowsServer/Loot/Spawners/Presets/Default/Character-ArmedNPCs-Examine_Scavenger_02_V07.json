@@ -1,0 +1,38 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Beenie_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tracksuit_Top_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jeans_02_01_V2"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Leather_Shoes"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Stabproof"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Wool_Gloves_01_06"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Common",
+			"Ids": [
+				"ItemLootTreeNodes.DeadPuppets.Civilian.Items"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.DeadPuppets.Hospital.Items.FirstAid"
+			]
+		}
+	],
+	"Probability": 100,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 80,
+	"RandomDamage": 15,
+	"InitialUsage": 80,
+	"RandomUsage": 15
+}

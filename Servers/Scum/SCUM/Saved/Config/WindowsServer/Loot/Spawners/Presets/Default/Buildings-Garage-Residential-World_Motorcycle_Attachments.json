@@ -1,0 +1,22 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Garage.VehicleAttachments.Pneumatics.Dirtbike_Wheel_110_80_R19_Item",
+				"ItemLootTreeNodes.Garage.VehicleAttachments.Pneumatics.Dirtbike_Wheel_90_90_R21_Item"
+			]
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 30,
+	"InitialUsage": 50,
+	"RandomUsage": 30
+}

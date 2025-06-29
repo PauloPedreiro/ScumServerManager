@@ -1,0 +1,13 @@
+{
+	"FixedItems": [
+		"Weapon_M82A1",
+		"WeaponSuppressor_M82A1",
+		"WeaponScope_M82A1",
+		"Construction_Earmuffs_01",
+		"WeaponGhillie_Woodland"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

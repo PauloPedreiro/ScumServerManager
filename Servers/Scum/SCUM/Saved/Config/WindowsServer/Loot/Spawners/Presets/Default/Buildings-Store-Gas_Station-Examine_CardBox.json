@@ -1,0 +1,38 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.GasShop.Crafting",
+				"ItemLootTreeNodes.GasShop.Tools.Hand",
+				"ItemLootTreeNodes.GasShop.Tools.Electrical"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.FoodStore.Food",
+				"ItemLootTreeNodes.FoodStore.Drinks"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.GasShop.Other.Ammo",
+				"ItemLootTreeNodes.GasShop.Other.Flares",
+				"ItemLootTreeNodes.GasShop.Other.FoodAndDrink"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 15,
+	"InitialUsage": 0,
+	"RandomUsage": 15
+}

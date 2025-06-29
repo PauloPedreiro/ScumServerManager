@@ -1,0 +1,27 @@
+{
+	"Items": [
+		{
+			"Rarity": "Abundant",
+			"Id": "IntEA_Level1"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "IntEA_Level2"
+		},
+		{
+			"Rarity": "ExtremelyRare",
+			"Id": "IntEA_Level3"
+		}
+	],
+	"Probability": 10,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

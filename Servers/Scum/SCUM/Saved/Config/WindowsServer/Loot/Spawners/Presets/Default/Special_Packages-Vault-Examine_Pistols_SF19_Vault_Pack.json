@@ -1,0 +1,11 @@
+{
+	"FixedItems": [
+		"Weapon_SF19",
+		"WeaponFlashlight_M9",
+		"Tactical_Handgun_Holster_02"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

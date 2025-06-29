@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Bathroom.Clothes.Torso",
+				"ItemLootTreeNodes.Bathroom.Clothes.Legs",
+				"ItemLootTreeNodes.Bathroom.Clothes.Head",
+				"ItemLootTreeNodes.Bathroom.Clothes.Hands"
+			]
+		}
+	],
+	"Probability": 18,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}
