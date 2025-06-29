@@ -1,0 +1,25 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.Rifles",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Ammo.12Gauge",
+				"ItemLootTreeNodes.Military.Ammo.Regular"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 15,
+	"RandomDamage": 15,
+	"InitialUsage": 10,
+	"RandomUsage": 20
+}

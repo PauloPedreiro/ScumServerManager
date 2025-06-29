@@ -1,0 +1,42 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Kitchen.Items"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.Tools",
+				"ItemLootTreeNodes.Workshop.RepairToolkits.General",
+				"ItemLootTreeNodes.Workshop.WorkClothes",
+				"ItemLootTreeNodes.Workshop.Other.Ammo",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks",
+				"ItemLootTreeNodes.Workshop.Other.Flares",
+				"ItemLootTreeNodes.Workshop.Other.FoodAndDrink",
+				"ItemLootTreeNodes.Workshop.Other.Money"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

@@ -1,0 +1,21 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Garage.VehicleAttachments"
+			]
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 5,
+	"RandomDamage": 35,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

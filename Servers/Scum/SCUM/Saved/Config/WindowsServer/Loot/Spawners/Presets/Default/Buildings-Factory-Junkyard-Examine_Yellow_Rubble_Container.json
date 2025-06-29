@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Masonry.Crafting"
+			]
+		}
+	],
+	"Probability": 50,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 30,
+	"InitialUsage": 40,
+	"RandomUsage": 30
+}

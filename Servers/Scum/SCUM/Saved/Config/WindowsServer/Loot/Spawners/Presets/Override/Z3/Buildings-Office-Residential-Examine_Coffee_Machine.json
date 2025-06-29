@@ -1,0 +1,19 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Coffee_Cup"
+		}
+	],
+	"Probability": 6,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 10,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

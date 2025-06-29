@@ -1,0 +1,24 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Holsters",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Plain",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.WaistBags"
+			]
+		}
+	],
+	"Probability": 10,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

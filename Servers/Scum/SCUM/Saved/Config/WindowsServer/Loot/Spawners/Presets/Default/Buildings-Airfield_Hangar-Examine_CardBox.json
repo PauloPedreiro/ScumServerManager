@@ -1,0 +1,22 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Airfield.Misc",
+				"ItemLootTreeNodes.Airfield.Medical"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 20,
+	"RandomDamage": 20,
+	"InitialUsage": 20,
+	"RandomUsage": 20
+}

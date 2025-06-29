@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Ghillie_Suit_Jacket_04",
+		"Ghillie_Suit_Pants_04",
+		"Gas_Mask_03",
+		"MilitaryBoots_Peace",
+		"Cigarettes",
+		"Rope1",
+		"1H_Dildo",
+		"Lighter",
+		"Duct_Tape"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

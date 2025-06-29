@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Barn.Tools",
+				"ItemLootTreeNodes.Barn.Crafting",
+				"ItemLootTreeNodes.Barn.LightsFire",
+				"ItemLootTreeNodes.Barn.WorkClothes"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Clothes"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 20,
+	"InitialUsage": 10,
+	"RandomUsage": 20,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

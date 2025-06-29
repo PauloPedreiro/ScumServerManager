@@ -1,0 +1,30 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_shirt_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tights_01_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "HighTop_Shoes"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Driving_Gloves_01_03"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

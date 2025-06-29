@@ -1,0 +1,36 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Other",
+				"ItemLootTreeNodes.LivingRoom.Drinks",
+				"ItemLootTreeNodes.LivingRoom.Items"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Farm.Fertilizers",
+				"ItemLootTreeNodes.Farm.Pesticides",
+				"ItemLootTreeNodes.Farm.Seeds"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetAmmoAmount_SmallStash",
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

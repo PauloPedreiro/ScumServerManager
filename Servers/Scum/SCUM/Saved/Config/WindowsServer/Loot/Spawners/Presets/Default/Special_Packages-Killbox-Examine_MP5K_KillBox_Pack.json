@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_MP5_K",
+		"Magazine_MP5",
+		"Magazine_MP5",
+		"Magazine_MP5",
+		"Cal_9mm_Ammobox",
+		"Cal_9mm_Ammobox",
+		"Cal_9mm_Ammobox",
+		"MP5_Rail_Short",
+		"WeaponSights_RedDot_CA401B",
+		"WeaponSuppressor_MP5"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

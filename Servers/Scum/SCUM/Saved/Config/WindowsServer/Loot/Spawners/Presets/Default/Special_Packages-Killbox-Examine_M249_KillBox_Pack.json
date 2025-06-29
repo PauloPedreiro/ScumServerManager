@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_M249",
+		"Magazine_M249",
+		"Magazine_M249",
+		"Magazine_M249",
+		"WeaponSuppressor_MK18",
+		"Cal_5_56x45mm_Ammobox",
+		"Cal_5_56x45mm_Ammobox",
+		"Cal_5_56x45mm_Ammobox",
+		"WeaponSights_XPS300_Holographic",
+		"WeaponScope_ACOG_01"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

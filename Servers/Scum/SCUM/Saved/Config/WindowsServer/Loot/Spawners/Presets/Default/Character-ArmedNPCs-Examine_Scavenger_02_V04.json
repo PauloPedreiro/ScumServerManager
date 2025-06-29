@@ -1,0 +1,42 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Baseball_Cap_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Bag_Small_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Shemagh_Scarf_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_pants"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boots_06_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Medical_Glove_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Vest_04"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

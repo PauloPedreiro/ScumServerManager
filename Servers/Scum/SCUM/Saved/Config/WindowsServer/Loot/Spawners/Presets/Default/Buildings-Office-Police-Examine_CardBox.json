@@ -1,0 +1,28 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Police.FoodDrink",
+				"ItemLootTreeNodes.Police.Clothes.Feet.HikingsBoots",
+				"ItemLootTreeNodes.Police.Clothes.Hands",
+				"ItemLootTreeNodes.Police.Clothes.Head",
+				"ItemLootTreeNodes.Police.Ammo.12Gauge.SmallStash",
+				"ItemLootTreeNodes.Police.Ammo.AP.SmallStash",
+				"ItemLootTreeNodes.Police.Ammo.Regular.SmallStash",
+				"ItemLootTreeNodes.Police.Ammo.Tracers.SmallStash"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

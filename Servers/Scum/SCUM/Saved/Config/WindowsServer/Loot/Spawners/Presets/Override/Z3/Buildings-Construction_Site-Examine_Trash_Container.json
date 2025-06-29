@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Masonry.Crafting",
+				"ItemLootTreeNodes.Masonry.LightsFire",
+				"ItemLootTreeNodes.Masonry.Tools.Hand",
+				"ItemLootTreeNodes.Masonry.WorkClothes"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

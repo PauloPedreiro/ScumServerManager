@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.Other",
+				"ItemLootTreeNodes.Workshop.WorkClothes"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 20,
+	"InitialUsage": 10,
+	"RandomUsage": 20,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes",
+		"SetCashAmount_SmallStash",
+		"SetAmmoAmount_SmallStash"
+	]
+}

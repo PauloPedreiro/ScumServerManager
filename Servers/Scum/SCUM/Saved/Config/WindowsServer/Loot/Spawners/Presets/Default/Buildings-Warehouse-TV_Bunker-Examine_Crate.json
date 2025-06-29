@@ -1,0 +1,31 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.Other",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_590A11",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_SDASS",
+				"ItemLootTreeNodes.Military.Weapons.Rifles",
+				"ItemLootTreeNodes.Military.Ammo",
+				"ItemLootTreeNodes.Military.Gear",
+				"ItemLootTreeNodes.Military.Clothes.Hands",
+				"ItemLootTreeNodes.Military.Clothes.Head",
+				"ItemLootTreeNodes.Military.Clothes.Legs",
+				"ItemLootTreeNodes.Military.Clothes.Torso"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

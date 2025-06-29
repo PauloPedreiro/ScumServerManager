@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.SaltMine.WorkClothes",
+				"ItemLootTreeNodes.SaltMine.LightsFire",
+				"ItemLootTreeNodes.SaltMine.Other.Money",
+				"ItemLootTreeNodes.SaltMine.Other.Flares",
+				"ItemLootTreeNodes.SaltMine.Other.Backpacks",
+				"ItemLootTreeNodes.SaltMine.Other.Ammo",
+				"ItemLootTreeNodes.SaltMine.Crafting"
+			]
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50
+}

@@ -1,0 +1,38 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Farm.Seeds",
+				"ItemLootTreeNodes.Farm.Tools"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.HuntingStore.Bows",
+				"ItemLootTreeNodes.HuntingStore.Fishing",
+				"ItemLootTreeNodes.HuntingStore.LightsFire",
+				"ItemLootTreeNodes.HuntingStore.Melee",
+				"ItemLootTreeNodes.HuntingStore.Ammo.Hunting.Arrows"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 40,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

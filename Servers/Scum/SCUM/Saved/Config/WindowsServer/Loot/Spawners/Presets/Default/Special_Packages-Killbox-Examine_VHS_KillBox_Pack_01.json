@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Weapon_VHS2",
+		"Magazine_VHS2",
+		"Magazine_VHS2",
+		"Magazine_VHS2",
+		"Cal_5_56x45mm_Ammobox",
+		"Cal_5_56x45mm_Ammobox",
+		"Cal_5_56x45mm_AP_Ammobox",
+		"Cal_5_56x45mm_AP_Ammobox",
+		"WeaponGhillie_Woodland"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

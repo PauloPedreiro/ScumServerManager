@@ -1,0 +1,34 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Farm.Fertilizers",
+				"ItemLootTreeNodes.Farm.Pesticides",
+				"ItemLootTreeNodes.Farm.Seeds"
+			]
+		}
+	],
+	"Probability": 17,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 10,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_DirtyClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

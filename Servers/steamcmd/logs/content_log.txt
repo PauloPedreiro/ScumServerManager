@@ -1,0 +1,359 @@
+
+
+[2025-06-18 09:33:18] Client version: 1747702063
+[2025-06-18 09:33:18] Loaded 0 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-18 09:33:18] Triggered async write of Steam library folders configuration (1 libraries).
+[2025-06-18 09:33:24] AppID 3792580 state changed : Update Required,
+[2025-06-18 09:33:24] AppID 228980 state changed : Uninstalled, (Missing configuration)
+[2025-06-18 09:33:24] AppID 228980 finished uninstall (Missing configuration)
+[2025-06-18 09:33:24] AppID 3792580 scheduler update : Priority First, not played for 0 seconds, update disabled for 0 seconds
+[2025-06-18 09:33:24] AppID 3792580 state changed : Update Required,Update Queued,
+[2025-06-18 09:33:24] AppID 3792580 scheduler update : Priority First, not played for 0 seconds, update disabled for 0 seconds
+[2025-06-18 09:33:24] AppID 228980 state changed : Uninstalled, (Missing configuration)
+[2025-06-18 09:33:24] AppID 228980 finished uninstall (Missing configuration)
+[2025-06-18 09:33:24] AppID 3792580 state changed : Update Required,Update Queued,Update Running,
+[2025-06-18 09:33:24] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:33:24] AppID 3792580 App update changed : Running Update,Reconfiguring,
+[2025-06-18 09:33:25] Got 22 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 155 / Launcher 3)
+[2025-06-18 09:33:25] Moving to source priority class '3'
+[2025-06-18 09:33:25] Created download interface of type 'SteamCache' (7) to host cache4-gru1.steamcontent.com (cache4-gru1.steamcontent.com)
+[2025-06-18 09:33:25] Created download interface of type 'SteamCache' (7) to host cache5-gru1.steamcontent.com (cache5-gru1.steamcontent.com)
+[2025-06-18 09:33:25] Created download interface of type 'SteamCache' (7) to host cache13-gru1.steamcontent.com (cache13-gru1.steamcontent.com)
+[2025-06-18 09:33:25] HTTP/2 available
+[2025-06-18 09:33:25] Created dual-stack http client
+[2025-06-18 09:33:26] HTTPS (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-18 09:33:26] HTTP/2 (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): cache4-gru1.steamcontent.com/depot/1004/manifest/7747775778018907449/5/12935728682150937646 - received 200 (OK) HTTP response
+[2025-06-18 09:33:30] HTTP/2 (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): cache4-gru1.steamcontent.com/depot/3792581/manifest/2729717487792135872/5/10430077034286723117 - received 200 (OK) HTTP response
+[2025-06-18 09:33:30] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:33:30] AppID 3792580 App update changed : Running Update,Verifying Installed,
+[2025-06-18 09:33:30] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:33:30] AppID 3792580 App update changed : Running Update,Preallocating,
+[2025-06-18 09:33:31] AppID 3792580 preallocated 70 files (11924 MB) 
+[2025-06-18 09:33:31] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:33:31] AppID 3792580 update started : download 0/5782462464, store 0/0, reuse 0/0, delta 0/0, stage 0/12505910728 
+[2025-06-18 09:33:31] AppID 3792580 state changed : Update Required,Update Queued,Update Running,Update Started,
+[2025-06-18 09:33:31] AppID 3792580 App update changed : Running Update,Downloading,Staging,
+[2025-06-18 09:33:31] Downloading 47 chunks from depot 1004
+[2025-06-18 09:33:31] HTTPS (SteamCache,455) - cache13-gru1.steamcontent.com ([2602:801:f005:100::9b85:e30b]:443 / [2602:801:f005:100::9b85:e30b]:443, host: cache13-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-18 09:33:31] HTTPS (SteamCache,315) - cache5-gru1.steamcontent.com ([2602:801:f005:100::9b85:e305]:443 / [2602:801:f005:100::9b85:e305]:443, host: cache5-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-18 09:33:33] Downloading 10806 chunks from depot 3792581
+[2025-06-18 09:33:38] Increasing target number of download connections to 4 (rate was 0.000, now 222.369)
+[2025-06-18 09:33:38] Created download interface of type 'SteamCache' (7) to host cache14-gru1.steamcontent.com (cache14-gru1.steamcontent.com)
+[2025-06-18 09:33:43] HTTPS (SteamCache,456) - cache14-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31b]:443 / [2602:801:f005:101::9b85:e31b]:443, host: cache14-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-18 09:33:50] Increasing target number of download connections to 5 (rate was 222.369, now 416.567)
+[2025-06-18 09:33:50] Created download interface of type 'SteamCache' (7) to host cache6-gru1.steamcontent.com (cache6-gru1.steamcontent.com)
+[2025-06-18 09:33:52] HTTPS (SteamCache,325) - cache6-gru1.steamcontent.com ([2602:801:f005:101::9b85:e315]:443 / [2602:801:f005:101::9b85:e315]:443, host: cache6-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-18 09:34:39] Current download rate: 295.660 Mbps
+[2025-06-18 09:35:40] Current download rate: 415.488 Mbps
+[2025-06-18 09:35:44] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:35:44] AppID 3792580 App update changed : Running Update,Verifying Staged,
+[2025-06-18 09:35:58] Verified 2049 MB in 'C:\Servers\steamcmd', clean bytes tally is now 2049 MB
+[2025-06-18 09:35:58] Triggered async write of Steam library folders configuration (1 libraries).
+[2025-06-18 09:35:58] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:35:58] AppID 3792580 App update changed : Running Update,Committing,
+[2025-06-18 09:35:58] AppID 3792580 starting commit from "c:\servers\scum\steamapps\downloading\3792580" to "c:\servers\scum" : 189 updated, 0 moved, 0 deleted files
+[2025-06-18 09:35:58] AppID 3792580 state changed : Fully Installed,Update Queued,Update Running,
+[2025-06-18 09:35:58] AppID 3792580 finished update, 2 mounted depots (BuildID 18896997) : 1004 (7747775778018907449),3792581 (2729717487792135872),
+[2025-06-18 09:35:58] AppID 3792580 App update changed : Running Update,
+[2025-06-18 09:35:58] AppID 3792580 App update changed : None
+[2025-06-18 09:35:58] AppID 3792580 state changed : Fully Installed,Update Queued,
+[2025-06-18 09:35:58] AppID 228980 state changed : Update Required,Shared Only,
+[2025-06-18 09:35:58] AppID 228980 state changed : Update Required,
+[2025-06-18 09:35:58] Dependency added: parent 228980, child 3792580, depot 228989
+[2025-06-18 09:35:58] Dependency added: parent 228980, child 3792580, depot 228990
+[2025-06-18 09:35:58] AppID 3792580 state changed : Fully Installed,
+[2025-06-18 09:35:58] AppID 3792580 scheduler finished : removed from schedule (result No Error, state 0xc) 
+[2025-06-18 09:35:58] HTTP/2 (SteamCache,325) - cache6-gru1.steamcontent.com ([2602:801:f005:101::9b85:e315]:443 / [2602:801:f005:101::9b85:e315]:443, host: cache6-gru1.steamcontent.com): Closing connection
+[2025-06-18 09:35:58] HTTP/2 (SteamCache,456) - cache14-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31b]:443 / [2602:801:f005:101::9b85:e31b]:443, host: cache14-gru1.steamcontent.com): Closing connection
+[2025-06-18 09:35:58] HTTP/2 (SteamCache,455) - cache13-gru1.steamcontent.com ([2602:801:f005:100::9b85:e30b]:443 / [2602:801:f005:100::9b85:e30b]:443, host: cache13-gru1.steamcontent.com): Closing connection
+[2025-06-18 09:35:58] HTTP/2 (SteamCache,315) - cache5-gru1.steamcontent.com ([2602:801:f005:100::9b85:e305]:443 / [2602:801:f005:100::9b85:e305]:443, host: cache5-gru1.steamcontent.com): Closing connection
+[2025-06-18 09:35:58] HTTP/2 (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): Closing connection
+
+
+[2025-06-18 09:46:40] Client version: 1747702063
+[2025-06-18 09:46:40] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-18 09:46:40] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-18 10:15:31] Client version: 1747702063
+[2025-06-18 10:15:31] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-18 10:15:31] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-18 11:08:29] Client version: 1747702063
+[2025-06-18 11:08:29] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-18 11:08:29] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-18 20:03:00] Client version: 1747702063
+[2025-06-18 20:03:00] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-18 20:03:00] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-19 13:24:41] Client version: 1747702063
+[2025-06-19 13:24:41] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-19 13:24:41] Triggered async write of Steam library folders configuration (1 libraries).
+[2025-06-19 13:24:43] AppID 3792580 state changed : Update Required,Fully Installed,
+[2025-06-19 13:24:43] AppID 3792580 config changed : updated depots 3792581
+[2025-06-19 13:24:43] AppID 3792580 scheduler update : Priority First, not played for 100279 seconds, update disabled for 0 seconds
+[2025-06-19 13:24:43] AppID 3792580 state changed : Update Required,Fully Installed,Update Queued,
+[2025-06-19 13:24:43] AppID 3792580 state changed : Update Required,Fully Installed,Update Queued,Update Running,
+[2025-06-19 13:24:43] AppID 228980 state changed : Update Required,Update Running,
+[2025-06-19 13:24:43] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:24:43] AppID 3792580 App update changed : Running Update,Reconfiguring,
+[2025-06-19 13:24:44] Got 9 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 155 / Launcher 3)
+[2025-06-19 13:24:44] Moving to source priority class '2'
+[2025-06-19 13:24:44] Created download interface of type 'CDN' (2) to host alibaba.cdn.steampipe.steamcontent.com (alibaba.cdn.steampipe.steamcontent.com)
+[2025-06-19 13:24:44] Created download interface of type 'SteamCache' (7) to host cache4-gru1.steamcontent.com (cache4-gru1.steamcontent.com)
+[2025-06-19 13:24:44] Created download interface of type 'SteamCache' (7) to host cache13-gru1.steamcontent.com (cache13-gru1.steamcontent.com)
+[2025-06-19 13:24:44] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: alibaba.cdn.steampipe.steamcontent.com): AuthenticateDepotID (228989) - Success!
+[2025-06-19 13:24:45] HTTP/2 available
+[2025-06-19 13:24:45] Created dual-stack http client
+[2025-06-19 13:24:45] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com ([2600:9000:236d:ba00:13:8ee3:f9c0:21]:80 / [2600:9000:236d:ba00:13:8ee3:f9c0:21]:80, host: alibaba.cdn.steampipe.steamcontent.com): alibaba.cdn.steampipe.steamcontent.com/depot/228989/manifest/550968249685141759/5/14231946379162489403 - received 200 (OK) HTTP response
+[2025-06-19 13:24:46] HTTPS (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-19 13:24:46] HTTP/2 (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): cache4-gru1.steamcontent.com/depot/228990/manifest/1829726630299308803/5/7573997319183148633 - received 200 (OK) HTTP response
+[2025-06-19 13:24:46] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com ([2600:9000:236d:ba00:13:8ee3:f9c0:21]:80 / [2600:9000:236d:ba00:13:8ee3:f9c0:21]:80, host: alibaba.cdn.steampipe.steamcontent.com): AuthenticateDepotID (3792581) - Success!
+[2025-06-19 13:24:47] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com ([2600:9000:236d:ba00:13:8ee3:f9c0:21]:80 / [2600:9000:236d:ba00:13:8ee3:f9c0:21]:80, host: alibaba.cdn.steampipe.steamcontent.com): alibaba.cdn.steampipe.steamcontent.com/depot/3792581/manifest/8918856671603585048/5/11324272712314605231 - received 200 (OK) HTTP response
+[2025-06-19 13:24:48] HTTPS (SteamCache,455) - cache13-gru1.steamcontent.com ([2602:801:f005:100::9b85:e30b]:443 / [2602:801:f005:100::9b85:e30b]:443, host: cache13-gru1.steamcontent.com): Negotiated HTTP/2
+[2025-06-19 13:24:48] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:24:48] AppID 3792580 App update changed : Running Update,Verifying Installed,
+[2025-06-19 13:24:48] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:24:48] AppID 3792580 App update changed : Running Update,Preallocating,
+[2025-06-19 13:24:49] AppID 228980 preallocated 86 files (127 MB) 
+[2025-06-19 13:24:49] AppID 3792580 preallocated 13 files (11209 MB, 8593 MB as sparse files) 
+[2025-06-19 13:24:49] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:24:49] AppID 228980 update started : download 0/139704160, store 0/0, reuse 0/0, delta 0/0, stage 0/142524258 
+[2025-06-19 13:24:49] AppID 228980 state changed : Update Required,Update Running,Update Started,
+[2025-06-19 13:24:49] AppID 3792580 update started : download 0/4192992, store 0/0, reuse 0/10422559949, delta 0/1005026820, stage 0/11754237629 
+[2025-06-19 13:24:49] AppID 3792580 state changed : Update Required,Fully Installed,Update Queued,Update Running,Update Started,
+[2025-06-19 13:24:49] AppID 3792580 App update changed : Running Update,Downloading,Staging,
+[2025-06-19 13:24:49] Downloading 44 chunks from depot 228989
+[2025-06-19 13:24:52] Downloading 203 chunks from depot 228990
+[2025-06-19 13:24:52] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com ([2600:9000:236d:ba00:13:8ee3:f9c0:21]:80 / [2600:9000:236d:ba00:13:8ee3:f9c0:21]:80, host: alibaba.cdn.steampipe.steamcontent.com): AuthenticateDepotID (228990) - Success!
+[2025-06-19 13:24:54] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:24:54] AppID 3792580 App update changed : Running Update,Downloading,Staging,
+[2025-06-19 13:24:54] Downloading 11 chunks from depot 3792581
+[2025-06-19 13:24:55] AppID 3792580 App update changed : Running Update,Staging,
+[2025-06-19 13:25:28] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:25:28] AppID 3792580 App update changed : Running Update,Verifying Staged,
+[2025-06-19 13:25:30] Verified 135 MB in 'C:\Servers\steamcmd', clean bytes tally is now 135 MB
+[2025-06-19 13:25:30] Triggered async write of Steam library folders configuration (1 libraries).
+[2025-06-19 13:25:42] Verified 1912 MB in 'C:\Servers\steamcmd', clean bytes tally is now 2048 MB
+[2025-06-19 13:25:42] Triggered async write of Steam library folders configuration (1 libraries).
+[2025-06-19 13:25:42] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:25:42] AppID 3792580 App update changed : Running Update,Committing,
+[2025-06-19 13:25:42] AppID 228980 starting commit from "c:\servers\scum\steamapps\downloading\228980" to "c:\servers\scum" : 163 updated, 0 moved, 0 deleted files
+[2025-06-19 13:25:42] AppID 228980 state changed : Fully Installed,Update Running,
+[2025-06-19 13:25:42] AppID 228980 finished update, 2 mounted depots (BuildID 17627579) : 228989 (550968249685141759),228990 (1829726630299308803),
+[2025-06-19 13:25:42] AppID 3792580 starting commit from "c:\servers\scum\steamapps\downloading\3792580" to "c:\servers\scum" : 23 updated, 0 moved, 0 deleted files
+[2025-06-19 13:25:43] AppID 3792580 state changed : Fully Installed,Update Queued,Update Running,
+[2025-06-19 13:25:43] AppID 3792580 finished update, 2 mounted depots (BuildID 18918371) : 1004 (7747775778018907449),3792581 (8918856671603585048),
+[2025-06-19 13:25:43] AppID 3792580 App update changed : Running Update,
+[2025-06-19 13:25:43] AppID 3792580 App update changed : None
+[2025-06-19 13:25:43] AppID 228980 state changed : Fully Installed,
+[2025-06-19 13:25:43] AppID 3792580 state changed : Fully Installed,Update Queued,
+[2025-06-19 13:25:43] AppID 3792580 state changed : Fully Installed,
+[2025-06-19 13:25:43] AppID 3792580 scheduler finished : removed from schedule (result No Error, state 0xc) 
+[2025-06-19 13:25:43] HTTP/2 (SteamCache,455) - cache13-gru1.steamcontent.com ([2602:801:f005:100::9b85:e30b]:443 / [2602:801:f005:100::9b85:e30b]:443, host: cache13-gru1.steamcontent.com): Closing connection
+[2025-06-19 13:25:43] HTTP/2 (SteamCache,326) - cache4-gru1.steamcontent.com ([2602:801:f005:101::9b85:e31e]:443 / [2602:801:f005:101::9b85:e31e]:443, host: cache4-gru1.steamcontent.com): Closing connection
+[2025-06-19 13:25:43] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com ([2600:9000:236d:ba00:13:8ee3:f9c0:21]:80 / [2600:9000:236d:ba00:13:8ee3:f9c0:21]:80, host: alibaba.cdn.steampipe.steamcontent.com): Closing connection
+
+
+[2025-06-19 18:55:39] Client version: 1747702063
+[2025-06-19 18:55:39] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-19 18:55:39] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-19 20:29:00] Client version: 1747702063
+[2025-06-19 20:29:00] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-19 20:29:00] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 03:28:31] Client version: 1747702063
+[2025-06-20 03:28:31] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 03:28:31] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 11:47:54] Client version: 1747702063
+[2025-06-20 11:47:54] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 11:47:54] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 14:38:26] Client version: 1747702063
+[2025-06-20 14:38:26] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 14:38:26] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 15:29:09] Client version: 1747702063
+[2025-06-20 15:29:09] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 15:29:09] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 17:28:47] Client version: 1747702063
+[2025-06-20 17:28:47] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 17:28:47] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 17:41:41] Client version: 1747702063
+[2025-06-20 17:41:41] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 17:41:41] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 23:47:13] Client version: 1747702063
+[2025-06-20 23:47:13] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 23:47:13] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-20 23:56:58] Client version: 1747702063
+[2025-06-20 23:56:58] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-20 23:56:58] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 00:00:42] Client version: 1747702063
+[2025-06-21 00:00:42] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 00:00:42] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 01:31:19] Client version: 1747702063
+[2025-06-21 01:31:19] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 01:31:19] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 01:55:08] Client version: 1747702063
+[2025-06-21 01:55:08] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 01:55:08] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 02:06:33] Client version: 1747702063
+[2025-06-21 02:06:33] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 02:06:33] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 02:20:05] Client version: 1747702063
+[2025-06-21 02:20:05] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 02:20:05] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 02:29:42] Client version: 1747702063
+[2025-06-21 02:29:42] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 02:29:42] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 02:33:03] Client version: 1747702063
+[2025-06-21 02:33:03] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 02:33:03] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 02:39:21] Client version: 1747702063
+[2025-06-21 02:39:21] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 02:39:21] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 03:03:38] Client version: 1747702063
+[2025-06-21 03:03:38] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 03:03:38] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 03:22:54] Client version: 1747702063
+[2025-06-21 03:22:54] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 03:22:54] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 03:58:42] Client version: 1747702063
+[2025-06-21 03:58:42] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 03:58:42] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 12:00:14] Client version: 1747702063
+[2025-06-21 12:00:14] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 12:00:14] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-21 20:06:18] Client version: 1747702063
+[2025-06-21 20:06:18] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-21 20:06:18] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-22 01:54:57] Client version: 1747702063
+[2025-06-22 01:54:57] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-22 01:54:57] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-22 02:43:23] Client version: 1747702063
+[2025-06-22 02:43:23] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-22 02:43:23] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-22 13:02:39] Client version: 1747702063
+[2025-06-22 13:02:39] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-22 13:02:39] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-22 17:02:58] Client version: 1747702063
+[2025-06-22 17:02:58] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-22 17:02:58] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-22 21:02:17] Client version: 1747702063
+[2025-06-22 21:02:17] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-22 21:02:17] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-23 01:26:19] Client version: 1747702063
+[2025-06-23 01:26:19] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-23 01:26:19] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-23 09:25:23] Client version: 1747702063
+[2025-06-23 09:25:23] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-23 09:25:23] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-23 16:10:28] Client version: 1747702063
+[2025-06-23 16:10:28] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-23 16:10:28] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-23 17:02:47] Client version: 1747702063
+[2025-06-23 17:02:47] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-23 17:02:47] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-23 21:03:04] Client version: 1747702063
+[2025-06-23 21:03:04] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-23 21:03:04] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-24 13:02:21] Client version: 1747702063
+[2025-06-24 13:02:21] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-24 13:02:21] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-24 17:02:39] Client version: 1747702063
+[2025-06-24 17:02:39] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-24 17:02:39] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-24 21:02:59] Client version: 1747702063
+[2025-06-24 21:02:59] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-24 21:02:59] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-25 13:02:19] Client version: 1747702063
+[2025-06-25 13:02:19] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-25 13:02:19] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-25 15:36:21] Client version: 1747702063
+[2025-06-25 15:36:21] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-25 15:36:21] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-25 17:02:40] Client version: 1747702063
+[2025-06-25 17:02:40] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-25 17:02:40] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2025-06-25 21:02:59] Client version: 1747702063
+[2025-06-25 21:02:59] Loaded 2 apps from install folder "c:\servers\scum\steamapps\appmanifest_*.acf".
+[2025-06-25 21:02:59] Triggered async write of Steam library folders configuration (1 libraries).

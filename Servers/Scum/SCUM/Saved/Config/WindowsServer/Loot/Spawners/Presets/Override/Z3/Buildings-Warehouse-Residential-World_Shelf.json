@@ -1,0 +1,67 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Bows",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Handguns",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Other",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Shotguns.Weapon_M1887",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Shotguns.Weapon_DT11B_Sawed_Off",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Shotguns.Weapon_M1887_Sawed_off",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Shotguns.Weapon_DT11B",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Swords",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Rifles.Weapon_Hunter85_V2",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.WorkClothes",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Belt_Pistol_Holster",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Plain",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.School",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Hiking.Other",
+				"ItemLootTreeNodes.Workshop.Other.Flares",
+				"ItemLootTreeNodes.Workshop.Other.Money",
+				"ItemLootTreeNodes.Workshop.Other.Ammo.12Gauge",
+				"ItemLootTreeNodes.Workshop.Other.Ammo.Regular",
+				"ItemLootTreeNodes.Workshop.Tools.Blades.1H_Bushman",
+				"ItemLootTreeNodes.Workshop.Tools.Blades.1H_Cleaver",
+				"ItemLootTreeNodes.Workshop.Tools.Blades.1H_Scalpel",
+				"ItemLootTreeNodes.Workshop.Tools.Electrical",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.1H_Crowbar",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.1H_Metal_Pipe",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Thermometer",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.CanOpener",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Saw",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Screwdriver_Small",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Wire_Cutters_01",
+				"ItemLootTreeNodes.Workshop.Tools.Heavy",
+				"ItemLootTreeNodes.Workshop.Tools.Power",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.1H_Pipe_Wrench"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Farm"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetCashAmount_SmallStash",
+		"SetAmmoAmount_SmallStash",
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

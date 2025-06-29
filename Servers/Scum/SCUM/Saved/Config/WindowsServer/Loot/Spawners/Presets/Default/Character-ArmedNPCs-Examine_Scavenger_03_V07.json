@@ -1,0 +1,49 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Baseball_Cap_05"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Motorcycle_Mask_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Shemagh_Scarf_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Motorcycle_Jacket_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Leather_Backpack_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Belt_Pistol_Holster"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jeans_01_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sneakers_02_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

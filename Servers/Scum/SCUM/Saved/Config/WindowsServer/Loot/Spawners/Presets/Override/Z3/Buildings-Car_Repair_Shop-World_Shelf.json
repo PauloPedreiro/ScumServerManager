@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.CarRepairShop.Tools",
+				"ItemLootTreeNodes.CarRepairShop.RepairToolkits",
+				"ItemLootTreeNodes.CarRepairShop.Crafting",
+				"ItemLootTreeNodes.CarRepairShop.Other"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Garage.VehicleAccesories"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

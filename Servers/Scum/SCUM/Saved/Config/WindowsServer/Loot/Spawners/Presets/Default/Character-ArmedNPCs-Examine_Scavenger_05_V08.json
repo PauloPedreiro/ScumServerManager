@@ -1,0 +1,50 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Military_Helmet_01_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Motorcycle_Glasses_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Respirator_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Armor_Tactical_Vest_01_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Camouflage_Jacket_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "MilitaryPants_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tactical_Gloves_01_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "MilitaryBoots_JNA"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Military_Backpack_03_07"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

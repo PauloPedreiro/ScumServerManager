@@ -1,0 +1,19 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Wooden_Plank"
+		}
+	],
+	"Probability": 75,
+	"QuantityMin": 1,
+	"QuantityMax": 3,
+	"AllowDuplicates": true,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 35,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

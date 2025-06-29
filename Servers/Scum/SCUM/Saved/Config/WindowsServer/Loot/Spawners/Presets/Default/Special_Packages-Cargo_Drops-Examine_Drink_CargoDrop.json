@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Water_05l",
+		"Water_05l",
+		"Water_05l",
+		"PETBottle01",
+		"PETBottle01",
+		"PETBottle01",
+		"Milk",
+		"Milk",
+		"Milk"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

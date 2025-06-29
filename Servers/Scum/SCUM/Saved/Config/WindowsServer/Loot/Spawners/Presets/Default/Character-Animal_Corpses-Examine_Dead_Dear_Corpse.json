@@ -1,0 +1,23 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Doe_Left_Back_Leg"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Doe_Left_Front_Leg"
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 50
+}

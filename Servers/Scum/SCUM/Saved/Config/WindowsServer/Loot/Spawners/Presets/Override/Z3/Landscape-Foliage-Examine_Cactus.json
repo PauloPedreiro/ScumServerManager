@@ -1,0 +1,19 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Opuntia_Fig"
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": true,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

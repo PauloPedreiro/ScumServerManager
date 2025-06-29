@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_SVD_Dragunov",
+		"Magazine_SVD_Dragunov",
+		"Magazine_SVD_Dragunov",
+		"Cal_7_62x54mmR_Ammobox",
+		"Cal_7_62x54mmR_Ammobox",
+		"WeaponScope_POSP",
+		"WeaponSuppressor_SVD",
+		"WeaponGhillie_Woodland",
+		"Ghillie_Suit_Jacket_01",
+		"Ghillie_Suit_Pants_01"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

@@ -1,0 +1,32 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.FoodDrink",
+				"ItemLootTreeNodes.Military.Clothes",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass_Advanced",
+				"ItemLootTreeNodes.Military.Gear.Tools.Geiger_Counter_Analogue",
+				"ItemLootTreeNodes.Military.Gear.Tools.DialLock_Item",
+				"ItemLootTreeNodes.Military.Gear.Tools.GasMasks",
+				"ItemLootTreeNodes.Military.Gear.Tools.Grinding_Stone_02",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives",
+				"ItemLootTreeNodes.Military.Gear.Tools.Sewing_kit",
+				"ItemLootTreeNodes.Military.Gear.Tools.Tool_Box_Small",
+				"ItemLootTreeNodes.Military.Gear.Tools.Weapon_Cleaning_Kit"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

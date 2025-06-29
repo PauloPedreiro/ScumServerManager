@@ -1,0 +1,38 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Office.Items.Misc.Cigarettes",
+				"ItemLootTreeNodes.Office.Items.Misc.Glue",
+				"ItemLootTreeNodes.Office.Items.Misc.Fabric",
+				"ItemLootTreeNodes.Office.Other.Backpacks",
+				"ItemLootTreeNodes.Office.Items.Misc.Duct_Tape",
+				"ItemLootTreeNodes.Office.Items.Misc.Battery.Batteries",
+				"ItemLootTreeNodes.Office.Items.Misc.Lockpicks.Bobby_Pin_Package"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Office.Other.Weapons.Ammo.Regular.SmallStash",
+				"ItemLootTreeNodes.Office.Other.Weapons.Handguns",
+				"ItemLootTreeNodes.Office.Other.Weapons.Magazines"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 35,
+	"InitialUsage": 0,
+	"RandomUsage": 0,
+	"PostSpawnActions": [
+		"SetCashAmount_SmallStash"
+	]
+}

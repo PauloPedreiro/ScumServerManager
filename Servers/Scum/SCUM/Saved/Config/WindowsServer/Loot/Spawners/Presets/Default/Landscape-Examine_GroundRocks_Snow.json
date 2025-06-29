@@ -1,0 +1,34 @@
+{
+	"Items": [
+		{
+			"Rarity": "Abundant",
+			"Id": "Stone_Small"
+		},
+		{
+			"Rarity": "Common",
+			"Id": "Stone"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Snowballs_01"
+		},
+		{
+			"Rarity": "VeryRare",
+			"Id": "Snowballs_02"
+		}
+	],
+	"FixedItems": [
+		"Stone_Small",
+		"Snowballs_01"
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": true,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

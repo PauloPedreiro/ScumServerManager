@@ -1,0 +1,40 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "ExtremelyRare",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.WaistBags",
+				"ItemLootTreeNodes.LivingRoom.Other.Backpacks.Holsters",
+				"ItemLootTreeNodes.LivingRoom.Other.Ammo",
+				"ItemLootTreeNodes.LivingRoom.Other.Money",
+				"ItemLootTreeNodes.LivingRoom.Other.Weapons"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Misc"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Clothes"
+			]
+		}
+	],
+	"Probability": 17,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

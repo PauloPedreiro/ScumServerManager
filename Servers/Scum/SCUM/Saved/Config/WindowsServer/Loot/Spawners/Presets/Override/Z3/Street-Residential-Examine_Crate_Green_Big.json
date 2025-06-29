@@ -1,0 +1,54 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass_Advanced",
+				"ItemLootTreeNodes.Military.Gear.Tools.Geiger_Counter_Analogue",
+				"ItemLootTreeNodes.Military.Gear.Tools.MetalDetector",
+				"ItemLootTreeNodes.Military.Gear.Tools.GasMasks",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Shuriken",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_MK5000_Black",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Kunai",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Hunter",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives.1H_Scout_Black",
+				"ItemLootTreeNodes.Military.Gear.Tools.Sewing_kit",
+				"ItemLootTreeNodes.Military.Gear.Tools.Weapon_Cleaning_Kit",
+				"ItemLootTreeNodes.Military.Gear.Armor",
+				"ItemLootTreeNodes.Military.Gear.Attachments",
+				"ItemLootTreeNodes.Military.Gear.Backpacks",
+				"ItemLootTreeNodes.Military.Gear.Explosives",
+				"ItemLootTreeNodes.Military.Gear.Magazines",
+				"ItemLootTreeNodes.Military.Gear.Optics"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Weapons.SMGs",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_590A11",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_SDASS",
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.Other"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50
+}

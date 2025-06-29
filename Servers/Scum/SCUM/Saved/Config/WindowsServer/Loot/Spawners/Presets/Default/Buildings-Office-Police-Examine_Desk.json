@@ -1,0 +1,42 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Police.Ammo.12Gauge.SmallStash",
+				"ItemLootTreeNodes.Police.Ammo.AP.SmallStash",
+				"ItemLootTreeNodes.Police.Ammo.Regular.SmallStash",
+				"ItemLootTreeNodes.Police.Ammo.Tracers.SmallStash",
+				"ItemLootTreeNodes.Police.Clothes.Hands",
+				"ItemLootTreeNodes.Police.Clothes.Head",
+				"ItemLootTreeNodes.Police.FoodDrink.Food.Snacks",
+				"ItemLootTreeNodes.Police.Gear.Attachments.Bayonets.N9s",
+				"ItemLootTreeNodes.Police.Gear.Attachments.Flashlights",
+				"ItemLootTreeNodes.Police.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Police.Weapons.Handguns"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Office.Items.Misc"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetAmmoAmount_SmallStash",
+		"SetClothesDirtiness_ResidentialClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.Other",
+				"ItemLootTreeNodes.Workshop.Tools.Hand",
+				"ItemLootTreeNodes.Workshop.Tools.Blades",
+				"ItemLootTreeNodes.Workshop.Tools.Electrical",
+				"ItemLootTreeNodes.Workshop.Tools.Power"
+			]
+		}
+	],
+	"Probability": 18,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 10,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_DirtyClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

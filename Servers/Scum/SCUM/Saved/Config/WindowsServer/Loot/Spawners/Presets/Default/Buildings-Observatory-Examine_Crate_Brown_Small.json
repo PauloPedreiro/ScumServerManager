@@ -1,0 +1,29 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.Tools"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Observatory.Items.Misc"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 20,
+	"RandomDamage": 40,
+	"InitialUsage": 0,
+	"RandomUsage": 40
+}

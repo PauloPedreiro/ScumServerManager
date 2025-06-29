@@ -1,0 +1,34 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Construction_Earmuffs_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Leather_Backpack_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jock_Jacket_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tights_01_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boots_07_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

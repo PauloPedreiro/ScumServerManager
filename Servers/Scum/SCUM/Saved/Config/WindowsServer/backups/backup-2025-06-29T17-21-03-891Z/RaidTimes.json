@@ -1,0 +1,34 @@
+{
+	"raiding-times": [
+		{
+			"day": "Weekdays",
+			"time": "17:00-19:00",
+			"start-announcement-time": "30",
+			"end-announcement-time": "30"
+		},
+		{
+			"day": "Weekend",
+			"time": "12:00-15:00",
+			"start-announcement-time": "30",
+			"end-announcement-time": "30"
+		},
+		{
+			"day": "Monday-Wednesday",
+			"time": "10:00-11:30",
+			"start-announcement-time": "30",
+			"end-announcement-time": "15"
+		},
+		{
+			"day": "Monday,Wednesday,Friday",
+			"time": "07:12-09:01",
+			"start-announcement-time": "30",
+			"end-announcement-time": "20"
+		},
+		{
+			"day": "Thursday",
+			"time": "21:00-23:45",
+			"start-announcement-time": "30",
+			"end-announcement-time": "30"
+		}
+	]
+}

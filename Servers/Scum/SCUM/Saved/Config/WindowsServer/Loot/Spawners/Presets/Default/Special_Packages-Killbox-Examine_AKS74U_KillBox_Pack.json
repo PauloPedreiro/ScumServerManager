@@ -1,0 +1,17 @@
+{
+	"FixedItems": [
+		"Weapon_AKS_74U",
+		"Magazine_AKS_74U",
+		"Magazine_AKS_74U",
+		"Magazine_AKS_74U",
+		"Cal_5_45x39mm_Ammobox",
+		"Cal_5_45x39mm_Ammobox",
+		"Cal_5_45x39mm_Ammobox",
+		"WeaponSights_V3_Holographic",
+		"ScopeRail_AK47"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

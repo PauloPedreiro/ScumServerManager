@@ -1,0 +1,31 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Clothes",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Assault",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Holsters",
+				"ItemLootTreeNodes.Military.Gear.Tools"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Misc"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 30,
+	"InitialUsage": 40,
+	"RandomUsage": 30
+}

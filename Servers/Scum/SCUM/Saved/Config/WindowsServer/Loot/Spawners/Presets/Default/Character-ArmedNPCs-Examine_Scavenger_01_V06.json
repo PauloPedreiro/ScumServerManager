@@ -1,0 +1,34 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Undershirt_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_pants"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "HighTop_Shoes"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Gloves"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Bag_Small_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

@@ -1,0 +1,38 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_shirt_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tracksuit_Pants_02_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Shoes_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Shemagh_Scarf_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Driving_Gloves_01_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Pilot_Glasses"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

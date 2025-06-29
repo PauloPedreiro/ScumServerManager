@@ -1,0 +1,11 @@
+{
+	"FixedItems": [
+		"Weapon_DT11B",
+		"12_Gauge_Buckshot_Ammobox",
+		"12_Gauge_Buckshot_Ammobox"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

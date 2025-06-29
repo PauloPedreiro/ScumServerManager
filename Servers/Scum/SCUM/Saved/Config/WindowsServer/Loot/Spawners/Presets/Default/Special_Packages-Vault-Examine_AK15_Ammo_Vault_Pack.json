@@ -1,0 +1,14 @@
+{
+	"FixedItems": [
+		"Cal_7_62x39mm_Ammobox",
+		"Cal_7_62x39mm_Ammobox",
+		"Cal_7_62x39mm_Ammobox",
+		"Magazine_AK15",
+		"Magazine_AK15",
+		"Magazine_AK15"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

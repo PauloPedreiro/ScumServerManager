@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.WW2.Weapons",
+				"ItemLootTreeNodes.WW2.Ammo",
+				"ItemLootTreeNodes.WW2.Gear.Magazines",
+				"ItemLootTreeNodes.WW2.Gear.Armor",
+				"ItemLootTreeNodes.WW2.Gear.Attachments",
+				"ItemLootTreeNodes.WW2.Gear.Optics",
+				"ItemLootTreeNodes.WW2.Gear.Tools"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 20,
+	"RandomDamage": 50,
+	"InitialUsage": 20,
+	"RandomUsage": 50
+}

@@ -1,0 +1,29 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boots_06_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hoodie_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tracksuit_Pants_01_02"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 93,
+	"RandomDamage": 3,
+	"InitialUsage": 93,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

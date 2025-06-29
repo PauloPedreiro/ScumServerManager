@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.12Gauge",
+				"ItemLootTreeNodes.Military.Ammo.Regular",
+				"ItemLootTreeNodes.Military.Ammo.Arrows",
+				"ItemLootTreeNodes.Military.Ammo.Tracers",
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.Rifles",
+				"ItemLootTreeNodes.Military.Weapons.Other",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Weapons.SMGs",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Assault"
+			]
+		}
+	],
+	"Probability": 10,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 40,
+	"InitialUsage": 10,
+	"RandomUsage": 40
+}

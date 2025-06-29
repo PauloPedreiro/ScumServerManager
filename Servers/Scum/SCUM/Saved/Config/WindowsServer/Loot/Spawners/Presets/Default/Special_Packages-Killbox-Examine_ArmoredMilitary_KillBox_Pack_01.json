@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_AK15",
+		"Magazine_AK15",
+		"Magazine_AK15",
+		"Cal_7_62x39mm_Ammobox",
+		"Cal_7_62x39mm_Ammobox",
+		"Armor_Tactical_Vest_01_01",
+		"Combat_Helmet_02",
+		"Tactical_Jacket_01_03",
+		"MilitaryPants_01",
+		"Night_Vision_Goggles_01"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

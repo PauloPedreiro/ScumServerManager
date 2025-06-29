@@ -1,0 +1,61 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Abundant",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.Regular.Boxed",
+				"ItemLootTreeNodes.Military.Ammo.12Gauge.Boxed",
+				"ItemLootTreeNodes.Military.FoodDrink",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Bayonets",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Camouflage",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Flashlights",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Rails",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Assault",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Rifles",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives",
+				"ItemLootTreeNodes.Military.Gear.Tools.GasMasks",
+				"ItemLootTreeNodes.Military.Gear.Optics",
+				"ItemLootTreeNodes.Military.Gear.Explosives.Flares",
+				"ItemLootTreeNodes.Military.Gear.Explosives.Gun_Powder",
+				"ItemLootTreeNodes.Military.Clothes.Legs.ShortTrousers",
+				"ItemLootTreeNodes.Military.Clothes.Legs.TacticalMilitaryPants",
+				"ItemLootTreeNodes.Military.Clothes.Legs.WorkPants",
+				"ItemLootTreeNodes.Military.Clothes.Torso.CamoJackets",
+				"ItemLootTreeNodes.Military.Clothes.Torso.MilitaryShirts",
+				"ItemLootTreeNodes.Military.Clothes.Torso.Raincoats",
+				"ItemLootTreeNodes.Military.Clothes.Torso.TacticalSweaters",
+				"ItemLootTreeNodes.Military.Clothes.Torso.TacticalJackets",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Holsters.Military",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Military.Clothes.Head",
+				"ItemLootTreeNodes.Military.Clothes.Hands"
+			]
+		},
+		{
+			"Rarity": "ExtremelyRare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Weapons.SMGs.MP5s",
+				"ItemLootTreeNodes.Military.Weapons.Other",
+				"ItemLootTreeNodes.Military.Weapons.Rifles"
+			]
+		}
+	],
+	"Probability": 12,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 15,
+	"InitialUsage": 0,
+	"RandomUsage": 15,
+	"PostSpawnActions": [
+		"SetAmmoAmount_BigStash",
+		"SetCashAmount_SmallStash"
+	]
+}

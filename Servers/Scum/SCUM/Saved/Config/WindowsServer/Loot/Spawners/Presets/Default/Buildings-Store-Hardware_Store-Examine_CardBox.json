@@ -1,0 +1,29 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting.Bolts",
+				"ItemLootTreeNodes.Workshop.Crafting.Fluids",
+				"ItemLootTreeNodes.Workshop.Crafting.Nails",
+				"ItemLootTreeNodes.Workshop.Crafting.Locks",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.Tools.Hand",
+				"ItemLootTreeNodes.Workshop.Tools.Electrical",
+				"ItemLootTreeNodes.Workshop.Tools.Blades"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 10,
+	"InitialUsage": 0,
+	"RandomUsage": 10
+}

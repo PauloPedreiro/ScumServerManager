@@ -1,0 +1,22 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.WW2.Ammo",
+				"ItemLootTreeNodes.WW2.Gear"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 20,
+	"RandomDamage": 50,
+	"InitialUsage": 20,
+	"RandomUsage": 50
+}

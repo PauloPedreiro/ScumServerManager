@@ -1,0 +1,19 @@
+{
+	"FixedItems": [
+		"Weapon_98k_Karabiner",
+		"Kar98_Bayonet",
+		"Cal_7_92x57mm_Ammobox",
+		"Cal_7_92x57mm_Ammobox",
+		"ImprovisedRail_Side",
+		"WeaponScope_Dragunov",
+		"WW2_German_Helmet_01",
+		"Stabproof_Vest_01_04",
+		"Tactical_Jacket_01_01",
+		"CombatBoots",
+		"MilitaryPants_08"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

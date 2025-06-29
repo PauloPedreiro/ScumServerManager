@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.12Gauge",
+				"ItemLootTreeNodes.Military.Ammo.Regular",
+				"ItemLootTreeNodes.Military.Ammo.Tracers",
+				"ItemLootTreeNodes.Military.Clothes",
+				"ItemLootTreeNodes.Military.FoodDrink",
+				"ItemLootTreeNodes.Military.Gear.Armor.Helmets",
+				"ItemLootTreeNodes.Military.Gear.Attachments",
+				"ItemLootTreeNodes.Military.Gear.Backpacks",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Rifles",
+				"ItemLootTreeNodes.Military.Gear.Magazines.SMGs",
+				"ItemLootTreeNodes.Military.Gear.Tools",
+				"ItemLootTreeNodes.Military.Gear.Optics"
+			]
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 30,
+	"InitialUsage": 40,
+	"RandomUsage": 30
+}

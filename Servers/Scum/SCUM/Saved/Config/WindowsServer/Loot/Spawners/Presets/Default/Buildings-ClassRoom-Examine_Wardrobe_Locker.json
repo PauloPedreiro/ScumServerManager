@@ -1,0 +1,24 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.School.Items.Clothes",
+				"ItemLootTreeNodes.School.Other.Backpacks",
+				"ItemLootTreeNodes.School.Other.Weapons",
+				"ItemLootTreeNodes.School.Other.Ammo"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 35,
+	"InitialUsage": 0,
+	"RandomUsage": 35
+}

@@ -1,0 +1,24 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Observatory.Weapons",
+				"ItemLootTreeNodes.Observatory.Ammo",
+				"ItemLootTreeNodes.Observatory.Items.Clothes",
+				"ItemLootTreeNodes.Observatory.Items.Melee"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 20,
+	"RandomDamage": 40,
+	"InitialUsage": 0,
+	"RandomUsage": 40
+}

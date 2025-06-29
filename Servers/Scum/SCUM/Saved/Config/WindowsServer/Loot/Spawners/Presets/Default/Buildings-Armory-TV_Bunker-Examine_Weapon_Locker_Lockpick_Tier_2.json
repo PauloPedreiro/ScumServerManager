@@ -1,0 +1,92 @@
+{
+	"Subpresets": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_M16A4_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_M16A4_Ammo_Vault_Pack1"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_MK18_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_MK18_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_VHS2_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_VHS2_Rail_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_VHS2_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_AK15_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_AK15_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Military_Vault_Pack_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Military_Vault_Pack_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Military_Vault_Pack_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_AKS74U_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_AKS74U_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_ASVal_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_ASVal_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_MP5_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_MP5K_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_MP5SD_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_MP5SD_Ammo_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Scar-Dmr_Vault_Pack"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Special_Packages-Vault-Examine_Scar-Dmr_Ammo_Vault_Pack"
+		}
+	]
+}

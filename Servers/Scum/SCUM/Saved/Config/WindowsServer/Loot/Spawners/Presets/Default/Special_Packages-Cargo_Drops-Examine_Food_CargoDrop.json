@@ -1,0 +1,16 @@
+{
+	"FixedItems": [
+		"MRE_Stew",
+		"MRE_Cheeseburger",
+		"MRE_TunaSalad",
+		"Can01",
+		"Can02",
+		"Can03",
+		"ChocolateCandy_01",
+		"ChocolateCandy_03"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

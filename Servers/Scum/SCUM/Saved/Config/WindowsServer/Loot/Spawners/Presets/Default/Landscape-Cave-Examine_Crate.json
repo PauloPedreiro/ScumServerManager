@@ -1,0 +1,25 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Cave.Crafting",
+				"ItemLootTreeNodes.Cave.LightsFire",
+				"ItemLootTreeNodes.Cave.Tools",
+				"ItemLootTreeNodes.Cave.WorkClothes",
+				"ItemLootTreeNodes.Cave.Repair"
+			]
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 30,
+	"RandomDamage": 50,
+	"InitialUsage": 30,
+	"RandomUsage": 50
+}

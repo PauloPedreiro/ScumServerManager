@@ -1,0 +1,50 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Military_Beanie_05"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Halloween_Mask_Clown_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Shemagh_Scarf_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Bulletproof_Armor"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tactical_Jacket_01_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Military_Backpack_01_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Open_Finger_Gloves_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jeans_02_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hiking_Boots_02"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

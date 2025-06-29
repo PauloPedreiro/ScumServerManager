@@ -1,0 +1,35 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Office.Items.Misc"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Paper"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Christmas_Box"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Mobile_Phone"
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 30
+}
