@@ -1,5 +1,0 @@
-
-
-[2025-06-18 09:33:24] Client version: 1747702063
-[2025-06-18 09:33:24] [AppID 228980] YldWriteCacheDirectoryToFile - empty vector, deleting 'C:\Servers\steamcmd/userdata/2822439079/228980/remotecache.vdf'
-[2025-06-18 09:33:24] [AppID 228980] YldWriteCacheDirectoryToFile - empty vector, deleting 'C:\Servers\steamcmd/userdata/2822439079/228980/remotecache.vdf'
