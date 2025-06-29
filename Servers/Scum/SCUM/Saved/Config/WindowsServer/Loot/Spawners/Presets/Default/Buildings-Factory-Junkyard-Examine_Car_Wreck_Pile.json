@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.CarWreck"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Garage.VehicleAttachments.Body",
+				"ItemLootTreeNodes.Garage.VehicleAttachments.Doors",
+				"ItemLootTreeNodes.Garage.VehicleAttachments.Pneumatics",
+				"ItemLootTreeNodes.Garage.VehicleAttachments.Seats"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 4,
+	"QuantityMax": 7,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 60,
+	"RandomDamage": 30,
+	"InitialUsage": 60,
+	"RandomUsage": 30
+}

@@ -1,0 +1,45 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Kitchen.Items.Blades",
+				"ItemLootTreeNodes.Kitchen.Items.Dish",
+				"ItemLootTreeNodes.Kitchen.Items.Misc"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Cheese"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "CheesePacked"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Richards_Cheese"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Yeast"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Milk"
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

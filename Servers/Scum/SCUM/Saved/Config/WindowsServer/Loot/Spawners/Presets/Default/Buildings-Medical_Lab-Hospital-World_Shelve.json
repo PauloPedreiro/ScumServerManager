@@ -1,0 +1,38 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Hospital.Clothes"
+			]
+		},
+		{
+			"Rarity": "Abundant",
+			"Ids": [
+				"ItemLootTreeNodes.Hospital.Items"
+			]
+		},
+		{
+			"Rarity": "ExtremelyRare",
+			"Ids": [
+				"ItemLootTreeNodes.Hospital.Other.Backpacks",
+				"ItemLootTreeNodes.Hospital.Other.Money"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sneakers_02_04"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Trucker_Jacket_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jeans_01_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Beenie_07"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

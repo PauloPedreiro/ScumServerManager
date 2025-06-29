@@ -1,0 +1,34 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Pharmacy.Clothes",
+				"ItemLootTreeNodes.Pharmacy.Items"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Misc",
+				"ItemLootTreeNodes.LivingRoom.Items.Melee",
+				"ItemLootTreeNodes.LivingRoom.Other"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 30,
+	"RandomDamage": 50,
+	"InitialUsage": 30,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

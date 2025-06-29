@@ -1,0 +1,31 @@
+{
+	"Items": [
+		{
+			"Rarity": "Common",
+			"Id": "Gas_Mask_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Gas_Mask_02"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Gas_Mask_03"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Gas_Mask_04"
+		}
+	],
+	"Probability": 60,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

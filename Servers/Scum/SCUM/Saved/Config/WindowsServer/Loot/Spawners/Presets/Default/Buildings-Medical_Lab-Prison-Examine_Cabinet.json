@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Pharmacy.Items.Scissors",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Antibiotics",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Bandages",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Charcoal",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Painkillers",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Vitamins",
+				"ItemLootTreeNodes.Pharmacy.Items.FirstAid.Potassium"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 30
+}

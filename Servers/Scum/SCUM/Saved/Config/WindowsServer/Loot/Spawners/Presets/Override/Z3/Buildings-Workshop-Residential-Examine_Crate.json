@@ -1,0 +1,41 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.RepairToolkits",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Rifles",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Other",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Handguns",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Bows",
+				"ItemLootTreeNodes.Workshop.Tools",
+				"ItemLootTreeNodes.Workshop.WorkClothes",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Shotguns"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Farm"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetCashAmount_SmallStash",
+		"SetAmmoAmount_SmallStash"
+	]
+}

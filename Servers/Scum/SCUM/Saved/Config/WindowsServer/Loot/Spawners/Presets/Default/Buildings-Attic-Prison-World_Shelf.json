@@ -1,0 +1,36 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Police.Clothes",
+				"ItemLootTreeNodes.Police.Gear.Attachments.Bayonets",
+				"ItemLootTreeNodes.Police.Gear.Backpacks",
+				"ItemLootTreeNodes.Police.Gear.Attachments.Flashlights",
+				"ItemLootTreeNodes.Police.Weapons.Handguns",
+				"ItemLootTreeNodes.Police.Weapons.Shotguns"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Misc"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 30,
+	"RandomDamage": 50,
+	"InitialUsage": 30,
+	"RandomUsage": 50,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes",
+		"SetAmmoAmount_SmallStash"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_Block21",
+		"Magazine_Block21",
+		"Magazine_Block21",
+		"Cal_45_Ammobox",
+		"Cal_45_Ammobox",
+		"Magazine_Block21",
+		"Cal_45_Ammobox",
+		"WeaponFlashlight_M9",
+		"WeaponSuppressor_45ACP",
+		"Tactical_Handgun_Holster_03"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

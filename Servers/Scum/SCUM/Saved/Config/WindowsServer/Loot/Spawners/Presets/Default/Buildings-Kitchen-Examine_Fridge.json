@@ -1,0 +1,26 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Kitchen.Drinks.Alcoholic.Beers",
+				"ItemLootTreeNodes.Kitchen.Drinks.NonAlcoholic",
+				"ItemLootTreeNodes.Kitchen.Food.Veggies",
+				"ItemLootTreeNodes.Kitchen.Food.Fruit",
+				"ItemLootTreeNodes.Kitchen.Food.Dairy",
+				"ItemLootTreeNodes.Kitchen.Food.CookingIngredients"
+			]
+		}
+	],
+	"Probability": 5,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 25,
+	"InitialUsage": 0,
+	"RandomUsage": 50
+}

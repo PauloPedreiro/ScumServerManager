@@ -1,0 +1,38 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting.Bolts.Bolts",
+				"ItemLootTreeNodes.Workshop.Crafting.Nails.Nails",
+				"ItemLootTreeNodes.Workshop.Crafting.Duct_Tape",
+				"ItemLootTreeNodes.Workshop.Tools.Blades.1H_Scalpel",
+				"ItemLootTreeNodes.Workshop.Tools.Electrical.Batteries",
+				"ItemLootTreeNodes.Workshop.Tools.Electrical.Wire",
+				"ItemLootTreeNodes.Workshop.Tools.Electrical.Wire_Cutters_01",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.1H_Crowbar",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.CanOpener",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Screwdriver_Small",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Wire_Cutters_01",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Saw",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Lockpick_Item",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.Thermometer",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.1H_Metal_Pipe",
+				"ItemLootTreeNodes.Workshop.Crafting.Lead_Plate",
+				"ItemLootTreeNodes.Workshop.Tools.Hand.1H_Pipe_Wrench"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50,
+	"PostSpawnActions": []
+}

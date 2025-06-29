@@ -1,0 +1,102 @@
+
+{
+	"economy-override":
+	{
+		"economy-reset-time-hours" : "-1.0",
+		"prices-randomization-time-hours" : "-1.0",
+		"tradeable-rotation-time-ingame-hours-min" : "48.0",
+		"tradeable-rotation-time-ingame-hours-max" : "96.0",
+		"tradeable-rotation-time-of-day-min" : "8.0",
+		"tradeable-rotation-time-of-day-max" : "16.0",
+		"fully-restock-tradeable-hours" : "2.0",
+		"trader-funds-change-rate-per-hour-multiplier" : "1.0",
+		"prices-subject-to-player-count" : "0",
+		"gold-price-subject-to-global-multiplier" : "1",
+		"gold-base-price" : "-1",
+		"gold-sale-price-modifier" : "-1.0",
+		"gold-price-change-percentage-step" : "-1.0",
+		"gold-price-change-per-step" : "-1.0",
+		"economy-logging" : "1",
+		"traders-unlimited-funds" : "0",
+		"traders-unlimited-stock" : "0",
+		"tradeable-rotation-enabled" : "1",
+		"enable-fame-point-requirement" : "1",
+		"traders" :
+		{ 
+			"A_0_Armory": 
+			[
+				{"tradeable-code" : "Frag_Grenade", "base-purchase-price" : "-1", "base-sell-price" : "-1", "delta-price" : "-1.0", "can-be-purchased" : "default", "required-famepoints" : "-1"},
+				{"tradeable-code" : "Weapon_AK47", "base-purchase-price" : "-1", "base-sell-price" : "-1", "delta-price" : "-1.0", "can-be-purchased" : "default", "required-famepoints" : "-1"}
+			],
+			"A_0_BoatShop":
+			[
+			],
+			"A_0_Hospital":
+			[
+			],
+			"A_0_Mechanic":
+			[
+			],
+			"A_0_Saloon":
+			[
+			],
+			"A_0_Trader":
+			[
+			],
+			"B_4_Armory":
+			[
+			],
+			"B_4_BoatShop":
+			[
+			],
+			"B_4_Hospital":
+			[
+			],
+			"B_4_Mechanic":
+			[
+			],
+			"B_4_Saloon":
+			[
+			],
+			"B_4_Trader":
+			[
+			],
+			"C_2_Armory":
+			[
+			],
+			"C_2_BoatShop":
+			[
+			],
+			"C_2_Hospital":
+			[
+			],
+			"C_2_Mechanic":
+			[
+			],
+			"C_2_Saloon":
+			[
+			],
+			"C_2_Trader":
+			[
+			],
+			"Z_3_Armory":
+			[
+			],
+			"Z_3_BoatShop":
+			[
+			],
+			"Z_3_Hospital":
+			[
+			],
+			"Z_3_Mechanic":
+			[
+			],
+			"Z_3_Saloon":
+			[
+			],
+			"Z_3_Trader":
+			[
+			]
+		}	
+	}
+}

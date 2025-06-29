@@ -1,0 +1,49 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "ExtremelyRare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Weapons.Handguns.M1911s",
+				"ItemLootTreeNodes.Military.Weapons.Handguns.M9s",
+				"ItemLootTreeNodes.Military.Weapons.Handguns.Revolvers",
+				"ItemLootTreeNodes.Military.Weapons.SMGs",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_M1887",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns.Weapon_M1887_Sawed_off"
+			]
+		},
+		{
+			"Rarity": "Abundant",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.Regular.SmallStash",
+				"ItemLootTreeNodes.Military.Ammo.12Gauge.SmallStash"
+			]
+		},
+		{
+			"Rarity": "Common",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Rifles",
+				"ItemLootTreeNodes.Military.Gear.Magazines.SMGs",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives",
+				"ItemLootTreeNodes.Military.Gear.Explosives.Gun_Powder",
+				"ItemLootTreeNodes.Military.Gear.Explosives.Flashbang",
+				"ItemLootTreeNodes.Military.Gear.Explosives.FlareItem",
+				"ItemLootTreeNodes.Military.Gear.Explosives.Smoke_Grenade",
+				"ItemLootTreeNodes.Military.Gear.Explosives.Frag_Grenade",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass",
+				"ItemLootTreeNodes.Military.Gear.Tools.Compass_Advanced"
+			]
+		}
+	],
+	"Probability": 7,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 40,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

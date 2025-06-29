@@ -1,0 +1,33 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Clothes",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Assault",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Holsters",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.WaistBags"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 50,
+	"RandomDamage": 40,
+	"InitialUsage": 50,
+	"RandomUsage": 40,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

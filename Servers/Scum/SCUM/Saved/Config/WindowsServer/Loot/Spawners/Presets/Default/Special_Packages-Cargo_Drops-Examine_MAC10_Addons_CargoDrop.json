@@ -1,0 +1,16 @@
+{
+	"FixedItems": [
+		"Magazine_MAC10",
+		"Magazine_MAC10",
+		"Magazine_MAC10",
+		"Cal_9mm_Ammobox",
+		"Cal_9mm_Ammobox",
+		"Cal_9mm_Ammobox",
+		"WeaponSights_RedDot_CA401B",
+		"ImprovisedRail_Short"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

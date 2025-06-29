@@ -1,0 +1,989 @@
+
+
+[2025-06-18 09:12:26] Startup - updater built Dec  2 2013 18:43:44
+[2025-06-18 09:12:26] Checking for update on startup
+[2025-06-18 09:12:26] Checking for available update...
+[2025-06-18 09:12:26] Download failed: http error 0
+[2025-06-18 09:12:26] Package file steamcmd_public_all.zip.f9b8a84da17473cfb2dec3bb9bc8044f85ab2f32 missing or incorrect size
+[2025-06-18 09:12:26] Package file steamcmd_bins_win32.zip.723c87af8cca74986614865a7f729a28983bb5c8 missing or incorrect size
+[2025-06-18 09:12:26] Package file steamcmd_steamservice_win32.zip.d2ca2da3c5d120ac2497d02dfb4cd79b163a58e3 missing or incorrect size
+[2025-06-18 09:12:26] Package file steamcmd_steamerrorreporter_win32.zip.8dcc6cb02cefa16abbbe5ee37c8d197d1cfe0e3e missing or incorrect size
+[2025-06-18 09:12:26] Package file steamcmd_siteserverui_win32.zip.885feef04941d99d051cbed5dd731c1eadcdf5b2 missing or incorrect size
+[2025-06-18 09:12:26] Package file steamcmd_win32.zip.12764855257e72facb6d61293b1227b774744c65 missing or incorrect size
+[2025-06-18 09:12:26] Downloading update (0 of 53,819 KB)...
+[2025-06-18 09:12:27] Error: Download of package (steamcmd_win32) failed after 0 bytes (0).
+[2025-06-18 09:12:27] Error: Download of package (steamcmd_siteserverui_win32) failed after 0 bytes (0).
+[2025-06-18 09:12:27] Error: Download of package (steamcmd_steamerrorreporter_win32) failed after 0 bytes (0).
+[2025-06-18 09:12:27] Error: Download of package (steamcmd_steamservice_win32) failed after 0 bytes (0).
+[2025-06-18 09:12:27] Error: Download of package (steamcmd_bins_win32) failed after 0 bytes (0).
+[2025-06-18 09:12:27] Error: Download of package (steamcmd_public_all) failed after 0 bytes (0).
+[2025-06-18 09:12:27] Package file steamcmd_public_all.zip.f9b8a84da17473cfb2dec3bb9bc8044f85ab2f32 missing or incorrect size
+[2025-06-18 09:12:27] Package file steamcmd_bins_win32.zip.723c87af8cca74986614865a7f729a28983bb5c8 missing or incorrect size
+[2025-06-18 09:12:27] Package file steamcmd_steamservice_win32.zip.d2ca2da3c5d120ac2497d02dfb4cd79b163a58e3 missing or incorrect size
+[2025-06-18 09:12:27] Package file steamcmd_steamerrorreporter_win32.zip.8dcc6cb02cefa16abbbe5ee37c8d197d1cfe0e3e missing or incorrect size
+[2025-06-18 09:12:27] Package file steamcmd_siteserverui_win32.zip.885feef04941d99d051cbed5dd731c1eadcdf5b2 missing or incorrect size
+[2025-06-18 09:12:27] Package file steamcmd_win32.zip.12764855257e72facb6d61293b1227b774744c65 missing or incorrect size
+[2025-06-18 09:12:27] Downloading update (4,594 of 53,819 KB)...
+[2025-06-18 09:12:27] Downloading update (14,058 of 53,819 KB)...
+[2025-06-18 09:12:27] Downloading update (21,259 of 53,819 KB)...
+[2025-06-18 09:12:28] Downloading update (28,020 of 53,819 KB)...
+[2025-06-18 09:12:28] Downloading update (30,893 of 53,819 KB)...
+[2025-06-18 09:12:28] Downloading update (33,850 of 53,819 KB)...
+[2025-06-18 09:12:29] Downloading update (36,757 of 53,819 KB)...
+[2025-06-18 09:12:29] Downloading update (40,051 of 53,819 KB)...
+[2025-06-18 09:12:29] Downloading update (42,699 of 53,819 KB)...
+[2025-06-18 09:12:29] Downloading update (45,671 of 53,819 KB)...
+[2025-06-18 09:12:30] Downloading update (48,563 of 53,819 KB)...
+[2025-06-18 09:12:30] Downloading update (51,625 of 53,819 KB)...
+[2025-06-18 09:12:31] Downloading update (53,819 of 53,819 KB)...
+[2025-06-18 09:12:31] Download Complete.
+[2025-06-18 09:12:31] uninstalled manifest found in C:\Servers\steamcmd\package\steam_cmd_win32 (1).
+[2025-06-18 09:12:31] Found pending update
+[2025-06-18 09:12:31] Applying update...
+[2025-06-18 09:12:31] Extracting package...
+[2025-06-18 09:12:34] Installing update...
+[2025-06-18 09:12:35] Committing NTFS transaction (0 non-transactional backup files)
+[2025-06-18 09:12:35] Cleaning up...
+[2025-06-18 09:12:35] Update complete, launching...
+[2025-06-18 09:12:35] Shutdown
+
+
+[2025-06-18 09:33:10] Startup - updater built May 19 2025 12:51:56
+[2025-06-18 09:33:10] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-18 09:33:10] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-18 09:33:10] Loading cached metrics from disk (C:\Servers\steamcmd\package\steam_cmd_metrics.bin)
+[2025-06-18 09:33:10] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-18 09:33:10] Using the following download hosts for Public, Realm steamglobal
+[2025-06-18 09:33:10] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-18 09:33:10] Checking for update on startup
+[2025-06-18 09:33:10] Checking for available updates...
+[2025-06-18 09:33:10] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-18 09:33:10] Manifest download: send request
+[2025-06-18 09:33:10] Manifest download: waiting for download to finish
+[2025-06-18 09:33:11] Manifest download: finished
+[2025-06-18 09:33:11] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-18 09:33:11] Nothing to do
+[2025-06-18 09:33:11] Verifying installation...
+[2025-06-18 09:33:11] Verifying all executable checksums
+[2025-06-18 09:33:11] Verification complete
+[2025-06-18 09:33:19] Clearing cached metrics (C:\Servers\steamcmd\package\steam_cmd_metrics.bin)
+[2025-06-18 09:35:58] Shutdown
+
+
+[2025-06-18 09:46:34] Startup - updater built May 19 2025 12:51:56
+[2025-06-18 09:46:34] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-18 09:46:34] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-18 09:46:34] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-18 09:46:34] Using the following download hosts for Public, Realm steamglobal
+[2025-06-18 09:46:34] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-18 09:46:34] Checking for update on startup
+[2025-06-18 09:46:34] Checking for available updates...
+[2025-06-18 09:46:34] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-18 09:46:34] Manifest download: send request
+[2025-06-18 09:46:34] Manifest download: waiting for download to finish
+[2025-06-18 09:46:35] Manifest download: finished
+[2025-06-18 09:46:35] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-18 09:46:35] Nothing to do
+[2025-06-18 09:46:35] Verifying installation...
+[2025-06-18 09:46:35] Verifying all executable checksums
+[2025-06-18 09:46:35] Verification complete
+[2025-06-18 09:46:42] Shutdown
+
+
+[2025-06-18 10:15:24] Startup - updater built May 19 2025 12:51:56
+[2025-06-18 10:15:24] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-18 10:15:24] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-18 10:15:24] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-18 10:15:24] Using the following download hosts for Public, Realm steamglobal
+[2025-06-18 10:15:24] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-18 10:15:24] Checking for update on startup
+[2025-06-18 10:15:24] Checking for available updates...
+[2025-06-18 10:15:24] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-18 10:15:24] Manifest download: send request
+[2025-06-18 10:15:25] Manifest download: waiting for download to finish
+[2025-06-18 10:15:25] Manifest download: finished
+[2025-06-18 10:15:25] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-18 10:15:25] Nothing to do
+[2025-06-18 10:15:25] Verifying installation...
+[2025-06-18 10:15:25] Verifying all executable checksums
+[2025-06-18 10:15:26] Verification complete
+[2025-06-18 10:15:33] Shutdown
+
+
+[2025-06-18 11:08:24] Startup - updater built May 19 2025 12:51:56
+[2025-06-18 11:08:24] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-18 11:08:24] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-18 11:08:24] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-18 11:08:24] Using the following download hosts for Public, Realm steamglobal
+[2025-06-18 11:08:24] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-18 11:08:24] Checking for update on startup
+[2025-06-18 11:08:24] Checking for available updates...
+[2025-06-18 11:08:24] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-18 11:08:24] Manifest download: send request
+[2025-06-18 11:08:25] Manifest download: waiting for download to finish
+[2025-06-18 11:08:25] Manifest download: finished
+[2025-06-18 11:08:25] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-18 11:08:25] Nothing to do
+[2025-06-18 11:08:25] Verifying installation...
+[2025-06-18 11:08:25] Verifying all executable checksums
+[2025-06-18 11:08:25] Verification complete
+[2025-06-18 11:08:31] Shutdown
+
+
+[2025-06-18 20:02:53] Startup - updater built May 19 2025 12:51:56
+[2025-06-18 20:02:53] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-18 20:02:53] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-18 20:02:54] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-18 20:02:54] Using the following download hosts for Public, Realm steamglobal
+[2025-06-18 20:02:54] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-18 20:02:54] Checking for update on startup
+[2025-06-18 20:02:54] Checking for available updates...
+[2025-06-18 20:02:54] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-18 20:02:54] Manifest download: send request
+[2025-06-18 20:02:54] Manifest download: waiting for download to finish
+[2025-06-18 20:02:55] Manifest download: finished
+[2025-06-18 20:02:55] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-18 20:02:55] Nothing to do
+[2025-06-18 20:02:55] Verifying installation...
+[2025-06-18 20:02:55] Verifying all executable checksums
+[2025-06-18 20:02:56] Verification complete
+[2025-06-18 20:03:02] Shutdown
+
+
+[2025-06-19 13:24:33] Startup - updater built May 19 2025 12:51:56
+[2025-06-19 13:24:33] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-19 13:24:33] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-19 13:24:33] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-19 13:24:33] Using the following download hosts for Public, Realm steamglobal
+[2025-06-19 13:24:33] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-19 13:24:33] Checking for update on startup
+[2025-06-19 13:24:34] Checking for available updates...
+[2025-06-19 13:24:34] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-19 13:24:34] Manifest download: send request
+[2025-06-19 13:24:34] Manifest download: waiting for download to finish
+[2025-06-19 13:24:35] Manifest download: finished
+[2025-06-19 13:24:35] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-19 13:24:35] Nothing to do
+[2025-06-19 13:24:35] Verifying installation...
+[2025-06-19 13:24:35] Verifying all executable checksums
+[2025-06-19 13:24:36] Verification complete
+[2025-06-19 13:25:43] Shutdown
+
+
+[2025-06-19 18:55:32] Startup - updater built May 19 2025 12:51:56
+[2025-06-19 18:55:32] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-19 18:55:32] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-19 18:55:32] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-19 18:55:32] Using the following download hosts for Public, Realm steamglobal
+[2025-06-19 18:55:32] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-19 18:55:32] Checking for update on startup
+[2025-06-19 18:55:32] Checking for available updates...
+[2025-06-19 18:55:32] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-19 18:55:32] Manifest download: send request
+[2025-06-19 18:55:33] Manifest download: waiting for download to finish
+[2025-06-19 18:55:33] Manifest download: finished
+[2025-06-19 18:55:33] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-19 18:55:33] Nothing to do
+[2025-06-19 18:55:33] Verifying installation...
+[2025-06-19 18:55:33] Verifying all executable checksums
+[2025-06-19 18:55:34] Verification complete
+[2025-06-19 18:55:41] Shutdown
+
+
+[2025-06-19 20:28:56] Startup - updater built May 19 2025 12:51:56
+[2025-06-19 20:28:56] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-19 20:28:56] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-19 20:28:56] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-19 20:28:56] Using the following download hosts for Public, Realm steamglobal
+[2025-06-19 20:28:56] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-19 20:28:56] Checking for update on startup
+[2025-06-19 20:28:56] Checking for available updates...
+[2025-06-19 20:28:56] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-19 20:28:56] Manifest download: send request
+[2025-06-19 20:28:56] Manifest download: waiting for download to finish
+[2025-06-19 20:28:57] Manifest download: finished
+[2025-06-19 20:28:57] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-19 20:28:57] Nothing to do
+[2025-06-19 20:28:57] Verifying installation...
+[2025-06-19 20:28:57] Verifying all executable checksums
+[2025-06-19 20:28:57] Verification complete
+[2025-06-19 20:29:03] Shutdown
+
+
+[2025-06-20 03:28:26] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 03:28:26] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 03:28:26] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 03:28:26] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 03:28:26] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 03:28:26] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 03:28:26] Checking for update on startup
+[2025-06-20 03:28:26] Checking for available updates...
+[2025-06-20 03:28:26] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 03:28:26] Manifest download: send request
+[2025-06-20 03:28:26] Manifest download: waiting for download to finish
+[2025-06-20 03:28:27] Manifest download: finished
+[2025-06-20 03:28:27] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 03:28:27] Nothing to do
+[2025-06-20 03:28:27] Verifying installation...
+[2025-06-20 03:28:27] Verifying all executable checksums
+[2025-06-20 03:28:27] Verification complete
+[2025-06-20 03:28:33] Shutdown
+
+
+[2025-06-20 11:47:50] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 11:47:50] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 11:47:50] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 11:47:50] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 11:47:50] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 11:47:50] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 11:47:50] Checking for update on startup
+[2025-06-20 11:47:50] Checking for available updates...
+[2025-06-20 11:47:50] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 11:47:50] Manifest download: send request
+[2025-06-20 11:47:50] Manifest download: waiting for download to finish
+[2025-06-20 11:47:51] Manifest download: finished
+[2025-06-20 11:47:51] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 11:47:51] Nothing to do
+[2025-06-20 11:47:51] Verifying installation...
+[2025-06-20 11:47:51] Verifying all executable checksums
+[2025-06-20 11:47:51] Verification complete
+[2025-06-20 11:47:57] Shutdown
+
+
+[2025-06-20 14:38:20] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 14:38:20] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 14:38:20] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 14:38:20] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 14:38:20] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 14:38:20] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 14:38:20] Checking for update on startup
+[2025-06-20 14:38:20] Checking for available updates...
+[2025-06-20 14:38:20] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 14:38:20] Manifest download: send request
+[2025-06-20 14:38:21] Manifest download: waiting for download to finish
+[2025-06-20 14:38:21] Manifest download: finished
+[2025-06-20 14:38:21] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 14:38:21] Nothing to do
+[2025-06-20 14:38:21] Verifying installation...
+[2025-06-20 14:38:21] Verifying all executable checksums
+[2025-06-20 14:38:22] Verification complete
+[2025-06-20 14:38:28] Shutdown
+
+
+[2025-06-20 15:29:03] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 15:29:03] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 15:29:03] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 15:29:03] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 15:29:03] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 15:29:03] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 15:29:03] Checking for update on startup
+[2025-06-20 15:29:03] Checking for available updates...
+[2025-06-20 15:29:03] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 15:29:03] Manifest download: send request
+[2025-06-20 15:29:03] Manifest download: waiting for download to finish
+[2025-06-20 15:29:04] Manifest download: finished
+[2025-06-20 15:29:04] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 15:29:04] Nothing to do
+[2025-06-20 15:29:04] Verifying installation...
+[2025-06-20 15:29:04] Verifying all executable checksums
+[2025-06-20 15:29:05] Verification complete
+[2025-06-20 15:29:11] Shutdown
+
+
+[2025-06-20 17:28:38] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 17:28:38] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 17:28:38] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 17:28:38] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 17:28:38] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 17:28:38] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 17:28:38] Checking for update on startup
+[2025-06-20 17:28:38] Checking for available updates...
+[2025-06-20 17:28:38] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 17:28:38] Manifest download: send request
+[2025-06-20 17:28:38] Manifest download: waiting for download to finish
+[2025-06-20 17:28:38] Manifest download: finished
+[2025-06-20 17:28:38] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 17:28:38] Nothing to do
+[2025-06-20 17:28:38] Verifying installation...
+[2025-06-20 17:28:38] Verifying all executable checksums
+[2025-06-20 17:28:39] Verification complete
+
+
+[2025-06-20 17:28:43] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 17:28:43] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 17:28:43] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 17:28:43] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 17:28:43] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 17:28:43] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 17:28:43] Checking for update on startup
+[2025-06-20 17:28:43] Checking for available updates...
+[2025-06-20 17:28:43] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 17:28:43] Manifest download: send request
+[2025-06-20 17:28:43] Manifest download: waiting for download to finish
+[2025-06-20 17:28:44] Manifest download: finished
+[2025-06-20 17:28:44] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 17:28:44] Nothing to do
+[2025-06-20 17:28:44] Verifying installation...
+[2025-06-20 17:28:44] Verifying all executable checksums
+[2025-06-20 17:28:44] Verification complete
+[2025-06-20 17:28:50] Shutdown
+
+
+[2025-06-20 17:41:37] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 17:41:37] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 17:41:37] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 17:41:37] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 17:41:37] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 17:41:37] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 17:41:37] Checking for update on startup
+[2025-06-20 17:41:37] Checking for available updates...
+[2025-06-20 17:41:37] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 17:41:37] Manifest download: send request
+[2025-06-20 17:41:38] Manifest download: waiting for download to finish
+[2025-06-20 17:41:38] Manifest download: finished
+[2025-06-20 17:41:38] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 17:41:38] Nothing to do
+[2025-06-20 17:41:38] Verifying installation...
+[2025-06-20 17:41:38] Verifying all executable checksums
+[2025-06-20 17:41:38] Verification complete
+[2025-06-20 17:41:43] Shutdown
+
+
+[2025-06-20 23:47:08] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 23:47:08] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 23:47:08] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 23:47:08] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 23:47:08] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 23:47:08] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 23:47:08] Checking for update on startup
+[2025-06-20 23:47:08] Checking for available updates...
+[2025-06-20 23:47:08] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 23:47:08] Manifest download: send request
+[2025-06-20 23:47:08] Manifest download: waiting for download to finish
+[2025-06-20 23:47:09] Manifest download: finished
+[2025-06-20 23:47:09] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 23:47:09] Nothing to do
+[2025-06-20 23:47:09] Verifying installation...
+[2025-06-20 23:47:09] Verifying all executable checksums
+[2025-06-20 23:47:09] Verification complete
+[2025-06-20 23:47:15] Shutdown
+
+
+[2025-06-20 23:56:53] Startup - updater built May 19 2025 12:51:56
+[2025-06-20 23:56:53] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-20 23:56:53] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-20 23:56:53] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-20 23:56:53] Using the following download hosts for Public, Realm steamglobal
+[2025-06-20 23:56:53] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-20 23:56:53] Checking for update on startup
+[2025-06-20 23:56:53] Checking for available updates...
+[2025-06-20 23:56:53] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-20 23:56:53] Manifest download: send request
+[2025-06-20 23:56:54] Manifest download: waiting for download to finish
+[2025-06-20 23:56:54] Manifest download: finished
+[2025-06-20 23:56:54] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-20 23:56:54] Nothing to do
+[2025-06-20 23:56:54] Verifying installation...
+[2025-06-20 23:56:54] Verifying all executable checksums
+[2025-06-20 23:56:54] Verification complete
+[2025-06-20 23:56:59] Shutdown
+
+
+[2025-06-21 00:00:38] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 00:00:38] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 00:00:38] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 00:00:38] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 00:00:38] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 00:00:38] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 00:00:38] Checking for update on startup
+[2025-06-21 00:00:38] Checking for available updates...
+[2025-06-21 00:00:38] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 00:00:38] Manifest download: send request
+[2025-06-21 00:00:38] Manifest download: waiting for download to finish
+[2025-06-21 00:00:39] Manifest download: finished
+[2025-06-21 00:00:39] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 00:00:39] Nothing to do
+[2025-06-21 00:00:39] Verifying installation...
+[2025-06-21 00:00:39] Verifying all executable checksums
+[2025-06-21 00:00:39] Verification complete
+[2025-06-21 00:00:44] Shutdown
+
+
+[2025-06-21 01:31:14] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 01:31:14] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 01:31:14] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 01:31:14] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 01:31:14] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 01:31:14] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 01:31:14] Checking for update on startup
+[2025-06-21 01:31:14] Checking for available updates...
+[2025-06-21 01:31:14] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 01:31:14] Manifest download: send request
+[2025-06-21 01:31:15] Manifest download: waiting for download to finish
+[2025-06-21 01:31:15] Manifest download: finished
+[2025-06-21 01:31:15] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 01:31:15] Nothing to do
+[2025-06-21 01:31:15] Verifying installation...
+[2025-06-21 01:31:15] Verifying all executable checksums
+[2025-06-21 01:31:15] Verification complete
+[2025-06-21 01:31:21] Shutdown
+
+
+[2025-06-21 01:55:04] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 01:55:04] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 01:55:04] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 01:55:04] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 01:55:04] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 01:55:04] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 01:55:04] Checking for update on startup
+[2025-06-21 01:55:04] Checking for available updates...
+[2025-06-21 01:55:04] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 01:55:04] Manifest download: send request
+[2025-06-21 01:55:04] Manifest download: waiting for download to finish
+[2025-06-21 01:55:05] Manifest download: finished
+[2025-06-21 01:55:05] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 01:55:05] Nothing to do
+[2025-06-21 01:55:05] Verifying installation...
+[2025-06-21 01:55:05] Verifying all executable checksums
+[2025-06-21 01:55:05] Verification complete
+[2025-06-21 01:55:10] Shutdown
+
+
+[2025-06-21 02:06:29] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 02:06:29] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 02:06:29] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 02:06:29] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 02:06:29] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 02:06:29] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 02:06:29] Checking for update on startup
+[2025-06-21 02:06:29] Checking for available updates...
+[2025-06-21 02:06:29] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 02:06:29] Manifest download: send request
+[2025-06-21 02:06:29] Manifest download: waiting for download to finish
+[2025-06-21 02:06:30] Manifest download: finished
+[2025-06-21 02:06:30] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 02:06:30] Nothing to do
+[2025-06-21 02:06:30] Verifying installation...
+[2025-06-21 02:06:30] Verifying all executable checksums
+[2025-06-21 02:06:30] Verification complete
+[2025-06-21 02:06:35] Shutdown
+
+
+[2025-06-21 02:20:01] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 02:20:01] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 02:20:01] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 02:20:01] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 02:20:01] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 02:20:01] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 02:20:01] Checking for update on startup
+[2025-06-21 02:20:01] Checking for available updates...
+[2025-06-21 02:20:01] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 02:20:01] Manifest download: send request
+[2025-06-21 02:20:01] Manifest download: waiting for download to finish
+[2025-06-21 02:20:02] Manifest download: finished
+[2025-06-21 02:20:02] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 02:20:02] Nothing to do
+[2025-06-21 02:20:02] Verifying installation...
+[2025-06-21 02:20:02] Verifying all executable checksums
+[2025-06-21 02:20:02] Verification complete
+[2025-06-21 02:20:06] Shutdown
+
+
+[2025-06-21 02:29:37] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 02:29:37] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 02:29:37] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 02:29:37] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 02:29:37] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 02:29:37] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 02:29:37] Checking for update on startup
+[2025-06-21 02:29:37] Checking for available updates...
+[2025-06-21 02:29:37] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 02:29:37] Manifest download: send request
+[2025-06-21 02:29:37] Manifest download: waiting for download to finish
+[2025-06-21 02:29:38] Manifest download: finished
+[2025-06-21 02:29:38] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 02:29:38] Nothing to do
+[2025-06-21 02:29:38] Verifying installation...
+[2025-06-21 02:29:38] Verifying all executable checksums
+[2025-06-21 02:29:38] Verification complete
+[2025-06-21 02:29:43] Shutdown
+
+
+[2025-06-21 02:32:59] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 02:32:59] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 02:32:59] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 02:32:59] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 02:32:59] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 02:32:59] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 02:32:59] Checking for update on startup
+[2025-06-21 02:32:59] Checking for available updates...
+[2025-06-21 02:32:59] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 02:32:59] Manifest download: send request
+[2025-06-21 02:32:59] Manifest download: waiting for download to finish
+[2025-06-21 02:32:59] Manifest download: finished
+[2025-06-21 02:32:59] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 02:32:59] Nothing to do
+[2025-06-21 02:32:59] Verifying installation...
+[2025-06-21 02:32:59] Verifying all executable checksums
+[2025-06-21 02:33:00] Verification complete
+[2025-06-21 02:33:05] Shutdown
+
+
+[2025-06-21 02:39:16] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 02:39:16] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 02:39:16] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 02:39:16] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 02:39:16] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 02:39:16] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 02:39:16] Checking for update on startup
+[2025-06-21 02:39:16] Checking for available updates...
+[2025-06-21 02:39:16] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 02:39:16] Manifest download: send request
+[2025-06-21 02:39:17] Manifest download: waiting for download to finish
+[2025-06-21 02:39:17] Manifest download: finished
+[2025-06-21 02:39:17] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 02:39:17] Nothing to do
+[2025-06-21 02:39:17] Verifying installation...
+[2025-06-21 02:39:17] Verifying all executable checksums
+[2025-06-21 02:39:17] Verification complete
+[2025-06-21 02:39:23] Shutdown
+
+
+[2025-06-21 03:03:33] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 03:03:33] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 03:03:33] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 03:03:33] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 03:03:33] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 03:03:33] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 03:03:33] Checking for update on startup
+[2025-06-21 03:03:33] Checking for available updates...
+[2025-06-21 03:03:33] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 03:03:33] Manifest download: send request
+[2025-06-21 03:03:34] Manifest download: waiting for download to finish
+[2025-06-21 03:03:34] Manifest download: finished
+[2025-06-21 03:03:34] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 03:03:34] Nothing to do
+[2025-06-21 03:03:34] Verifying installation...
+[2025-06-21 03:03:34] Verifying all executable checksums
+[2025-06-21 03:03:34] Verification complete
+[2025-06-21 03:03:40] Shutdown
+
+
+[2025-06-21 03:22:49] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 03:22:49] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 03:22:49] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 03:22:49] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 03:22:49] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 03:22:49] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 03:22:49] Checking for update on startup
+[2025-06-21 03:22:49] Checking for available updates...
+[2025-06-21 03:22:49] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 03:22:49] Manifest download: send request
+[2025-06-21 03:22:49] Manifest download: waiting for download to finish
+[2025-06-21 03:22:50] Manifest download: finished
+[2025-06-21 03:22:50] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 03:22:50] Nothing to do
+[2025-06-21 03:22:50] Verifying installation...
+[2025-06-21 03:22:50] Verifying all executable checksums
+[2025-06-21 03:22:50] Verification complete
+[2025-06-21 03:22:56] Shutdown
+
+
+[2025-06-21 03:58:37] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 03:58:37] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 03:58:37] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 03:58:38] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 03:58:38] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 03:58:38] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 03:58:38] Checking for update on startup
+[2025-06-21 03:58:38] Checking for available updates...
+[2025-06-21 03:58:38] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 03:58:38] Manifest download: send request
+[2025-06-21 03:58:38] Manifest download: waiting for download to finish
+[2025-06-21 03:58:38] Manifest download: finished
+[2025-06-21 03:58:38] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 03:58:38] Nothing to do
+[2025-06-21 03:58:38] Verifying installation...
+[2025-06-21 03:58:38] Verifying all executable checksums
+[2025-06-21 03:58:39] Verification complete
+[2025-06-21 03:58:44] Shutdown
+
+
+[2025-06-21 12:00:09] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 12:00:09] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 12:00:09] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 12:00:09] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 12:00:09] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 12:00:09] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 12:00:09] Checking for update on startup
+[2025-06-21 12:00:09] Checking for available updates...
+[2025-06-21 12:00:09] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 12:00:09] Manifest download: send request
+[2025-06-21 12:00:09] Manifest download: waiting for download to finish
+[2025-06-21 12:00:10] Manifest download: finished
+[2025-06-21 12:00:10] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 12:00:10] Nothing to do
+[2025-06-21 12:00:10] Verifying installation...
+[2025-06-21 12:00:10] Verifying all executable checksums
+[2025-06-21 12:00:10] Verification complete
+[2025-06-21 12:00:16] Shutdown
+
+
+[2025-06-21 20:06:11] Startup - updater built May 19 2025 12:51:56
+[2025-06-21 20:06:11] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-21 20:06:11] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-21 20:06:11] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-21 20:06:11] Using the following download hosts for Public, Realm steamglobal
+[2025-06-21 20:06:11] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-21 20:06:11] Checking for update on startup
+[2025-06-21 20:06:11] Checking for available updates...
+[2025-06-21 20:06:11] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-21 20:06:11] Manifest download: send request
+[2025-06-21 20:06:11] Manifest download: waiting for download to finish
+[2025-06-21 20:06:11] Manifest download: finished
+[2025-06-21 20:06:11] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-21 20:06:11] Nothing to do
+[2025-06-21 20:06:11] Verifying installation...
+[2025-06-21 20:06:11] Verifying all executable checksums
+[2025-06-21 20:06:14] Verification complete
+[2025-06-21 20:06:20] Shutdown
+
+
+[2025-06-22 01:54:52] Startup - updater built May 19 2025 12:51:56
+[2025-06-22 01:54:52] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-22 01:54:52] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-22 01:54:52] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-22 01:54:52] Using the following download hosts for Public, Realm steamglobal
+[2025-06-22 01:54:52] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-22 01:54:52] Checking for update on startup
+[2025-06-22 01:54:52] Checking for available updates...
+[2025-06-22 01:54:52] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-22 01:54:52] Manifest download: send request
+[2025-06-22 01:54:53] Manifest download: waiting for download to finish
+[2025-06-22 01:54:53] Manifest download: finished
+[2025-06-22 01:54:53] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-22 01:54:53] Nothing to do
+[2025-06-22 01:54:53] Verifying installation...
+[2025-06-22 01:54:53] Verifying all executable checksums
+[2025-06-22 01:54:53] Verification complete
+[2025-06-22 01:54:59] Shutdown
+
+
+[2025-06-22 02:43:17] Startup - updater built May 19 2025 12:51:56
+[2025-06-22 02:43:17] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-22 02:43:17] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-22 02:43:17] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-22 02:43:17] Using the following download hosts for Public, Realm steamglobal
+[2025-06-22 02:43:17] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-22 02:43:17] Checking for update on startup
+[2025-06-22 02:43:17] Checking for available updates...
+[2025-06-22 02:43:17] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-22 02:43:17] Manifest download: send request
+[2025-06-22 02:43:17] Manifest download: waiting for download to finish
+[2025-06-22 02:43:18] Manifest download: finished
+[2025-06-22 02:43:18] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-22 02:43:18] Nothing to do
+[2025-06-22 02:43:18] Verifying installation...
+[2025-06-22 02:43:18] Verifying all executable checksums
+[2025-06-22 02:43:18] Verification complete
+[2025-06-22 02:43:25] Shutdown
+
+
+[2025-06-22 13:02:35] Startup - updater built May 19 2025 12:51:56
+[2025-06-22 13:02:35] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-22 13:02:35] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-22 13:02:35] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-22 13:02:35] Using the following download hosts for Public, Realm steamglobal
+[2025-06-22 13:02:35] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-22 13:02:35] Checking for update on startup
+[2025-06-22 13:02:35] Checking for available updates...
+[2025-06-22 13:02:35] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-22 13:02:35] Manifest download: send request
+[2025-06-22 13:02:35] Manifest download: waiting for download to finish
+[2025-06-22 13:02:36] Manifest download: finished
+[2025-06-22 13:02:36] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-22 13:02:36] Nothing to do
+[2025-06-22 13:02:36] Verifying installation...
+[2025-06-22 13:02:36] Verifying all executable checksums
+[2025-06-22 13:02:36] Verification complete
+[2025-06-22 13:02:42] Shutdown
+
+
+[2025-06-22 17:02:52] Startup - updater built May 19 2025 12:51:56
+[2025-06-22 17:02:52] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-22 17:02:52] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-22 17:02:52] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-22 17:02:52] Using the following download hosts for Public, Realm steamglobal
+[2025-06-22 17:02:52] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-22 17:02:52] Checking for update on startup
+[2025-06-22 17:02:52] Checking for available updates...
+[2025-06-22 17:02:52] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-22 17:02:52] Manifest download: send request
+[2025-06-22 17:02:52] Manifest download: waiting for download to finish
+[2025-06-22 17:02:53] Manifest download: finished
+[2025-06-22 17:02:53] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-22 17:02:53] Nothing to do
+[2025-06-22 17:02:53] Verifying installation...
+[2025-06-22 17:02:53] Verifying all executable checksums
+[2025-06-22 17:02:54] Verification complete
+[2025-06-22 17:03:00] Shutdown
+
+
+[2025-06-22 21:02:12] Startup - updater built May 19 2025 12:51:56
+[2025-06-22 21:02:12] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-22 21:02:12] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-22 21:02:12] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-22 21:02:12] Using the following download hosts for Public, Realm steamglobal
+[2025-06-22 21:02:12] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-22 21:02:12] Checking for update on startup
+[2025-06-22 21:02:12] Checking for available updates...
+[2025-06-22 21:02:12] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-22 21:02:12] Manifest download: send request
+[2025-06-22 21:02:12] Manifest download: waiting for download to finish
+[2025-06-22 21:02:13] Manifest download: finished
+[2025-06-22 21:02:13] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-22 21:02:13] Nothing to do
+[2025-06-22 21:02:13] Verifying installation...
+[2025-06-22 21:02:13] Verifying all executable checksums
+[2025-06-22 21:02:14] Verification complete
+[2025-06-22 21:02:20] Shutdown
+
+
+[2025-06-23 01:26:14] Startup - updater built May 19 2025 12:51:56
+[2025-06-23 01:26:14] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-23 01:26:14] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-23 01:26:14] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-23 01:26:14] Using the following download hosts for Public, Realm steamglobal
+[2025-06-23 01:26:14] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-23 01:26:14] Checking for update on startup
+[2025-06-23 01:26:14] Checking for available updates...
+[2025-06-23 01:26:14] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-23 01:26:14] Manifest download: send request
+[2025-06-23 01:26:15] Manifest download: waiting for download to finish
+[2025-06-23 01:26:15] Manifest download: finished
+[2025-06-23 01:26:15] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-23 01:26:15] Nothing to do
+[2025-06-23 01:26:15] Verifying installation...
+[2025-06-23 01:26:15] Verifying all executable checksums
+[2025-06-23 01:26:15] Verification complete
+[2025-06-23 01:26:21] Shutdown
+
+
+[2025-06-23 09:25:19] Startup - updater built May 19 2025 12:51:56
+[2025-06-23 09:25:19] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-23 09:25:19] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-23 09:25:19] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-23 09:25:19] Using the following download hosts for Public, Realm steamglobal
+[2025-06-23 09:25:19] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-23 09:25:19] Checking for update on startup
+[2025-06-23 09:25:19] Checking for available updates...
+[2025-06-23 09:25:19] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-23 09:25:19] Manifest download: send request
+[2025-06-23 09:25:19] Manifest download: waiting for download to finish
+[2025-06-23 09:25:20] Manifest download: finished
+[2025-06-23 09:25:20] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-23 09:25:20] Nothing to do
+[2025-06-23 09:25:20] Verifying installation...
+[2025-06-23 09:25:20] Verifying all executable checksums
+[2025-06-23 09:25:20] Verification complete
+[2025-06-23 09:25:26] Shutdown
+
+
+[2025-06-23 16:10:22] Startup - updater built May 19 2025 12:51:56
+[2025-06-23 16:10:22] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-23 16:10:22] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-23 16:10:22] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-23 16:10:22] Using the following download hosts for Public, Realm steamglobal
+[2025-06-23 16:10:22] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-23 16:10:22] Checking for update on startup
+[2025-06-23 16:10:22] Checking for available updates...
+[2025-06-23 16:10:22] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-23 16:10:22] Manifest download: send request
+[2025-06-23 16:10:22] Manifest download: waiting for download to finish
+[2025-06-23 16:10:22] Manifest download: finished
+[2025-06-23 16:10:22] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-23 16:10:22] Nothing to do
+[2025-06-23 16:10:22] Verifying installation...
+[2025-06-23 16:10:22] Verifying all executable checksums
+[2025-06-23 16:10:24] Verification complete
+[2025-06-23 16:10:30] Shutdown
+
+
+[2025-06-23 17:02:42] Startup - updater built May 19 2025 12:51:56
+[2025-06-23 17:02:42] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-23 17:02:42] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-23 17:02:42] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-23 17:02:42] Using the following download hosts for Public, Realm steamglobal
+[2025-06-23 17:02:42] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-23 17:02:42] Checking for update on startup
+[2025-06-23 17:02:42] Checking for available updates...
+[2025-06-23 17:02:42] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-23 17:02:42] Manifest download: send request
+[2025-06-23 17:02:42] Manifest download: waiting for download to finish
+[2025-06-23 17:02:43] Manifest download: finished
+[2025-06-23 17:02:43] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-23 17:02:43] Nothing to do
+[2025-06-23 17:02:43] Verifying installation...
+[2025-06-23 17:02:43] Verifying all executable checksums
+[2025-06-23 17:02:43] Verification complete
+[2025-06-23 17:02:49] Shutdown
+
+
+[2025-06-23 21:02:59] Startup - updater built May 19 2025 12:51:56
+[2025-06-23 21:02:59] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-23 21:02:59] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-23 21:02:59] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-23 21:02:59] Using the following download hosts for Public, Realm steamglobal
+[2025-06-23 21:02:59] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-23 21:02:59] Checking for update on startup
+[2025-06-23 21:02:59] Checking for available updates...
+[2025-06-23 21:02:59] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-23 21:02:59] Manifest download: send request
+[2025-06-23 21:02:59] Manifest download: waiting for download to finish
+[2025-06-23 21:03:00] Manifest download: finished
+[2025-06-23 21:03:00] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-23 21:03:00] Nothing to do
+[2025-06-23 21:03:00] Verifying installation...
+[2025-06-23 21:03:00] Verifying all executable checksums
+[2025-06-23 21:03:01] Verification complete
+[2025-06-23 21:03:06] Shutdown
+
+
+[2025-06-24 13:02:17] Startup - updater built May 19 2025 12:51:56
+[2025-06-24 13:02:17] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-24 13:02:17] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-24 13:02:17] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-24 13:02:17] Using the following download hosts for Public, Realm steamglobal
+[2025-06-24 13:02:17] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-24 13:02:17] Checking for update on startup
+[2025-06-24 13:02:17] Checking for available updates...
+[2025-06-24 13:02:17] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-24 13:02:17] Manifest download: send request
+[2025-06-24 13:02:17] Manifest download: waiting for download to finish
+[2025-06-24 13:02:18] Manifest download: finished
+[2025-06-24 13:02:18] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-24 13:02:18] Nothing to do
+[2025-06-24 13:02:18] Verifying installation...
+[2025-06-24 13:02:18] Verifying all executable checksums
+[2025-06-24 13:02:18] Verification complete
+[2025-06-24 13:02:24] Shutdown
+
+
+[2025-06-24 17:02:34] Startup - updater built May 19 2025 12:51:56
+[2025-06-24 17:02:34] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-24 17:02:34] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-24 17:02:34] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-24 17:02:34] Using the following download hosts for Public, Realm steamglobal
+[2025-06-24 17:02:34] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-24 17:02:34] Checking for update on startup
+[2025-06-24 17:02:34] Checking for available updates...
+[2025-06-24 17:02:34] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-24 17:02:34] Manifest download: send request
+[2025-06-24 17:02:34] Manifest download: waiting for download to finish
+[2025-06-24 17:02:35] Manifest download: finished
+[2025-06-24 17:02:35] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-24 17:02:35] Nothing to do
+[2025-06-24 17:02:35] Verifying installation...
+[2025-06-24 17:02:35] Verifying all executable checksums
+[2025-06-24 17:02:36] Verification complete
+[2025-06-24 17:02:42] Shutdown
+
+
+[2025-06-24 21:02:53] Startup - updater built May 19 2025 12:51:56
+[2025-06-24 21:02:53] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-24 21:02:53] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-24 21:02:53] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-24 21:02:53] Using the following download hosts for Public, Realm steamglobal
+[2025-06-24 21:02:53] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-24 21:02:53] Checking for update on startup
+[2025-06-24 21:02:53] Checking for available updates...
+[2025-06-24 21:02:53] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-24 21:02:53] Manifest download: send request
+[2025-06-24 21:02:53] Manifest download: waiting for download to finish
+[2025-06-24 21:02:54] Manifest download: finished
+[2025-06-24 21:02:54] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-24 21:02:54] Nothing to do
+[2025-06-24 21:02:54] Verifying installation...
+[2025-06-24 21:02:54] Verifying all executable checksums
+[2025-06-24 21:02:55] Verification complete
+[2025-06-24 21:03:02] Shutdown
+
+
+[2025-06-25 13:02:13] Startup - updater built May 19 2025 12:51:56
+[2025-06-25 13:02:13] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-25 13:02:13] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-25 13:02:13] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-25 13:02:13] Using the following download hosts for Public, Realm steamglobal
+[2025-06-25 13:02:13] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-25 13:02:13] Checking for update on startup
+[2025-06-25 13:02:13] Checking for available updates...
+[2025-06-25 13:02:13] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-25 13:02:13] Manifest download: send request
+[2025-06-25 13:02:13] Manifest download: waiting for download to finish
+[2025-06-25 13:02:14] Manifest download: finished
+[2025-06-25 13:02:14] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-25 13:02:14] Nothing to do
+[2025-06-25 13:02:14] Verifying installation...
+[2025-06-25 13:02:14] Verifying all executable checksums
+[2025-06-25 13:02:14] Verification complete
+[2025-06-25 13:02:22] Shutdown
+
+
+[2025-06-25 15:36:14] Startup - updater built May 19 2025 12:51:56
+[2025-06-25 15:36:14] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-25 15:36:14] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-25 15:36:14] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-25 15:36:14] Using the following download hosts for Public, Realm steamglobal
+[2025-06-25 15:36:14] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-25 15:36:14] Checking for update on startup
+[2025-06-25 15:36:14] Checking for available updates...
+[2025-06-25 15:36:14] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-25 15:36:14] Manifest download: send request
+[2025-06-25 15:36:15] Manifest download: waiting for download to finish
+[2025-06-25 15:36:15] Manifest download: finished
+[2025-06-25 15:36:15] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-25 15:36:15] Nothing to do
+[2025-06-25 15:36:15] Verifying installation...
+[2025-06-25 15:36:15] Verifying all executable checksums
+[2025-06-25 15:36:17] Verification complete
+[2025-06-25 15:36:23] Shutdown
+
+
+[2025-06-25 17:02:36] Startup - updater built May 19 2025 12:51:56
+[2025-06-25 17:02:36] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-25 17:02:36] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-25 17:02:36] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-25 17:02:36] Using the following download hosts for Public, Realm steamglobal
+[2025-06-25 17:02:36] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-25 17:02:36] Checking for update on startup
+[2025-06-25 17:02:36] Checking for available updates...
+[2025-06-25 17:02:36] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-25 17:02:36] Manifest download: send request
+[2025-06-25 17:02:36] Manifest download: waiting for download to finish
+[2025-06-25 17:02:37] Manifest download: finished
+[2025-06-25 17:02:37] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-25 17:02:37] Nothing to do
+[2025-06-25 17:02:37] Verifying installation...
+[2025-06-25 17:02:37] Verifying all executable checksums
+[2025-06-25 17:02:37] Verification complete
+[2025-06-25 17:02:42] Shutdown
+
+
+[2025-06-25 21:02:52] Startup - updater built May 19 2025 12:51:56
+[2025-06-25 21:02:52] Startup - Steam Client launched with: "C:\Servers\steamcmd\steamcmd.exe"  +force_install_dir "C:\Servers\Scum"  <+42 truncated>
+[2025-06-25 21:02:52] Windows 10.0.20348.0, 0, 2, 272, 3, 7 
+[2025-06-25 21:02:52] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2025-06-25 21:02:52] Using the following download hosts for Public, Realm steamglobal
+[2025-06-25 21:02:52] 1. https://client-update.steamstatic.com, /, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2025-06-25 21:02:52] Checking for update on startup
+[2025-06-25 21:02:52] Checking for available updates...
+[2025-06-25 21:02:52] Downloading manifest: https://client-update.steamstatic.com/steam_cmd_win32
+[2025-06-25 21:02:52] Manifest download: send request
+[2025-06-25 21:02:52] Manifest download: waiting for download to finish
+[2025-06-25 21:02:53] Manifest download: finished
+[2025-06-25 21:02:53] Download skipped: /steam_cmd_win32 version 1747702063, installed version 1747702063, existing pending version 0
+[2025-06-25 21:02:53] Nothing to do
+[2025-06-25 21:02:53] Verifying installation...
+[2025-06-25 21:02:53] Verifying all executable checksums
+[2025-06-25 21:02:54] Verification complete
+[2025-06-25 21:03:01] Shutdown

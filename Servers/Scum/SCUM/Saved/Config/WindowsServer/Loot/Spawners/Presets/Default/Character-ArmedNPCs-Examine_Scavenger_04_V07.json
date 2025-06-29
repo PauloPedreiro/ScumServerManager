@@ -1,0 +1,50 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "WW2_German_Helmet_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Halloween_Mask_Lecter_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Bulletproof_Armor"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Negan_Jacket"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Backpack_02_05"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Working_pants_01_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tactical_Handgun_Holster_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Waist_Bag_Small_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "MilitaryBoots_JNA"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

@@ -1,0 +1,41 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items",
+				"ItemLootTreeNodes.LivingRoom.Other"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Clothes",
+				"ItemLootTreeNodes.Military.FoodDrink",
+				"ItemLootTreeNodes.Military.Gear.Armor.Vests.Stabproof",
+				"ItemLootTreeNodes.Military.Gear.Armor.Helmets.Combat",
+				"ItemLootTreeNodes.Military.Gear.Attachments",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Assault",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Holsters",
+				"ItemLootTreeNodes.Military.Gear.Tools"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20,
+	"PostSpawnActions": [
+		"SetCashAmount_SmallStash",
+		"SetClothesDirtiness_ResidentialClothes",
+		"SetCashAmount_SmallStash"
+	]
+}

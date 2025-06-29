@@ -1,0 +1,24 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Clothes.Feet.Sportswear",
+				"ItemLootTreeNodes.Military.Clothes.Legs.Underwear",
+				"ItemLootTreeNodes.Military.Clothes.Legs.ShortTrousers",
+				"ItemLootTreeNodes.Military.Clothes.Torso.MilitaryShirts"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

@@ -1,0 +1,30 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.FoodStore.Drinks",
+				"ItemLootTreeNodes.FoodStore.Food.CookingIngredients",
+				"ItemLootTreeNodes.FoodStore.Food.Cans",
+				"ItemLootTreeNodes.FoodStore.Food.Dairy",
+				"ItemLootTreeNodes.FoodStore.Food.Fruit",
+				"ItemLootTreeNodes.FoodStore.Food.Snacks",
+				"ItemLootTreeNodes.FoodStore.Food.Veggies",
+				"ItemLootTreeNodes.FoodStore.Items",
+				"ItemLootTreeNodes.FoodStore.Other",
+				"ItemLootTreeNodes.FoodStore.Food.Condiments"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 30
+}

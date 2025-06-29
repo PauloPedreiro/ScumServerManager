@@ -1,0 +1,26 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.CoalMine.Other.Ammo.12Gauge",
+				"ItemLootTreeNodes.CoalMine.Other.Ammo.Regular",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.WaistBags",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.Plain",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks.Hiking.Camo",
+				"ItemLootTreeNodes.CoalMine.Other.Flares"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 15,
+	"RandomDamage": 40,
+	"InitialUsage": 15,
+	"RandomUsage": 40
+}

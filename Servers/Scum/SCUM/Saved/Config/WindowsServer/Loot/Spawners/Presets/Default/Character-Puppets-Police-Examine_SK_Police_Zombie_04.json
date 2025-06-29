@@ -1,0 +1,37 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "MilitaryPants_09"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Police_Gloves_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boots_06_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Police_Mask_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Police_Jacket_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 93,
+	"RandomDamage": 3,
+	"InitialUsage": 93,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

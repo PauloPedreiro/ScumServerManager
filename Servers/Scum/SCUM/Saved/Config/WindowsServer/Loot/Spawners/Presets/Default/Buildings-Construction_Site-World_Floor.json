@@ -1,0 +1,32 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Masonry.Other.Ammo",
+				"ItemLootTreeNodes.Masonry.Other.Backpacks",
+				"ItemLootTreeNodes.Masonry.Other.Flares",
+				"ItemLootTreeNodes.Masonry.Other.Money",
+				"ItemLootTreeNodes.Masonry.Repair",
+				"ItemLootTreeNodes.Masonry.Tools",
+				"ItemLootTreeNodes.Masonry.WorkClothes",
+				"ItemLootTreeNodes.Masonry.LightsFire",
+				"ItemLootTreeNodes.Masonry.Crafting"
+			]
+		}
+	],
+	"Probability": 30,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 30,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DirtyClothes"
+	]
+}

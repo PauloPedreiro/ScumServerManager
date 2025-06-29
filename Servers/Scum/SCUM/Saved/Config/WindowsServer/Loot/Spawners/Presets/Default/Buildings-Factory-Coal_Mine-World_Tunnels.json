@@ -1,0 +1,35 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.CoalMine.Crafting",
+				"ItemLootTreeNodes.CoalMine.LightsFire",
+				"ItemLootTreeNodes.CoalMine.Repair",
+				"ItemLootTreeNodes.CoalMine.Tools",
+				"ItemLootTreeNodes.CoalMine.WorkClothes",
+				"ItemLootTreeNodes.CoalMine.Other.Ammo",
+				"ItemLootTreeNodes.CoalMine.Other.Backpacks",
+				"ItemLootTreeNodes.CoalMine.Other.Flares",
+				"ItemLootTreeNodes.CoalMine.Other.Money"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Abundant",
+			"Id": "Coal_01"
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

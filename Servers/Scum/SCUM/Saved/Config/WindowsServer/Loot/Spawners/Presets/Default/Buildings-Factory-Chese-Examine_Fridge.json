@@ -1,0 +1,26 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Kitchen.Drinks.NonAlcoholic.Milk",
+				"ItemLootTreeNodes.Kitchen.Food.CookingIngredients.Yeast",
+				"ItemLootTreeNodes.Kitchen.Food.Dairy.Cheese",
+				"ItemLootTreeNodes.Kitchen.Food.Dairy.Butter",
+				"ItemLootTreeNodes.Kitchen.Food.Dairy.Richards_Cheese",
+				"ItemLootTreeNodes.Kitchen.Food.Dairy.CheesePacked"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

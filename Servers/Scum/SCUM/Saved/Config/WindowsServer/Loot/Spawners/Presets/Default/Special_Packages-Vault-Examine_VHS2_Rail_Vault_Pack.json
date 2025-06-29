@@ -1,0 +1,13 @@
+{
+	"FixedItems": [
+		"Weapon_VHS2",
+		"Gas_Mask_02",
+		"WeaponGhillie_Woodland",
+		"WeaponSights_RedDot_CA401B",
+		"WeaponGhillie_Woodland"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

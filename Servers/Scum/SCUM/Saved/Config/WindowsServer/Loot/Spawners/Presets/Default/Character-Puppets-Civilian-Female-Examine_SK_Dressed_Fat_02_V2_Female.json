@@ -1,0 +1,25 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "RH_Jacket"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Shorts_Pants_01_04"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 93,
+	"RandomDamage": 3,
+	"InitialUsage": 93,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Bathroom.Items.Fabric",
+				"ItemLootTreeNodes.Bathroom.Items.Scissors"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Misc.Battery",
+				"ItemLootTreeNodes.LivingRoom.Items.Misc.Cigarettes",
+				"ItemLootTreeNodes.LivingRoom.Items.Misc.Fabric"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Soap"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_shirt_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_pants"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Inmate_Hoodie_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Undershirt_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sock_01"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Isopropyl_alcohol"
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

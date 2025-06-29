@@ -1,0 +1,34 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Quarry.Crafting",
+				"ItemLootTreeNodes.Quarry.Tools.Heavy",
+				"ItemLootTreeNodes.Quarry.WorkClothes.Torso",
+				"ItemLootTreeNodes.Quarry.WorkClothes.Legs",
+				"ItemLootTreeNodes.Quarry.WorkClothes.Feet",
+				"ItemLootTreeNodes.Quarry.Other.Ammo",
+				"ItemLootTreeNodes.Quarry.Other.Explosives",
+				"ItemLootTreeNodes.Quarry.Other.Flares",
+				"ItemLootTreeNodes.Quarry.Other.Money",
+				"ItemLootTreeNodes.Quarry.Other.Backpacks.Belt_Pistol_Holster",
+				"ItemLootTreeNodes.Quarry.Other.Backpacks.Hiking.Other",
+				"ItemLootTreeNodes.Quarry.Other.Backpacks.Plain",
+				"ItemLootTreeNodes.Quarry.Other.Backpacks.School",
+				"ItemLootTreeNodes.Quarry.Other.Backpacks.WaistBags"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 5,
+	"RandomDamage": 35,
+	"InitialUsage": 5,
+	"RandomUsage": 35
+}

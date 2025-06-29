@@ -132,6 +132,7 @@ ScumServerManager/
 - Edite `ServerSettings.ini` com interface amigável
 - Configure porta, nome, senha, etc.
 - Validação automática de campos
+- **Estilo de Jogo**: Agora selecionado por menu suspenso (PVE ou PVP), evitando erros de digitação
 
 ### 4. Configurações do Jogo
 - Gerencie `GameUserSettings.ini`

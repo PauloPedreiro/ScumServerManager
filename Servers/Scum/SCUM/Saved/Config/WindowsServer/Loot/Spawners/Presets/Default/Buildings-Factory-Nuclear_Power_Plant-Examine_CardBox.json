@@ -1,0 +1,31 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Tools",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Workshop.Other.Flares",
+				"ItemLootTreeNodes.Workshop.Other.FoodAndDrink",
+				"ItemLootTreeNodes.Workshop.Other.Weapons.Handguns",
+				"ItemLootTreeNodes.Workshop.Other.Ammo.Regular.SmallStash",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Hands.ConstructionGloves",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Head.EarProtection",
+				"ItemLootTreeNodes.Workshop.WorkClothes.Head.Goggles"
+			]
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 30,
+	"RandomDamage": 40,
+	"InitialUsage": 30,
+	"RandomUsage": 40
+}

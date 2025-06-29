@@ -21,7 +21,8 @@ import {
   TableHead,
   TableRow,
   Paper,
-  IconButton
+  IconButton,
+  Divider
 } from '@mui/material';
 import {
   ExpandMore as ExpandMoreIcon,
@@ -46,13 +47,36 @@ const traderKeys = [
 
 const EconomySettings: React.FC<EconomySettingsProps> = ({ showNotification }) => {
   const { config, loading, saveConfig } = useServerConfig();
+  if (config) {
+    console.log('Config recebido:', config);
+    console.log('economyConfig:', config.economyConfig);
+  }
   const [localConfig, setLocalConfig] = useState<any>(null);
   const [saving, setSaving] = useState(false);
   const [selectedTrader, setSelectedTrader] = useState<string>('A_0_Armory');
 
   React.useEffect(() => {
-    if (config?.economyConfig) {
-      setLocalConfig(JSON.parse(JSON.stringify(config.economyConfig)));
+    const eco = config?.economyConfig?.['economy-override'] || config?.['economy-override'];
+    if (eco) {
+      function mapTradeableItemFromJson(item: any) {
+        return {
+          tradeableCode: item['tradeable-code'] || '',
+          basePurchasePrice: Number(item['base-purchase-price']) || 0,
+          baseSellPrice: Number(item['base-sell-price']) || 0,
+          deltaPrice: Number(item['delta-price']) || 0,
+          canBePurchased: item['can-be-purchased'] || 'default',
+          requiredFamepoints: Number(item['required-famepoints']) || 0,
+        };
+      }
+      const economyConfig = JSON.parse(JSON.stringify(eco));
+      if (economyConfig.traders) {
+        Object.entries(economyConfig.traders).forEach(([trader, items]) => {
+          if (Array.isArray(items)) {
+            economyConfig.traders[trader] = items.map(mapTradeableItemFromJson);
+          }
+        });
+      }
+      setLocalConfig(economyConfig);
     }
   }, [config]);
 
@@ -132,6 +156,15 @@ const EconomySettings: React.FC<EconomySettingsProps> = ({ showNotification }) =
       </Box>
     );
   }
+
+  if (!localConfig.traders) {
+    localConfig.traders = {};
+  }
+  traderKeys.forEach(key => {
+    if (!localConfig.traders[key]) {
+      localConfig.traders[key] = [];
+    }
+  });
 
   return (
     <Box>

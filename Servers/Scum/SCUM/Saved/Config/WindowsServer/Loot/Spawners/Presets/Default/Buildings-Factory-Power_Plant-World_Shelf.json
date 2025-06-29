@@ -1,0 +1,31 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.WorkClothes",
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Other.Ammo",
+				"ItemLootTreeNodes.Workshop.Other.Flares",
+				"ItemLootTreeNodes.Workshop.Other.FoodAndDrink",
+				"ItemLootTreeNodes.Workshop.Other.Money",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Belt_Pistol_Holster",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Hiking.Other",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Plain",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.School",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.WaistBags"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30
+}

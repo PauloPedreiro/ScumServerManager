@@ -1,0 +1,28 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.12Gauge",
+				"ItemLootTreeNodes.Military.Ammo.Regular",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Bayonets",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Flashlights",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Rifles",
+				"ItemLootTreeNodes.Military.Gear.Tools.Knives",
+				"ItemLootTreeNodes.Military.Gear.Explosives"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 15,
+	"RandomDamage": 15,
+	"InitialUsage": 10,
+	"RandomUsage": 20
+}

@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"Weapon_M16A4",
+		"Magazine_M16",
+		"Magazine_M16",
+		"Cal_5_56x45mm_Ammobox",
+		"Cal_5_56x45mm_Ammobox",
+		"MilitaryPants_01",
+		"CombatBoots",
+		"Tactical_Jacket_01_03",
+		"M1_Vietnam_Helmet",
+		"Police_Bulletproof_Vest_01"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

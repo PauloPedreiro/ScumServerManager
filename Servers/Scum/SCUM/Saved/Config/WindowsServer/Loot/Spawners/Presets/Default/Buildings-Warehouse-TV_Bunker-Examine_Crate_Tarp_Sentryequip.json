@@ -1,0 +1,51 @@
+{
+	"Items": [
+		{
+			"Rarity": "Rare",
+			"Id": "BCULock_Item"
+		},
+		{
+			"Rarity": "Common",
+			"Id": "Cal_50BMG"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Frag_Grenade"
+		},
+		{
+			"Rarity": "Common",
+			"Id": "TearGasGrenade"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tool_Box"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Wire_Cutters_01"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Weapon_Cleaning_Kit"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Screwdriver_Small"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Electrical_Repair_Kit"
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": true,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 35,
+	"InitialUsage": 0,
+	"RandomUsage": 35
+}

@@ -1,0 +1,35 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo",
+				"ItemLootTreeNodes.Military.Gear.Attachments",
+				"ItemLootTreeNodes.Military.Gear.Magazines",
+				"ItemLootTreeNodes.Military.Gear.Optics",
+				"ItemLootTreeNodes.Military.Gear.Tools",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Assault",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Military.Gear.Backpacks.Holsters",
+				"ItemLootTreeNodes.Military.Weapons.AssaultRifles",
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.LMGs",
+				"ItemLootTreeNodes.Military.Weapons.Other",
+				"ItemLootTreeNodes.Military.Weapons.Rifles",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Weapons.SMGs"
+			]
+		}
+	],
+	"Probability": 9,
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

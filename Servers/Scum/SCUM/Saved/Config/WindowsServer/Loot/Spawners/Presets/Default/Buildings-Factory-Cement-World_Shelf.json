@@ -1,0 +1,64 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Other.Ammo",
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Fishing",
+				"ItemLootTreeNodes.Workshop.LightsFire",
+				"ItemLootTreeNodes.Workshop.RepairToolkits",
+				"ItemLootTreeNodes.Workshop.Tools",
+				"ItemLootTreeNodes.Workshop.WorkClothes",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Belt_Pistol_Holster",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Hiking.Other",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.Plain.Backpack_02_01",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.School",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks.WaistBags",
+				"ItemLootTreeNodes.Workshop.Other.Flares",
+				"ItemLootTreeNodes.Workshop.Other.FoodAndDrink",
+				"ItemLootTreeNodes.Workshop.Other.Money"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Masonry"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Military.Ammo.12Gauge",
+				"ItemLootTreeNodes.Military.Ammo.Regular",
+				"ItemLootTreeNodes.Military.Ammo.Arrows",
+				"ItemLootTreeNodes.Military.Clothes",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Bayonets",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Flashlights",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Rails",
+				"ItemLootTreeNodes.Military.Gear.Attachments.Suppressors",
+				"ItemLootTreeNodes.Military.Gear.Backpacks",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Military.Gear.Magazines.Rifles",
+				"ItemLootTreeNodes.Military.Gear.Magazines.SMGs",
+				"ItemLootTreeNodes.Military.Gear.Tools",
+				"ItemLootTreeNodes.Military.Weapons.Handguns",
+				"ItemLootTreeNodes.Military.Weapons.Rifles",
+				"ItemLootTreeNodes.Military.Weapons.Other",
+				"ItemLootTreeNodes.Military.Weapons.Shotguns",
+				"ItemLootTreeNodes.Military.Weapons.SMGs"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 20
+}

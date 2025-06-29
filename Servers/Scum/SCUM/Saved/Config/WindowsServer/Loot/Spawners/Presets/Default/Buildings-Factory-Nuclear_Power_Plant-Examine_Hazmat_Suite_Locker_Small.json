@@ -1,0 +1,23 @@
+{
+	"Items": [
+		{
+			"Rarity": "ExtremelyRare",
+			"Id": "Hazmat_Suit_Modern"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hazmat_Suit_Vintage"
+		}
+	],
+	"Probability": 40,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

@@ -1,0 +1,23 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Feather"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Egg"
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

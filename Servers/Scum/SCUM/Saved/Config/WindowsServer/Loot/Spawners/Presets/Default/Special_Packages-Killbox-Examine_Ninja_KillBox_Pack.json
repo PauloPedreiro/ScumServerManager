@@ -1,0 +1,18 @@
+{
+	"FixedItems": [
+		"2H_Katana",
+		"1H_Scout_Black",
+		"1H_Kunai",
+		"Gas_Mask_02",
+		"1H_Shuriken",
+		"MilitaryBoots_JNA",
+		"Smoke_Grenade",
+		"Ghillie_Suit_Jacket_02",
+		"Ghillie_Suit_Pants_02",
+		"Night_Vision_Goggles_01"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

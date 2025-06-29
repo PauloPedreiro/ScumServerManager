@@ -1,0 +1,38 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Motorcycle_Mask_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Improvised_Bag_Small_02"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tang_pants_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "HighTop_Shoes"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Driving_Gloves_01_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "MA1_Spitfire_04"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": false,
+	"ShouldApplyLocationSpecificProbabilityModifier": false,
+	"InitialDamage": 60,
+	"RandomDamage": 20,
+	"InitialUsage": 70,
+	"RandomUsage": 3
+}

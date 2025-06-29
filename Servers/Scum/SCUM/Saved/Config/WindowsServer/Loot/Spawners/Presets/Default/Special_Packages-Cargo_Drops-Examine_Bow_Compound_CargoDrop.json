@@ -1,0 +1,20 @@
+{
+	"FixedItems": [
+		"BowSilencer_SlipOn",
+		"Compound_Bow",
+		"BowSilencer_SlipOn",
+		"Bow_MicroStabilizer",
+		"CompoundBowSight_5_Pin",
+		"Military_Quiver_03",
+		"Carbon_BroadHead_Arrow",
+		"Carbon_BroadHead_Arrow",
+		"Carbon_BroadHead_Arrow"
+	],
+	"InitialDamage": 0,
+	"RandomDamage": 0,
+	"InitialUsage": 0,
+	"RandomUsage": 0,
+	"PostSpawnActions": [
+		"SetAmmoAmount_Arrows_Full"
+	]
+}

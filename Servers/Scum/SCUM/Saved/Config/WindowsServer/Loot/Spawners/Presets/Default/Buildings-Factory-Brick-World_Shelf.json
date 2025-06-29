@@ -1,0 +1,34 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.BrickFactory.Crafting",
+				"ItemLootTreeNodes.BrickFactory.LightsFire",
+				"ItemLootTreeNodes.BrickFactory.Repair",
+				"ItemLootTreeNodes.BrickFactory.WorkClothes",
+				"ItemLootTreeNodes.BrickFactory.Tools",
+				"ItemLootTreeNodes.BrickFactory.Other.Backpacks",
+				"ItemLootTreeNodes.BrickFactory.Other.Ammo",
+				"ItemLootTreeNodes.BrickFactory.Other.Money",
+				"ItemLootTreeNodes.BrickFactory.Other.Flares",
+				"ItemLootTreeNodes.BrickFactory.Other.Weapons.Rifles.Weapon_Hunter85_V2",
+				"ItemLootTreeNodes.BrickFactory.Other.Weapons.Bows.Recurves"
+			]
+		}
+	],
+	"Probability": 20,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 0,
+	"RandomUsage": 20,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_ResidentialClothes"
+	]
+}

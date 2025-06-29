@@ -1,0 +1,45 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.WorkClothes",
+				"ItemLootTreeNodes.Workshop.Crafting",
+				"ItemLootTreeNodes.Workshop.Other.Ammo",
+				"ItemLootTreeNodes.Workshop.Other.Backpacks",
+				"ItemLootTreeNodes.Workshop.Other.Flares",
+				"ItemLootTreeNodes.Workshop.Other.FoodAndDrink",
+				"ItemLootTreeNodes.Workshop.Other.Money"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Rare",
+			"Id": "Saw"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "1H_Small_Axe"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "2H_Axe"
+		},
+		{
+			"Rarity": "VeryRare",
+			"Id": "Chainsaw"
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 30,
+	"InitialUsage": 10,
+	"RandomUsage": 30
+}

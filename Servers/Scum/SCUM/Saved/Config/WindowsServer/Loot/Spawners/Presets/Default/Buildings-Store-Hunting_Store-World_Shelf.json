@@ -1,0 +1,48 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.HuntingStore.Firearms.Handguns",
+				"ItemLootTreeNodes.HuntingStore.Firearms.Rifles.Civilian",
+				"ItemLootTreeNodes.HuntingStore.Firearms.Shotguns.Civilian",
+				"ItemLootTreeNodes.HuntingStore.Ammo.Handguns.Regular",
+				"ItemLootTreeNodes.HuntingStore.Ammo.Hunting.12Gauge",
+				"ItemLootTreeNodes.HuntingStore.Ammo.Hunting.Regular",
+				"ItemLootTreeNodes.HuntingStore.Ammo.Military.Old.Regular",
+				"ItemLootTreeNodes.HuntingStore.Ammo.Military.Modern.Regular",
+				"ItemLootTreeNodes.HuntingStore.Bows",
+				"ItemLootTreeNodes.HuntingStore.Fishing",
+				"ItemLootTreeNodes.HuntingStore.LightsFire",
+				"ItemLootTreeNodes.HuntingStore.Other",
+				"ItemLootTreeNodes.HuntingStore.Repositories",
+				"ItemLootTreeNodes.HuntingStore.Clothes.Military.Torso",
+				"ItemLootTreeNodes.HuntingStore.Clothes.Military.Legs",
+				"ItemLootTreeNodes.HuntingStore.Clothes.Military.Head",
+				"ItemLootTreeNodes.HuntingStore.Clothes.Military.Hands",
+				"ItemLootTreeNodes.HuntingStore.Clothes.Military.Feet",
+				"ItemLootTreeNodes.HuntingStore.Melee.Knives",
+				"ItemLootTreeNodes.HuntingStore.RepairToolkits.Weapons",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Optics",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Attachments.Suppressors",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Attachments.Sights",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Attachments.Scopes",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Attachments.Rails",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Attachments.Flashlights",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Magazines.Handguns",
+				"ItemLootTreeNodes.HuntingStore.WeaponParts.Magazines.Rifles"
+			]
+		}
+	],
+	"Probability": 25,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 10,
+	"InitialUsage": 0,
+	"RandomUsage": 10
+}

@@ -1,0 +1,49 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Clothes"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Police.Gear.Tools.1H_Police_Baton"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.LivingRoom.Items.Misc.Cigarettes",
+				"ItemLootTreeNodes.LivingRoom.Items.Misc.Lighter",
+				"ItemLootTreeNodes.LivingRoom.Items.Misc.Matches"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Rare",
+			"Id": "Inmate_pants"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Inmate_shirt_01"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "Inmate_Hoodie_01"
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 0,
+	"RandomDamage": 50,
+	"InitialUsage": 0,
+	"RandomUsage": 50
+}

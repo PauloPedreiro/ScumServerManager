@@ -105,6 +105,23 @@ function isBooleanField(section: string, key: string) {
 // Função para renderizar campos dinamicamente
 function renderField(section: string, key: string, value: any, updateConfig: any) {
   const label = ptBR[key] || key;
+  if (key === 'ServerPlaystyle') {
+    return (
+      <Grid item xs={12} md={6} key={key}>
+        <FormControl fullWidth margin="normal">
+          <InputLabel>{label}</InputLabel>
+          <Select
+            value={value}
+            label={label}
+            onChange={e => updateConfig(section, key, e.target.value)}
+          >
+            <MenuItem value="PVE">PVE</MenuItem>
+            <MenuItem value="PVP">PVP</MenuItem>
+          </Select>
+        </FormControl>
+      </Grid>
+    );
+  }
   if (isBooleanField(section, key)) {
     return (
       <Grid item xs={12} md={6} key={key}>

@@ -1,0 +1,27 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Police.Gear.Attachments",
+				"ItemLootTreeNodes.Police.Gear.Magazines.Handguns",
+				"ItemLootTreeNodes.Police.Gear.Magazines.SMGs",
+				"ItemLootTreeNodes.Police.Gear.Armor",
+				"ItemLootTreeNodes.Police.Gear.Explosives.Smoke_Grenade",
+				"ItemLootTreeNodes.Police.Gear.Explosives.Flashbang",
+				"ItemLootTreeNodes.Police.Ammo"
+			]
+		}
+	],
+	"Probability": 40,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 20,
+	"RandomDamage": 20,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}

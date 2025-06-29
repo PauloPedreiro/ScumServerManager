@@ -1,0 +1,37 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Trash"
+			]
+		},
+		{
+			"Rarity": "Rare",
+			"Ids": [
+				"ItemLootTreeNodes.Workshop.Fishing"
+			]
+		}
+	],
+	"Items": [
+		{
+			"Rarity": "Rare",
+			"Id": "Canned_Tuna"
+		},
+		{
+			"Rarity": "Rare",
+			"Id": "CannedSardine"
+		}
+	],
+	"Probability": 15,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 50,
+	"RandomDamage": 40,
+	"InitialUsage": 50,
+	"RandomUsage": 40
+}

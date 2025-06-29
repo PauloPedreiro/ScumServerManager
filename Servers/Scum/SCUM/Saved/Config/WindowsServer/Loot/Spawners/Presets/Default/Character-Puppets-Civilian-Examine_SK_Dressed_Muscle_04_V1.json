@@ -1,0 +1,33 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Marine_Cap_01"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Jeans_02_01_V2"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Tactical_Jacket_01_05"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boots_07_01"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 93,
+	"RandomDamage": 3,
+	"InitialUsage": 93,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

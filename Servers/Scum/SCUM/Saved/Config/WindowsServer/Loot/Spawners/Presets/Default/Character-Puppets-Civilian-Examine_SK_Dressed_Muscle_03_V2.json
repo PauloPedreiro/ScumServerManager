@@ -1,0 +1,29 @@
+{
+	"Items": [
+		{
+			"Rarity": "Uncommon",
+			"Id": "Boonie_Hat_06"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Sweater_03"
+		},
+		{
+			"Rarity": "Uncommon",
+			"Id": "Hippie_Pants_05"
+		}
+	],
+	"QuantityMin": 1,
+	"QuantityMax": 2,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": false,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 93,
+	"RandomDamage": 3,
+	"InitialUsage": 93,
+	"RandomUsage": 3,
+	"PostSpawnActions": [
+		"SetClothesDirtiness_DeadPuppets"
+	]
+}

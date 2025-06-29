@@ -1,0 +1,38 @@
+{
+	"Nodes": [
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Farm.Fertilizers",
+				"ItemLootTreeNodes.Farm.Pesticides",
+				"ItemLootTreeNodes.Farm.Seeds",
+				"ItemLootTreeNodes.Farm.Tools"
+			]
+		},
+		{
+			"Rarity": "Uncommon",
+			"Ids": [
+				"ItemLootTreeNodes.Barn.LightsFire",
+				"ItemLootTreeNodes.Barn.Repair.Grinding_Stone_02",
+				"ItemLootTreeNodes.Barn.WorkClothes"
+			]
+		},
+		{
+			"Rarity": "VeryRare",
+			"Ids": [
+				"ItemLootTreeNodes.Barn.Other"
+			]
+		}
+	],
+	"Probability": 35,
+	"QuantityMin": 1,
+	"QuantityMax": 1,
+	"AllowDuplicates": false,
+	"ShouldFilterItemsByZone": true,
+	"ShouldApplyLocationSpecificDamageModifier": true,
+	"ShouldApplyLocationSpecificProbabilityModifier": true,
+	"InitialDamage": 10,
+	"RandomDamage": 40,
+	"InitialUsage": 0,
+	"RandomUsage": 0
+}
