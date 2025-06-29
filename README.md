@@ -2,6 +2,19 @@
 
 Um aplicativo desktop moderno para gerenciar configurações de servidores SCUM de forma intuitiva e eficiente.
 
+## 🚧 Status do Projeto
+
+**Este é um projeto em desenvolvimento inicial!** 
+
+Estamos na fase inicial de desenvolvimento e toda ajuda da comunidade será muito bem-vinda! Se você tem interesse em contribuir, seja com código, sugestões, feedback ou testando o aplicativo, sua participação é fundamental para o sucesso deste projeto.
+
+### 🤝 Como Contribuir
+
+- **Desenvolvedores**: Contribua com código, correções de bugs, novas funcionalidades
+- **Testadores**: Teste o aplicativo e reporte bugs ou sugestões de melhorias
+- **Comunidade**: Compartilhe ideias, feedback e ajude a espalhar a palavra
+- **Documentação**: Ajude a melhorar a documentação e criar tutoriais
+
 ## 🎯 Características
 
 ### 📋 Funcionalidades Principais
@@ -23,6 +36,35 @@ Um aplicativo desktop moderno para gerenciar configurações de servidores SCUM 
 - **TypeScript**: Tipagem estática e melhor desenvolvimento
 - **Material-UI**: Design system consistente e responsivo
 - **Vite**: Build tool rápido e eficiente
+
+## 🔮 Implementações Futuras
+
+### 1. 📊 Envio de Relatórios de Logs para Discord
+- **Webhooks do Discord**: Envio automático de relatórios de logs
+- **Notificações em tempo real**: Alertas sobre eventos importantes do servidor
+- **Relatórios personalizáveis**: Configuração de quais eventos enviar
+- **Canais específicos**: Diferentes webhooks para diferentes tipos de eventos
+
+### 2. 🤖 Parcerias com Bots Existentes
+- **Integração com Prisoner Bot**: Parceria com o bot do "Galo Doido"
+- **API para bots**: Interface para integração com outros bots SCUM
+- **Sistema de plugins**: Arquitetura para facilitar integrações
+- **Comunidade de desenvolvedores**: Rede de colaboração entre criadores de bots
+
+> **💡 Interesse em Parceria?** Se você tem contato com o "Galo Doido" ou outros criadores de bots SCUM, seria incrível estabelecer parcerias! Entre em contato conosco.
+
+### 3. 🌐 Site da Comunidade
+- **Portal de bots**: Local para a comunidade compartilhar bots criados
+- **Repositório centralizado**: Biblioteca de bots e ferramentas
+- **Sistema de avaliações**: Feedback da comunidade sobre os bots
+- **Integração futura**: Bots aprovados poderão ser instalados diretamente na aplicação
+
+### 4. 💡 Outras Ideias em Desenvolvimento
+- **Sistema de templates**: Configurações pré-definidas para diferentes tipos de servidor
+- **Análise de performance**: Métricas detalhadas do servidor
+- **Sistema de backup na nuvem**: Integração com Google Drive, Dropbox, etc.
+- **Interface mobile**: Versão mobile para monitoramento remoto
+- **Sistema de notificações**: Alertas por email, SMS, etc.
 
 ## 🚀 Instalação
 
@@ -178,11 +220,42 @@ Os logs são salvos em:
 
 ## 🤝 Contribuição
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+### Como Contribuir
+
+1. **Fork o projeto**
+2. **Crie uma branch para sua feature** (`git checkout -b feature/AmazingFeature`)
+3. **Commit suas mudanças** (`git commit -m 'Add some AmazingFeature'`)
+4. **Push para a branch** (`git push origin feature/AmazingFeature`)
+5. **Abra um Pull Request**
+
+### Tipos de Contribuição
+
+- **🐛 Bug Fixes**: Correção de problemas existentes
+- **✨ Novas Funcionalidades**: Implementação de features solicitadas
+- **📚 Documentação**: Melhorias na documentação
+- **🎨 UI/UX**: Melhorias na interface do usuário
+- **🧪 Testes**: Criação de testes e melhorias na qualidade
+- **💡 Sugestões**: Ideias para novas funcionalidades
+
+### Diretrizes de Contribuição
+
+- Mantenha o código limpo e bem documentado
+- Siga os padrões de código existentes
+- Teste suas mudanças antes de submeter
+- Seja respeitoso e construtivo nas discussões
+
+## 💬 Sugestões e Feedback
+
+**TODAS AS SUGESTÕES SERÃO BEM VINDAS!** 
+
+Se você tem ideias para melhorar o projeto, quer sugerir novas funcionalidades ou tem feedback sobre o que já existe, não hesite em:
+
+- Abrir uma issue no GitHub
+- Participar das discussões
+- Entrar em contato diretamente
+- Compartilhar suas experiências de uso
+
+Sua opinião é fundamental para o desenvolvimento do projeto!
 
 ## 📄 Licença
 
@@ -193,6 +266,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 - Comunidade SCUM por feedback e sugestões
 - Desenvolvedores do Electron e React
 - Contribuidores do Material-UI
+- Todos os que contribuem e apoiam este projeto
 
 ## 📞 Suporte
 
@@ -200,4 +274,16 @@ Para suporte, abra uma issue no GitHub ou entre em contato através dos canais o
 
 ---
 
-**Desenvolvido com ❤️ para a comunidade SCUM** 
+**Desenvolvido com ❤️ para a comunidade SCUM**
+
+*Este projeto está em constante evolução graças à colaboração da comunidade. Junte-se a nós e ajude a criar a melhor ferramenta de gerenciamento para servidores SCUM!*
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](assets/dashboard.png)
+*Dashboard principal da aplicação*
+
+### Configurações do Servidor
+![Configurações do Servidor](assets/configuracoes-servidor.png)
+*Edição avançada das configurações do servidor* 
