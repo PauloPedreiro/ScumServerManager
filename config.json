@@ -1,0 +1,11 @@
+{
+  "lastServerPath": "C:\\Servers\\scum\\SCUM\\Binaries\\Win64",
+  "steamcmdPath": "C:\\Servers\\steamcmd\\steamcmd.exe",
+  "serverPath": "C:\\Servers\\scum\\SCUM\\Binaries\\Win64\\SCUMServer.exe",
+  "installPath": "C:\\Servers\\scum",
+  "iniConfigPath": "C:\\Servers\\scum\\SCUM\\Saved\\Config\\WindowsServer",
+  "logsPath": "C:\\Servers\\scum\\SCUM\\Saved\\Logs",
+  "serverPort": 8900,
+  "maxPlayers": 64,
+  "enableBattleye": true
+}
