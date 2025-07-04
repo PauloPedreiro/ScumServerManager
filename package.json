@@ -13,7 +13,9 @@
     "build:renderer": "vite build",
     "dist": "npm run build && electron-builder",
     "dist:win": "npm run build && electron-builder --win",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "lint": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx",
+    "lint:fix": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx --fix"
   },
   "keywords": [
     "scum",
@@ -50,6 +52,7 @@
     "electron-store": "^8.1.0",
     "fs-extra": "^11.1.1",
     "ini": "^4.1.1",
+    "node-fetch": "^2.7.0",
     "ps-list": "^7.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

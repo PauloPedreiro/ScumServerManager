@@ -12,6 +12,7 @@ import LootSettings from './pages/LootSettings';
 import BackupRestore from './pages/BackupRestore';
 import LogsMonitoring from './pages/LogsMonitoring';
 import FolderSettings from './pages/FolderSettings';
+import Discord from './pages/Discord';
 import { ServerConfigProvider } from './contexts/ServerConfigContext';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
                 <Route path="/loot" element={<LootSettings showNotification={showNotification} />} />
                 <Route path="/backup" element={<BackupRestore showNotification={showNotification} />} />
                 <Route path="/monitoring" element={<LogsMonitoring showNotification={showNotification} />} />
+                <Route path="/discord" element={<Discord />} />
               </Routes>
             </Container>
           </Box>

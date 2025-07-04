@@ -242,6 +242,7 @@ export class BackupManager {
     try {
       console.log('Baixando backup:', backupId);
       // Aqui você implementaria a lógica real para baixar o backup
+      // Implementação temporária - apenas log
     } catch (error) {
       console.error('Erro ao baixar backup:', error);
       throw error;

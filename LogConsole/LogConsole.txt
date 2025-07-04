@@ -1,0 +1,2553 @@
+
+C:\Users\paulo\Desktop\Cursor Ai\Scum\ScumServerManager>npm run dev
+
+> scum-server-manager@1.0.0 dev
+> concurrently "npm run dev:main" "npm run dev:renderer"
+
+[0]
+[0] > scum-server-manager@1.0.0 dev:main
+[0] > set NODE_ENV=development && tsc -p src/main/tsconfig.json && electron dist/main/index.js
+[0]
+[1]
+[1] > scum-server-manager@1.0.0 dev:renderer
+[1] > vite
+[1]
+[1]
+[1]   VITE v5.4.19  ready in 184 ms
+[1]
+[1]   ➜  Local:   http://localhost:5173/
+[1]   ➜  Network: use --host to expose
+[0]
+[0] NODE_ENV (início): development
+[0] Preload path: C:\Users\paulo\Desktop\Cursor Ai\Scum\ScumServerManager\dist\main\preload.js
+[0] Icon path: C:\Users\paulo\Desktop\Cursor Ai\Scum\ScumServerManager\assets\icon.png
+[0] NODE_ENV (ajustado): development
+[0] Carregando frontend de desenvolvimento: http://localhost:5173
+[0] Cache do servidor carregado com sucesso
+[0] Cache do servidor carregado com sucesso
+[0] Cache do servidor salvo com sucesso
+[0] [21680:0702/162344.743:ERROR:gpu_process_host.cc(991)] GPU process exited unexpectedly: exit_code=-1073740791
+[0] [21680:0702/162345.275:ERROR:gpu_process_host.cc(991)] GPU process exited unexpectedly: exit_code=-1073740791
+[0] [21680:0702/162345.599:ERROR:gpu_process_host.cc(991)] GPU process exited unexpectedly: exit_code=-1073740791
+[0] [saveIniFile] Salvando arquivo: C:\Servers\scum\SCUM\Saved\Config\WindowsServer/ServerSettings.ini
+[0] [saveIniFile] Conteúdo recebido: {
+[0]   ServerName: 'BLUE SECTOR BRASIL PVE/PVP [LOOT 5X SKILL 3X]',
+[0]   ServerDescription: 'BLUE SECTOR BRASIL PVE/PVP[LOOT 5X SKILL 4X]',
+[0]   ServerPassword: '',
+[0]   MaxPlayers: '64',
+[0]   ServerBannerUrl: '',
+[0]   ServerPlaystyle: 'PVE',
+[0]   WelcomeMessage: 'Seja Bem-Vindo ao Melhor Servidor PVE/PVP  discord.gg/UR6CFN2qYT',
+[0]   MessageOfTheDay: 'Servidor PVE Leia as Regras Restart  01:00 05:00 09:00 13:00 17:00 21:00',
+[0]   MessageOfTheDayCooldown: '10.000000',
+[0]   MinServerTickRate: '5',
+[0]   MaxServerTickRate: '30',
+[0]   MaxPing: '160.000000',
+[0]   LogoutTimer: '10.000000',
+[0]   LogoutTimerWhileCaptured: '120.000000',
+[0]   LogoutTimerInBunker: '30000.000000',
+[0]   AllowFirstPerson: '1',
+[0]   AllowThirdPerson: '1',
+[0]   AllowCrosshair: '1',
+[0]   AllowVoting: '1',
+[0]   AllowMapScreen: '1',
+[0]   AllowKillClaiming: '1',
+[0]   AllowComa: '1',
+[0]   AllowMinesAndTraps: '1',
+[0]   AllowSkillGainInSafeZones: '1',
+[0]   AllowEvents: '1',
+[0]   LimitGlobalChat: '0',
+[0]   AllowGlobalChat: '1',
+[0]   AllowLocalChat: '1',
+[0]   AllowSquadChat: '1',
+[0]   AllowAdminChat: '1',
+[0]   RustyLocksLogging: '1',
+[0]   HideKillNotification: '0',
+[0]   DisableTimedGifts: '0',
+[0]   UseMapBaseBuildingRestriction: '1',
+[0]   DisableBaseBuilding: '0',
+[0]   VotingDuration: '60.000000',
+[0]   PlayerMinimalVotingInterest: '0.500000',
+[0]   PlayerPositiveVotePercentage: '0.500000',
+[0]   MasterServerEndpoints: '',
+[0]   MasterServerUpdateSendInterval: '60.000000',
+[0]   PartialWipe: '0',
+[0]   GoldWipe: '0',
+[0]   FullWipe: '0',
+[0]   ItemVirtualizationRelevancyUpdatePeriod: '1.000000',
+[0]   ItemVirtualizationEventProcessingTimeBudget: '5.000000',
+[0]   ItemVirtualizationVisitorDistanceTravelledForUpdate: '100.000000',
+[0]   ItemVirtualizationVisitorBounds: '10000.000000',
+[0]   VirtualizedItemBounds: '100.000000',
+[0]   FameGainMultiplier: '2.500000',
+[0]   FamePointPenaltyOnDeath: '0.100000',
+[0]   FamePointPenaltyOnKilled: '0.250000',
+[0]   FamePointRewardOnKill: '0.500000',
+[0]   LogSuicides: '1',
+[0]   EnableSpawnOnGround: '0',
+[0]   DeleteInactiveUsers: '1',
+[0]   DaysSinceLastLoginToBecomeInactive: '180',
+[0]   DeleteBannedUsers: '0',
+[0]   MaximumTimeForChestsInForbiddenZones: '02:00:00',
+[0]   LogChestOwnership: '1',
+[0]   SettingsVersion: '3',
+[0]   MasterServerIsLocalTest: '0'
+[0] }
+[0] [saveIniFile] Linha chave: scum.ServerName | newValues: [
+[0]   'scum.ServerName',
+[0]   'scum.ServerDescription',
+[0]   'scum.ServerPassword',
+[0]   'scum.MaxPlayers',
+[0]   'scum.ServerBannerUrl',
+[0]   'scum.ServerPlaystyle',
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ServerName=BLUE SECTOR BRASIL PVE/PVP [LOOT 5X SKILL 3X]
+[0] [saveIniFile] Depois: scum.ServerName=BLUE SECTOR BRASIL PVE/PVP [LOOT 5X SKILL 3X]
+[0] [saveIniFile] Linha chave: scum.ServerDescription | newValues: [
+[0]   'scum.ServerDescription',
+[0]   'scum.ServerPassword',
+[0]   'scum.MaxPlayers',
+[0]   'scum.ServerBannerUrl',
+[0]   'scum.ServerPlaystyle',
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ServerDescription=BLUE SECTOR BRASIL PVE/PVP[LOOT 5X SKILL 4X]
+[0] [saveIniFile] Depois: scum.ServerDescription=BLUE SECTOR BRASIL PVE/PVP[LOOT 5X SKILL 4X]
+[0] [saveIniFile] Linha chave: scum.ServerPassword | newValues: [
+[0]   'scum.ServerPassword',
+[0]   'scum.MaxPlayers',
+[0]   'scum.ServerBannerUrl',
+[0]   'scum.ServerPlaystyle',
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ServerPassword=
+[0] [saveIniFile] Depois: scum.ServerPassword=
+[0] [saveIniFile] Linha chave: scum.MaxPlayers | newValues: [
+[0]   'scum.MaxPlayers',
+[0]   'scum.ServerBannerUrl',
+[0]   'scum.ServerPlaystyle',
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MaxPlayers=64
+[0] [saveIniFile] Depois: scum.MaxPlayers=64
+[0] [saveIniFile] Linha chave: scum.ServerBannerUrl | newValues: [
+[0]   'scum.ServerBannerUrl',
+[0]   'scum.ServerPlaystyle',
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ServerBannerUrl=
+[0] [saveIniFile] Depois: scum.ServerBannerUrl=
+[0] [saveIniFile] Linha chave: scum.ServerPlaystyle | newValues: [
+[0]   'scum.ServerPlaystyle',
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ServerPlaystyle=PVE
+[0] [saveIniFile] Depois: scum.ServerPlaystyle=PVE
+[0] [saveIniFile] Linha chave: scum.WelcomeMessage | newValues: [
+[0]   'scum.WelcomeMessage',
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.WelcomeMessage=Seja Bem-Vindo ao Melhor Servidor PVE/PVP  discord.gg/UR6CFN2qYT
+[0] [saveIniFile] Depois: scum.WelcomeMessage=Seja Bem-Vindo ao Melhor Servidor PVE/PVP  discord.gg/UR6CFN2qYT
+[0] [saveIniFile] Linha chave: scum.MessageOfTheDay | newValues: [
+[0]   'scum.MessageOfTheDay',
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MessageOfTheDay=Servidor PVE Leia as Regras Restart  01:00 05:00 09:00 13:00 17:00 21:00
+[0] [saveIniFile] Depois: scum.MessageOfTheDay=Servidor PVE Leia as Regras Restart  01:00 05:00 09:00 13:00 17:00 21:00
+[0] [saveIniFile] Linha chave: scum.MessageOfTheDayCooldown | newValues: [
+[0]   'scum.MessageOfTheDayCooldown',
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MessageOfTheDayCooldown=10.000000
+[0] [saveIniFile] Depois: scum.MessageOfTheDayCooldown=10.000000
+[0] [saveIniFile] Linha chave: scum.MinServerTickRate | newValues: [
+[0]   'scum.MinServerTickRate',
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MinServerTickRate=5
+[0] [saveIniFile] Depois: scum.MinServerTickRate=5
+[0] [saveIniFile] Linha chave: scum.MaxServerTickRate | newValues: [
+[0]   'scum.MaxServerTickRate',
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MaxServerTickRate=30
+[0] [saveIniFile] Depois: scum.MaxServerTickRate=30
+[0] [saveIniFile] Linha chave: scum.MaxPing | newValues: [
+[0]   'scum.MaxPing',
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MaxPing=160.000000
+[0] [saveIniFile] Depois: scum.MaxPing=160.000000
+[0] [saveIniFile] Linha chave: scum.LogoutTimer | newValues: [
+[0]   'scum.LogoutTimer',
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.LogoutTimer=10.000000
+[0] [saveIniFile] Depois: scum.LogoutTimer=10.000000
+[0] [saveIniFile] Linha chave: scum.LogoutTimerWhileCaptured | newValues: [
+[0]   'scum.LogoutTimerWhileCaptured',
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.LogoutTimerWhileCaptured=120.000000
+[0] [saveIniFile] Depois: scum.LogoutTimerWhileCaptured=120.000000
+[0] [saveIniFile] Linha chave: scum.LogoutTimerInBunker | newValues: [
+[0]   'scum.LogoutTimerInBunker',
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.LogoutTimerInBunker=30000.000000
+[0] [saveIniFile] Depois: scum.LogoutTimerInBunker=30000.000000
+[0] [saveIniFile] Linha chave: scum.AllowFirstPerson | newValues: [
+[0]   'scum.AllowFirstPerson',
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowFirstPerson=1
+[0] [saveIniFile] Depois: scum.AllowFirstPerson=1
+[0] [saveIniFile] Linha chave: scum.AllowThirdPerson | newValues: [
+[0]   'scum.AllowThirdPerson',
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowThirdPerson=1
+[0] [saveIniFile] Depois: scum.AllowThirdPerson=1
+[0] [saveIniFile] Linha chave: scum.AllowCrosshair | newValues: [
+[0]   'scum.AllowCrosshair',
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowCrosshair=1
+[0] [saveIniFile] Depois: scum.AllowCrosshair=1
+[0] [saveIniFile] Linha chave: scum.AllowVoting | newValues: [
+[0]   'scum.AllowVoting',
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowVoting=1
+[0] [saveIniFile] Depois: scum.AllowVoting=1
+[0] [saveIniFile] Linha chave: scum.AllowMapScreen | newValues: [
+[0]   'scum.AllowMapScreen',
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowMapScreen=1
+[0] [saveIniFile] Depois: scum.AllowMapScreen=1
+[0] [saveIniFile] Linha chave: scum.AllowKillClaiming | newValues: [
+[0]   'scum.AllowKillClaiming',
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowKillClaiming=1
+[0] [saveIniFile] Depois: scum.AllowKillClaiming=1
+[0] [saveIniFile] Linha chave: scum.AllowComa | newValues: [
+[0]   'scum.AllowComa',
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowComa=1
+[0] [saveIniFile] Depois: scum.AllowComa=1
+[0] [saveIniFile] Linha chave: scum.AllowMinesAndTraps | newValues: [
+[0]   'scum.AllowMinesAndTraps',
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowMinesAndTraps=1
+[0] [saveIniFile] Depois: scum.AllowMinesAndTraps=1
+[0] [saveIniFile] Linha chave: scum.AllowSkillGainInSafeZones | newValues: [
+[0]   'scum.AllowSkillGainInSafeZones',
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowSkillGainInSafeZones=1
+[0] [saveIniFile] Depois: scum.AllowSkillGainInSafeZones=1
+[0] [saveIniFile] Linha chave: scum.AllowEvents | newValues: [
+[0]   'scum.AllowEvents',
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowEvents=1
+[0] [saveIniFile] Depois: scum.AllowEvents=1
+[0] [saveIniFile] Linha chave: scum.LimitGlobalChat | newValues: [
+[0]   'scum.LimitGlobalChat',
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.LimitGlobalChat=0
+[0] [saveIniFile] Depois: scum.LimitGlobalChat=0
+[0] [saveIniFile] Linha chave: scum.AllowGlobalChat | newValues: [
+[0]   'scum.AllowGlobalChat',
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowGlobalChat=1
+[0] [saveIniFile] Depois: scum.AllowGlobalChat=1
+[0] [saveIniFile] Linha chave: scum.AllowLocalChat | newValues: [
+[0]   'scum.AllowLocalChat',
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowLocalChat=1
+[0] [saveIniFile] Depois: scum.AllowLocalChat=1
+[0] [saveIniFile] Linha chave: scum.AllowSquadChat | newValues: [
+[0]   'scum.AllowSquadChat',
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowSquadChat=1
+[0] [saveIniFile] Depois: scum.AllowSquadChat=1
+[0] [saveIniFile] Linha chave: scum.AllowAdminChat | newValues: [
+[0]   'scum.AllowAdminChat',
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.AllowAdminChat=1
+[0] [saveIniFile] Depois: scum.AllowAdminChat=1
+[0] [saveIniFile] Linha chave: scum.RustyLocksLogging | newValues: [
+[0]   'scum.RustyLocksLogging',
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.RustyLocksLogging=1
+[0] [saveIniFile] Depois: scum.RustyLocksLogging=1
+[0] [saveIniFile] Linha chave: scum.HideKillNotification | newValues: [
+[0]   'scum.HideKillNotification',
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.HideKillNotification=0
+[0] [saveIniFile] Depois: scum.HideKillNotification=0
+[0] [saveIniFile] Linha chave: scum.DisableTimedGifts | newValues: [
+[0]   'scum.DisableTimedGifts',
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.DisableTimedGifts=0
+[0] [saveIniFile] Depois: scum.DisableTimedGifts=0
+[0] [saveIniFile] Linha chave: scum.UseMapBaseBuildingRestriction | newValues: [
+[0]   'scum.UseMapBaseBuildingRestriction',
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.UseMapBaseBuildingRestriction=1
+[0] [saveIniFile] Depois: scum.UseMapBaseBuildingRestriction=1
+[0] [saveIniFile] Linha chave: scum.DisableBaseBuilding | newValues: [
+[0]   'scum.DisableBaseBuilding',
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.DisableBaseBuilding=0
+[0] [saveIniFile] Depois: scum.DisableBaseBuilding=0
+[0] [saveIniFile] Linha chave: scum.VotingDuration | newValues: [
+[0]   'scum.VotingDuration',
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.VotingDuration=60.000000
+[0] [saveIniFile] Depois: scum.VotingDuration=60.000000
+[0] [saveIniFile] Linha chave: scum.PlayerMinimalVotingInterest | newValues: [
+[0]   'scum.PlayerMinimalVotingInterest',
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.PlayerMinimalVotingInterest=0.500000
+[0] [saveIniFile] Depois: scum.PlayerMinimalVotingInterest=0.500000
+[0] [saveIniFile] Linha chave: scum.PlayerPositiveVotePercentage | newValues: [
+[0]   'scum.PlayerPositiveVotePercentage',
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.PlayerPositiveVotePercentage=0.500000
+[0] [saveIniFile] Depois: scum.PlayerPositiveVotePercentage=0.500000
+[0] [saveIniFile] Linha chave: scum.MasterServerEndpoints | newValues: [
+[0]   'scum.MasterServerEndpoints',
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MasterServerEndpoints=
+[0] [saveIniFile] Depois: scum.MasterServerEndpoints=
+[0] [saveIniFile] Linha chave: scum.MasterServerUpdateSendInterval | newValues: [
+[0]   'scum.MasterServerUpdateSendInterval',
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MasterServerUpdateSendInterval=60.000000
+[0] [saveIniFile] Depois: scum.MasterServerUpdateSendInterval=60.000000
+[0] [saveIniFile] Linha chave: scum.PartialWipe | newValues: [
+[0]   'scum.PartialWipe',
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.PartialWipe=0
+[0] [saveIniFile] Depois: scum.PartialWipe=0
+[0] [saveIniFile] Linha chave: scum.GoldWipe | newValues: [
+[0]   'scum.GoldWipe',
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.GoldWipe=0
+[0] [saveIniFile] Depois: scum.GoldWipe=0
+[0] [saveIniFile] Linha chave: scum.FullWipe | newValues: [
+[0]   'scum.FullWipe',
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.FullWipe=0
+[0] [saveIniFile] Depois: scum.FullWipe=0
+[0] [saveIniFile] Linha chave: scum.ItemVirtualizationRelevancyUpdatePeriod | newValues: [
+[0]   'scum.ItemVirtualizationRelevancyUpdatePeriod',
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ItemVirtualizationRelevancyUpdatePeriod=1.000000
+[0] [saveIniFile] Depois: scum.ItemVirtualizationRelevancyUpdatePeriod=1.000000
+[0] [saveIniFile] Linha chave: scum.ItemVirtualizationEventProcessingTimeBudget | newValues: [
+[0]   'scum.ItemVirtualizationEventProcessingTimeBudget',
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ItemVirtualizationEventProcessingTimeBudget=5.000000
+[0] [saveIniFile] Depois: scum.ItemVirtualizationEventProcessingTimeBudget=5.000000
+[0] [saveIniFile] Linha chave: scum.ItemVirtualizationVisitorDistanceTravelledForUpdate | newValues: [
+[0]   'scum.ItemVirtualizationVisitorDistanceTravelledForUpdate',
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ItemVirtualizationVisitorDistanceTravelledForUpdate=100.000000
+[0] [saveIniFile] Depois: scum.ItemVirtualizationVisitorDistanceTravelledForUpdate=100.000000
+[0] [saveIniFile] Linha chave: scum.ItemVirtualizationVisitorBounds | newValues: [
+[0]   'scum.ItemVirtualizationVisitorBounds',
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.ItemVirtualizationVisitorBounds=10000.000000
+[0] [saveIniFile] Depois: scum.ItemVirtualizationVisitorBounds=10000.000000
+[0] [saveIniFile] Linha chave: scum.VirtualizedItemBounds | newValues: [
+[0]   'scum.VirtualizedItemBounds',
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.VirtualizedItemBounds=100.000000
+[0] [saveIniFile] Depois: scum.VirtualizedItemBounds=100.000000
+[0] [saveIniFile] Linha chave: scum.FameGainMultiplier | newValues: [
+[0]   'scum.FameGainMultiplier',
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.FameGainMultiplier=2.500000
+[0] [saveIniFile] Depois: scum.FameGainMultiplier=2.500000
+[0] [saveIniFile] Linha chave: scum.FamePointPenaltyOnDeath | newValues: [
+[0]   'scum.FamePointPenaltyOnDeath',
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.FamePointPenaltyOnDeath=0.100000
+[0] [saveIniFile] Depois: scum.FamePointPenaltyOnDeath=0.100000
+[0] [saveIniFile] Linha chave: scum.FamePointPenaltyOnKilled | newValues: [
+[0]   'scum.FamePointPenaltyOnKilled',
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.FamePointPenaltyOnKilled=0.250000
+[0] [saveIniFile] Depois: scum.FamePointPenaltyOnKilled=0.250000
+[0] [saveIniFile] Linha chave: scum.FamePointRewardOnKill | newValues: [
+[0]   'scum.FamePointRewardOnKill',
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.FamePointRewardOnKill=0.500000
+[0] [saveIniFile] Depois: scum.FamePointRewardOnKill=0.500000
+[0] [saveIniFile] Linha chave: scum.LogSuicides | newValues: [
+[0]   'scum.LogSuicides',
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.LogSuicides=1
+[0] [saveIniFile] Depois: scum.LogSuicides=1
+[0] [saveIniFile] Linha chave: scum.EnableSpawnOnGround | newValues: [
+[0]   'scum.EnableSpawnOnGround',
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.EnableSpawnOnGround=0
+[0] [saveIniFile] Depois: scum.EnableSpawnOnGround=0
+[0] [saveIniFile] Linha chave: scum.DeleteInactiveUsers | newValues: [
+[0]   'scum.DeleteInactiveUsers',
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.DeleteInactiveUsers=1
+[0] [saveIniFile] Depois: scum.DeleteInactiveUsers=1
+[0] [saveIniFile] Linha chave: scum.DaysSinceLastLoginToBecomeInactive | newValues: [
+[0]   'scum.DaysSinceLastLoginToBecomeInactive',
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.DaysSinceLastLoginToBecomeInactive=180
+[0] [saveIniFile] Depois: scum.DaysSinceLastLoginToBecomeInactive=180
+[0] [saveIniFile] Linha chave: scum.DeleteBannedUsers | newValues: [
+[0]   'scum.DeleteBannedUsers',
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.DeleteBannedUsers=0
+[0] [saveIniFile] Depois: scum.DeleteBannedUsers=0
+[0] [saveIniFile] Linha chave: scum.MaximumTimeForChestsInForbiddenZones | newValues: [
+[0]   'scum.MaximumTimeForChestsInForbiddenZones',
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.MaximumTimeForChestsInForbiddenZones=02:00:00
+[0] [saveIniFile] Depois: scum.MaximumTimeForChestsInForbiddenZones=02:00:00
+[0] [saveIniFile] Linha chave: scum.LogChestOwnership | newValues: [
+[0]   'scum.LogChestOwnership',
+[0]   'scum.SettingsVersion',
+[0]   'scum.MasterServerIsLocalTest'
+[0] ]
+[0] [saveIniFile] Antes: scum.LogChestOwnership=1
+[0] [saveIniFile] Depois: scum.LogChestOwnership=1
+[0] [saveIniFile] Linha chave: scum.SettingsVersion | newValues: [ 'scum.SettingsVersion', 'scum.MasterServerIsLocalTest' ]
+[0] [saveIniFile] Antes: scum.SettingsVersion=3
+[0] [saveIniFile] Depois: scum.SettingsVersion=3
+[0] [saveIniFile] Linha chave: scum.MasterServerIsLocalTest | newValues: [ 'scum.MasterServerIsLocalTest' ]
+[0] [saveIniFile] Antes: scum.MasterServerIsLocalTest=0
+[0] [saveIniFile] Depois: scum.MasterServerIsLocalTest=0
+[0] [saveIniFile] Linha chave: scum.MaxAllowedBirds | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedCharacters | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedPuppets | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedAnimals | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedNPCs | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterBaseCharacterAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterExtraCharacterPerPlayerMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterExtraCharacterPlayerCapMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterCharacterRespawnTimeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterCharacterRespawnBatchSizeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterCharacterAggressiveSpawnChanceOverride | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterCharacterAINoiseResponseRadiusMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeGroupBaseCharacterAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeGroupExtraCharacterPerPlayerMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeGroupExtraCharacterPlayerCapMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeBaseCharacterAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeExtraCharacterPerPlayerMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeExtraCharacterPlayerCapMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeActivationChanceMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeNoiseCheckCooldownMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeSpawnDistanceMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeGroupRefillTimeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordeShouldPlayActivationSound | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterHordePuppetHordeActivationScreamOverrideChance | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterCanRemoveLowPriorityCharacters | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterCanClampCharacterNumWhenOutOfResources | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterGlobalZoneCooldownMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EncounterEnableSpawnPreventionAreaSpawnOnCharacterDeath | newValues: []
+[0] [saveIniFile] Linha chave: scum.PuppetWorldEncounterSpawnWeightMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.AnimalWorldEncounterSpawnWeightMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DropshipWorldEncounterSpawnWeightMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableDropshipAbandonedBunkerEncounter | newValues: []
+[0] [saveIniFile] Linha chave: scum.DropshipAbandonedBunkerEncounterTriggerChance | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterTriggerChance | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterTriggerTimeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableDropshipBaseBuildingEncounter | newValues: []
+[0] [saveIniFile] Linha chave: scum.SpawnEncountersInThreatZonesIgnoringBaseBuilding | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableEncounterManagerLowPlayerCountMode | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterMinNumElementsToStart | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterMinNumElementsToEnd | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterDamagePercentageIncreasePerSquadMember | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterTimeToFullMinNumToEnd | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingEncounterMaximumMinToEndReduction | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedDrones | newValues: []
+[0] [saveIniFile] Linha chave: scum.DisableSentrySpawning | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableSentryRespawning | newValues: []
+[0] [saveIniFile] Linha chave: scum.DisableSuicidePuppetSpawning | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerCommotionThreshold | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerCommotionThresholdPerPlayerExtra | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerEnemyActivationThreshold | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerEnemyActivationThresholdPerPlayerExtra | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerResetArmoryLockersOnActivationOnly | newValues: []
+[0] [saveIniFile] Linha chave: scum.PuppetsCanOpenDoors | newValues: []
+[0] [saveIniFile] Linha chave: scum.PuppetsCanVaultWindows | newValues: []
+[0] [saveIniFile] Linha chave: scum.PuppetHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DropshipHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SentryHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingAttackerSentryHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ArmedNPCDifficultyLevel | newValues: []
+[0] [saveIniFile] Linha chave: scum.ProbabilityForArmedNPCToDropItemFromHandsWhenSearched | newValues: []
+[0] [saveIniFile] Linha chave: scum.StartTimeOfDay | newValues: []
+[0] [saveIniFile] Linha chave: scum.TimeOfDaySpeed | newValues: []
+[0] [saveIniFile] Linha chave: scum.NighttimeDarkness | newValues: []
+[0] [saveIniFile] Linha chave: scum.SunriseTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.SunsetTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.WeatherRainFrequencyMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WeatherRainDurationMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ShouldDestroyEntitiesOutsideMapLimitsOnRestart | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableLockedLootContainers | newValues: []
+[0] [saveIniFile] Linha chave: scum.CustomMapEnabled | newValues: []
+[0] [saveIniFile] Linha chave: scum.CustomMapCenterXCoordinate | newValues: []
+[0] [saveIniFile] Linha chave: scum.CustomMapCenterYCoordinate | newValues: []
+[0] [saveIniFile] Linha chave: scum.CustomMapWidth | newValues: []
+[0] [saveIniFile] Linha chave: scum.CustomMapHeight | newValues: []
+[0] [saveIniFile] Linha chave: scum.DoorLockability.Garage | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropCooldownMinimum | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropCooldownMaximum | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropFallDelay | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropFallDuration | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropSelfdestructTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropZombieEncounterWeightMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.CargoDropDropshipEncounterWeightMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedHunts | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntTriggerChanceOverride_ContinentalForest | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntTriggerChanceOverride_ContinentalMeadow | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntTriggerChanceOverride_Mediterranean | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntTriggerChanceOverride_Mountain | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntTriggerChanceOverride_Urban | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntTriggerChanceOverride_Village | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntFailureTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.HuntFailureDistance | newValues: []
+[0] [saveIniFile] Linha chave: scum.BearMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BoarMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ChickenMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DeerMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DonkeyMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GoatMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.HorseMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.RabbitMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WolfMaxHealthMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedKillboxKeycards | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedKillboxKeycards_PoliceStation | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxAllowedKillboxKeycards_RadiationZone | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerMaxSimultaneouslyActive | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerActiveDurationHours | newValues: []
+[0] [saveIniFile] Linha chave: scum.AbandonedBunkerKeyCardActiveDurationHours | newValues: []
+[0] [saveIniFile] Linha chave: scum.SecretBunkerKeyCardActiveDurationHours | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowSectorRespawn | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowShelterRespawn | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowSquadmateRespawn | newValues: []
+[0] [saveIniFile] Linha chave: scum.RandomRespawnPrice | newValues: []
+[0] [saveIniFile] Linha chave: scum.SectorRespawnPrice | newValues: []
+[0] [saveIniFile] Linha chave: scum.ShelterRespawnPrice | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadRespawnPrice | newValues: []
+[0] [saveIniFile] Linha chave: scum.RandomRespawnInitialTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.SectorRespawnInitialTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.ShelterRespawnInitialTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadRespawnInitialTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.RandomRespawnCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.SectorRespawnCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.ShelterRespawnCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadRespawnCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.RandomCooldownResetMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SectorCooldownResetMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ShelterCooldownResetMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadCooldownResetMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.RandomPricePerSquadmateModifier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SectorPricePerSquadmateModifier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ShelterPricePerSquadmateModifier | newValues: []
+[0] [saveIniFile] Linha chave: scum.CommitSuicideInitialTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.CommitSuicideCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.CommitSuicideCooldownResetMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaximumBaseProximityWhenSpawning | newValues: []
+[0] [saveIniFile] Linha chave: scum.PermadeathThreshold | newValues: []
+[0] [saveIniFile] Linha chave: scum.FuelDrainFromEngineMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BatteryDrainFromEngineMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BatteryDrainFromDevicesMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BatteryDrainFromInactivityMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BatteryChargeWithAlternatorMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BatteryChargeWithDynamoMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.KingletDusterMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.KingletDusterMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.KingletDusterMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.DirtbikeMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.DirtbikeMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.DirtbikeMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.LaikaMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.LaikaMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.LaikaMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.MotorboatMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.MotorboatMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.MotorboatMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.WheelbarrowMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.WheelbarrowMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.WheelbarrowMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.WolfswagenMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.WolfswagenMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.WolfswagenMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.BicycleMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.BicycleMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.BicycleMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.RagerMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.RagerMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.RagerMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.CruiserMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.CruiserMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.CruiserMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.RisMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.RisMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.RisMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.SUPMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.SUPMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.SUPMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.KingletMarinerMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.KingletMarinerMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.KingletMarinerMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.TractorMaxAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.TractorMaxFunctionalAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.TractorMinPurchasedAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaximumTimeOfVehicleInactivity | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaximumTimeForVehiclesInForbiddenZones | newValues: []
+[0] [saveIniFile] Linha chave: scum.LogVehicleDestroyed | newValues: []
+[0] [saveIniFile] Linha chave: scum.VehicleDecayTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.HumanToVehicleDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ZombieToVehicleDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.HumanToHumanDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.HumanToHumanArmedMeleeDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.HumanToHumanUnarmedMeleeDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.HumanToHumanThrowingDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SentryDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SentryRailgunDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SentryGrenadeDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingAttackerSentryDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingAttackerSentryRailgunDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BaseBuildingAttackerSentryGrenadeDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SentryBaseBuildingDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DropshipDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DropshipRailgunDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DropshipBaseBuildingElementsDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ZombieDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ItemDecayDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.FoodDecayDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WeaponDecayDamageOnFiring | newValues: []
+[0] [saveIniFile] Linha chave: scum.LockProtectionDamageMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.FlagOvertakeDuration | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaximumAmountOfElementsPerFlag | newValues: []
+[0] [saveIniFile] Linha chave: scum.ExtraElementsPerFlagForAdditionalSquadMember | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaximumNumberOfExpandedElementsPerFlag | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowMultipleFlagsPerPlayer | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowFlagPlacementOnBBElements | newValues: []
+[0] [saveIniFile] Linha chave: scum.ChestAcquisitionDuration | newValues: []
+[0] [saveIniFile] Linha chave: scum.WeaponRackMaxAmountPerFlagArea | newValues: []
+[0] [saveIniFile] Linha chave: scum.WeaponRackStartDecayingIfFlagAreaHasMoreThan | newValues: []
+[0] [saveIniFile] Linha chave: scum.WallWeaponRackMaxAmountPerFlagArea | newValues: []
+[0] [saveIniFile] Linha chave: scum.WallWeaponRackStartDecayingIfFlagAreaHasMoreThan | newValues: []
+[0] [saveIniFile] Linha chave: scum.WellMaxAmountPerFlagArea | newValues: []
+[0] [saveIniFile] Linha chave: scum.WellStartDecayingIfFlagAreaHasMoreThan | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretMaxAmountPerFlagArea | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretStartDecayingIfFlagAreaHasMoreThan | newValues: []
+[0] [saveIniFile] Linha chave: scum.GardenMaxAmountPerFlagArea | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowFloorPlacementOnHalfAndLowWalls | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowWallPlacementOnHalfAndLowWalls | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionType | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionEnableLog | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionFlagSpecificChangeSettingCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionFlagSpecificChangeSettingPrice | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionFlagSpecificMaxProtectionTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionOfflineProtectionStartDelay | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionOfflineMaxProtectionTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionGlobalShouldShowRaidTimesMessage | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionGlobalShouldShowRaidAnnouncementMessage | newValues: []
+[0] [saveIniFile] Linha chave: scum.RaidProtectionGlobalShouldShowRaidStartEndMessages | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterPricePerUnitMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterPeriodicInitialAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterPeriodicMaxAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterPeriodicReplenishAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterPeriodicReplenishIntervalMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterProximityReplenishAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterProximityReplenishChanceMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.WaterProximityReplenishTimeoutMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolinePricePerUnitMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolinePeriodicInitialAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolinePeriodicInitialAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolinePeriodicMaxAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolinePeriodicReplenishAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolinePeriodicReplenishIntervalMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolineProximityReplenishAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolineProximityReplenishChanceMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.GasolineProximityReplenishTimeoutMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropanePricePerUnitMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropanePeriodicInitialAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropanePeriodicMaxAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropanePeriodicReplenishAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropanePeriodicReplenishIntervalMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropaneProximityReplenishAmountMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropaneProximityReplenishChanceMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.PropaneProximityReplenishTimeoutMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SpawnerProbabilityMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ExamineSpawnerProbabilityMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ExamineSpawnerExpirationTimeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SpawnerExpirationTimeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableItemCooldownGroups | newValues: []
+[0] [saveIniFile] Linha chave: scum.ItemCooldownGroupsDurationMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMemberCountAtIntLevel1 | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMemberCountAtIntLevel2 | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMemberCountAtIntLevel3 | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMemberCountAtIntLevel4 | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMemberCountAtIntLevel5 | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMemberCountLimitForPunishment | newValues: []
+[0] [saveIniFile] Linha chave: scum.RTSquadProbationDuration | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadMoneyPenaltyPerPrevSquadMember | newValues: []
+[0] [saveIniFile] Linha chave: scum.SquadFamePointsPenaltyPerPrevSquadMember | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableSquadMemberNameWidget | newValues: []
+[0] [saveIniFile] Linha chave: scum.PlantHarvestExamineTimeMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.FirstPlantHarvestAdditionalChance | newValues: []
+[0] [saveIniFile] Linha chave: scum.ArcherySkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.AviationSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.AwarenessSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.BrawlingSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.CamouflageSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.CookingSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DemolitionSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DrivingSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnduranceSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.EngineeringSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.FarmingSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.HandgunSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MedicalSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MeleeWeaponsSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MotorcycleSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.RiflesSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.RunningSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SnipingSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.StealthSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.SurvivalSkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.ThieverySkillMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.QuestsEnabled | newValues: []
+[0] [saveIniFile] Linha chave: scum.QuestsGlobalCycleDuration | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxQuestsPerCyclePerTrader | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaxSimultaneousQuestsPerTrader | newValues: []
+[0] [saveIniFile] Linha chave: scum.QuestsTraderRefillCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.QuestsPhoneRefillCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.QuestsNoticeBoardRefillCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.QuestRequirementsBlockTradeableItems | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretsAttackPrisoners | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretsAttackPuppets | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretsAttackVehicles | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretsAttackSentries | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretsAttackAnimals | newValues: []
+[0] [saveIniFile] Linha chave: scum.TurretsAttackArmedNPCs | newValues: []
+[0] [saveIniFile] Linha chave: scum.MovementInertiaAmount | newValues: []
+[0] [saveIniFile] Linha chave: scum.StaminaDrainOnJumpMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.StaminaDrainOnClimbMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.DisableExhaustion | newValues: []
+[0] [saveIniFile] Linha chave: scum.BodySimulationSpeedMultiplier | newValues: []
+[0] [saveIniFile] Linha chave: scum.MaintainItemsExpirationTime | newValues: []
+[0] [saveIniFile] Linha chave: scum.KillboxDefuseFailureBonus | newValues: []
+[0] [saveIniFile] Linha chave: scum.BedrollVisibilityTimer | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableBCULocking | newValues: []
+[0] [saveIniFile] Linha chave: scum.NameChangeCooldown | newValues: []
+[0] [saveIniFile] Linha chave: scum.NameChangeCost | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableNewPlayerProtection | newValues: []
+[0] [saveIniFile] Linha chave: scum.NewPlayerProtectionDuration | newValues: []
+[0] [saveIniFile] Linha chave: scum.AllowAutomaticParachuteOpening | newValues: []
+[0] [saveIniFile] Linha chave: scum.HideQuickAccessBar | newValues: []
+[0] [saveIniFile] Linha chave: scum.HideLifeIndicators | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableDeenaOnServer | newValues: []
+[0] [saveIniFile] Linha chave: scum.EnableDigitalDeluxeStarterPack | newValues: []

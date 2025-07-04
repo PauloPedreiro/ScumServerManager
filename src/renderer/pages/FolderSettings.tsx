@@ -245,10 +245,8 @@ const FolderSettings: React.FC<FolderSettingsProps> = ({ showNotification }) => 
   const handleSaveConfig = async () => {
     try {
       setSaving(true);
-      
       const requiredFolders = folders.filter(f => f.required);
       const missingRequired = requiredFolders.filter(f => !f.exists);
-      
       if (missingRequired.length > 0) {
         showNotification(
           `Pastas obrigatórias não encontradas: ${missingRequired.map(f => f.name).join(', ')}`,
@@ -256,24 +254,24 @@ const FolderSettings: React.FC<FolderSettingsProps> = ({ showNotification }) => 
         );
         return;
       }
-      
       const serverPath = folders.find(f => f.name === 'Pasta do Servidor')?.path + '\\SCUMServer.exe';
       const installPath = folders.find(f => f.name === 'Pasta de Instalação')?.path;
       const iniConfigPath = folders.find(f => f.name === 'Pasta de Configuração (.ini)')?.path;
       const steamcmdPath = folders.find(f => f.name === 'Pasta do SteamCMD')?.path + '\\steamcmd.exe';
-      
-      await window.electronAPI.saveAppConfig(
+      // Carregar config atual, fazer merge e salvar
+      const configAtual = await window.electronAPI.loadAppConfig();
+      const configAtualizado = {
+        ...configAtual,
         serverPath,
         steamcmdPath,
         installPath,
-        8900,
-        64,
-        true,
+        serverPort: 8900,
+        maxPlayers: 64,
+        enableBattleye: true,
         iniConfigPath
-      );
-      
+      };
+      await window.electronAPI.saveAppConfig(configAtualizado);
       showNotification('Configuração de pastas salva com sucesso!', 'success');
-      
     } catch (error) {
       console.error('Erro ao salvar configuração:', error);
       showNotification('Erro ao salvar configuração', 'error');

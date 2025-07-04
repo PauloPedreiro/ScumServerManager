@@ -2,8 +2,13 @@ declare global {
     interface Window {
         electronAPI: {
             selectServerFolder: () => Promise<string | null>;
+            selectSteamcmdFolder: () => Promise<string | null>;
+            selectInstallFolder: () => Promise<string | null>;
             readServerConfig: (serverPath: string) => Promise<any>;
             saveServerConfig: (serverPath: string, config: any) => Promise<any>;
+            loadServerCache: () => Promise<any>;
+            clearServerCache: () => Promise<any>;
+            getServerInfo: (serverPath: string) => Promise<any>;
             readIniFile: (filePath: string) => Promise<any>;
             saveIniFile: (filePath: string, content: any) => Promise<any>;
             readJsonFile: (filePath: string) => Promise<any>;
@@ -13,7 +18,7 @@ declare global {
             validateConfig: (config: any) => Promise<any>;
             restoreDefaultFile: (serverPath: string, fileName: string) => Promise<any>;
             listConfigFiles: (serverPath: string) => Promise<string[]>;
-            saveAppConfig: (serverPath: string, steamcmdPath?: string, installPath?: string, serverPort?: number, maxPlayers?: number, enableBattleye?: boolean) => Promise<any>;
+            saveAppConfig: (config: any) => Promise<any>;
             loadAppConfig: () => Promise<any>;
             clearAppConfig: () => Promise<any>;
             listDir: (dirPath: string) => Promise<any>;
@@ -41,6 +46,11 @@ declare global {
             removeUpdateServerLogEnd: (callback: (event: any, code: number) => void) => void;
             loadRestartSchedule: () => Promise<any>;
             saveRestartSchedule: (hours: number[]) => Promise<any>;
+            saveDiscordWebhooks: (webhooks: any) => Promise<any>;
+            loadDiscordWebhooks: () => Promise<any>;
+            sendDiscordWebhookMessage: (webhookUrl: string, message: string) => Promise<any>;
+            clearNotifiedPlayers: () => Promise<any>;
+            getNotifiedPlayers: () => Promise<any>;
         };
     }
 }

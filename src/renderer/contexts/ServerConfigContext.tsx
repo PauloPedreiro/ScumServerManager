@@ -1,5 +1,6 @@
 /// <reference path="../types/electron.d.ts" />
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { fetchPlayersFromLogs } from '../utils/playerUtils';
 
 interface ServerConfig {
   serverSettings: any;
@@ -53,12 +54,24 @@ export const ServerConfigProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [logsPath, setLogsPathState] = useState<string>('C:\\Servers\\scum\\SCUM\\Saved\\Logs');
+  const [isProcessingPlayers, setIsProcessingPlayers] = useState(false);
 
   // Função para setar o caminho e salvar no config.json
-  const setServerPath = (path: string | null) => {
+  const setServerPath = async (path: string | null) => {
     setServerPathState(path);
-    if (path && window.electronAPI?.saveAppConfig) {
-      window.electronAPI.saveAppConfig(path);
+    if (path && window.electronAPI?.saveAppConfig && window.electronAPI?.loadAppConfig) {
+      const appConfig = await window.electronAPI.loadAppConfig();
+      if (!appConfig) return;
+      await window.electronAPI.saveAppConfig({
+        lastServerPath: path,
+        steamcmdPath: appConfig.steamcmdPath || '',
+        installPath: appConfig.installPath || '',
+        serverPort: appConfig.serverPort ?? 0,
+        maxPlayers: appConfig.maxPlayers ?? 0,
+        enableBattleye: appConfig.enableBattleye ?? false,
+        iniConfigPath: appConfig.iniConfigPath || '',
+        logsPath: appConfig.logsPath || ''
+      });
     }
   };
 
@@ -81,7 +94,7 @@ export const ServerConfigProvider: React.FC<{ children: React.ReactNode }> = ({ 
         if (cache) {
           setServerCache(cache);
           setServerPathState(cache.serverPath);
-          console.log('Cache do servidor carregado:', cache.serverName);
+          // console.log('Cache do servidor carregado:', cache.serverName);
         }
       }
     } catch (err) {
@@ -96,7 +109,7 @@ export const ServerConfigProvider: React.FC<{ children: React.ReactNode }> = ({ 
         setServerCache(null);
         setServerPathState(null);
         setConfig(null);
-        console.log('Cache do servidor limpo');
+        // console.log('Cache do servidor limpo');
       }
     } catch (err) {
       console.error('Erro ao limpar cache:', err);
@@ -152,10 +165,6 @@ export const ServerConfigProvider: React.FC<{ children: React.ReactNode }> = ({ 
   };
 
   useEffect(() => {
-    loadServerCache();
-  }, []);
-
-  useEffect(() => {
     if (serverPath) {
       loadConfig();
     }
@@ -172,12 +181,28 @@ export const ServerConfigProvider: React.FC<{ children: React.ReactNode }> = ({ 
     })();
   }, []);
 
-  const setLogsPath = (path: string) => {
+  const setLogsPath = async (path: string) => {
     setLogsPathState(path);
-    if (window.electronAPI?.saveAppConfig) {
-      window.electronAPI.saveAppConfig(serverPath || '', undefined, undefined, undefined, undefined, undefined, undefined, path);
+    if (window.electronAPI?.loadAppConfig && window.electronAPI?.saveAppConfig) {
+      const appConfig = await window.electronAPI.loadAppConfig();
+      if (!appConfig) return;
+      // console.log('[setLogsPath] Salvando logsPath:', path, 'appConfig:', appConfig);
+      await window.electronAPI.saveAppConfig({
+        ...appConfig,
+        logsPath: path
+      });
     }
   };
+
+  // Chamar cadastro de jogadores sempre que logsPath mudar
+  useEffect(() => {
+    if (logsPath && window.electronAPI && !isProcessingPlayers) {
+      setIsProcessingPlayers(true);
+      fetchPlayersFromLogs(logsPath, window.electronAPI).finally(() => {
+        setIsProcessingPlayers(false);
+      });
+    }
+  }, [logsPath, isProcessingPlayers]);
 
   return (
     <ServerConfigContext.Provider value={{

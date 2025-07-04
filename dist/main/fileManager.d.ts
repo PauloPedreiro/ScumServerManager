@@ -30,6 +30,7 @@ export declare class FileManager {
     private cacheDir;
     private cacheFile;
     private appConfigFile;
+    private lastNotifiedSteamId;
     constructor();
     saveServerCache(serverPath: string, config: ServerConfig, configDir: string): Promise<void>;
     loadServerCache(): Promise<ServerCache | null>;
@@ -56,11 +57,11 @@ export declare class FileManager {
     }>;
     listConfigFiles(serverPath: string): Promise<string[]>;
     restoreDefaultFile(serverPath: string, fileName: string): Promise<void>;
-    saveAppConfig(serverPath: string, steamcmdPath?: string, installPath?: string, serverPort?: number, maxPlayers?: number, enableBattleye?: boolean, iniConfigPath?: string, logsPath?: string): Promise<void>;
+    saveAppConfig(config: AppConfig): Promise<void>;
     loadAppConfig(): Promise<AppConfig | null>;
     clearAppConfig(): Promise<void>;
     listDir(dirPath: string): Promise<string[]>;
-    getServerStatus(serverPath: string): Promise<any>;
+    getServerStatus(_serverPath: string): Promise<any>;
     getServerLogs(serverPath: string, options: {
         level: string;
         filter: string;
@@ -80,5 +81,13 @@ export declare class FileManager {
     startServerWithConfig(serverPath: string, serverPort: number, maxPlayers: number, enableBattleye: boolean): Promise<void>;
     getRealServerStatus(serverPath: string): Promise<any>;
     startUpdateServerWithSteamcmdStream(steamcmdPath: string, installPath: string, event: any): void;
+    saveDiscordWebhooks(webhooks: any): Promise<void>;
+    loadDiscordWebhooks(): Promise<any>;
+    sendDiscordWebhookMessage(webhookUrl: string, message: string): Promise<{
+        success: boolean;
+        error?: string;
+    }>;
+    clearNotifiedPlayers(): Promise<void>;
+    getNotifiedPlayers(): Promise<string[]>;
 }
 //# sourceMappingURL=fileManager.d.ts.map

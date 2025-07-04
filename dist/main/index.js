@@ -38,18 +38,21 @@ const path = __importStar(require("path"));
 const fileManager_1 = require("./fileManager");
 const backupManager_1 = require("./backupManager");
 const fs = __importStar(require("fs"));
+const vehicleDestructionWatcher_1 = require("./vehicleDestructionWatcher");
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = 'development';
 }
-console.log('NODE_ENV (início):', process.env.NODE_ENV);
+// console.log('NODE_ENV (início):', process.env.NODE_ENV);
 let mainWindow = null;
 const fileManager = new fileManager_1.FileManager();
 const backupManager = new backupManager_1.BackupManager();
+// Iniciar monitoramento automático de destruição de veículos
+(0, vehicleDestructionWatcher_1.startVehicleDestructionWatcher)(fileManager).catch(() => { });
 function createWindow() {
     const preloadPath = path.join(__dirname, 'preload.js');
     const iconPath = path.join(__dirname, '../../assets/icon.png');
-    console.log('Preload path:', preloadPath);
-    console.log('Icon path:', iconPath);
+    // console.log('Preload path:', preloadPath);
+    // console.log('Icon path:', iconPath);
     mainWindow = new electron_1.BrowserWindow({
         width: 1400,
         height: 900,
@@ -66,9 +69,9 @@ function createWindow() {
     });
     // Carrega a aplicação React
     const nodeEnv = (process.env.NODE_ENV || '').trim().toLowerCase();
-    console.log('NODE_ENV (ajustado):', nodeEnv);
+    // console.log('NODE_ENV (ajustado):', nodeEnv);
     if (nodeEnv === 'development') {
-        console.log('Carregando frontend de desenvolvimento: http://localhost:5173');
+        // console.log('Carregando frontend de desenvolvimento: http://localhost:5173');
         mainWindow.loadURL('http://localhost:5173').catch((err) => {
             console.error('Erro ao carregar frontend de desenvolvimento:', err);
         });
@@ -76,7 +79,7 @@ function createWindow() {
     }
     else {
         const prodPath = path.join(__dirname, '../renderer/index.html');
-        console.log('Carregando frontend de produção:', prodPath);
+        // console.log('Carregando frontend de produção:', prodPath);
         mainWindow.loadFile(prodPath).catch((err) => {
             console.error('Erro ao carregar frontend de produção:', err);
         });
@@ -187,7 +190,8 @@ electron_1.ipcMain.handle('read-json-file', async (event, filePath) => {
     }
     catch (error) {
         console.error('Erro ao ler arquivo JSON:', error);
-        throw error;
+        // Retornar objeto vazio em vez de propagar o erro
+        return {};
     }
 });
 // Salvar arquivo JSON
@@ -293,15 +297,8 @@ electron_1.ipcMain.handle('get-server-info', async (event, serverPath) => {
     }
 });
 // Configuração persistente do caminho do servidor e steamcmd
-electron_1.ipcMain.handle('save-app-config', async (event, serverPath, steamcmdPath, installPath, serverPort, maxPlayers, enableBattleye) => {
-    try {
-        await fileManager.saveAppConfig(serverPath, steamcmdPath, installPath, serverPort, maxPlayers, enableBattleye);
-        return { success: true };
-    }
-    catch (error) {
-        console.error('Erro ao salvar config.json:', error);
-        throw error;
-    }
+electron_1.ipcMain.handle('save-app-config', async (event, config) => {
+    await fileManager.saveAppConfig(config);
 });
 electron_1.ipcMain.handle('load-app-config', async () => {
     try {
@@ -499,8 +496,8 @@ electron_1.ipcMain.handle('get-real-server-status', async (event, serverPath) =>
         throw error;
     }
 });
-electron_1.ipcMain.on('start-update-server-with-steamcmd-stream', (event, steamcmdPath, installPath) => {
-    fileManager.startUpdateServerWithSteamcmdStream(steamcmdPath, installPath, event);
+electron_1.ipcMain.on('start-update-server-with-steamcmd-stream', (_event, steamcmdPath, installPath) => {
+    fileManager.startUpdateServerWithSteamcmdStream(steamcmdPath, installPath, _event);
 });
 electron_1.ipcMain.handle('load-restart-schedule', async () => {
     const filePath = path.join(process.cwd(), 'restart-schedule.json');
@@ -535,6 +532,59 @@ electron_1.ipcMain.handle('check-path-exists', async (event, pathToCheck) => {
     catch (error) {
         console.error('Erro ao verificar existência do caminho:', error);
         return false;
+    }
+});
+electron_1.ipcMain.handle('save-discord-webhooks', async (event, webhooks) => {
+    try {
+        await fileManager.saveDiscordWebhooks(webhooks);
+        return { success: true };
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao salvar discordWebhooks:', errMsg);
+        return { success: false, error: errMsg };
+    }
+});
+electron_1.ipcMain.handle('load-discord-webhooks', async () => {
+    try {
+        return await fileManager.loadDiscordWebhooks();
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao carregar discordWebhooks:', errMsg);
+        return {};
+    }
+});
+electron_1.ipcMain.handle('send-discord-webhook-message', async (event, webhookUrl, message) => {
+    try {
+        return await fileManager.sendDiscordWebhookMessage(webhookUrl, message);
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao enviar mensagem para webhook do Discord:', errMsg);
+        return { success: false, error: errMsg };
+    }
+});
+// Gerenciamento de notificações de jogadores
+electron_1.ipcMain.handle('clear-notified-players', async () => {
+    try {
+        await fileManager.clearNotifiedPlayers();
+        return { success: true };
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao limpar jogadores notificados:', errMsg);
+        return { success: false, error: errMsg };
+    }
+});
+electron_1.ipcMain.handle('get-notified-players', async () => {
+    try {
+        return await fileManager.getNotifiedPlayers();
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao obter jogadores notificados:', errMsg);
+        return [];
     }
 });
 //# sourceMappingURL=index.js.map
