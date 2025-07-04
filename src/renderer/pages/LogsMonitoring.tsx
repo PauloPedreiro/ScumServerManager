@@ -30,23 +30,8 @@ import {
   TableHead,
   TableRow
 } from '@mui/material';
-import {
-  Refresh as RefreshIcon,
-  PlayArrow as StartIcon,
-  Stop as StopIcon,
-  RestartAlt as RestartIcon,
-  Download as DownloadIcon,
-  Clear as ClearIcon,
-  Monitor as MonitorIcon,
-  BugReport as LogIcon,
-  Memory as MemoryIcon,
-  Speed as CpuIcon,
-  Storage as StorageIcon,
-  NetworkCheck as NetworkIcon,
-  People as PeopleIcon,
-  Folder as FolderIcon
-} from '@mui/icons-material';
 import { useServerConfig } from '../contexts/ServerConfigContext';
+import { usePlayerStats } from '../contexts/PlayerStatsContext';
 
 interface LogsMonitoringProps {
   showNotification: (message: string, severity?: 'success' | 'error' | 'warning' | 'info') => void;
@@ -103,9 +88,9 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
   const [tabValue, setTabValue] = useState(0);
   const [serverStatus, setServerStatus] = useState<ServerStatus | null>(null);
   const [logs, setLogs] = useState<LogEntry[]>([]);
-  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [autoRefresh, setAutoRefresh] = useState(false);
   const [refreshInterval, setRefreshInterval] = useState(5);
-  const [logLevel, setLogLevel] = useState('ALL');
+  const [logLevel, setLogLevel] = useState('INFO');
   const [logFilter, setLogFilter] = useState('');
   const [serverAction, setServerAction] = useState<'idle' | 'starting' | 'stopping' | 'restarting'>('idle');
   const logsEndRef = useRef<HTMLDivElement>(null);
@@ -118,15 +103,17 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
     totalLogins: number;
     lastPosition?: { x: string; y: string; z: string };
   }>>([]);
-  const [pollInterval, setPollInterval] = useState<number>(5000); // padrão 5 segundos
-
-  const logLevels = [
-    { value: 'ALL', label: 'Todos', color: 'default' },
-    { value: 'INFO', label: 'Info', color: 'info' },
-    { value: 'WARNING', label: 'Aviso', color: 'warning' },
-    { value: 'ERROR', label: 'Erro', color: 'error' },
-    { value: 'DEBUG', label: 'Debug', color: 'primary' }
-  ];
+  const [pollInterval, setPollInterval] = useState(30000);
+  const [loginLogStats, setLoginLogStats] = useState({
+    path: '',
+    files: 0,
+    events: 0,
+    online: 0
+  });
+  const { setPlayerStats } = usePlayerStats();
+  const [logsPathInput, setLogsPathInput] = useState(logsPath);
+  const [isProcessingPlayers, setIsProcessingPlayers] = useState(false);
+  const [lastProcessedTimestamp, setLastProcessedTimestamp] = useState<number>(0);
 
   useEffect(() => {
     if (serverPath && autoRefresh) {
@@ -148,7 +135,6 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
   useEffect(() => {
     if (tabValue === 2) {
       loadLoginLogs();
-      extractPlayersFromLoginLogs();
     }
   }, [tabValue, serverPath]);
 
@@ -159,10 +145,11 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Função para ler os logs da pasta logsPath e atualizar a lista de jogadores
-      fetchPlayersFromLogs();
-    }, pollInterval);
+    if (!logsPath) return;
+    
+    processPlayersFromLogs();
+    
+    const interval = setInterval(processPlayersFromLogs, pollInterval);
     return () => clearInterval(interval);
   }, [logsPath, pollInterval]);
 
@@ -194,18 +181,18 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
 
   const loadLoginLogs = async () => {
     if (!serverPath) return;
-    // Caminho base dos logs
     const logsDir = `${serverPath.replace(/\\/g, '/')}/Saved/SaveFiles/Logs`;
-    // Buscar arquivos login_*.log
     if (window.electronAPI?.listDir && window.electronAPI?.readConfigFile) {
       const files = await window.electronAPI.listDir(logsDir);
       const loginFiles = files.filter((f: string) => f.startsWith('login_') && f.endsWith('.log'));
       let events: any[] = [];
-      for (const file of loginFiles.slice(-5)) { // Pega os 5 mais recentes
-        const content = await window.electronAPI.readConfigFile(`${logsDir}/${file}`);
-        const lines = content.split('\n').filter((l: string) => l.trim().length > 0 && l.includes('logged'));
+      for (const file of loginFiles.slice(-5)) {
+        let content = await window.electronAPI.readConfigFile(`${logsDir}/${file}`);
+        content = content.replace(/\u0000/g, '');
+        const rawLines = content.split(/\r?\n/);
+        // console.log(`[DEBUG] Linhas brutas do arquivo ${file}:`, rawLines.slice(0, 10));
+        const lines = rawLines.filter((l: string) => l.trim().length > 0 && l.includes('logged'));
         for (const line of lines) {
-          // Exemplo: 2025.06.22-04.58.36: '192.168.100.3 76561198040636105:Pedreiro(1)' logged in at: X=25824.000 Y=-674331.000 Z=1000.000
           const match = line.match(/^(\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2}): '([\d.]+) (\d+):([^(]+)\(\d+\)' logged (in|out) at: X=([\d.-]+) Y=([\d.-]+) Z=([\d.-]+)/);
           if (match) {
             events.push({
@@ -222,52 +209,6 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
         }
       }
       setLoginEvents(events.reverse());
-    }
-  };
-
-  const extractPlayersFromLoginLogs = async () => {
-    if (!serverPath) return;
-    const logsDir = `${serverPath.replace(/\\/g, '/')}/Saved/SaveFiles/Logs`;
-    const PLAYERS_PATH = 'players.json';
-    if (window.electronAPI?.listDir && window.electronAPI?.readConfigFile && window.electronAPI?.saveJsonFile) {
-      const files = await window.electronAPI.listDir(logsDir);
-      const loginFiles = files.filter((f: string) => f.startsWith('login_') && f.endsWith('.log'));
-      let players: Record<string, { name: string, steamId: string, timestamp: string, lastLogin: string, totalLogins: number }> = {};
-      
-      for (const file of loginFiles) {
-        const content = await window.electronAPI.readConfigFile(`${logsDir}/${file}`);
-        const lines = content.split('\n').filter((l: string) => l.trim().length > 0 && l.includes('logged in'));
-        
-        for (const line of lines) {
-          const match = line.match(/^(\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2}): '([\d.]+) (\d+):([^(]+)\(\d+\)' logged in at:/);
-          if (match) {
-            const steamId = match[3];
-            const name = match[4];
-            const timestamp = match[1];
-            
-            if (!players[steamId]) {
-              players[steamId] = {
-                name,
-                steamId,
-                timestamp,
-                lastLogin: timestamp,
-                totalLogins: 1
-              };
-            } else {
-              players[steamId].lastLogin = timestamp;
-              players[steamId].totalLogins += 1;
-            }
-          }
-        }
-      }
-      
-      const playersArr = Object.values(players).sort((a, b) => 
-        new Date(b.lastLogin).getTime() - new Date(a.lastLogin).getTime()
-      );
-      
-      setPlayersList(playersArr);
-      await window.electronAPI.saveJsonFile(PLAYERS_PATH, playersArr);
-      showNotification(`Processados ${playersArr.length} jogadores únicos`, 'success');
     }
   };
 
@@ -340,117 +281,142 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
     return status.running ? 'Online' : 'Offline';
   };
 
-  const processAttachedLog = async () => {
-    try {
-      // Simular o processamento do log anexado
-      const logContent = `2025.06.22-16.00.39: Game version: 1.0.0.1.95114
-2025.06.22-16.02.50: '172.18.0.1 76561199581557003:SANDMAN(167)' logged in at: X=-70556.000 Y=-497816.000 Z=276.000
-2025.06.22-16.02.50: '172.18.0.1 76561198305612921:Katsumoto(273)' logged in at: X=-763085.000 Y=-683503.000 Z=10712.000
-2025.06.22-16.02.52: '172.18.0.1 76561199581557003:SANDMAN(167)' logged out at: ?
-2025.06.22-16.03.02: '172.18.0.1 76561199581557003:SANDMAN(167)' logged in at: X=-70556.000 Y=-497816.000 Z=276.000
-2025.06.22-16.03.02: '172.18.0.1 76561198201014691:Tua Mãe(271)' logged in at: X=-763163.000 Y=-680669.000 Z=10717.000
-2025.06.22-16.03.04: '172.18.0.1 76561198201014691:Tua Mãe(271)' logged out at: ?
-2025.06.22-16.03.16: '172.18.0.1 76561198381975980:iEduCopattiBR(178)' logged in at: X=-769054.000 Y=-748223.000 Z=2748.000
-2025.06.22-16.03.22: '172.18.0.1 76561199446915172:jairtf(295)' logged in at: X=-388600.500 Y=-469269.500 Z=2949.781
-2025.06.22-16.03.34: '172.18.0.1 76561198142874446:Saitama(51)' logged in at: X=-771934.000 Y=-748890.000 Z=2742.000
-2025.06.22-16.03.54: '172.18.0.1 76561198201014691:Tua Mãe(271)' logged in at: X=-763163.000 Y=-680669.000 Z=10717.000
-2025.06.22-16.04.03: '172.18.0.1 76561198240717656:Dilas(288)' logged in at: X=45375.000 Y=-679626.000 Z=611.000
-2025.06.22-16.05.13: '172.18.0.1 76561198337589373:KamaBR(282)' logged in at: X=-787322.000 Y=-286317.000 Z=16665.000
-2025.06.22-16.06.04: '172.18.0.1 76561199492540812:rafaela(259)' logged in at: X=-787328.000 Y=-286116.000 Z=16690.000
-2025.06.22-16.06.06: '172.18.0.1 76561198258958714:Zerf23BR(235)' logged in at: X=-276478.000 Y=-675100.000 Z=7802.000
-2025.06.22-20.00.45: '172.18.0.1 76561198081711036:Matheus(325)' logged in at: X=464045.562 Y=-508691.250 Z=5420.328`;
+  const processPlayersFromLogs = async () => {
+    if (isProcessingPlayers) {
+      // console.log('[DEBUG] Já processando jogadores, pulando...');
+      return;
+    }
 
-      const lines = logContent.split('\n').filter((l: string) => l.trim().length > 0 && l.includes('logged in'));
-      let players: Record<string, { name: string, steamId: string, timestamp: string, lastLogin: string, totalLogins: number, lastPosition: { x: string, y: string, z: string } }> = {};
+    const now = Date.now();
+    if (now - lastProcessedTimestamp < 5000) {
+      // console.log('[DEBUG] Processamento muito recente, pulando...');
+      return;
+    }
+
+    setIsProcessingPlayers(true);
+    setLastProcessedTimestamp(now);
+
+    try {
+      const detectedPath = logsPath;
+      // console.log('[DEBUG] Processando jogadores do caminho:', detectedPath);
       
-      for (const line of lines) {
-        const match = line.match(/^(\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2}): '([\d.]+) (\d+):([^(]+)\(\d+\)' logged in at: X=([\d.-]+) Y=([\d.-]+) Z=([\d.-]+)/);
-        if (match) {
-          const steamId = match[3];
-          const name = match[4];
-          const timestamp = match[1];
-          const x = match[5];
-          const y = match[6];
-          const z = match[7];
-          
-          if (!players[steamId]) {
-            players[steamId] = {
-              name,
-              steamId,
-              timestamp,
-              lastLogin: timestamp,
-              totalLogins: 1,
-              lastPosition: { x, y, z }
-            };
-          } else {
-            players[steamId].lastLogin = timestamp;
-            players[steamId].totalLogins += 1;
-            players[steamId].lastPosition = { x, y, z };
-          }
+      const files = await window.electronAPI.listDir(detectedPath);
+      const loginFiles = files.filter((f: string) => f.startsWith('login_') && f.endsWith('.log'));
+              // console.log('[DEBUG] Arquivos login_*.log encontrados:', loginFiles.length);
+      
+      let allLines: string[] = [];
+      let events = 0;
+      
+      for (const file of loginFiles) {
+        let content = await window.electronAPI.readConfigFile(`${detectedPath}/${file}`);
+        content = content.replace(/\u0000/g, '');
+        const rawLines = content.split(/\r?\n/);
+        const lines = rawLines.filter((l: string) => l.trim().length > 0 && l.includes('logged'));
+        events += lines.length;
+        allLines.push(...lines);
+      }
+      
+              // console.log('[DEBUG] Total de linhas de evento lidas:', allLines.length);
+      
+      allLines.sort((a, b) => {
+        const getDate = (line: string) => {
+          const m = line.match(/^(\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2})/);
+          return m ? m[1].replace(/\./g, '-').replace('-', 'T').replace(/-/g, ':').replace('T', '-') : '';
+        };
+        return getDate(a).localeCompare(getDate(b));
+      });
+      
+      const onlinePlayers = new Set();
+      for (const line of allLines) {
+        const matchIn = line.match(/\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2}: '[\d.]+ (\d+):/);
+        if (line.includes('logged in') && matchIn) {
+          onlinePlayers.add(matchIn[1]);
+        } else if (line.includes('logged out') && matchIn) {
+          onlinePlayers.delete(matchIn[1]);
         }
       }
       
-      const playersArr = Object.values(players).sort((a, b) => 
-        new Date(b.lastLogin).getTime() - new Date(a.lastLogin).getTime()
-      );
+      setLoginLogStats({ path: detectedPath, files: loginFiles.length, events, online: onlinePlayers.size });
+      setPlayerStats((prev) => ({ ...prev, online: onlinePlayers.size }));
       
-      setPlayersList(playersArr);
+      await updatePlayersJson(allLines);
       
-      // Salvar o JSON gerado
-      if (window.electronAPI?.saveJsonFile) {
-        await window.electronAPI.saveJsonFile('players_from_log.json', playersArr);
-      }
-      
-      showNotification(`Processados ${playersArr.length} jogadores do log anexado`, 'success');
     } catch (error) {
-      showNotification('Erro ao processar log anexado', 'error');
-      console.error('Erro ao processar log:', error);
+      console.error('[DEBUG] Erro ao processar jogadores:', error);
+    } finally {
+      setIsProcessingPlayers(false);
     }
   };
 
-  const fetchPlayersFromLogs = async () => {
-    if (!logsPath) return;
-    const logsDir = logsPath;
-    const PLAYERS_PATH = 'players.json';
-    if (window.electronAPI?.listDir && window.electronAPI?.readConfigFile && window.electronAPI?.saveJsonFile) {
-      const files = await window.electronAPI.listDir(logsDir);
-      const loginFiles = files.filter((f: string) => f.startsWith('login_') && f.endsWith('.log'));
-      let players: Record<string, { name: string, steamId: string, timestamp: string, lastLogin: string, totalLogins: number }> = {};
-      
-      for (const file of loginFiles) {
-        const content = await window.electronAPI.readConfigFile(`${logsDir}/${file}`);
-        const lines = content.split('\n').filter((l: string) => l.trim().length > 0 && l.includes('logged in'));
-        
-        for (const line of lines) {
-          const match = line.match(/^(\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2}): '([\d.]+) (\d+):([^(]+)\(\d+\)' logged in at:/);
-          if (match) {
-            const steamId = match[3];
-            const name = match[4];
-            const timestamp = match[1];
-            
-            if (!players[steamId]) {
-              players[steamId] = {
-                name,
-                steamId,
-                timestamp,
-                lastLogin: timestamp,
-                totalLogins: 1
-              };
-            } else {
-              players[steamId].lastLogin = timestamp;
-              players[steamId].totalLogins += 1;
+  const updatePlayersJson = async (allLines: string[]) => {
+    if (!allLines || allLines.length === 0) {
+      // console.log('[DEBUG][players.json] Nenhuma linha de log para processar, pulando...');
+      return;
+    }
+    
+    try {
+      let playersDb: any[] = [];
+      try {
+        playersDb = await window.electronAPI.readJsonFile('players.json');
+        if (!Array.isArray(playersDb)) playersDb = [];
+      } catch { playersDb = []; }
+      const playersMap = new Map(playersDb.map(p => [p.steamId, p]));
+
+      let updated = false;
+      let newPlayersCount = 0;
+      for (const line of allLines) {
+        const match = line.match(/\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2}: '[\d.]+ (\d+):([^']+)\(/);
+        if (line.includes('logged in') && match) {
+          const steamId = match[1];
+          const name = match[2];
+          const tsMatch = line.match(/^(\d{4}\.\d{2}\.\d{2}-\d{2}\.\d{2}\.\d{2})/);
+          const timestamp = tsMatch ? tsMatch[1] : '';
+          
+          if (!playersMap.has(steamId)) {
+            playersMap.set(steamId, {
+              steamId,
+              name,
+              firstLogin: timestamp,
+              lastLogin: timestamp,
+              totalLogins: 1
+            });
+            updated = true;
+            newPlayersCount++;
+            // console.log(`[DEBUG][players.json] Novo jogador detectado: ${name} (${steamId})`);
+          } else {
+            const player = playersMap.get(steamId);
+            if (player.lastLogin !== timestamp || player.name !== name) {
+              player.lastLogin = timestamp;
+              player.name = name;
+              updated = true;
+              // console.log(`[DEBUG][players.json] Jogador atualizado: ${name} (${steamId})`);
             }
+            player.totalLogins += 1;
+            playersMap.set(steamId, player);
           }
         }
       }
       
-      const playersArr = Object.values(players).sort((a, b) => 
-        new Date(b.lastLogin).getTime() - new Date(a.lastLogin).getTime()
-      );
+      // console.log(`[DEBUG][players.json] Processamento concluído: ${newPlayersCount} novos jogadores, ${playersMap.size} total`);
       
-      setPlayersList(playersArr);
-      await window.electronAPI.saveJsonFile(PLAYERS_PATH, playersArr);
-      showNotification(`Processados ${playersArr.length} jogadores do log anexado`, 'success');
+      if (playersMap.size === 0) {
+        // console.log('[DEBUG][players.json] playersMap está vazio, NÃO VOU salvar nem limpar o arquivo!');
+        return;
+      }
+      
+      if (updated) {
+        try {
+          let playersPath = 'players.json';
+          await window.electronAPI.saveJsonFile(playersPath, Array.from(playersMap.values()));
+          // console.log('[DEBUG][players.json] Arquivo salvo em', playersPath, 'total jogadores:', playersMap.size);
+        } catch (err) {
+          console.error('[DEBUG][players.json] Erro ao salvar arquivo:', err);
+        }
+      } else {
+        // console.log('[DEBUG][players.json] Nenhuma alteração detectada, não sobrescrevendo arquivo.');
+      }
+    } catch (error) {
+      console.error('[DEBUG][players.json] Erro ao processar jogadores:', error);
     }
   };
 
@@ -466,40 +432,19 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
 
   return (
     <Box>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-        <Typography variant="h4" component="h1">
-          <MonitorIcon sx={{ mr: 2, verticalAlign: 'middle' }} />
-          Logs e Monitoramento
-        </Typography>
-        <Box>
-          <Button
-            variant="outlined"
-            startIcon={<RefreshIcon />}
-            onClick={() => {
-              loadServerStatus();
-              loadLogs();
-            }}
-            sx={{ mr: 2 }}
-          >
-            Atualizar
-          </Button>
-          <Button
-            variant="outlined"
-            startIcon={<DownloadIcon />}
-            onClick={downloadLogs}
-            sx={{ mr: 2 }}
-          >
-            Baixar Logs
-          </Button>
-          <Button
-            variant="outlined"
-            startIcon={<ClearIcon />}
-            onClick={clearLogs}
-            color="warning"
-          >
-            Limpar Logs
-          </Button>
-        </Box>
+      <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+      </Box>
+
+      <Box sx={{ mb: 3 }}>
+        <Card sx={{ background: '#232323', color: 'white', display: 'inline-block', minWidth: 320 }}>
+          <CardContent>
+            <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 1 }}>Resumo da Pasta de Logs</Typography>
+            <Typography variant="body2">Caminho: <b>{loginLogStats.path}</b></Typography>
+            <Typography variant="body2">Arquivos de login: <b>{loginLogStats.files}</b></Typography>
+            <Typography variant="body2">Eventos de login/logout: <b>{loginLogStats.events}</b></Typography>
+            <Typography variant="body2" sx={{ color: 'lightgreen', fontWeight: 'bold' }}>Jogadores online agora: <b>{loginLogStats.online}</b></Typography>
+          </CardContent>
+        </Card>
       </Box>
 
       <Box sx={{ mb: 3 }}>
@@ -508,22 +453,31 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
           <TextField
             fullWidth
             size="small"
-            value={logsPath}
-            InputProps={{ readOnly: true }}
+            value={logsPathInput}
+            onChange={e => setLogsPathInput(e.target.value)}
             placeholder="Pasta dos logs do servidor"
           />
           <Button
             variant="outlined"
             size="small"
-            startIcon={<FolderIcon />}
             onClick={async () => {
               const selectedPath = await window.electronAPI.selectInstallFolder();
               if (selectedPath) {
-                setLogsPath(selectedPath);
+                setLogsPathInput(selectedPath);
               }
             }}
           >
             Selecionar
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={async () => {
+              // console.log('[LogsMonitoring] Salvando logsPathInput:', logsPathInput);
+              await setLogsPath(logsPathInput);
+            }}
+          >
+            Salvar
           </Button>
         </Box>
       </Box>
@@ -532,93 +486,15 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
         Monitore o status do seu servidor SCUM em tempo real e visualize logs para diagnóstico e troubleshooting.
       </Alert>
 
-      {/* Tabs for Logs and Monitoring */}
       <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 3 }}>
         <Tabs value={tabValue} onChange={handleTabChange} aria-label="logs tabs">
-          <Tab label="Status do Servidor" {...a11yProps(0)} />
-          <Tab label="Logs do Sistema" {...a11yProps(1)} />
-          <Tab label="Logs de Login" {...a11yProps(2)} />
-          <Tab label="Jogadores" {...a11yProps(3)} />
+          <Tab label="Logs do Sistema" {...a11yProps(0)} />
+          <Tab label="Logs de Login" {...a11yProps(1)} />
+          <Tab label="Jogadores" {...a11yProps(2)} />
         </Tabs>
       </Box>
 
       <TabPanel value={tabValue} index={0}>
-        {/* Server Status Content */}
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Ações de Logs
-                </Typography>
-                <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                  <Button
-                    variant="outlined"
-                    startIcon={<DownloadIcon />}
-                    onClick={downloadLogs}
-                  >
-                    Baixar Logs
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="warning"
-                    startIcon={<ClearIcon />}
-                    onClick={clearLogs}
-                  >
-                    Limpar Logs
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    startIcon={<PeopleIcon />}
-                    onClick={processAttachedLog}
-                  >
-                    Processar Log Anexado
-                  </Button>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-          
-          <Grid item xs={12} md={6}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Ações de Logs
-                </Typography>
-                <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                  <Button
-                    variant="outlined"
-                    startIcon={<DownloadIcon />}
-                    onClick={downloadLogs}
-                  >
-                    Baixar Logs
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="warning"
-                    startIcon={<ClearIcon />}
-                    onClick={clearLogs}
-                  >
-                    Limpar Logs
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    startIcon={<PeopleIcon />}
-                    onClick={processAttachedLog}
-                  >
-                    Processar Log Anexado
-                  </Button>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </TabPanel>
-
-      <TabPanel value={tabValue} index={1}>
-        {/* System Logs Content */}
         <Box sx={{ mb: 2 }}>
           <Typography variant="h6" gutterBottom>
             Logs do Sistema
@@ -654,19 +530,11 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
         </Paper>
       </TabPanel>
 
-      <TabPanel value={tabValue} index={2}>
-        {/* Login Logs Content */}
+      <TabPanel value={tabValue} index={1}>
         <Box sx={{ mb: 2 }}>
           <Typography variant="h6" gutterBottom>
             Logs de Login
           </Typography>
-          <Button
-            variant="outlined"
-            onClick={loadLoginLogs}
-            sx={{ mb: 2 }}
-          >
-            Carregar Logs de Login
-          </Button>
         </Box>
         
         <Paper sx={{ maxHeight: 600, overflow: 'auto' }}>
@@ -688,8 +556,7 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
         </Paper>
       </TabPanel>
 
-      <TabPanel value={tabValue} index={3}>
-        {/* Players Content */}
+      <TabPanel value={tabValue} index={2}>
         <Box sx={{ mb: 2 }}>
           <Typography variant="h6" gutterBottom>
             Lista de Jogadores
@@ -744,7 +611,6 @@ const LogsMonitoring: React.FC<LogsMonitoringProps> = ({ showNotification }) => 
         </Paper>
       </TabPanel>
 
-      {/* Information Box */}
       <Box sx={{ mt: 4, p: 3, bgcolor: 'background.paper', borderRadius: 2 }}>
         <Typography variant="h6" gutterBottom>
           Informações sobre Logs e Monitoramento

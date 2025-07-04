@@ -30,7 +30,7 @@ electron_1.contextBridge.exposeInMainWorld('electronAPI', {
     // Listar arquivos de configuração
     listConfigFiles: (serverPath) => electron_1.ipcRenderer.invoke('list-config-files', serverPath),
     // Configurações persistentes
-    saveAppConfig: (serverPath, steamcmdPath, installPath, serverPort, maxPlayers, enableBattleye) => electron_1.ipcRenderer.invoke('save-app-config', serverPath, steamcmdPath, installPath, serverPort, maxPlayers, enableBattleye),
+    saveAppConfig: (config) => electron_1.ipcRenderer.invoke('save-app-config', config),
     loadAppConfig: () => electron_1.ipcRenderer.invoke('load-app-config'),
     clearAppConfig: () => electron_1.ipcRenderer.invoke('clear-app-config'),
     // Listar arquivos em um diretório
@@ -66,5 +66,11 @@ electron_1.contextBridge.exposeInMainWorld('electronAPI', {
     removeUpdateServerLogEnd: (callback) => electron_1.ipcRenderer.removeListener('update-server-log-end', callback),
     loadRestartSchedule: () => electron_1.ipcRenderer.invoke('load-restart-schedule'),
     saveRestartSchedule: (hours) => electron_1.ipcRenderer.invoke('save-restart-schedule', hours),
+    saveDiscordWebhooks: (webhooks) => electron_1.ipcRenderer.invoke('save-discord-webhooks', webhooks),
+    loadDiscordWebhooks: () => electron_1.ipcRenderer.invoke('load-discord-webhooks'),
+    sendDiscordWebhookMessage: (webhookUrl, message) => electron_1.ipcRenderer.invoke('send-discord-webhook-message', webhookUrl, message),
+    // Gerenciamento de notificações de jogadores
+    clearNotifiedPlayers: () => electron_1.ipcRenderer.invoke('clear-notified-players'),
+    getNotifiedPlayers: () => electron_1.ipcRenderer.invoke('get-notified-players'),
 });
 //# sourceMappingURL=preload.js.map

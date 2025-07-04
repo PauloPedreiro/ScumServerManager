@@ -40,6 +40,7 @@ export class FileManager {
   private cacheDir = path.join(os.homedir(), '.scum-server-manager');
   private cacheFile = path.join(this.cacheDir, 'server-cache.json');
   private appConfigFile = path.join(process.cwd(), 'config.json');
+  private lastNotifiedSteamId: string | null = null;
 
   constructor() {
     // Garantir que o diretório de cache existe
@@ -59,7 +60,7 @@ export class FileManager {
       };
 
       await fs.writeJson(this.cacheFile, cache, { spaces: 2 });
-      console.log('Cache do servidor salvo com sucesso');
+      // console.log('Cache do servidor salvo com sucesso');
     } catch (error) {
       console.error('Erro ao salvar cache do servidor:', error);
     }
@@ -235,8 +236,37 @@ export class FileManager {
 
   async saveIniFile(filePath: string, content: any): Promise<void> {
     try {
-      const iniContent = ini.stringify(this.addScumPrefix(content));
-      await fs.writeFile(filePath, iniContent, 'utf8');
+      // console.log('[saveIniFile] Salvando arquivo:', filePath);
+      // console.log('[saveIniFile] Conteúdo recebido:', content);
+      // Ler o conteúdo original do arquivo INI
+      let original = '';
+      if (await fs.pathExists(filePath)) {
+        original = await fs.readFile(filePath, 'utf8');
+      }
+      const lines = original.split(/\r?\n/);
+      const updated: string[] = [];
+      // Adiciona prefixo scum. nas chaves de content
+      const newValues = this.addScumPrefix(content);
+      // Para cada linha, se for uma chave que está em newValues, substitui o valor
+      for (let line of lines) {
+        const match = line.match(/^([^#;[\][^=]*)=(.*)$/); // ignora comentários e seções
+        if (match) {
+          const key = match[1].trim();
+          // console.log('[saveIniFile] Linha chave:', key, '| newValues:', Object.keys(newValues));
+          if (key in newValues) {
+            // console.log('[saveIniFile] Antes:', line);
+            line = key + '=' + newValues[key];
+            // console.log('[saveIniFile] Depois:', line);
+            delete newValues[key];
+          }
+        }
+        updated.push(line);
+      }
+      // Se houver novas chaves, adiciona ao final
+      for (const key in newValues) {
+        updated.push(key + '=' + newValues[key]);
+      }
+      await fs.writeFile(filePath, updated.join('\n'), 'utf8');
     } catch (error) {
       console.error(`Erro ao salvar arquivo INI ${filePath}:`, error);
       throw error;
@@ -250,15 +280,167 @@ export class FileManager {
       }
       
       const content = await fs.readFile(filePath, 'utf8');
+      
+      // Verificar se o arquivo está vazio
+      if (!content || content.trim().length === 0) {
+        return {};
+      }
+      
       return JSON.parse(content);
     } catch (error) {
       console.error(`Erro ao ler arquivo JSON ${filePath}:`, error);
-      throw error;
+      // Retornar objeto vazio em vez de propagar o erro
+      return {};
     }
   }
 
   async saveJsonFile(filePath: string, content: any): Promise<void> {
     try {
+      // Proteção: nunca sobrescrever players.json com array vazio
+      const isPlayersJson = filePath.endsWith('players.json') || filePath.endsWith('players.json'.replace('/', '\\'));
+      if (isPlayersJson && Array.isArray(content) && content.length === 0) {
+        // Log removido para evitar spam - proteção ainda ativa
+        return;
+      }
+      
+      // --- INÍCIO: Detectar novos jogadores e enviar para o Discord ---
+      if (isPlayersJson && Array.isArray(content)) {
+        const fs = require('fs-extra');
+        const path = require('path');
+        const webhookConfigPath = path.join(process.cwd(), 'discordWebhooks.json');
+        let webhookUrl = '';
+        if (await fs.pathExists(webhookConfigPath)) {
+          const webhookConfig = JSON.parse(await fs.readFile(webhookConfigPath, 'utf8'));
+          webhookUrl = webhookConfig.logNovosPlayers || '';
+        }
+        
+        if (!webhookUrl) {
+          console.log('[Discord] Webhook não configurado, pulando notificação de novos jogadores');
+          // Salva o arquivo sem notificar
+          const jsonContent = JSON.stringify(content, null, 2);
+          await fs.writeFile(filePath, jsonContent, 'utf8');
+          return;
+        }
+
+        // Carregar jogadores já notificados
+        const notifiedPath = path.join(process.cwd(), '.players_notified.json');
+        let notifiedIds: string[] = [];
+        if (await fs.pathExists(notifiedPath)) {
+          try {
+            const notifiedContent = await fs.readFile(notifiedPath, 'utf8');
+            if (notifiedContent.trim().length === 0) {
+              notifiedIds = [];
+            } else {
+              notifiedIds = JSON.parse(notifiedContent);
+              if (!Array.isArray(notifiedIds)) {
+                notifiedIds = [];
+              }
+            }
+          } catch (error) {
+            console.error('[Discord] Erro ao ler arquivo de notificados:', error);
+            notifiedIds = [];
+          }
+        }
+        
+        // Carregar jogadores existentes no players.json
+        let existingPlayers: any[] = [];
+        if (await fs.pathExists(filePath)) {
+          try {
+            const fileContent = await fs.readFile(filePath, 'utf8');
+            // Verificar se o arquivo não está vazio
+            if (fileContent.trim().length === 0) {
+              existingPlayers = [];
+            } else {
+              existingPlayers = JSON.parse(fileContent);
+              if (!Array.isArray(existingPlayers)) {
+                existingPlayers = [];
+              }
+            }
+          } catch (error) {
+            console.error('[Discord] Erro ao ler players.json existente:', error);
+            existingPlayers = [];
+          }
+        }
+        
+        // Criar conjunto de IDs já conhecidos (existentes + notificados)
+        const knownIds = new Set([...existingPlayers.map((p: any) => p.steamId), ...notifiedIds]);
+        
+        // Filtrar apenas jogadores realmente novos
+        const newPlayers = content.filter((p: any) => !knownIds.has(p.steamId));
+        
+        // Logs removidos para evitar spam - apenas mostrar quando há novos jogadores
+        if (newPlayers.length > 0) {
+          console.log(`[Discord] Processando ${newPlayers.length} jogadores novos:`);
+          for (const player of newPlayers) {
+            console.log(`  - ${player.name} (${player.steamId})`);
+          }
+          
+          for (const player of newPlayers) {
+            console.log(`[Discord] Processando novo jogador: ${player.name} (${player.steamId})`);
+            
+            const lockPath = path.join(process.cwd(), `.notify_lock_${player.steamId}`);
+            if (await fs.pathExists(lockPath)) {
+              console.log(`[Discord] Lock existente para ${player.steamId}, pulando...`);
+              continue;
+            }
+            
+            try {
+              // Cria o lock
+              await fs.writeFile(lockPath, Date.now().toString());
+              console.log(`[Discord] Lock criado para ${player.steamId}`);
+              
+              // Aguarda 1 segundo
+              await new Promise(resolve => setTimeout(resolve, 1000));
+              
+              // Verificar novamente se já foi notificado (dupla verificação)
+              let currentNotifiedIds: string[] = [];
+              if (await fs.pathExists(notifiedPath)) {
+                try {
+                  const currentContent = await fs.readFile(notifiedPath, 'utf8');
+                  if (currentContent.trim().length > 0) {
+                    currentNotifiedIds = JSON.parse(currentContent);
+                    if (!Array.isArray(currentNotifiedIds)) {
+                      currentNotifiedIds = [];
+                    }
+                  }
+                } catch {
+                  // Ignora erro de parse, continua com array vazio
+                  currentNotifiedIds = [];
+                }
+              }
+              
+              if (!currentNotifiedIds.includes(player.steamId)) {
+                // console.log(`[Discord] Enviando notificação para ${player.name} (${player.steamId})`);
+                const result = await this.sendDiscordWebhookMessage(
+                  webhookUrl,
+                  `+ ${player.name} (${player.steamId})`
+                );
+                
+                if (result.success) {
+                  currentNotifiedIds.push(player.steamId);
+                  await fs.writeFile(notifiedPath, JSON.stringify(currentNotifiedIds, null, 2), 'utf8');
+                  // console.log(`[Discord] Notificação enviada com sucesso para ${player.name}`);
+                } else {
+                  console.error(`[Discord] Erro ao enviar notificação para ${player.name}:`, result.error);
+                }
+              } else {
+                // console.log(`[Discord] Jogador ${player.name} já foi notificado anteriormente (verificação dupla)`);
+              }
+            } finally {
+              // Remove o lock
+              try {
+                await fs.remove(lockPath);
+                // console.log(`[Discord] Lock removido para ${player.steamId}`);
+              } catch (err) {
+                console.error(`[Discord] Erro ao remover lock para ${player.steamId}:`, err);
+              }
+            }
+          }
+        }
+        // Log removido: "Nenhum jogador novo detectado" - estava causando spam
+      }
+      // --- FIM: Detectar novos jogadores ---
+      
       const jsonContent = JSON.stringify(content, null, 2);
       await fs.writeFile(filePath, jsonContent, 'utf8');
     } catch (error) {
@@ -376,27 +558,9 @@ export class FileManager {
     await fs.writeFile(targetFile, content);
   }
 
-  async saveAppConfig(
-    serverPath: string, 
-    steamcmdPath?: string,
-    installPath?: string,
-    serverPort?: number,
-    maxPlayers?: number,
-    enableBattleye?: boolean,
-    iniConfigPath?: string,
-    logsPath?: string
-  ): Promise<void> {
-    const config: AppConfig = { 
-      lastServerPath: serverPath, 
-      steamcmdPath,
-      installPath,
-      serverPort,
-      maxPlayers,
-      enableBattleye,
-      iniConfigPath,
-      logsPath
-    };
+  async saveAppConfig(config: AppConfig): Promise<void> {
     await fs.writeJson(this.appConfigFile, config, { spaces: 2 });
+    // console.log('[saveAppConfig] Arquivo salvo em:', this.appConfigFile);
   }
 
   async loadAppConfig(): Promise<AppConfig | null> {
@@ -457,7 +621,7 @@ export class FileManager {
     }
   }
 
-  async getServerStatus(serverPath: string): Promise<any> {
+  async getServerStatus(_serverPath: string): Promise<any> {
     try {
       // Simular status do servidor (em uma implementação real, você verificaria processos)
       const isRunning = Math.random() > 0.5; // Simulação aleatória
@@ -493,7 +657,7 @@ export class FileManager {
       const appConfig = await this.loadAppConfig();
       // Extrair o diretório do caminho do servidor (remover o nome do executável)
       const serverDir = path.dirname(serverPath);
-      const logsDir = appConfig?.logsPath || path.join(serverDir, 'Saved', 'Logs');
+      const _logsDir = appConfig?.logsPath || path.join(serverDir, 'Saved', 'Logs');
       // Simular logs do servidor
       const logs = [
         {
@@ -549,10 +713,10 @@ export class FileManager {
       console.log('Parando servidor em:', serverPath);
       const { exec } = require('child_process');
       
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve, _reject) => {
         // Comando para parar o processo SCUMServer.exe
         const cmd = 'taskkill /f /im SCUMServer.exe';
-        exec(cmd, (error: any, stdout: any, stderr: any) => {
+        exec(cmd, (error: any, _stdout: any, _stderr: any) => {
           if (error) {
             // Se o processo não estiver rodando, não é um erro
             if (error.code === 1) {
@@ -560,7 +724,7 @@ export class FileManager {
               resolve(true);
             } else {
               console.error('Erro ao parar servidor:', error);
-              reject(error);
+              _reject(error);
             }
           } else {
             console.log('Servidor parado com sucesso');
@@ -690,7 +854,7 @@ export class FileManager {
       if (!enableBattleye) {
         cmd += ` -nobattleye`;
       }
-      exec(cmd, (error: any, stdout: any, stderr: any) => {
+      exec(cmd, (error: any, _stdout: any, _stderr: any) => {
         if (error) {
           console.error('Erro ao iniciar servidor:', error);
           reject(error);
@@ -785,5 +949,72 @@ export class FileManager {
       console.log('[SteamCMD] Processo finalizado com código:', code);
       event.sender.send('update-server-log-end', code);
     });
+  }
+
+  // Salvar webhooks do Discord
+  async saveDiscordWebhooks(webhooks: any): Promise<void> {
+    const fs = require('fs-extra');
+    const path = require('path');
+    const filePath = path.join(process.cwd(), 'discordWebhooks.json');
+    await fs.writeFile(filePath, JSON.stringify(webhooks, null, 2), 'utf8');
+  }
+
+  // Carregar webhooks do Discord
+  async loadDiscordWebhooks(): Promise<any> {
+    try {
+      const webhookPath = path.join(process.cwd(), 'discordWebhooks.json');
+      if (await fs.pathExists(webhookPath)) {
+        return JSON.parse(await fs.readFile(webhookPath, 'utf8'));
+      }
+      return {};
+    } catch (error) {
+      console.error('Erro ao carregar webhooks do Discord:', error);
+      return {};
+    }
+  }
+
+  // Enviar mensagem para um webhook do Discord
+  async sendDiscordWebhookMessage(webhookUrl: string, message: string): Promise<{ success: boolean; error?: string }> {
+    try {
+      const fetch = require('node-fetch');
+      const res = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: message })
+      });
+      if (res.ok) {
+        return { success: true };
+      } else {
+        return { success: false, error: `HTTP ${res.status}` };
+      }
+    } catch (error) {
+      const errMsg = error instanceof Error ? error.message : String(error);
+      return { success: false, error: errMsg };
+    }
+  }
+
+  async clearNotifiedPlayers(): Promise<void> {
+    try {
+      const notifiedPath = path.join(process.cwd(), '.players_notified.json');
+      if (await fs.pathExists(notifiedPath)) {
+        await fs.remove(notifiedPath);
+        console.log('[Discord] Arquivo de notificações limpo');
+      }
+    } catch (error) {
+      console.error('[Discord] Erro ao limpar arquivo de notificações:', error);
+    }
+  }
+
+  async getNotifiedPlayers(): Promise<string[]> {
+    try {
+      const notifiedPath = path.join(process.cwd(), '.players_notified.json');
+      if (await fs.pathExists(notifiedPath)) {
+        return JSON.parse(await fs.readFile(notifiedPath, 'utf8'));
+      }
+      return [];
+    } catch (error) {
+      console.error('[Discord] Erro ao ler jogadores notificados:', error);
+      return [];
+    }
   }
 } 

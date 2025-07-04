@@ -32,6 +32,7 @@ import {
 import { useServerConfig } from '../contexts/ServerConfigContext';
 import ptBR from '../locales/ptBR';
 import ServerTopFields from '../components/ServerTopFields';
+import { SelectChangeEvent } from '@mui/material/Select';
 // Usar asserção de tipo para listDir
 
 interface ServerSettingsProps {
@@ -177,205 +178,122 @@ function ServerDescriptionFieldComponent({ value, onChange }: ServerFieldProps) 
 }
 const ServerDescriptionField = React.memo(ServerDescriptionFieldComponent);
 
+// Tipos das props do GeneralSection
 interface GeneralSectionProps {
-  initialGeneral: any;
-  onSave: (general: any) => void;
+  serverName: string;
+  onServerNameChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  serverDescription: string;
+  onServerDescriptionChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  serverPassword: string;
+  onServerPasswordChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  maxPlayers: number;
+  onMaxPlayersChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  serverBannerUrl: string;
+  onServerBannerUrlChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  serverPlaystyle: string;
+  onServerPlaystyleChange: (e: SelectChangeEvent<string>) => void;
+  welcomeMessage: string;
+  onWelcomeMessageChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  messageOfTheDay: string;
+  onMessageOfTheDayChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  messageOfTheDayCooldown: number;
+  onMessageOfTheDayCooldownChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  minServerTickRate: number;
+  onMinServerTickRateChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  maxServerTickRate: number;
+  onMaxServerTickRateChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  maxPing: number;
+  onMaxPingChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  serverPort: number;
+  onServerPortChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  enableBattleye: boolean;
+  onEnableBattleyeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const GeneralSection: React.FC<GeneralSectionProps> = memo(({ initialGeneral, onSave }) => {
-  // Estados locais para todos os campos da seção General
-  const [serverName, setServerName] = useState(initialGeneral.ServerName || '');
-  const [serverDescription, setServerDescription] = useState(initialGeneral.ServerDescription || '');
-  const [serverPassword, setServerPassword] = useState(initialGeneral.ServerPassword || '');
-  const [maxPlayers, setMaxPlayers] = useState(initialGeneral.MaxPlayers || 64);
-  const [serverBannerUrl, setServerBannerUrl] = useState(initialGeneral.ServerBannerUrl || '');
-  const [serverPlaystyle, setServerPlaystyle] = useState(initialGeneral.ServerPlaystyle || 'PVE');
-  const [welcomeMessage, setWelcomeMessage] = useState(initialGeneral.WelcomeMessage || '');
-  const [messageOfTheDay, setMessageOfTheDay] = useState(initialGeneral.MessageOfTheDay || '');
-  const [messageOfTheDayCooldown, setMessageOfTheDayCooldown] = useState(initialGeneral.MessageOfTheDayCooldown || 10);
-  const [minServerTickRate, setMinServerTickRate] = useState(initialGeneral.MinServerTickRate || 5);
-  const [maxServerTickRate, setMaxServerTickRate] = useState(initialGeneral.MaxServerTickRate || 30);
-  const [maxPing, setMaxPing] = useState(initialGeneral.MaxPing || 200);
-  const [serverPort, setServerPort] = useState(initialGeneral.ServerPort || 8900);
-  const [enableBattleye, setEnableBattleye] = useState(initialGeneral.EnableBattleye !== undefined ? initialGeneral.EnableBattleye : true);
-
-  // Atualizar estados locais se initialGeneral mudar (ex: reset)
-  useEffect(() => {
-    setServerName(initialGeneral.ServerName || '');
-    setServerDescription(initialGeneral.ServerDescription || '');
-    setServerPassword(initialGeneral.ServerPassword || '');
-    setMaxPlayers(initialGeneral.MaxPlayers || 64);
-    setServerBannerUrl(initialGeneral.ServerBannerUrl || '');
-    setServerPlaystyle(initialGeneral.ServerPlaystyle || 'PVE');
-    setWelcomeMessage(initialGeneral.WelcomeMessage || '');
-    setMessageOfTheDay(initialGeneral.MessageOfTheDay || '');
-    setMessageOfTheDayCooldown(initialGeneral.MessageOfTheDayCooldown || 10);
-    setMinServerTickRate(initialGeneral.MinServerTickRate || 5);
-    setMaxServerTickRate(initialGeneral.MaxServerTickRate || 30);
-    setMaxPing(initialGeneral.MaxPing || 200);
-    setServerPort(initialGeneral.ServerPort || 8900);
-    setEnableBattleye(initialGeneral.EnableBattleye !== undefined ? initialGeneral.EnableBattleye : true);
-  }, [initialGeneral]);
-
-  // Função para salvar
-  const handleSave = () => {
-    onSave({
-      ServerName: serverName,
-      ServerDescription: serverDescription,
-      ServerPassword: serverPassword,
-      MaxPlayers: maxPlayers,
-      ServerBannerUrl: serverBannerUrl,
-      ServerPlaystyle: serverPlaystyle,
-      WelcomeMessage: welcomeMessage,
-      MessageOfTheDay: messageOfTheDay,
-      MessageOfTheDayCooldown: messageOfTheDayCooldown,
-      MinServerTickRate: minServerTickRate,
-      MaxServerTickRate: maxServerTickRate,
-      MaxPing: maxPing,
-      ServerPort: serverPort,
-      EnableBattleye: enableBattleye
-    });
-  };
-
-  // Campos otimizados
-  const handleServerNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerName(e.target.value), []);
-  const handleServerDescriptionChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerDescription(e.target.value), []);
-
+// GeneralSection recebe handlers onChange
+const GeneralSection: React.FC<GeneralSectionProps> = memo(({
+  serverName,
+  onServerNameChange,
+  serverDescription,
+  onServerDescriptionChange,
+  serverPassword,
+  onServerPasswordChange,
+  maxPlayers,
+  onMaxPlayersChange,
+  serverBannerUrl,
+  onServerBannerUrlChange,
+  serverPlaystyle,
+  onServerPlaystyleChange,
+  welcomeMessage,
+  onWelcomeMessageChange,
+  messageOfTheDay,
+  onMessageOfTheDayChange,
+  messageOfTheDayCooldown,
+  onMessageOfTheDayCooldownChange,
+  minServerTickRate,
+  onMinServerTickRateChange,
+  maxServerTickRate,
+  onMaxServerTickRateChange,
+  maxPing,
+  onMaxPingChange,
+  serverPort,
+  onServerPortChange,
+  enableBattleye,
+  onEnableBattleyeChange
+}) => {
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.ServerName || 'Nome do Servidor'}
-          fullWidth
-          value={serverName}
-          onChange={handleServerNameChange}
-          margin="normal"
-        />
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <TextField label="Nome do Servidor" fullWidth value={serverName} onChange={onServerNameChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.ServerDescription || 'Descrição do Servidor'}
-          fullWidth
-          value={serverDescription}
-          onChange={handleServerDescriptionChange}
-          margin="normal"
-        />
+      <Grid item xs={12}>
+        <TextField label="Descrição do Servidor" fullWidth value={serverDescription} onChange={onServerDescriptionChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.ServerPassword || 'Senha do Servidor'}
-          fullWidth
-          value={serverPassword}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerPassword(e.target.value)}
-          margin="normal"
-        />
+      <Grid item xs={12}>
+        <TextField label="Senha do Servidor" fullWidth value={serverPassword} onChange={onServerPasswordChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.MaxPlayers || 'Máximo de Jogadores'}
-          fullWidth
-          type="number"
-          value={maxPlayers}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMaxPlayers(Number(e.target.value))}
-          margin="normal"
-        />
+      <Grid item xs={12}>
+        <TextField label="Máximo de Jogadores" type="number" fullWidth value={maxPlayers} onChange={onMaxPlayersChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.ServerBannerUrl || 'URL do Banner do Servidor'}
-          fullWidth
-          value={serverBannerUrl}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerBannerUrl(e.target.value)}
-          margin="normal"
-        />
+      <Grid item xs={12}>
+        <TextField label="Banner do Servidor (URL)" fullWidth value={serverBannerUrl} onChange={onServerBannerUrlChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12}>
         <FormControl fullWidth margin="normal">
           <InputLabel>Estilo de Jogo</InputLabel>
-          <Select value={serverPlaystyle} onChange={e => setServerPlaystyle(e.target.value)} label="Estilo de Jogo">
+          <Select value={serverPlaystyle} onChange={onServerPlaystyleChange} label="Estilo de Jogo">
             <MenuItem value="PVE">PVE</MenuItem>
             <MenuItem value="PVP">PVP</MenuItem>
           </Select>
         </FormControl>
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.WelcomeMessage || 'Mensagem de Boas-vindas'}
-          fullWidth
-          value={welcomeMessage}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setWelcomeMessage(e.target.value)}
-          margin="normal"
-        />
+      <Grid item xs={12}>
+        <TextField label="Mensagem de Boas-vindas" fullWidth value={welcomeMessage} onChange={onWelcomeMessageChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.MessageOfTheDay || 'Mensagem do Dia'}
-          fullWidth
-          value={messageOfTheDay}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMessageOfTheDay(e.target.value)}
-          margin="normal"
-        />
+      <Grid item xs={12}>
+        <TextField label="Mensagem do Dia" fullWidth value={messageOfTheDay} onChange={onMessageOfTheDayChange} margin="normal" />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.MessageOfTheDayCooldown || 'Intervalo da Mensagem do Dia'}
-          fullWidth
-          type="number"
-          value={messageOfTheDayCooldown}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMessageOfTheDayCooldown(Number(e.target.value))}
-          margin="normal"
-        />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.MinServerTickRate || 'Taxa Mínima de Tick do Servidor'}
-          fullWidth
-          type="number"
-          value={minServerTickRate}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMinServerTickRate(Number(e.target.value))}
-          margin="normal"
-        />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.MaxServerTickRate || 'Taxa Máxima de Tick do Servidor'}
-          fullWidth
-          type="number"
-          value={maxServerTickRate}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMaxServerTickRate(Number(e.target.value))}
-          margin="normal"
-        />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR.MaxPing || 'Ping Máximo'}
-          fullWidth
-          type="number"
-          value={maxPing}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMaxPing(Number(e.target.value))}
-          margin="normal"
-        />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <TextField
-          label={ptBR['ServerPort'] || 'Porta do Servidor'}
-          fullWidth
-          type="number"
-          value={serverPort}
-          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerPort(Number(e.target.value))}
-          margin="normal"
-        />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={enableBattleye}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEnableBattleye(e.target.checked)}
-            />
-          }
-          label={ptBR['EnableBattleye'] || 'Ativar Battleye'}
-        />
+      <Grid item xs={12}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={2}>
+            <TextField label="Cooldown da Mensagem do Dia" type="number" fullWidth value={messageOfTheDayCooldown} onChange={onMessageOfTheDayCooldownChange} margin="normal" />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <TextField label="Min Server Tick Rate" type="number" fullWidth value={minServerTickRate} onChange={onMinServerTickRateChange} margin="normal" />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <TextField label="Max Server Tick Rate" type="number" fullWidth value={maxServerTickRate} onChange={onMaxServerTickRateChange} margin="normal" />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <TextField label="Max Ping" type="number" fullWidth value={maxPing} onChange={onMaxPingChange} margin="normal" />
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <TextField label="Porta do Servidor" type="number" fullWidth value={serverPort} onChange={onServerPortChange} margin="normal" />
+          </Grid>
+          <Grid item xs={12} md={2} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+            <FormControlLabel control={<Switch checked={enableBattleye} onChange={onEnableBattleyeChange} />} label="Battleye Ativado" />
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
@@ -457,7 +375,16 @@ const ServerSettings: React.FC<ServerSettingsProps> = ({ showNotification }) => 
   const [maxServerTickRate, setMaxServerTickRate] = useState(30);
   const [maxPing, setMaxPing] = useState(200);
 
-  // Inicializar os estados locais a partir do config
+  // 1. Adicione um estado: const [expandedSection, setExpandedSection] = useState<string | false>('General');
+  const [expandedSection, setExpandedSection] = useState<string | false>('General');
+
+  // Ref para o campo Máximo de Jogadores
+  const maxPlayersRef = React.useRef<HTMLInputElement>(null);
+
+  // Estado para campo de teste
+  const [campoTeste, setCampoTeste] = useState('');
+
+  // Inicializar os estados locais apenas uma vez ao montar o componente
   useEffect(() => {
     if (config?.serverSettings?.General) {
       setServerPort(config.serverSettings.General.ServerPort || 8900);
@@ -479,57 +406,94 @@ const ServerSettings: React.FC<ServerSettingsProps> = ({ showNotification }) => 
       setMaxServerTickRate(config.serverSettings.General.MaxServerTickRate || 30);
       setMaxPing(config.serverSettings.General.MaxPing || 200);
     }
-    if (config?.serverSettings) {
+    if (config?.serverSettings && !localConfig) {
       setLocalConfig(JSON.parse(JSON.stringify(config.serverSettings)));
     }
-  }, [config]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const handleSave = async () => {
-    if (!localConfig) return;
+  const handleSave = async (event?: React.MouseEvent) => {
+    if (event) event.preventDefault();
 
-    const updatedConfig = { ...localConfig };
-    if (!updatedConfig.General) updatedConfig.General = {};
-    updatedConfig.General.ServerName = serverName;
-    updatedConfig.General.ServerDescription = serverDescription;
-    updatedConfig.General.ServerPassword = serverPassword;
-    updatedConfig.General.MaxPlayers = maxPlayers;
-    updatedConfig.General.ServerBannerUrl = serverBannerUrl;
-    updatedConfig.General.ServerPlaystyle = serverPlaystyle;
-    updatedConfig.General.WelcomeMessage = welcomeMessage;
-    updatedConfig.General.MessageOfTheDay = messageOfTheDay;
-    updatedConfig.General.MessageOfTheDayCooldown = messageOfTheDayCooldown;
-    updatedConfig.General.MinServerTickRate = minServerTickRate;
-    updatedConfig.General.MaxServerTickRate = maxServerTickRate;
-    updatedConfig.General.MaxPing = maxPing;
-    updatedConfig.General.ServerPort = serverPort;
-    updatedConfig.General.EnableBattleye = enableBattleye;
+    // Debug: logar valor real do input no DOM no clique
+    setTimeout(() => {
+      const val = maxPlayersRef.current ? maxPlayersRef.current.value : 'N/A';
+              // console.log('[DEBUG] Valor do input no DOM no clique:', val);
+    }, 0);
 
-    // Validar antes de salvar
-    const errors: {[key: string]: string} = {};
-    Object.keys(updatedConfig).forEach(section => {
-      Object.keys(updatedConfig[section] || {}).forEach(key => {
-        const validation = validateField(section, key, updatedConfig[section][key]);
-        if (!validation.valid) {
-          errors[`${section}.${key}`] = validation.message || 'Valor inválido';
-        }
-      });
-    });
+    if (!expandedSection) return;
 
-    if (Object.keys(errors).length > 0) {
-      setValidationErrors(errors);
-      showNotification('Existem erros de validação. Corrija-os antes de salvar.', 'error');
-      return;
+    // Capturar o valor do campo diretamente do input
+    const maxPlayersValue = maxPlayersRef.current ? Number(maxPlayersRef.current.value) : maxPlayers;
+    // console.log('[handleSave] Valor capturado via ref para MaxPlayers:', maxPlayersValue);
+
+    // console.log('[handleSave] Seção expandida:', expandedSection);
+    // console.log('[handleSave] Estados locais dos campos:');
+    // console.log('  serverName:', serverName);
+    // console.log('  maxPlayers:', maxPlayersValue);
+    // console.log('  serverDescription:', serverDescription);
+    // console.log('  serverPassword:', serverPassword);
+    // console.log('  serverBannerUrl:', serverBannerUrl);
+    // console.log('  serverPlaystyle:', serverPlaystyle);
+    // console.log('  welcomeMessage:', welcomeMessage);
+    // console.log('  messageOfTheDay:', messageOfTheDay);
+    // console.log('  messageOfTheDayCooldown:', messageOfTheDayCooldown);
+    // console.log('  minServerTickRate:', minServerTickRate);
+    // console.log('  maxServerTickRate:', maxServerTickRate);
+    // console.log('  maxPing:', maxPing);
+    // console.log('  serverPort:', serverPort);
+    // console.log('  enableBattleye:', enableBattleye);
+
+    // Buscar o appConfig para pegar o iniConfigPath
+    let iniBasePath = '';
+    if (window.electronAPI?.loadAppConfig) {
+      const appConfig = await window.electronAPI.loadAppConfig();
+      iniBasePath = appConfig?.iniConfigPath || '';
     }
 
+    // console.log('[handleSave] Caminho da pasta .ini:', iniBasePath);
+
+    let iniFile = '';
+    let sectionData = {};
+
+    switch (expandedSection) {
+      case 'General':
+        iniFile = 'ServerSettings.ini';
+        sectionData = {
+          ServerName: serverName,
+          ServerDescription: serverDescription,
+          ServerPassword: serverPassword,
+          MaxPlayers: maxPlayersValue,
+          ServerBannerUrl: serverBannerUrl,
+          ServerPlaystyle: serverPlaystyle,
+          WelcomeMessage: welcomeMessage,
+          MessageOfTheDay: messageOfTheDay,
+          MessageOfTheDayCooldown: messageOfTheDayCooldown,
+          MinServerTickRate: minServerTickRate,
+          MaxServerTickRate: maxServerTickRate,
+          MaxPing: maxPing,
+          ServerPort: serverPort,
+          EnableBattleye: enableBattleye
+        };
+        break;
+      case 'World':
+        iniFile = 'GameUserSettings.ini';
+        sectionData = localConfig.World;
+        break;
+      // Adicione outros cases conforme necessário
+      default:
+        return;
+    }
+
+    // console.log('[handleSave] Arquivo a ser salvo:', iniFile);
+    // console.log('[handleSave] Dados a serem enviados:', sectionData);
+
     try {
-      setSaving(true);
-      await saveConfig({ serverSettings: updatedConfig });
-      showNotification('Configurações do servidor salvas com sucesso!', 'success');
-      setValidationErrors({});
+      await window.electronAPI.saveIniFile(iniBasePath + '/' + iniFile, sectionData);
+      showNotification('Configuração salva com sucesso!', 'success');
     } catch (error) {
-      showNotification('Erro ao salvar configurações', 'error');
-    } finally {
-      setSaving(false);
+      console.error('[handleSave] Erro ao salvar:', error);
+      showNotification('Erro ao salvar configuração!', 'error');
     }
   };
 
@@ -556,9 +520,21 @@ const ServerSettings: React.FC<ServerSettingsProps> = ({ showNotification }) => 
     // Nenhuma validação em tempo real aqui!
   };
 
-  // No componente principal:
-  const handleServerNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerName(e.target.value), []);
-  const handleServerDescriptionChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerDescription(e.target.value), []);
+  // No componente principal, criar handlers para cada campo:
+  const handleServerNameChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerName(e.target.value);
+  const handleServerDescriptionChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerDescription(e.target.value);
+  const handleServerPasswordChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerPassword(e.target.value);
+  const handleMaxPlayersChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMaxPlayers(Number(e.target.value));
+  const handleServerBannerUrlChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerBannerUrl(e.target.value);
+  const handleServerPlaystyleChange = (e: SelectChangeEvent<string>) => setServerPlaystyle(e.target.value as string);
+  const handleWelcomeMessageChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setWelcomeMessage(e.target.value);
+  const handleMessageOfTheDayChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMessageOfTheDay(e.target.value);
+  const handleMessageOfTheDayCooldownChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMessageOfTheDayCooldown(Number(e.target.value));
+  const handleMinServerTickRateChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMinServerTickRate(Number(e.target.value));
+  const handleMaxServerTickRateChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMaxServerTickRate(Number(e.target.value));
+  const handleMaxPingChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setMaxPing(Number(e.target.value));
+  const handleServerPortChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setServerPort(Number(e.target.value));
+  const handleEnableBattleyeChange = (e: React.ChangeEvent<HTMLInputElement>) => setEnableBattleye(e.target.checked);
 
   if (!config) {
     return (
@@ -600,6 +576,7 @@ const ServerSettings: React.FC<ServerSettingsProps> = ({ showNotification }) => 
             variant="contained"
             startIcon={saving ? <CircularProgress size={20} /> : <SaveIcon />}
             onClick={handleSave}
+            type="button"
             disabled={saving || loading || hasErrors}
           >
             {saving ? 'Salvando...' : 'Salvar'}
@@ -623,13 +600,42 @@ const ServerSettings: React.FC<ServerSettingsProps> = ({ showNotification }) => 
         {/* Renderizar cada seção dinamicamente */}
         {['General','World','Respawn','Vehicles','Damage','Features'].map(section => (
           <Grid item xs={12} key={section}>
-            <Accordion defaultExpanded={section==='General'}>
+            <Accordion defaultExpanded={section==='General'} expanded={expandedSection === section} onChange={() => setExpandedSection(expandedSection === section ? false : section)}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="h6">{section}</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 {section === 'General' ? (
-                  <GeneralSection initialGeneral={localConfig.General} onSave={data => updateConfig('General', '', data)} />
+                  <GeneralSection
+                    serverName={serverName}
+                    onServerNameChange={handleServerNameChange}
+                    serverDescription={serverDescription}
+                    onServerDescriptionChange={handleServerDescriptionChange}
+                    serverPassword={serverPassword}
+                    onServerPasswordChange={handleServerPasswordChange}
+                    maxPlayers={maxPlayers}
+                    onMaxPlayersChange={handleMaxPlayersChange}
+                    serverBannerUrl={serverBannerUrl}
+                    onServerBannerUrlChange={handleServerBannerUrlChange}
+                    serverPlaystyle={serverPlaystyle}
+                    onServerPlaystyleChange={handleServerPlaystyleChange}
+                    welcomeMessage={welcomeMessage}
+                    onWelcomeMessageChange={handleWelcomeMessageChange}
+                    messageOfTheDay={messageOfTheDay}
+                    onMessageOfTheDayChange={handleMessageOfTheDayChange}
+                    messageOfTheDayCooldown={messageOfTheDayCooldown}
+                    onMessageOfTheDayCooldownChange={handleMessageOfTheDayCooldownChange}
+                    minServerTickRate={minServerTickRate}
+                    onMinServerTickRateChange={handleMinServerTickRateChange}
+                    maxServerTickRate={maxServerTickRate}
+                    onMaxServerTickRateChange={handleMaxServerTickRateChange}
+                    maxPing={maxPing}
+                    onMaxPingChange={handleMaxPingChange}
+                    serverPort={serverPort}
+                    onServerPortChange={handleServerPortChange}
+                    enableBattleye={enableBattleye}
+                    onEnableBattleyeChange={handleEnableBattleyeChange}
+                  />
                 ) : (
                   <>
                     {section === 'World' && <WorldSection initialData={localConfig.World} onSave={data => updateConfig('World', '', data)} />}

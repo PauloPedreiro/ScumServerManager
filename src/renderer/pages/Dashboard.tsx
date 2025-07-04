@@ -25,6 +25,7 @@ import {
   Delete as DeleteIcon
 } from '@mui/icons-material';
 import { useServerConfig } from '../contexts/ServerConfigContext';
+import { usePlayerStats } from '../contexts/PlayerStatsContext';
 
 interface DashboardProps {
   showNotification: (message: string, severity?: 'success' | 'error' | 'warning' | 'info') => void;
@@ -45,6 +46,7 @@ interface ServerStatus {
 
 const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
   const { config, serverPath: serverConfigPath, serverCache, loading, error, loadConfig, saveConfig } = useServerConfig();
+  const { playerStats } = usePlayerStats();
   const [serverStatus, setServerStatus] = useState<ServerStatus | null>(null);
   const [playersList, setPlayersList] = useState<Array<any>>([]);
   const [steamcmdPath, setSteamcmdPath] = useState<string>('');
@@ -141,11 +143,11 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
       showNotification('Configure os caminhos do steamcmd e instalação nas configurações!', 'warning');
       return;
     }
-    console.log('[Atualizar] steamcmdPath:', steamcmdPath);
-    console.log('[Atualizar] installPath:', installPath);
+          // console.log('[Atualizar] steamcmdPath:', steamcmdPath);
+      // console.log('[Atualizar] installPath:', installPath);
     try {
       const result = await window.electronAPI.updateServerWithSteamcmd(steamcmdPath, installPath);
-      console.log('[Atualizar] Log retornado:', result.output);
+      // console.log('[Atualizar] Log retornado:', result.output);
       setUpdateLog(result.output);
       if (result.success) {
         showNotification('Atualização do servidor finalizada!', 'success');
@@ -280,6 +282,7 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
         const status = await window.electronAPI.getRealServerStatus(serverExecutablePath);
         if (status?.running) {
           showNotification(`Reinício automático agendado para ${hour.toString().padStart(2, '0')}:00`, 'info');
+          await window.electronAPI.stopServer(serverExecutablePath || '');
           await handleUpdateServerRealtime();
         }
       }
@@ -381,14 +384,9 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
                 <PeopleIcon sx={{ mr: 1, fontSize: 30 }} />
                 Jogadores Online
               </Typography>
-              <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1 }}>
-                {serverStatus.players || 0}
-                <Typography component="span" variant="h5" sx={{ ml: 1, opacity: 0.8 }}>
-                  / {serverStatus.maxPlayers || 0}
-                </Typography>
-              </Typography>
+              <Typography variant="h3" sx={{ fontWeight: 'bold', color: 'white' }}>{playerStats.online} / 64</Typography>
               <Typography variant="body1" sx={{ opacity: 0.9 }}>
-                {serverStatus.players || 0} jogadores conectados agora
+                {playerStats.online} jogadores conectados agora
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -406,15 +404,15 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
                       overflow: 'hidden'
                     }}>
                       <Box sx={{ 
-                        width: `${Math.min(((serverStatus.players || 0) / (serverStatus.maxPlayers || 1)) * 100, 100)}%`, 
+                        width: `${Math.min(((playerStats.online || 0) / (maxPlayers || 1)) * 100, 100)}%`, 
                         height: '100%', 
-                        bgcolor: serverStatus.players > (serverStatus.maxPlayers || 0) * 0.8 ? 'warning.main' : 'success.main',
+                        bgcolor: playerStats.online > (maxPlayers || 0) * 0.8 ? 'warning.main' : 'success.main',
                         transition: 'width 0.3s ease'
                       }} />
                     </Box>
                   </Box>
                   <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                    {Math.round(((serverStatus.players || 0) / (serverStatus.maxPlayers || 1)) * 100)}%
+                    {Math.round(((playerStats.online || 0) / (maxPlayers || 1)) * 100)}%
                   </Typography>
                 </Box>
               </Box>
@@ -435,45 +433,6 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
                 color={serverStatus?.running ? 'success' : 'error'}
                 sx={{ mt: 1 }}
               />
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Card>
-            <CardContent sx={{ textAlign: 'center' }}>
-              <MemoryIcon sx={{ fontSize: 40, color: 'secondary.main', mb: 1 }} />
-              <Typography variant="h6">Jogadores</Typography>
-              <Typography variant="h4">
-                {serverStatus?.players || 0}/{serverStatus?.maxPlayers || 0}
-              </Typography>
-              <Chip
-                label={`${Math.round(((serverStatus?.players || 0) / (serverStatus?.maxPlayers || 1)) * 100)}% ocupado`}
-                color={serverStatus?.players && serverStatus.players > (serverStatus?.maxPlayers || 0) * 0.8 ? 'warning' : 'success'}
-                size="small"
-                sx={{ mt: 1 }}
-              />
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Card>
-            <CardContent sx={{ textAlign: 'center' }}>
-              <StorageIcon sx={{ fontSize: 40, color: 'success.main', mb: 1 }} />
-              <Typography variant="h6">Uptime</Typography>
-              <Typography variant="h6">
-                {serverStatus?.uptime || 'N/A'}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Card>
-            <CardContent sx={{ textAlign: 'center' }}>
-              <NetworkIcon sx={{ fontSize: 40, color: 'info.main', mb: 1 }} />
-              <Typography variant="h6">CPU/Memória</Typography>
-              <Typography variant="body2">
-                {serverStatus?.cpu || 0}% / {serverStatus?.memory || 0}%
-              </Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -533,50 +492,6 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
           </Box>
         </CardContent>
       </Card>
-
-      {/* Informações Detalhadas dos Jogadores */}
-      <Grid container spacing={2} sx={{ mb: 3 }}>
-        <Grid item xs={12} md={3}>
-          <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'primary.light', borderRadius: 1 }}>
-            <Typography variant="h4" color="white" sx={{ fontWeight: 'bold' }}>
-              {serverStatus?.players || 0}
-            </Typography>
-            <Typography variant="body2" color="white">
-              Jogadores Online
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'secondary.light', borderRadius: 1 }}>
-            <Typography variant="h4" color="white" sx={{ fontWeight: 'bold' }}>
-              {serverStatus?.maxPlayers || 0}
-            </Typography>
-            <Typography variant="body2" color="white">
-              Capacidade Máxima
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'success.light', borderRadius: 1 }}>
-            <Typography variant="h4" color="white" sx={{ fontWeight: 'bold' }}>
-              {Math.round(((serverStatus?.players || 0) / (serverStatus?.maxPlayers || 1)) * 100)}%
-            </Typography>
-            <Typography variant="body2" color="white">
-              Taxa de Ocupação
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'info.light', borderRadius: 1 }}>
-            <Typography variant="h4" color="white" sx={{ fontWeight: 'bold' }}>
-              {playersList.length}
-            </Typography>
-            <Typography variant="body2" color="white">
-              Jogadores Registrados
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
 
       <Modal open={showRestartModal} onClose={() => {}} disableEscapeKeyDown>
         <Box sx={{

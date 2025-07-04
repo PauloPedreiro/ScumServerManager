@@ -3,21 +3,25 @@ import * as path from 'path';
 import { FileManager } from './fileManager';
 import { BackupManager } from './backupManager';
 import * as fs from 'fs';
+import { startVehicleDestructionWatcher } from './vehicleDestructionWatcher';
 
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'development';
 }
-console.log('NODE_ENV (início):', process.env.NODE_ENV);
+// console.log('NODE_ENV (início):', process.env.NODE_ENV);
 
 let mainWindow: BrowserWindow | null = null;
 const fileManager = new FileManager();
 const backupManager = new BackupManager();
 
+// Iniciar monitoramento automático de destruição de veículos
+startVehicleDestructionWatcher(fileManager).catch(() => {});
+
 function createWindow(): void {
   const preloadPath = path.join(__dirname, 'preload.js');
   const iconPath = path.join(__dirname, '../../assets/icon.png');
-  console.log('Preload path:', preloadPath);
-  console.log('Icon path:', iconPath);
+  // console.log('Preload path:', preloadPath);
+  // console.log('Icon path:', iconPath);
 
   mainWindow = new BrowserWindow({
     width: 1400,
@@ -36,16 +40,16 @@ function createWindow(): void {
 
   // Carrega a aplicação React
   const nodeEnv = (process.env.NODE_ENV || '').trim().toLowerCase();
-  console.log('NODE_ENV (ajustado):', nodeEnv);
+  // console.log('NODE_ENV (ajustado):', nodeEnv);
   if (nodeEnv === 'development') {
-    console.log('Carregando frontend de desenvolvimento: http://localhost:5173');
+    // console.log('Carregando frontend de desenvolvimento: http://localhost:5173');
     mainWindow.loadURL('http://localhost:5173').catch((err) => {
       console.error('Erro ao carregar frontend de desenvolvimento:', err);
     });
     mainWindow.webContents.openDevTools();
   } else {
     const prodPath = path.join(__dirname, '../renderer/index.html');
-    console.log('Carregando frontend de produção:', prodPath);
+    // console.log('Carregando frontend de produção:', prodPath);
     mainWindow.loadFile(prodPath).catch((err) => {
       console.error('Erro ao carregar frontend de produção:', err);
     });
@@ -165,7 +169,8 @@ ipcMain.handle('read-json-file', async (event, filePath: string) => {
     return await fileManager.readJsonFile(filePath);
   } catch (error) {
     console.error('Erro ao ler arquivo JSON:', error);
-    throw error;
+    // Retornar objeto vazio em vez de propagar o erro
+    return {};
   }
 });
 
@@ -272,14 +277,8 @@ ipcMain.handle('get-server-info', async (event, serverPath: string) => {
 });
 
 // Configuração persistente do caminho do servidor e steamcmd
-ipcMain.handle('save-app-config', async (event, serverPath: string, steamcmdPath?: string, installPath?: string, serverPort?: number, maxPlayers?: number, enableBattleye?: boolean) => {
-  try {
-    await fileManager.saveAppConfig(serverPath, steamcmdPath, installPath, serverPort, maxPlayers, enableBattleye);
-    return { success: true };
-  } catch (error) {
-    console.error('Erro ao salvar config.json:', error);
-    throw error;
-  }
+ipcMain.handle('save-app-config', async (event, config) => {
+  await fileManager.saveAppConfig(config);
 });
 
 ipcMain.handle('load-app-config', async () => {
@@ -478,8 +477,8 @@ ipcMain.handle('get-real-server-status', async (event, serverPath: string) => {
   }
 });
 
-ipcMain.on('start-update-server-with-steamcmd-stream', (event, steamcmdPath, installPath) => {
-  fileManager.startUpdateServerWithSteamcmdStream(steamcmdPath, installPath, event);
+ipcMain.on('start-update-server-with-steamcmd-stream', (_event, steamcmdPath, installPath) => {
+  fileManager.startUpdateServerWithSteamcmdStream(steamcmdPath, installPath, _event);
 });
 
 ipcMain.handle('load-restart-schedule', async () => {
@@ -514,5 +513,58 @@ ipcMain.handle('check-path-exists', async (event, pathToCheck: string) => {
   } catch (error) {
     console.error('Erro ao verificar existência do caminho:', error);
     return false;
+  }
+});
+
+ipcMain.handle('save-discord-webhooks', async (event, webhooks) => {
+  try {
+    await fileManager.saveDiscordWebhooks(webhooks);
+    return { success: true };
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao salvar discordWebhooks:', errMsg);
+    return { success: false, error: errMsg };
+  }
+});
+
+ipcMain.handle('load-discord-webhooks', async () => {
+  try {
+    return await fileManager.loadDiscordWebhooks();
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao carregar discordWebhooks:', errMsg);
+    return {};
+  }
+});
+
+ipcMain.handle('send-discord-webhook-message', async (event, webhookUrl, message) => {
+  try {
+    return await fileManager.sendDiscordWebhookMessage(webhookUrl, message);
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao enviar mensagem para webhook do Discord:', errMsg);
+    return { success: false, error: errMsg };
+  }
+});
+
+// Gerenciamento de notificações de jogadores
+ipcMain.handle('clear-notified-players', async () => {
+  try {
+    await fileManager.clearNotifiedPlayers();
+    return { success: true };
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao limpar jogadores notificados:', errMsg);
+    return { success: false, error: errMsg };
+  }
+});
+
+ipcMain.handle('get-notified-players', async () => {
+  try {
+    return await fileManager.getNotifiedPlayers();
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao obter jogadores notificados:', errMsg);
+    return [];
   }
 }); 

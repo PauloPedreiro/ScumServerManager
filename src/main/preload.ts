@@ -38,7 +38,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   listConfigFiles: (serverPath: string) => ipcRenderer.invoke('list-config-files', serverPath),
   
   // Configurações persistentes
-  saveAppConfig: (serverPath: string, steamcmdPath?: string, installPath?: string, serverPort?: number, maxPlayers?: number, enableBattleye?: boolean) => ipcRenderer.invoke('save-app-config', serverPath, steamcmdPath, installPath, serverPort, maxPlayers, enableBattleye),
+  saveAppConfig: (config: any) => ipcRenderer.invoke('save-app-config', config),
   loadAppConfig: () => ipcRenderer.invoke('load-app-config'),
   clearAppConfig: () => ipcRenderer.invoke('clear-app-config'),
   
@@ -87,6 +87,13 @@ contextBridge.exposeInMainWorld('electronAPI', {
     ipcRenderer.removeListener('update-server-log-end', callback),
   loadRestartSchedule: () => ipcRenderer.invoke('load-restart-schedule'),
   saveRestartSchedule: (hours: number[]) => ipcRenderer.invoke('save-restart-schedule', hours),
+  saveDiscordWebhooks: (webhooks: any) => ipcRenderer.invoke('save-discord-webhooks', webhooks),
+  loadDiscordWebhooks: () => ipcRenderer.invoke('load-discord-webhooks'),
+  sendDiscordWebhookMessage: (webhookUrl: string, message: string) => ipcRenderer.invoke('send-discord-webhook-message', webhookUrl, message),
+  
+  // Gerenciamento de notificações de jogadores
+  clearNotifiedPlayers: () => ipcRenderer.invoke('clear-notified-players'),
+  getNotifiedPlayers: () => ipcRenderer.invoke('get-notified-players'),
 });
 
 // Declaração de tipos para TypeScript
@@ -94,8 +101,13 @@ declare global {
   interface Window {
     electronAPI: {
       selectServerFolder: () => Promise<string | null>;
+      selectSteamcmdFolder: () => Promise<string | null>;
+      selectInstallFolder: () => Promise<string | null>;
       readServerConfig: (serverPath: string) => Promise<any>;
       saveServerConfig: (serverPath: string, config: any) => Promise<any>;
+      loadServerCache: () => Promise<any>;
+      clearServerCache: () => Promise<any>;
+      getServerInfo: (serverPath: string) => Promise<any>;
       readIniFile: (filePath: string) => Promise<any>;
       saveIniFile: (filePath: string, content: any) => Promise<any>;
       readJsonFile: (filePath: string) => Promise<any>;
@@ -105,7 +117,7 @@ declare global {
       validateConfig: (config: any) => Promise<any>;
       restoreDefaultFile: (serverPath: string, fileName: string) => Promise<any>;
       listConfigFiles: (serverPath: string) => Promise<string[]>;
-      saveAppConfig: (serverPath: string, steamcmdPath?: string, installPath?: string, serverPort?: number, maxPlayers?: number, enableBattleye?: boolean) => Promise<any>;
+      saveAppConfig: (config: any) => Promise<any>;
       loadAppConfig: () => Promise<any>;
       clearAppConfig: () => Promise<any>;
       listDir: (dirPath: string) => Promise<any>;
@@ -133,6 +145,11 @@ declare global {
       removeUpdateServerLogEnd: (callback: (event: any, code: number) => void) => void;
       loadRestartSchedule: () => Promise<any>;
       saveRestartSchedule: (hours: number[]) => Promise<any>;
+      saveDiscordWebhooks: (webhooks: any) => Promise<any>;
+      loadDiscordWebhooks: () => Promise<any>;
+      sendDiscordWebhookMessage: (webhookUrl: string, message: string) => Promise<any>;
+      clearNotifiedPlayers: () => Promise<any>;
+      getNotifiedPlayers: () => Promise<any>;
     };
   }
 } 
