@@ -2,20 +2,88 @@ import * as fs from 'fs-extra';
 import * as path from 'path';
 import { FileManager } from './fileManager';
 
+// Importar bibliotecas para notificações push
+const chokidar = require('chokidar');
+const nodeWatch = require('node-watch');
+
 const OFFSETS_FILE = path.join(process.cwd(), 'vehicle_destruction_offsets.json');
 
 function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Função para converter string UTF-16 para UTF-8
-function convertUtf16ToUtf8(str: string): string {
-  // Se a string contém caracteres \u0000, é UTF-16
-  if (str.includes('\u0000')) {
-    // Remove os caracteres \u0000 e reconstrói a string
-    return str.replace(/\u0000/g, '');
+// Função para copiar arquivo e forçar detecção de mudanças
+async function copyLatestDestructionFile(logsPath: string): Promise<void> {
+  try {
+    const files = await fs.readdir(logsPath);
+    const destructionFiles = files
+      .filter(f => f.startsWith('vehicle_destruction_') && f.endsWith('.log'))
+      .sort((a, b) => {
+        // Extrair data/hora do nome do arquivo: vehicle_destruction_YYYYMMDDHHMMSS.log
+        const dateA = a.replace('vehicle_destruction_', '').replace('.log', '');
+        const dateB = b.replace('vehicle_destruction_', '').replace('.log', '');
+        return dateB.localeCompare(dateA); // Ordem decrescente (mais novo primeiro)
+      });
+
+    if (destructionFiles.length === 0) {
+      return;
+    }
+
+    const latestFile = destructionFiles[0];
+    const sourcePath = path.join(logsPath, latestFile);
+    const tempPath = path.join(logsPath, `${latestFile}.temp`);
+
+    // Verificar se o arquivo existe e tem conteúdo
+    if (!await fs.pathExists(sourcePath)) {
+      return;
+    }
+
+    const stats = await fs.stat(sourcePath);
+    if (stats.size === 0) {
+      return;
+    }
+
+    // Copiar o arquivo para um arquivo temporário
+    await fs.copy(sourcePath, tempPath);
+    
+    // Aguardar um pouco para garantir que a cópia foi concluída
+    await sleep(50);
+    
+    // Deletar o arquivo temporário
+    await fs.remove(tempPath);
+    
+    // Log apenas a cada 10 cópias para não poluir o console
+    const copyCount = (global as any).destructionFileCopyCount || 0;
+    (global as any).destructionFileCopyCount = copyCount + 1;
+    
+    if (copyCount % 10 === 0) {
+      console.log(`[DestructionWatcher] 📋 Arquivo copiado para forçar detecção: ${latestFile} (cópia #${copyCount + 1})`);
+    }
+  } catch (error) {
+    // Log silencioso para não poluir o console com erros de cópia
+    const errorCount = (global as any).destructionFileCopyErrorCount || 0;
+    (global as any).destructionFileCopyErrorCount = errorCount + 1;
+    
+    if (errorCount % 50 === 0) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.error('[DestructionWatcher] ⚠️ Erro ao copiar arquivo (ocasional):', errorMessage);
+    }
   }
-  return str;
+}
+
+// Função para converter UTF-16 para UTF-8 se necessário
+function convertUtf16ToUtf8(str: string): string {
+  try {
+    // Se a string contém caracteres UTF-16, converter
+    if (str.includes('\u0000')) {
+      const cleaned = str.replace(/\u0000/g, '');
+      return cleaned;
+    }
+    return str;
+  } catch (error) {
+    console.error('[DestructionWatcher] ❌ Erro na conversão UTF-16:', error);
+    return str;
+  }
 }
 
 function parseDestructionLine(line: string) {
@@ -86,7 +154,9 @@ async function readOffsets(): Promise<Record<string, number>> {
     if (await fs.pathExists(OFFSETS_FILE)) {
       return JSON.parse(await fs.readFile(OFFSETS_FILE, 'utf8'));
     }
-  } catch {}
+  } catch (error) {
+    console.error('[DestructionWatcher] ❌ Erro ao ler offsets:', error);
+  }
   return {};
 }
 
@@ -95,7 +165,7 @@ async function writeOffsets(offsets: Record<string, number>) {
 }
 
 export async function startVehicleDestructionWatcher(fileManager: FileManager) {
-  console.log('[DestructionWatcher] 🚀 Iniciando DestructionWatcher...');
+  console.log('[DestructionWatcher] 🚀 Iniciando DestructionWatcher com notificações push...');
   
   // Ler config.json para pegar logsPath
   const configPath = path.join(process.cwd(), 'config.json');
@@ -110,16 +180,31 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
     return;
   }
 
-  // Carregar webhook do discordWebhooks.json
-  const webhookPath = path.join(process.cwd(), 'discordWebhooks.json');
-  if (!await fs.pathExists(webhookPath)) {
-    console.log('[DestructionWatcher] ❌ discordWebhooks.json não encontrado');
-    return;
+  // Função para carregar webhook dinamicamente
+  async function loadWebhook(): Promise<string | null> {
+    const webhookPath = path.join(process.cwd(), 'discordWebhooks.json');
+    if (!await fs.pathExists(webhookPath)) {
+      console.log('[DestructionWatcher] ❌ discordWebhooks.json não encontrado');
+      return null;
+    }
+    try {
+      const webhooks = JSON.parse(await fs.readFile(webhookPath, 'utf8'));
+      const webhookUrl = webhooks.logDestruicaoVeiculos;
+      if (!webhookUrl) {
+        console.log('[DestructionWatcher] ❌ webhook de destruição de veículos não configurado');
+        return null;
+      }
+      return webhookUrl;
+    } catch (error) {
+      console.error('[DestructionWatcher] ❌ Erro ao carregar webhook:', error);
+      return null;
+    }
   }
-  const webhooks = JSON.parse(await fs.readFile(webhookPath, 'utf8'));
-  const webhookUrl = webhooks.logDestruicaoVeiculos;
+
+  // Carregar webhook inicial
+  let webhookUrl = await loadWebhook();
   if (!webhookUrl) {
-    console.log('[DestructionWatcher] ❌ webhook de destruição de veículos não configurado');
+    console.log('[DestructionWatcher] ❌ Não foi possível carregar webhook inicial');
     return;
   }
 
@@ -131,6 +216,56 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
   
   // Set para controlar arquivos sendo processados (evitar processamento simultâneo)
   const processingFiles = new Set<string>();
+  
+  // Carregar eventos já processados do arquivo
+  const processedEventsFile = path.join(process.cwd(), 'processed_vehicle_events.json');
+  try {
+    if (await fs.pathExists(processedEventsFile)) {
+      const savedEvents = JSON.parse(await fs.readFile(processedEventsFile, 'utf8'));
+      savedEvents.forEach((eventId: string) => processedEvents.add(eventId));
+      console.log(`[DestructionWatcher] 📋 Carregados ${processedEvents.size} eventos já processados`);
+    }
+  } catch (error) {
+    console.error('[DestructionWatcher] ❌ Erro ao carregar eventos processados:', error);
+  }
+  
+  // Função para salvar eventos processados
+  async function saveProcessedEvents() {
+    try {
+      const eventsArray = Array.from(processedEvents);
+      await fs.writeFile(processedEventsFile, JSON.stringify(eventsArray, null, 2), 'utf8');
+    } catch (error) {
+      console.error('[DestructionWatcher] ❌ Erro ao salvar eventos processados:', error);
+    }
+  }
+  
+  // Função para limpar eventos antigos (mais de 30 dias)
+  async function cleanupOldEvents() {
+    try {
+      const thirtyDaysAgo = new Date();
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+      const cutoffDate = thirtyDaysAgo.toISOString().split('T')[0].replace(/-/g, '.');
+      
+      const eventsToKeep = Array.from(processedEvents).filter(eventId => {
+        // Extrair data do eventId (formato: vehicleId-datetime-eventType)
+        const parts = eventId.split('-');
+        if (parts.length >= 3) {
+          const datePart = parts[1]; // datetime
+          return datePart >= cutoffDate;
+        }
+        return true; // Manter se não conseguir extrair data
+      });
+      
+      if (eventsToKeep.length < processedEvents.size) {
+        processedEvents.clear();
+        eventsToKeep.forEach(eventId => processedEvents.add(eventId));
+        await saveProcessedEvents();
+        console.log(`[DestructionWatcher] 🧹 Limpeza: ${processedEvents.size - eventsToKeep.length} eventos antigos removidos`);
+      }
+    } catch (error) {
+      console.error('[DestructionWatcher] ❌ Erro ao limpar eventos antigos:', error);
+    }
+  }
 
   // Função para gerar ID único do evento
   function generateEventId(data: any): string {
@@ -138,7 +273,20 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
   }
 
   // Função para processar um arquivo específico
-  async function processFile(logFileName: string, webhookUrl: string) {
+  async function processFile(logFileName: string) {
+    // Recarregar webhook antes de processar (para pegar mudanças)
+    const currentWebhook = await loadWebhook();
+    if (!currentWebhook) {
+      console.log('[DestructionWatcher] ⚠️ Webhook não disponível, pulando processamento');
+      return;
+    }
+    
+    // Se o webhook mudou, atualizar e logar
+    if (currentWebhook !== webhookUrl) {
+      console.log('[DestructionWatcher] 🔄 Webhook atualizado:', currentWebhook.substring(0, 50) + '...');
+      webhookUrl = currentWebhook;
+    }
+
     // Verificar se o arquivo já está sendo processado
     if (processingFiles.has(logFileName)) {
       return;
@@ -158,6 +306,8 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
         processingFiles.delete(logFileName);
         return;
       }
+      
+      console.log(`[DestructionWatcher] 🚀 Processando arquivo: ${logFileName} (size: ${stat.size}, offset: ${lastOffset})`);
       
       fd = fs.createReadStream(logFile, { start: lastOffset, encoding: 'utf8' });
       let buffer = '';
@@ -193,15 +343,11 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
               processedEvents.add(eventId);
               
               destructions++;
-              // console.log(`[DestructionWatcher] 🚗 Processando evento: ${data.eventType} - ${data.vehicle} (ID: ${data.vehicleId})`);
+              console.log(`[DestructionWatcher] 🚗 Processando evento: ${data.eventType} - ${data.vehicle} (ID: ${data.vehicleId})`);
               
               const eventEmoji = data.eventType === 'Disappeared' ? '🚗' : data.eventType === 'ForbiddenZoneTimerExpired' ? '⏰' : '💥';
               const eventText = data.eventType === 'Disappeared' ? 'Veículo desaparecido' : data.eventType === 'ForbiddenZoneTimerExpired' ? 'Veículo expirado (zona proibida)' : 'Veículo destruído';
-              let donoMsg = data.ownerName;
-              if (!config.hideVehicleOwnerSteamId) {
-                donoMsg += ` (SteamID: ${data.ownerSteamId})`;
-              }
-              const msg = `${eventEmoji} ${eventText}!\nVeículo: ${data.vehicle} (ID: ${data.vehicleId})\nDono: ${donoMsg}\nLocalização: ${data.location}\nData/Hora: ${data.datetime}`;
+              const msg = `${eventEmoji} ${eventText}!\nVeículo: ${data.vehicle} (ID: ${data.vehicleId})\nDono: ${data.ownerName}\nLocalização: ${data.location}\nData/Hora: ${data.datetime}`;
               
               try {
                 const result = await fileManager.sendDiscordWebhookMessage(webhookUrl, msg);
@@ -217,6 +363,7 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
           }
         }
       }
+      
       // Processar a última linha pendente (caso não termine com \n)
       if (buffer.trim().length > 0) {
         totalLines++;
@@ -229,14 +376,10 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
             if (!processedEvents.has(eventId)) {
               processedEvents.add(eventId);
               destructions++;
-              // console.log(`[DestructionWatcher] �� Processando evento (final): ${data.eventType} - ${data.vehicle} (ID: ${data.vehicleId})`);
+              console.log(`[DestructionWatcher] 🚗 Processando evento (final): ${data.eventType} - ${data.vehicle} (ID: ${data.vehicleId})`);
               const eventEmoji = data.eventType === 'Disappeared' ? '🚗' : data.eventType === 'ForbiddenZoneTimerExpired' ? '⏰' : '💥';
               const eventText = data.eventType === 'Disappeared' ? 'Veículo desaparecido' : data.eventType === 'ForbiddenZoneTimerExpired' ? 'Veículo expirado (zona proibida)' : 'Veículo destruído';
-              let donoMsg = data.ownerName;
-              if (!config.hideVehicleOwnerSteamId) {
-                donoMsg += ` (SteamID: ${data.ownerSteamId})`;
-              }
-              const msg = `${eventEmoji} ${eventText}!\nVeículo: ${data.vehicle} (ID: ${data.vehicleId})\nDono: ${donoMsg}\nLocalização: ${data.location}\nData/Hora: ${data.datetime}`;
+              const msg = `${eventEmoji} ${eventText}!\nVeículo: ${data.vehicle} (ID: ${data.vehicleId})\nDono: ${data.ownerName}\nLocalização: ${data.location}\nData/Hora: ${data.datetime}`;
               try {
                 const result = await fileManager.sendDiscordWebhookMessage(webhookUrl, msg);
                 if (result.success) {
@@ -257,9 +400,11 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
       offsets[logFileName] = newOffset;
       await writeOffsets(offsets);
       
-      // if (destructions > 0) {
-      //   console.log(`[DestructionWatcher] 📊 Processados ${destructions} evento(s) em ${logFileName}`);
-      // }
+      if (destructions > 0) {
+        console.log(`[DestructionWatcher] 📊 Processados ${destructions} evento(s) em ${logFileName}`);
+        // Salvar eventos processados
+        await saveProcessedEvents();
+      }
     } catch (err) {
       console.error('[DestructionWatcher] ❌ Erro ao ler arquivo de log:', err);
     } finally {
@@ -269,56 +414,150 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager) {
     }
   }
 
-  // Configurar watcher para detectar mudanças em tempo real
-  try {
-    const watcher = fs.watch(logsPath, { recursive: false }, async (eventType, filename) => {
-      if (filename && filename.startsWith('vehicle_destruction_') && filename.endsWith('.log')) {
-        // console.log(`[DestructionWatcher] 🔄 Mudança detectada em: ${filename}`);
-        await processFile(filename, webhookUrl);
-      }
-    });
-    
-    console.log('[DestructionWatcher] 👁️ Watcher configurado para detecção em tempo real');
-  } catch (err) {
-    console.error('[DestructionWatcher] ❌ Erro ao configurar watcher:', err);
+  // Função para processar mudanças de arquivo
+  async function handleFileChange(filePath: string) {
+    const filename = path.basename(filePath);
+    if (filename.startsWith('vehicle_destruction_') && filename.endsWith('.log')) {
+      console.log(`[DestructionWatcher] 🚀 Push notification: ${filename}`);
+      await processFile(filename);
+    }
   }
+
+  // Configurar múltiplos watchers para máxima confiabilidade
+  console.log('[DestructionWatcher] 🔧 Configurando sistema de notificações push...');
+
+  // 1. Chokidar (mais robusto)
+  try {
+    const chokidarWatcher = chokidar.watch(logsPath, {
+      persistent: true,
+      ignoreInitial: true,
+      awaitWriteFinish: { 
+        stabilityThreshold: 50,  // Aguarda 50ms após última mudança
+        pollInterval: 50         // Verifica a cada 50ms
+      },
+      usePolling: false,         // Usa eventos nativos
+      interval: 100,             // Fallback polling
+      binaryInterval: 100
+    });
+
+    chokidarWatcher.on('change', handleFileChange);
+    chokidarWatcher.on('add', handleFileChange);
+    console.log('[DestructionWatcher] ✅ Chokidar watcher configurado');
+  } catch (err) {
+    console.error('[DestructionWatcher] ❌ Erro ao configurar Chokidar:', err);
+  }
+
+  // 2. Node-watch (backup) - DESABILITADO para evitar duplicações
+  // try {
+  //   const nodeWatchWatcher = nodeWatch(logsPath, { 
+  //     recursive: false,
+  //     filter: (f: string) => f.includes('vehicle_destruction_')
+  //   });
+
+  //   nodeWatchWatcher.on('change', (evt: string, name: string) => {
+  //     console.log(`[DestructionWatcher] 🔄 Node-watch: ${name}`);
+  //     handleFileChange(path.join(logsPath, name));
+  //   });
+  //   console.log('[DestructionWatcher] ✅ Node-watch configurado');
+  // } catch (err) {
+  //   console.error('[DestructionWatcher] ❌ Erro ao configurar Node-watch:', err);
+  // }
+
+  // 3. Watcher nativo do Node.js (terceira camada) - DESABILITADO para evitar duplicações
+  // try {
+  //   const nativeWatcher = fs.watch(logsPath, { recursive: false }, async (eventType, filename) => {
+  //     if (filename && filename.startsWith('vehicle_destruction_') && filename.endsWith('.log')) {
+  //       console.log(`[DestructionWatcher] 🔄 Native watcher: ${filename}`);
+  //       await handleFileChange(path.join(logsPath, filename));
+  //     }
+  //   });
+  //   console.log('[DestructionWatcher] ✅ Native watcher configurado');
+  // } catch (err) {
+  //   console.error('[DestructionWatcher] ❌ Erro ao configurar native watcher:', err);
+  // }
+
+  console.log('[DestructionWatcher] 🚀 Sistema de notificações push ativo!');
 
   // Processamento inicial de todos os arquivos
   try {
     const files = await fs.readdir(logsPath);
     const vehicleLogs = files.filter(f => f.startsWith('vehicle_destruction_') && f.endsWith('.log'));
     
+    console.log(`[DestructionWatcher] 📁 Arquivos de destruição encontrados: ${vehicleLogs.length}`);
+    
     if (vehicleLogs.length > 0) {
-      // console.log(`[DestructionWatcher] 📁 Processando ${vehicleLogs.length} arquivo(s) de log inicialmente`);
+      console.log(`[DestructionWatcher] 📁 Processando ${vehicleLogs.length} arquivo(s) inicialmente`);
       
       for (const logFileName of vehicleLogs) {
-        await processFile(logFileName, webhookUrl);
+        await processFile(logFileName);
       }
     }
   } catch (err) {
     console.error('[DestructionWatcher] ❌ Erro ao processar arquivos iniciais:', err);
   }
 
-  // Loop de polling como fallback
-  console.log('[DestructionWatcher] 🔄 Iniciando loop de polling...');
-  let pollCount = 0;
-  while (true) {
+  // --- POLLING INCREMENTAL PARA ATUALIZAÇÃO EM TEMPO REAL ---
+  async function incrementalPolling() {
+    const offsets = await readOffsets();
     try {
-      pollCount++;
-      // if (pollCount % 60 === 0) { // Log a cada 30 segundos
-      //   console.log(`[DestructionWatcher] 🔄 Polling ativo (${new Date().toLocaleTimeString()})`);
-      // }
-      
       const files = await fs.readdir(logsPath);
-      const vehicleLogs = files.filter(f => f.startsWith('vehicle_destruction_') && f.endsWith('.log'));
-      
-      for (const logFileName of vehicleLogs) {
-        await processFile(logFileName, webhookUrl);
+      const destructionFiles = files.filter(file => file.startsWith('vehicle_destruction_') && file.endsWith('.log')).sort();
+      for (const logFileName of destructionFiles) {
+        const filePath = path.join(logsPath, logFileName);
+        const stats = await fs.stat(filePath);
+        let offset = offsets[logFileName] || 0;
+        if (stats.size > offset) {
+          const fd = await fs.promises.open(filePath, 'r');
+          const buffer = Buffer.alloc(stats.size - offset);
+          await fd.read(buffer, 0, stats.size - offset, offset);
+          await fd.close();
+          const content = buffer.toString('utf16le');
+          const lines = content.split(/\r?\n/);
+          let updated = false;
+          // Buscar webhook dinamicamente
+          const currentWebhook = await loadWebhook();
+          if (!currentWebhook) continue;
+          for (const line of lines) {
+            const data = parseDestructionLine(line);
+            if (data) {
+              const eventId = generateEventId(data);
+              if (!processedEvents.has(eventId)) {
+                processedEvents.add(eventId);
+                // Enviar para o Discord com formato consistente
+                const eventEmoji = data.eventType === 'Disappeared' ? '🚗' : data.eventType === 'ForbiddenZoneTimerExpired' ? '⏰' : '💥';
+                const eventText = data.eventType === 'Disappeared' ? 'Veículo desaparecido' : data.eventType === 'ForbiddenZoneTimerExpired' ? 'Veículo expirado (zona proibida)' : 'Veículo destruído';
+                const message = `${eventEmoji} ${eventText}!\nVeículo: ${data.vehicle} (ID: ${data.vehicleId})\nDono: ${data.ownerName}\nLocalização: ${data.location}\nData/Hora: ${data.datetime}`;
+                await fileManager.sendDiscordWebhookMessage(currentWebhook, message);
+                updated = true;
+                console.log(`[DestructionWatcher] 🔄 Evento enviado via polling incremental!`);
+              }
+            }
+          }
+          offsets[logFileName] = stats.size;
+        }
       }
+      await writeOffsets(offsets);
     } catch (err) {
-      console.error('[DestructionWatcher] ❌ Erro no polling:', err);
+      console.error('[DestructionWatcher] ❌ Erro no polling incremental:', err);
     }
-    
-    await sleep(500); // Polling a cada 0.5 segundo
+    setTimeout(incrementalPolling, 2000); // Polling a cada 2 segundos
   }
+
+  // --- SISTEMA DE CÓPIA FORÇADA PARA MELHORAR DETECÇÃO ---
+  async function forcedCopySystem() {
+    try {
+      await copyLatestDestructionFile(logsPath);
+    } catch (error) {
+      // Erro silencioso para não interromper o sistema
+    }
+    setTimeout(forcedCopySystem, 5000); // Copiar a cada 5 segundos
+  }
+
+  // Iniciar sistema de cópia forçada
+  console.log('[DestructionWatcher] 📋 Sistema de cópia forçada ativado (a cada 5 segundos)');
+  forcedCopySystem();
+  
+  // Limpeza automática de eventos antigos (a cada 24 horas)
+  setInterval(cleanupOldEvents, 24 * 60 * 60 * 1000);
+  console.log('[DestructionWatcher] 🧹 Limpeza automática de eventos antigos ativada (a cada 24 horas)');
 } 

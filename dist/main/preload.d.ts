@@ -51,6 +51,9 @@ declare global {
             sendDiscordWebhookMessage: (webhookUrl: string, message: string) => Promise<any>;
             clearNotifiedPlayers: () => Promise<any>;
             getNotifiedPlayers: () => Promise<any>;
+            validateDiscordWebhook: (webhookUrl: string) => Promise<any>;
+            sendDiscordMessageWithFallback: (primaryWebhook: string, message: string, fallbackWebhooks: string[]) => Promise<any>;
+            getDiscordSendStats: () => Promise<any>;
         };
     }
 }

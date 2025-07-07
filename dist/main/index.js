@@ -39,15 +39,49 @@ const fileManager_1 = require("./fileManager");
 const backupManager_1 = require("./backupManager");
 const fs = __importStar(require("fs"));
 const vehicleDestructionWatcher_1 = require("./vehicleDestructionWatcher");
+const chatGlobalWatcher_1 = require("./chatGlobalWatcher");
+const loginWatcher_1 = require("./loginWatcher");
+const adminLogWatcher_1 = require("./adminLogWatcher");
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = 'development';
 }
-// console.log('NODE_ENV (início):', process.env.NODE_ENV);
+// Log inicial do processo
+console.log('🚀 [MAIN] Iniciando SCUM Server Manager...');
+console.log('📋 [MAIN] NODE_ENV:', process.env.NODE_ENV);
+console.log('🆔 [MAIN] PID:', process.pid);
+console.log('📁 [MAIN] Diretório atual:', process.cwd());
 let mainWindow = null;
 const fileManager = new fileManager_1.FileManager();
 const backupManager = new backupManager_1.BackupManager();
-// Iniciar monitoramento automático de destruição de veículos
-(0, vehicleDestructionWatcher_1.startVehicleDestructionWatcher)(fileManager).catch(() => { });
+// Flag para controlar se os watchers já foram iniciados
+let watchersStarted = false;
+// Função para iniciar watchers de forma segura
+async function startWatchers() {
+    if (watchersStarted) {
+        console.log('⚠️ [MAIN] Watchers já foram iniciados, pulando...');
+        return;
+    }
+    console.log('🔍 [MAIN] Iniciando watchers...');
+    try {
+        // Iniciar monitoramento automático de destruição de veículos
+        console.log('🚗 [MAIN] Iniciando VehicleDestructionWatcher...');
+        await (0, vehicleDestructionWatcher_1.startVehicleDestructionWatcher)(fileManager);
+        // Iniciar monitoramento automático de chat global
+        console.log('💬 [MAIN] Iniciando ChatGlobalWatcher...');
+        await (0, chatGlobalWatcher_1.startChatGlobalWatcher)(fileManager);
+        // Iniciar monitoramento automático de login para painel de players online
+        console.log('👥 [MAIN] Iniciando LoginWatcher...');
+        await (0, loginWatcher_1.startLoginWatcher)(fileManager);
+        // Iniciar monitoramento automático de logs admin
+        console.log('🔍 [MAIN] Iniciando AdminLogWatcher...');
+        await (0, adminLogWatcher_1.startAdminLogWatcher)(fileManager);
+        watchersStarted = true;
+        console.log('✅ [MAIN] Todos os watchers iniciados com sucesso!');
+    }
+    catch (error) {
+        console.error('❌ [MAIN] Erro ao iniciar watchers:', error);
+    }
+}
 function createWindow() {
     const preloadPath = path.join(__dirname, 'preload.js');
     const iconPath = path.join(__dirname, '../../assets/icon.png');
@@ -86,22 +120,38 @@ function createWindow() {
     }
     mainWindow.once('ready-to-show', () => {
         mainWindow?.show();
+        console.log('🪟 [MAIN] Janela principal criada e exibida');
+        // Iniciar watchers após a janela estar pronta
+        startWatchers().catch(error => {
+            console.error('❌ [MAIN] Erro ao iniciar watchers após criação da janela:', error);
+        });
     });
     mainWindow.on('closed', () => {
+        console.log('🪟 [MAIN] Janela principal fechada');
         mainWindow = null;
     });
 }
 // Eventos da aplicação
-electron_1.app.whenReady().then(createWindow);
+electron_1.app.whenReady().then(() => {
+    console.log('✅ [MAIN] Electron app ready, criando janela...');
+    createWindow();
+});
 electron_1.app.on('window-all-closed', () => {
+    console.log('🔄 [MAIN] Todas as janelas fechadas');
     if (process.platform !== 'darwin') {
+        console.log('🛑 [MAIN] Encerrando aplicação...');
         electron_1.app.quit();
     }
 });
 electron_1.app.on('activate', () => {
+    console.log('🔄 [MAIN] App ativado');
     if (electron_1.BrowserWindow.getAllWindows().length === 0) {
+        console.log('🪟 [MAIN] Recriando janela...');
         createWindow();
     }
+});
+electron_1.app.on('before-quit', () => {
+    console.log('🛑 [MAIN] Aplicação será encerrada...');
 });
 // IPC Handlers para comunicação com o renderer process
 // Selecionar executável do servidor (SCUMServer.exe)
@@ -585,6 +635,37 @@ electron_1.ipcMain.handle('get-notified-players', async () => {
         const errMsg = error instanceof Error ? error.message : String(error);
         console.error('Erro ao obter jogadores notificados:', errMsg);
         return [];
+    }
+});
+// Novos handlers robustos do Discord
+electron_1.ipcMain.handle('validate-discord-webhook', async (event, webhookUrl) => {
+    try {
+        return await fileManager.validateDiscordWebhook(webhookUrl);
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao validar webhook do Discord:', errMsg);
+        return { valid: false, error: errMsg };
+    }
+});
+electron_1.ipcMain.handle('send-discord-message-with-fallback', async (event, primaryWebhook, message, fallbackWebhooks) => {
+    try {
+        return await fileManager.sendDiscordMessageWithFallback(primaryWebhook, message, fallbackWebhooks);
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao enviar mensagem com fallback:', errMsg);
+        return { success: false, error: errMsg };
+    }
+});
+electron_1.ipcMain.handle('get-discord-send-stats', async () => {
+    try {
+        return await fileManager.getDiscordSendStats();
+    }
+    catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error('Erro ao obter estatísticas do Discord:', errMsg);
+        return { total: 0, success: 0, failed: 0, error: errMsg };
     }
 });
 //# sourceMappingURL=index.js.map

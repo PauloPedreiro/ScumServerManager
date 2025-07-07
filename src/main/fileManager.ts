@@ -41,6 +41,7 @@ export class FileManager {
   private cacheFile = path.join(this.cacheDir, 'server-cache.json');
   private appConfigFile = path.join(process.cwd(), 'config.json');
   private lastNotifiedSteamId: string | null = null;
+  private discordRateLimit: Map<string, number> | null = null;
 
   constructor() {
     // Garantir que o diretório de cache existe
@@ -351,8 +352,24 @@ export class FileManager {
             if (fileContent.trim().length === 0) {
               existingPlayers = [];
             } else {
-              existingPlayers = JSON.parse(fileContent);
-              if (!Array.isArray(existingPlayers)) {
+              // Tentar parsear o JSON com tratamento de erro mais robusto
+              try {
+                existingPlayers = JSON.parse(fileContent);
+                if (!Array.isArray(existingPlayers)) {
+                  console.warn('[Discord] players.json não é um array válido, resetando...');
+                  existingPlayers = [];
+                }
+              } catch (parseError) {
+                console.error('[Discord] Erro ao fazer parse do players.json:', parseError);
+                console.log('[Discord] Conteúdo do arquivo (primeiros 200 chars):', fileContent.substring(0, 200));
+                // Se o arquivo estiver corrompido, fazer backup e resetar
+                try {
+                  const backupPath = filePath + '.backup.' + Date.now();
+                  await fs.copy(filePath, backupPath);
+                  console.log(`[Discord] Backup do arquivo corrompido criado: ${backupPath}`);
+                } catch (backupError) {
+                  console.error('[Discord] Erro ao criar backup:', backupError);
+                }
                 existingPlayers = [];
               }
             }
@@ -973,23 +990,148 @@ export class FileManager {
     }
   }
 
-  // Enviar mensagem para um webhook do Discord
+  // Enviar mensagem para um webhook do Discord com sistema robusto
   async sendDiscordWebhookMessage(webhookUrl: string, message: string): Promise<{ success: boolean; error?: string }> {
-    try {
-      const fetch = require('node-fetch');
-      const res = await fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ content: message })
-      });
-      if (res.ok) {
-        return { success: true };
-      } else {
-        return { success: false, error: `HTTP ${res.status}` };
+    const fs = require('fs-extra');
+    const path = require('path');
+    
+    // Cache para rate limiting
+    if (!this.discordRateLimit) {
+      this.discordRateLimit = new Map<string, number>();
+    }
+    
+    // Validação do webhook
+    if (!webhookUrl || !webhookUrl.includes('discord.com/api/webhooks/')) {
+      console.error('[Discord] Webhook inválido:', webhookUrl);
+      return { success: false, error: 'Webhook inválido' };
+    }
+    
+    // Rate limiting: máximo 5 mensagens por segundo por webhook
+    const now = Date.now();
+    const webhookKey = webhookUrl.split('/').pop() || 'unknown';
+    const lastSent = this.discordRateLimit?.get(webhookKey) || 0;
+    
+    if (now - lastSent < 200) { // 200ms = 5 mensagens por segundo
+      console.log('[Discord] Rate limit atingido, aguardando...');
+      await new Promise(resolve => setTimeout(resolve, 200 - (now - lastSent)));
+    }
+    
+    // Função de retry com backoff exponencial
+    const sendWithRetry = async (attempt: number = 1): Promise<{ success: boolean; error?: string }> => {
+      try {
+        const fetch = require('node-fetch');
+        
+        // Preparar payload com timestamp
+        const payload = {
+          content: message,
+          avatar_url: 'https://cdn.discordapp.com/attachments/123456789/123456789/scum-icon.png', // Placeholder
+          timestamp: new Date().toISOString()
+        };
+        
+        console.log(`[Discord] Tentativa ${attempt}: Enviando mensagem para webhook...`);
+        
+        const res = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            'User-Agent': 'SCUM-Server-Manager/1.0'
+          },
+          body: JSON.stringify(payload),
+          timeout: 10000 // 10 segundos de timeout
+        });
+        
+        // Atualizar rate limit
+        this.discordRateLimit?.set(webhookKey, Date.now());
+        
+        if (res.ok) {
+          console.log(`[Discord] ✅ Mensagem enviada com sucesso (tentativa ${attempt})`);
+          return { success: true };
+        } else {
+          const errorText = await res.text().catch(() => 'Erro desconhecido');
+          const error = `HTTP ${res.status}: ${errorText}`;
+          
+          // Log detalhado do erro
+          console.error(`[Discord] ❌ Erro HTTP ${res.status} na tentativa ${attempt}:`, errorText);
+          
+          // Se for erro 429 (rate limit), aguardar mais tempo
+          if (res.status === 429) {
+            const retryAfter = res.headers.get('retry-after') || '5';
+            const waitTime = parseInt(retryAfter) * 1000;
+            console.log(`[Discord] Rate limit do Discord, aguardando ${waitTime}ms...`);
+            await new Promise(resolve => setTimeout(resolve, waitTime));
+          }
+          
+          // Se for erro 4xx (cliente), não tentar novamente
+          if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+            console.error(`[Discord] Erro do cliente (${res.status}), não tentando novamente`);
+            return { success: false, error };
+          }
+          
+          // Se for erro 5xx (servidor) ou 429, tentar novamente
+          if (res.status >= 500 || res.status === 429) {
+            if (attempt < 3) {
+              const delay = Math.pow(2, attempt) * 1000; // Backoff exponencial: 2s, 4s, 8s
+              console.log(`[Discord] Tentando novamente em ${delay}ms...`);
+              await new Promise(resolve => setTimeout(resolve, delay));
+              return sendWithRetry(attempt + 1);
+            }
+          }
+          
+          return { success: false, error };
+        }
+      } catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        console.error(`[Discord] ❌ Erro de rede na tentativa ${attempt}:`, errMsg);
+        
+        // Se for erro de rede, tentar novamente
+        if (attempt < 3) {
+          const delay = Math.pow(2, attempt) * 1000;
+          console.log(`[Discord] Erro de rede, tentando novamente em ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          return sendWithRetry(attempt + 1);
+        }
+        
+        return { success: false, error: errMsg };
       }
+    };
+    
+    // Salvar log de tentativas
+    const logEntry = {
+      timestamp: new Date().toISOString(),
+      webhook: webhookUrl.substring(0, 50) + '...',
+      message: message.substring(0, 100) + (message.length > 100 ? '...' : ''),
+      success: false
+    };
+    
+    try {
+      const result = await sendWithRetry();
+      logEntry.success = result.success;
+      
+      // Salvar log em arquivo
+      const logPath = path.join(process.cwd(), 'discord_send_log.json');
+      let logs = [];
+      try {
+        if (await fs.pathExists(logPath)) {
+          logs = JSON.parse(await fs.readFile(logPath, 'utf8'));
+        }
+      } catch {
+        logs = [];
+      }
+      
+      logs.push(logEntry);
+      
+      // Manter apenas os últimos 100 logs
+      if (logs.length > 100) {
+        logs = logs.slice(-100);
+      }
+      
+      await fs.writeFile(logPath, JSON.stringify(logs, null, 2), 'utf8');
+      
+      return result;
     } catch (error) {
-      const errMsg = error instanceof Error ? error.message : String(error);
-      return { success: false, error: errMsg };
+      logEntry.success = false;
+      console.error('[Discord] ❌ Erro crítico ao enviar mensagem:', error);
+      return { success: false, error: String(error) };
     }
   }
 
@@ -1015,6 +1157,88 @@ export class FileManager {
     } catch (error) {
       console.error('[Discord] Erro ao ler jogadores notificados:', error);
       return [];
+    }
+  }
+
+  // Validar webhook do Discord
+  async validateDiscordWebhook(webhookUrl: string): Promise<{ valid: boolean; error?: string }> {
+    try {
+      if (!webhookUrl || !webhookUrl.includes('discord.com/api/webhooks/')) {
+        return { valid: false, error: 'URL do webhook inválida' };
+      }
+
+      const fetch = require('node-fetch');
+      const res = await fetch(webhookUrl, {
+        method: 'GET',
+        headers: { 'User-Agent': 'SCUM-Server-Manager/1.0' },
+        timeout: 5000
+      });
+
+      if (res.status === 404) {
+        return { valid: false, error: 'Webhook não encontrado (404)' };
+      } else if (res.status === 403) {
+        return { valid: false, error: 'Acesso negado ao webhook (403)' };
+      } else if (res.status === 200) {
+        return { valid: true };
+      } else {
+        return { valid: false, error: `Erro HTTP ${res.status}` };
+      }
+    } catch (error) {
+      const errMsg = error instanceof Error ? error.message : String(error);
+      return { valid: false, error: `Erro de conexão: ${errMsg}` };
+    }
+  }
+
+  // Enviar mensagem com fallback para webhooks alternativos
+  async sendDiscordMessageWithFallback(primaryWebhook: string, message: string, fallbackWebhooks: string[] = []): Promise<{ success: boolean; error?: string; usedFallback?: boolean }> {
+    // Tentar webhook principal primeiro
+    const primaryResult = await this.sendDiscordWebhookMessage(primaryWebhook, message);
+    if (primaryResult.success) {
+      return { success: true };
+    }
+
+    console.log(`[Discord] Webhook principal falhou: ${primaryResult.error}, tentando fallbacks...`);
+
+    // Tentar webhooks de fallback
+    for (const fallbackWebhook of fallbackWebhooks) {
+      if (fallbackWebhook && fallbackWebhook !== primaryWebhook) {
+        console.log(`[Discord] Tentando webhook de fallback: ${fallbackWebhook.substring(0, 50)}...`);
+        const fallbackResult = await this.sendDiscordWebhookMessage(fallbackWebhook, message);
+        if (fallbackResult.success) {
+          console.log('[Discord] ✅ Mensagem enviada via webhook de fallback');
+          return { success: true, usedFallback: true };
+        }
+      }
+    }
+
+    return { 
+      success: false, 
+      error: `Todos os webhooks falharam. Principal: ${primaryResult.error}` 
+    };
+  }
+
+  // Obter estatísticas de envio do Discord
+  async getDiscordSendStats(): Promise<{ total: number; success: number; failed: number; lastError?: string }> {
+    try {
+      const logPath = path.join(process.cwd(), 'discord_send_log.json');
+      if (!await fs.pathExists(logPath)) {
+        return { total: 0, success: 0, failed: 0 };
+      }
+
+      const logs = JSON.parse(await fs.readFile(logPath, 'utf8'));
+      const success = logs.filter((log: any) => log.success).length;
+      const failed = logs.filter((log: any) => !log.success).length;
+      const lastError = logs.length > 0 && !logs[logs.length - 1].success ? logs[logs.length - 1].error : undefined;
+
+      return {
+        total: logs.length,
+        success,
+        failed,
+        lastError
+      };
+    } catch (error) {
+      console.error('[Discord] Erro ao obter estatísticas:', error);
+      return { total: 0, success: 0, failed: 0 };
     }
   }
 } 
