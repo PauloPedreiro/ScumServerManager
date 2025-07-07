@@ -5,8 +5,10 @@
   "main": "dist/main/index.js",
   "homepage": "./",
   "scripts": {
-    "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\"",
+    "dev": "npm run dev:unified",
+    "dev:unified": "concurrently \"npm run dev:main:watch\" \"npm run dev:renderer\" --kill-others --prefix-colors blue,green",
     "dev:main": "set NODE_ENV=development && tsc -p src/main/tsconfig.json && electron dist/main/index.js",
+    "dev:main:watch": "concurrently \"tsc -p src/main/tsconfig.json --watch\" \"wait-on dist/main/index.js && electron dist/main/index.js\"",
     "dev:renderer": "vite",
     "build": "npm run build:main && npm run build:renderer",
     "build:main": "tsc -p src/main/tsconfig.json",
@@ -41,7 +43,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "wait-on": "^8.0.3"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -49,10 +52,12 @@
     "@mui/icons-material": "^5.15.1",
     "@mui/material": "^5.15.1",
     "@mui/x-data-grid": "^6.18.1",
+    "chokidar": "^4.0.3",
     "electron-store": "^8.1.0",
     "fs-extra": "^11.1.1",
     "ini": "^4.1.1",
     "node-fetch": "^2.7.0",
+    "node-watch": "^0.7.4",
     "ps-list": "^7.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

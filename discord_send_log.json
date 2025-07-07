@@ -1,0 +1,602 @@
+[
+  {
+    "timestamp": "2025-07-06T21:31:29.509Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00000\u00003\u0000.\u00005\u00004\u0000.\u00002\u00009\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:30.059Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00000\u00003\u0000.\u00005\u00004\u0000.\u00004\u00009\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:30.581Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00000\u00003\u0000.\u00005\u00004\u0000.\u00005\u00008\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:31.133Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00000\u00003\u0000.\u00005\u00009\u0000.\u00004\u00006\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:31.675Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00000\u00004\u0000.\u00000\u00003\u0000.\u00004\u00004\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:32.265Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00000\u00004\u0000.\u00000\u00005\u0000.\u00005\u00002\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:32.947Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00001\u00004\u0000.\u00003\u00001\u0000.\u00002\u00003\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00008\u00000\u00004\u00000\u00006\u00003\u00006\u00001\u00000\u00005\u0000:\u0000P\u0000e\u0000d\u0000r\u0000e\u0000i\u0000r\u0000o\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:31:33.450Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00003\u0000-\u00001\u00005\u0000.\u00000\u00006\u0000.\u00005\u00009\u0000:\u0000 \u0000G\u0000a\u0000m\u0000e\u0000 \u0000v\u0000e\u0000r\u0000s\u0000i\u0000o\u0000n\u0000:\u0000 \u00001\u0000.\u00000\u0000.\u00001\u0000.\u00000\u0000.\u00009\u00005\u00009\u00003\u00004\u0000",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:34:46.835Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00002\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:34:49.237Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00003\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:27.030Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00004\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:29.576Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00004\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:31.952Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00005\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:34.374Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00005\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:36.757Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00006\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:39.209Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00006\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:41.737Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00007\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:44.240Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00007\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:46.592Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00008\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:49.004Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00009\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:51.399Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00004\u0000.\u00005\u00009\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:53.772Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00000\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:56.120Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00000\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:35:58.526Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00001\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:36:01.031Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00001\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:36:03.521Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00002\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:36:06.015Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00003\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:36:08.351Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00003\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:36:10.841Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00004\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:36:13.174Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00000\u00004\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:37:10.861Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00005\u0000.\u00005\u00004\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00008\u00003\u00009\u00008\u00001\u00006\u00000\u00003\u00003\u00009\u0000:\u0000B\u0000l\u0000u\u0000e\u0000A\u0000r\u0000c\u0000h\u0000e\u0000r...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T21:37:13.275Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00001\u0000.\u00003\u00007\u0000.\u00001\u00006\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00007\u00009\u00006\u00003\u00003\u00005\u00008\u00001\u00008\u00000\u0000:\u0000R\u0000e\u0000a\u0000v\u0000(\u00001\u00009\u0000)\u0000'\u0000 ...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:15.720Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: Maninho aproveitando, como que funciona aqui pra fazer as bases?",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:18.123Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[CEO]BlueArcher_BR: Só dá uma olhadinha ali nas regras, tá descrito ali",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:20.471Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[CEO]BlueArcher_BR: Qualquer duvida, entra na call ali que a gente tira a duvida",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:23.091Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: Então pra mim na aba informações - sala Regras ta sem nada la",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:25.501Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: o discord é o Blue Sector BR né? da fotinha azul",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:27.905Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: ae agr to vendo la, uma duvida o registro de veiculos ja ta podendo botar la?",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:30.259Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[CEO]BlueArcher_BR: O registro ainda não está funcionando, mas estaos configurando, assim que estive...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:34.615Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: bele",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:37.085Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: a uma duvida em media quantos metros de uma cidade pra poder construir?",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:39.590Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: é só não usar construcao delas, cercar etc",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:41.901Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: só pra ter uma ideia, mt tempo que n jogo ai n sei o quão longe afeta",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:04:44.418Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Viper: beleza",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:08:02.239Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00002\u0000.\u00000\u00008\u0000.\u00000\u00008\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:12:43.170Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00002\u0000.\u00001\u00002\u0000.\u00004\u00000\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:12:45.629Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00002\u0000.\u00001\u00002\u0000.\u00004\u00001\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:12:47.964Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00002\u0000.\u00001\u00002\u0000.\u00004\u00002\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T22:12:50.279Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00002\u0000.\u00001\u00002\u0000.\u00004\u00003\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:45.097Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00002\u0000.\u00001\u00009\u0000.\u00001\u00008\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:48.850Z",
+    "webhook": "https://discord.com/api/webhooks/13911118780206940...",
+    "message": "\u00002\u00000\u00002\u00005\u0000.\u00000\u00007\u0000.\u00000\u00006\u0000-\u00002\u00003\u0000.\u00002\u00004\u0000.\u00005\u00006\u0000:\u0000 \u0000'\u00007\u00006\u00005\u00006\u00001\u00001\u00009\u00009\u00006\u00001\u00007\u00009\u00009\u00003\u00003\u00003\u00001\u0000:\u0000T\u0000u\u0000t\u0000i\u0000C\u0000a\u0000t\u0000s\u0000(\u00001...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:49.482Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: chegay",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:51.797Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: cigarrao no chao",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:54.167Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: kkk",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:56.789Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: aqui",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:24:59.163Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: kk",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:02.044Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: isqueiro",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:04.475Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: to sem",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:06.842Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: ae",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:09.236Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: fala pra ninguem kk",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:11.578Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: a gente acende um incenso dps",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:15.469Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: kkkkkkkk",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:17.853Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: odeio",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:20.228Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: pior",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:22.813Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: acho mt fedido",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:25.191Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: é terrivel",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:27.531Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: ataca a sinusite",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:30.710Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: kkkkjjj",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:33.069Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: coisa de bruxa",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:35.451Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: tem insqueiro pra ti no chao aqui",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:37.808Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: acheii um monte",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:40.234Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: ta lendo?",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:42.613Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: resetou",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:45.067Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: sim",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:47.370Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: agora foi",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:49.868Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: awwwweeeee",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:52.285Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: thanks",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:54.720Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: ele ta tragando ate o fim",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:57.059Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: filtro",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:25:59.405Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: credo",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:26:01.797Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:26:04.147Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: parece eu",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:26:06.581Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: agr pouco",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:26:08.923Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: kkkkkkkk",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:26:11.635Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: o dia todo sem fumar",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:41:57.409Z",
+    "webhook": "https://discord.com/api/webhooks/13908350098999910...",
+    "message": "🚗 Veículo desaparecido!\nVeículo: Rager_ES (ID: 631241)\nDono: BlueArcher_BR\nLocalização: X=-618009.5...",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:54:42.846Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: oi",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:54:53.212Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "GUTO: ola",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:54:55.569Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "GUTO: ola",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:54:57.903Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: hello karolllll",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:02.966Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: pior que nao tenho",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:05.453Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[CEO]BlueArcher_BR: Alguma coisa no chat",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:07.785Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: KKKKKKKK",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:19.236Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Karol: ola",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:21.661Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM] Reav: ola",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:45.111Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Karol: tudo bem  eu estou aqui no ferro velho",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:55:47.535Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "Karol: ja achei 3 das 4 porta tive sorte ate demais",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:56:04.647Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[CEO]BlueArcher_BR: dddddddeeee",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:56:08.435Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: qual mira vai na 12?",
+    "success": true
+  },
+  {
+    "timestamp": "2025-07-06T23:56:15.226Z",
+    "webhook": "https://discord.com/api/webhooks/13907711148372829...",
+    "message": "[ADM]TutiCats: sdaasss",
+    "success": true
+  }
+]

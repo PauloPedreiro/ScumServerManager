@@ -88,6 +88,9 @@ ScumServerManager/
 │   │   ├── fileManager.ts             # Gerenciamento de arquivos
 │   │   ├── backupManager.ts           # Sistema de backup
 │   │   ├── vehicleDestructionWatcher.ts # Monitor de destruição de veículos
+│   │   ├── chatGlobalWatcher.ts       # Monitor de chat global
+│   │   ├── adminLogWatcher.ts         # Monitor de logs admin
+│   │   ├── loginWatcher.ts            # Monitor de login de jogadores
 │   │   └── tsconfig.json              # Configuração TypeScript (main)
 │   ├── renderer/                      # Processo de renderização (React)
 │   │   ├── main.tsx                   # Ponto de entrada do React
@@ -105,6 +108,10 @@ ScumServerManager/
 ├── config.json                        # Configurações do aplicativo
 ├── discordWebhooks.json               # Webhooks do Discord
 ├── vehicle_destruction_offsets.json   # Controle de offset dos logs
+├── processed_chat_messages.json       # Eventos de chat processados
+├── admin_processed_events.json        # Eventos admin processados
+├── login_processed_events.json        # Eventos de login processados
+├── vehicle_processed_events.json      # Eventos de veículos processados
 ├── package.json                       # Dependências e scripts
 └── README.md                          # Documentação inicial
 ```
@@ -151,6 +158,120 @@ ScumServerManager/
 - **Backup Manual**: Interface para criar backups sob demanda
 - **Restauração**: Recuperação de configurações anteriores
 - **Gerenciamento**: Lista, download e exclusão de backups
+
+### 7. Sistema de Watchers e Monitoramento
+- **Monitoramento em Tempo Real**: Usando Chokidar para detecção eficiente de mudanças
+- **Deduplicação Inteligente**: Sistema de persistência que evita reprocessamento de eventos
+- **Proteção contra Rate Limit**: Debounce e controle de frequência para evitar HTTP 429 do Discord
+- **Tratamento Robusto de Erros**: Ignora arquivos temporários e lida com erros de permissão
+- **Processamento Inicial Otimizado**: Apenas o arquivo de log mais recente é processado na inicialização
+- **Limpeza Automática**: Remove eventos antigos dos arquivos de persistência
+
+#### Tipos de Watchers
+
+##### ChatGlobalWatcher
+- **Monitoramento**: Arquivos `chat_*.log` para mensagens globais
+- **Deduplicação**: Arquivo `processed_chat_messages.json` com IDs únicos
+- **Formato Discord**: `nome: mensagem` (sem timestamp)
+- **Filtros**: Apenas mensagens marcadas como `'Global: '`
+
+##### AdminLogWatcher
+- **Monitoramento**: Arquivos `admin_*.log` para comandos administrativos
+- **Deduplicação**: Arquivo `admin_processed_events.json` com IDs únicos
+- **Formato Discord**: Comando completo com timestamp
+- **Filtros**: Todos os comandos admin são enviados
+
+##### LoginWatcher
+- **Monitoramento**: Logs de login/logout de jogadores
+- **Deduplicação**: Arquivo `login_processed_events.json` com IDs únicos
+- **Formato Discord**: Notificação de entrada/saída com nome do jogador
+- **Filtros**: Eventos de login/logout válidos
+
+##### VehicleDestructionWatcher
+- **Monitoramento**: Logs de destruição/desaparecimento de veículos
+- **Deduplicação**: Arquivo `vehicle_processed_events.json` com IDs únicos
+- **Formato Discord**: Detalhes do veículo com ou sem SteamID (configurável)
+- **Filtros**: Eventos `[Destroyed]`, `[Disappeared]`, `[ForbiddenZoneTimerExpired]`
+
+#### Sistema de Deduplicação e Persistência
+
+##### Arquivos de Persistência
+```json
+// processed_chat_messages.json
+{
+  "chat_20250704_031821_mariocs10_oi_galera": true,
+  "chat_20250704_031822_joao123_boa_noite": true
+}
+
+// admin_processed_events.json
+{
+  "admin_20250704_031821_kick_player_123": true,
+  "admin_20250704_031822_ban_player_456": true
+}
+
+// login_processed_events.json
+{
+  "login_20250704_031821_mariocs10_76561198140545020": true,
+  "logout_20250704_031822_joao123_76561198140545021": true
+}
+
+// vehicle_processed_events.json
+{
+  "vehicle_20250704_031821_destroyed_car_123": true,
+  "vehicle_20250704_031822_disappeared_truck_456": true
+}
+```
+
+##### Limpeza Automática
+- **Frequência**: A cada 24 horas
+- **Critério**: Remove eventos com mais de 24 horas
+- **Benefício**: Evita crescimento indefinido dos arquivos
+- **Implementação**: Função `cleanupOldEvents()` em cada watcher
+
+#### Proteção contra Rate Limit (HTTP 429)
+
+##### Debounce e Controle de Frequência
+```typescript
+// Debounce de 500ms entre processamentos
+await sleep(500);
+
+// Delay de 1 segundo entre envios para Discord
+await sleep(1000);
+```
+
+##### Tratamento de Erros HTTP 429
+- **Detecção**: Captura de erro "Too Many Requests"
+- **Ação**: Aguarda 5 segundos antes de tentar novamente
+- **Log**: Registra tentativa de rate limit no console
+- **Recuperação**: Continua processamento após delay
+
+#### Tratamento Robusto de Erros
+
+##### Erros de Arquivo Ignorados
+- **Arquivos Temporários**: `.temp`, `.tmp`, `.bak`
+- **Erros de Permissão**: `EPERM` (comum em network shares)
+- **Arquivos Não Encontrados**: `ENOENT` (arquivo deletado durante processamento)
+- **Comportamento**: Log de erro mas continua processamento
+
+##### Tratamento de Encoding
+- **Detecção**: UTF-16 vs UTF-8
+- **Conversão**: Automática quando necessário
+- **Fallback**: Continua processamento mesmo com erro de encoding
+
+#### Comportamento de Inicialização
+
+##### Processamento Inicial
+1. **Identificação**: Encontra o arquivo de log mais recente
+2. **Leitura**: Carrega eventos já processados do arquivo de persistência
+3. **Filtragem**: Processa apenas eventos não marcados como processados
+4. **Envio**: Envia apenas eventos novos para o Discord
+5. **Persistência**: Salva novos eventos processados
+
+##### Benefícios
+- **Eficiência**: Não reprocessa eventos antigos
+- **Controle**: Usuário pode escolher enviar todos ou apenas novos
+- **Performance**: Inicialização rápida mesmo com logs grandes
+- **Confiabilidade**: Não envia duplicatas após reinício
 
 ---
 
@@ -336,11 +457,13 @@ class BackupManager {
 /**
  * Monitor de destruição de veículos em tempo real
  * Responsável por:
- * - Monitoramento contínuo de logs de veículos
+ * - Monitoramento contínuo de logs de veículos usando Chokidar
  * - Detecção de eventos de destruição/desaparecimento
- * - Envio automático de notificações Discord
- * - Controle de duplicatas e processamento
- * - Gerenciamento de offsets para leitura eficiente
+ * - Envio automático de notificações Discord com proteção contra rate limit
+ * - Sistema de deduplicação com persistência em arquivos JSON
+ * - Tratamento robusto de erros (EPERM, ENOENT, arquivos temporários)
+ * - Processamento inicial inteligente (apenas arquivo mais recente)
+ * - Limpeza automática de eventos antigos para evitar crescimento indefinido
  */
 
 /**
@@ -357,14 +480,14 @@ export async function startVehicleDestructionWatcher(fileManager: FileManager): 
 function parseDestructionLine(line: string): DestructionEvent | null
 
 /**
- * Processa arquivo de log específico
+ * Processa arquivo de log específico com deduplicação
  * @param logFileName Nome do arquivo de log
  * @param webhookUrl URL do webhook Discord
  */
 async function processFile(logFileName: string, webhookUrl: string): Promise<void>
 
 /**
- * Gera ID único para evento
+ * Gera ID único para evento baseado em dados do evento
  * @param data Dados do evento
  * @returns ID único do evento
  */
@@ -378,19 +501,26 @@ function generateEventId(data: DestructionEvent): string
 function convertUtf16ToUtf8(text: string): string
 
 /**
- * Lê offsets salvos dos arquivos
- * @returns Objeto com offsets por arquivo
+ * Lê eventos processados salvos em arquivo JSON
+ * @returns Objeto com eventos processados por ID
  */
-async function readOffsets(): Promise<Record<string, number>>
+async function readProcessedEvents(): Promise<Record<string, boolean>>
 
 /**
- * Salva offsets dos arquivos
- * @param offsets Offsets a serem salvos
+ * Salva eventos processados em arquivo JSON
+ * @param processedEvents Eventos processados a serem salvos
  */
-async function writeOffsets(offsets: Record<string, number>): Promise<void>
+async function writeProcessedEvents(processedEvents: Record<string, boolean>): Promise<void>
 
 /**
- * Aguarda por tempo específico
+ * Limpa eventos antigos (mais de 24 horas) do arquivo de persistência
+ * @param processedEvents Eventos processados atuais
+ * @returns Eventos processados limpos
+ */
+function cleanupOldEvents(processedEvents: Record<string, boolean>): Record<string, boolean>
+
+/**
+ * Aguarda por tempo específico (usado para debounce)
  * @param ms Milissegundos para aguardar
  */
 function sleep(ms: number): Promise<void>
@@ -698,7 +828,33 @@ npm run dist
 ```json
 {
   "logNovosPlayers": "https://discord.com/api/webhooks/...",
-  "logDestruicaoVeiculos": "https://discord.com/api/webhooks/..."
+  "logDestruicaoVeiculos": "https://discord.com/api/webhooks/...",
+  "logChatGlobal": "https://discord.com/api/webhooks/...",
+  "logAdmin": "https://discord.com/api/webhooks/...",
+  "logLogin": "https://discord.com/api/webhooks/..."
+}
+```
+
+3. **Arquivos de Persistência** - Controle de eventos processados
+```json
+// processed_chat_messages.json - Evita duplicação de mensagens de chat
+{
+  "chat_20250704_031821_mariocs10_oi_galera": true
+}
+
+// admin_processed_events.json - Evita duplicação de comandos admin
+{
+  "admin_20250704_031821_kick_player_123": true
+}
+
+// login_processed_events.json - Evita duplicação de eventos de login
+{
+  "login_20250704_031821_mariocs10_76561198140545020": true
+}
+
+// vehicle_processed_events.json - Evita duplicação de eventos de veículos
+{
+  "vehicle_20250704_031821_destroyed_car_123": true
 }
 ```
 
@@ -713,6 +869,28 @@ LogVehicleDestroyed=True
 2. **Configure o caminho dos logs** no aplicativo
 3. **Configure os webhooks do Discord** (opcional)
 4. **Teste as notificações** destruindo um veículo no jogo
+
+### Tipos de Logs Monitorados
+
+#### Logs de Veículos
+- **Arquivo**: `vehicle_destruction_*.log`
+- **Eventos**: `[Destroyed]`, `[Disappeared]`, `[ForbiddenZoneTimerExpired]`
+- **Configuração**: `LogVehicleDestroyed=True` no `Game.ini`
+
+#### Logs de Chat
+- **Arquivo**: `chat_*.log`
+- **Eventos**: Mensagens globais marcadas como `'Global: '`
+- **Formato**: `nome: mensagem` (sem timestamp)
+
+#### Logs Admin
+- **Arquivo**: `admin_*.log`
+- **Eventos**: Comandos administrativos e ações de admin
+- **Formato**: Comando completo com timestamp
+
+#### Logs de Login
+- **Arquivo**: Logs de login/logout de jogadores
+- **Eventos**: Entrada e saída de jogadores
+- **Formato**: Notificação com nome do jogador
 
 ---
 
@@ -760,6 +938,51 @@ LogVehicleDestroyed=True
 - Verifique se o caminho dos logs está correto
 - Confirme se o servidor está gerando logs
 - Reinicie o aplicativo
+
+#### 6. Mensagens duplicadas no Discord
+**Sintomas**: Mesmo evento é enviado múltiplas vezes
+
+**Soluções**:
+- Verifique se os arquivos de persistência não foram corrompidos
+- Delete os arquivos `*_processed_events.json` para reprocessar
+- Confirme se não há múltiplas instâncias do aplicativo rodando
+- Verifique se o sistema de deduplicação está funcionando
+
+#### 7. Rate limit do Discord (HTTP 429)
+**Sintomas**: Erro "Too Many Requests" no console
+
+**Soluções**:
+- O sistema automaticamente aguarda 5 segundos e tenta novamente
+- Verifique se não há flood de eventos sendo gerado
+- Confirme se o debounce está funcionando (500ms entre processamentos)
+- Considere aumentar o delay entre envios se necessário
+
+#### 8. Erro EPERM em network shares
+**Sintomas**: Erro "operation not permitted" ao acessar arquivos
+
+**Soluções**:
+- Este erro é comum em network shares e é tratado automaticamente
+- O sistema ignora arquivos temporários (`.temp`, `.tmp`, `.bak`)
+- Verifique se a conexão de rede está estável
+- Considere usar caminho local se possível
+
+#### 9. Arquivos de persistência muito grandes
+**Sintomas**: Arquivos `*_processed_events.json` crescem indefinidamente
+
+**Soluções**:
+- O sistema automaticamente limpa eventos com mais de 24 horas
+- Se necessário, delete manualmente os arquivos de persistência
+- Verifique se a limpeza automática está funcionando
+- Monitore o tamanho dos arquivos periodicamente
+
+#### 10. Watcher não detecta mudanças em network shares
+**Sintomas**: Mudanças em arquivos de rede não são detectadas
+
+**Soluções**:
+- O Chokidar pode ter limitações com network shares
+- Verifique se a conexão de rede está estável
+- Considere usar caminho local se possível
+- Reinicie o aplicativo para recarregar o watcher
 
 ### Logs de Debug
 

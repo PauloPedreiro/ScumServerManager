@@ -72,5 +72,9 @@ electron_1.contextBridge.exposeInMainWorld('electronAPI', {
     // Gerenciamento de notificações de jogadores
     clearNotifiedPlayers: () => electron_1.ipcRenderer.invoke('clear-notified-players'),
     getNotifiedPlayers: () => electron_1.ipcRenderer.invoke('get-notified-players'),
+    // Novas funções robustas do Discord
+    validateDiscordWebhook: (webhookUrl) => electron_1.ipcRenderer.invoke('validate-discord-webhook', webhookUrl),
+    sendDiscordMessageWithFallback: (primaryWebhook, message, fallbackWebhooks) => electron_1.ipcRenderer.invoke('send-discord-message-with-fallback', primaryWebhook, message, fallbackWebhooks),
+    getDiscordSendStats: () => electron_1.ipcRenderer.invoke('get-discord-send-stats'),
 });
 //# sourceMappingURL=preload.js.map

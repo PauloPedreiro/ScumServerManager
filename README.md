@@ -1,19 +1,197 @@
 # SCUM Server Manager
 
-Um aplicativo desktop moderno para gerenciar configurações de servidores SCUM de forma intuitiva e eficiente.
+Um aplicativo desktop moderno para gerenciar servidores SCUM de forma intuitiva, eficiente e com integração total ao Discord.
 
-## 🚧 Status do Projeto
+## 🚦 Status do Projeto
 
-**Este é um projeto em desenvolvimento inicial!** 
+**Projeto em desenvolvimento ativo!**
 
-Estamos na fase inicial de desenvolvimento e toda ajuda da comunidade será muito bem-vinda! Se você tem interesse em contribuir, seja com código, sugestões, feedback ou testando o aplicativo, sua participação é fundamental para o sucesso deste projeto.
+Contribuições, feedbacks e testes são muito bem-vindos. Participe para ajudar a construir a melhor ferramenta para a comunidade SCUM!
 
-### 🤝 Como Contribuir
+## ✨ Funcionalidades Principais
 
-- **Desenvolvedores**: Contribua com código, correções de bugs, novas funcionalidades
-- **Testadores**: Teste o aplicativo e reporte bugs ou sugestões de melhorias
-- **Comunidade**: Compartilhe ideias, feedback e ajude a espalhar a palavra
-- **Documentação**: Ajude a melhorar a documentação e criar tutoriais
+- **Dashboard Intuitivo**: Visão geral do servidor, status e estatísticas em tempo real.
+- **Configurações completas**: Edite `ServerSettings.ini`, `GameUserSettings.ini`, `EconomyOverride.json`, `RaidTimes.json` e muito mais.
+- **Gerenciamento de Usuários**: Admins, whitelist, banimentos e permissões.
+- **Sistema de Backup e Restauração**: Backups automáticos e restauração fácil.
+- **Monitoramento de Logs**: Logs de destruição de veículos, chat global/local, comandos admin e login de jogadores, todos com envio automático para canais do Discord via webhooks.
+- **Painel de Webhooks**: Configure diferentes webhooks para cada tipo de log/evento.
+- **Notificações Discord**: Receba alertas de eventos importantes diretamente no seu canal.
+- **Interface Moderna**: Desenvolvido com Electron, React, TypeScript e Material-UI.
+- **Sistema de Deduplicação**: Persistência inteligente que evita eventos duplicados
+- **Proteção contra Rate Limit**: Debounce e delays automáticos para o Discord
+- **Tratamento Robusto de Erros**: Recuperação automática de falhas de rede e arquivo
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Electron** (desktop multiplataforma)
+- **React** (UI)
+- **TypeScript** (tipagem)
+- **Material-UI** (design)
+- **Vite** (build)
+
+## 📚 Módulos e Páginas
+
+- **Dashboard**: Estatísticas e status do servidor.
+- **Configurações do Servidor**: Edição do `ServerSettings.ini`.
+- **Configurações do Jogo**: Edição do `GameUserSettings.ini`.
+- **Sistema de Economia**: Gerenciamento do `EconomyOverride.json`.
+- **Horários de Raid**: Controle de `RaidTimes.json`.
+- **Gerenciamento de Usuários**: Admins, whitelist, banimentos.
+- **Configurações de Loot**: Ajuste de loot e categorias.
+- **Backup e Restauração**: Gerenciamento de backups automáticos.
+- **Monitoramento de Logs**: Visualização e envio de logs para Discord.
+- **Logs Adm**: Monitoramento de comandos e ações administrativas.
+- **Logs de Destruição de Veículos**: Notificações automáticas de destruição de veículos.
+- **Chat Global/Local**: Monitoramento e envio de mensagens do chat para Discord.
+- **Painel Players Online**: Exibe jogadores online e envia para Discord.
+
+## 🤖 Watchers e Monitoramento Automático
+
+- **adminLogWatcher**: Monitora arquivos `admin_*.log` e envia comandos/admin logs para o Discord.
+- **chatGlobalWatcher**: Monitora chat global/local/squad e envia apenas nome e mensagem para o Discord.
+- **vehicleDestructionWatcher**: Monitora destruição de veículos e envia eventos para o Discord.
+- **loginWatcher**: Monitora logins de jogadores e envia notificações.
+- **backupManager**: Gerencia backups automáticos dos arquivos de configuração.
+
+### 🛡️ Proteções e Recursos Avançados
+
+- **Deduplicação Inteligente**: Sistema de persistência que evita envio de eventos duplicados
+- **Proteção contra Rate Limit**: Debounce e delays automáticos para evitar HTTP 429 do Discord
+- **Tratamento Robusto de Erros**: Ignora arquivos temporários e lida com erros de permissão
+- **Processamento Inicial Otimizado**: Apenas eventos novos são enviados na inicialização
+- **Limpeza Automática**: Remove eventos antigos dos arquivos de persistência
+- **Monitoramento em Tempo Real**: Usando Chokidar para detecção eficiente de mudanças
+
+## 🔔 Integração com Discord
+
+- **Webhooks configuráveis**: Cada tipo de log/evento pode ser enviado para um canal diferente.
+- **Logs Adm**: Comandos e ações administrativas.
+- **Logs de Destruição de Veículos**: Eventos de destruição com ou sem SteamID.
+- **Chat Global/Local**: Apenas nome e mensagem, sem data.
+- **Novos Players**: Notificação de novos jogadores.
+- **Players Online**: Atualização periódica dos jogadores online.
+
+### 🚦 Proteções Automáticas
+
+- **Rate Limit Protection**: Debounce e delays automáticos para evitar HTTP 429
+- **Deduplicação**: Sistema de persistência evita envio de eventos duplicados
+- **Tratamento de Erros**: Recuperação automática de falhas de rede
+- **Controle de Frequência**: Delays configuráveis entre envios
+
+## 🖼️ Screenshots
+
+### Dashboard
+![Dashboard](assets/Dashboard.png)
+*Visão geral do servidor, status e estatísticas.*
+
+### Configurações dos Arquivos INI
+![Configurações dos arquivos ini](assets/Configurações%20dos%20arquivos%20ini.png)
+*Edição avançada dos arquivos de configuração do servidor.*
+
+### Configuração de Pastas
+![Configuração de Pastas](assets/Config_pastas.png)
+*Seleção e gerenciamento das pastas do servidor SCUM.*
+
+### Controle de Usuários
+![Controle de Usuários](assets/Controle%20de%20Usuarios.png)
+*Gerenciamento de administradores, whitelist e banimentos.*
+
+## 🚀 Instalação
+
+### Pré-requisitos
+- Node.js 18+
+- npm ou yarn
+
+### Passos
+1. Clone o repositório:
+   ```bash
+   git clone <repository-url>
+   cd ScumServerManager
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Execute em modo de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. Para build de produção:
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+## 📁 Estrutura do Projeto
+
+```
+ScumServerManager/
+├── src/
+│   ├── main/                 # Processo principal do Electron
+│   │   ├── index.ts         # Ponto de entrada
+│   │   ├── fileManager.ts   # Gerenciamento de arquivos
+│   │   ├── adminLogWatcher.ts # Monitoramento de logs admin
+│   │   ├── chatGlobalWatcher.ts # Monitoramento de chat global/local
+│   │   ├── vehicleDestructionWatcher.ts # Monitoramento de destruição de veículos
+│   │   ├── loginWatcher.ts  # Monitoramento de login de jogadores
+│   │   └── backupManager.ts # Sistema de backup
+│   ├── renderer/            # Interface React
+│   │   ├── App.tsx         # Componente principal
+│   │   ├── components/     # Componentes reutilizáveis
+│   │   ├── pages/          # Páginas da aplicação
+│   │   └── contexts/       # Contextos React
+│   └── types/              # Definições de tipos
+├── assets/                  # Imagens e assets do projeto
+├── Servers/                 # Pasta dos servidores SCUM
+└── package.json
+```
+
+## 🛡️ Segurança
+
+- **Validação de Entrada**: Todos os campos são validados.
+- **Backup Automático**: Antes de qualquer alteração.
+- **Confirmação**: Diálogos para ações críticas.
+- **Logs**: Registro de todas as operações.
+
+## 🐛 Solução de Problemas
+
+- **Servidor não detectado**: Verifique se a pasta contém `SCUMServer.exe` e arquivos de configuração.
+- **Erro ao salvar**: Verifique permissões de escrita e se o servidor está rodando.
+- **Backup não criado**: Verifique espaço em disco e permissões.
+- **Logs não enviados ao Discord**: Confira as URLs dos webhooks e permissões de rede.
+- **Mensagens duplicadas**: Delete os arquivos `*_processed_events.json` para reprocessar.
+- **Rate limit do Discord**: O sistema automaticamente aguarda e tenta novamente.
+- **Erro EPERM em network shares**: Comum em redes, tratado automaticamente pelo sistema.
+- **Arquivos de persistência grandes**: Limpeza automática a cada 24 horas.
+
+## 🤝 Como Contribuir
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/NomeFeature`)
+3. Commit suas mudanças (`git commit -m 'Minha feature'`)
+4. Push para a branch (`git push origin feature/NomeFeature`)
+5. Abra um Pull Request
+
+### Tipos de Contribuição
+- Correção de bugs
+- Novas funcionalidades
+- Melhorias na documentação
+- Sugestões de UI/UX
+- Testes
+- Feedbacks
+
+## 💬 Sugestões e Feedback
+
+Abra uma issue, participe das discussões ou entre em contato diretamente. Sua opinião é fundamental!
+
+## 📄 Licença
+
+MIT
+
+---
+
+**Desenvolvido com ❤️ para a comunidade SCUM**
 
 ## 🎯 Características
 
@@ -28,6 +206,9 @@ Estamos na fase inicial de desenvolvimento e toda ajuda da comunidade será muit
 - **Configurações de Loot**: Spawns, probabilidades e categorias
 - **Backup e Restauração**: Sistema completo de backup automático
 - **Logs e Monitoramento**: Visualização em tempo real e controle do servidor
+- **Sistema de Deduplicação**: Persistência inteligente que evita eventos duplicados
+- **Proteção contra Rate Limit**: Debounce e delays automáticos para o Discord
+- **Tratamento Robusto de Erros**: Recuperação automática de falhas de rede e arquivo
 
 ### 🛠️ Tecnologias Utilizadas
 
@@ -65,109 +246,6 @@ Estamos na fase inicial de desenvolvimento e toda ajuda da comunidade será muit
 - **Sistema de backup na nuvem**: Integração com Google Drive, Dropbox, etc.
 - **Interface mobile**: Versão mobile para monitoramento remoto
 - **Sistema de notificações**: Alertas por email, SMS, etc.
-
-## 🚀 Instalação
-
-### Pré-requisitos
-
-- Node.js 18+ 
-- npm ou yarn
-
-### Passos de Instalação
-
-1. **Clone o repositório**
-   ```bash
-   git clone <repository-url>
-   cd ScumServerManager
-   ```
-
-2. **Instale as dependências**
-   ```bash
-   npm install
-   ```
-
-3. **Execute em modo de desenvolvimento**
-   ```bash
-   npm run dev
-   ```
-
-4. **Para build de produção**
-   ```bash
-   npm run build
-   npm run preview
-   ```
-
-## 📁 Estrutura do Projeto
-
-```
-ScumServerManager/
-├── src/
-│   ├── main/                 # Processo principal do Electron
-│   │   ├── index.ts         # Ponto de entrada
-│   │   ├── fileManager.ts   # Gerenciamento de arquivos
-│   │   └── backupManager.ts # Sistema de backup
-│   ├── renderer/            # Interface React
-│   │   ├── App.tsx         # Componente principal
-│   │   ├── components/     # Componentes reutilizáveis
-│   │   ├── pages/          # Páginas da aplicação
-│   │   └── contexts/       # Contextos React
-│   └── types/              # Definições de tipos
-├── Servers/                # Pasta dos servidores SCUM
-└── package.json
-```
-
-## 🎮 Como Usar
-
-### 1. Seleção do Servidor
-- Clique em "Selecionar Servidor" na barra lateral
-- Navegue até a pasta do seu servidor SCUM
-- O aplicativo detectará automaticamente os arquivos de configuração
-
-### 2. Dashboard
-- Visualize estatísticas do servidor
-- Acesse rapidamente as principais configurações
-- Monitore o status em tempo real
-
-### 3. Configurações do Servidor
-- Edite `ServerSettings.ini` com interface amigável
-- Configure porta, nome, senha, etc.
-- Validação automática de campos
-- **Estilo de Jogo**: Agora selecionado por menu suspenso (PVE ou PVP), evitando erros de digitação
-
-### 4. Configurações do Jogo
-- Gerencie `GameUserSettings.ini`
-- Ajuste dificuldade, loot, experiência
-- Interface organizada por categorias
-
-### 5. Sistema de Economia
-- Configure `EconomyOverride.json`
-- Defina preços, taxas, recompensas
-- Sistema de validação integrado
-
-### 6. Horários de Raid
-- Gerencie `RaidTimes.json`
-- Configure janelas de raid
-- Interface de calendário intuitiva
-
-### 7. Gerenciamento de Usuários
-- Administradores e permissões
-- Whitelist e banimentos
-- Interface com abas organizadas
-
-### 8. Configurações de Loot
-- Spawns e probabilidades
-- Categorias de itens
-- Controles avançados
-
-### 9. Backup e Restauração
-- Backups automáticos configuráveis
-- Restauração com confirmação
-- Download de backups
-
-### 10. Logs e Monitoramento
-- Visualização de logs em tempo real
-- Controles do servidor (iniciar/parar/reiniciar)
-- Monitoramento de recursos
 
 ## 🔧 Configuração
 

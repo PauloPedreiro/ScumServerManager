@@ -13,7 +13,16 @@ import {
   MenuItem,
   IconButton,
   InputLabel,
-  FormControl
+  FormControl,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider
 } from '@mui/material';
 import {
   People as PeopleIcon,
@@ -22,7 +31,11 @@ import {
   NetworkCheck as NetworkIcon,
   Memory as MemoryIcon,
   Add as AddIcon,
-  Delete as DeleteIcon
+  Delete as DeleteIcon,
+  Favorite as FavoriteIcon,
+  Payment as PaymentIcon,
+  AccountBalance as AccountBalanceIcon,
+  ContactSupport as ContactSupportIcon
 } from '@mui/icons-material';
 import { useServerConfig } from '../contexts/ServerConfigContext';
 import { usePlayerStats } from '../contexts/PlayerStatsContext';
@@ -67,6 +80,7 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [newRestartHour, setNewRestartHour] = useState<number>(0);
   const [lastAutoRestart, setLastAutoRestart] = useState<string | null>(null);
+  const [showDonationModal, setShowDonationModal] = useState(false);
 
   const electron = window.require ? window.require('electron') : null;
   const ipcRenderer = electron ? electron.ipcRenderer : null;
@@ -268,6 +282,15 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
     showNotification('Servidor iniciado após atualização!', 'success');
   };
 
+  const openDonationLink = (url: string) => {
+    window.open(url, '_blank');
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    showNotification('Copiado para a área de transferência!', 'success');
+  };
+
   // Agendador de reinício automático
   useEffect(() => {
     const interval = setInterval(async () => {
@@ -342,7 +365,7 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
   return (
     <Box>
       {/* Exibe os horários agendados no topo do Dashboard */}
-      <Box sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 2 }}>
+      <Box sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
         <Typography variant="subtitle1">
           Restart automático:
           {restartHours.length === 0 ? ' Nenhum horário agendado' :
@@ -373,6 +396,24 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
             <DeleteIcon />
           </IconButton>
         )}
+        
+        {/* Botão de Doação */}
+        <Box sx={{ ml: 'auto' }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<FavoriteIcon />}
+            onClick={() => setShowDonationModal(true)}
+            sx={{
+              background: 'linear-gradient(45deg, #FF6B6B, #FF8E53)',
+              '&:hover': {
+                background: 'linear-gradient(45deg, #FF5252, #FF7043)',
+              }
+            }}
+          >
+            Apoiar Projeto
+          </Button>
+        </Box>
       </Box>
 
       {/* Bloco de status de jogadores */}
@@ -576,6 +617,73 @@ const Dashboard: React.FC<DashboardProps> = ({ showNotification }) => {
           <Button variant="contained" sx={{ mt: 2 }} onClick={() => setShowRealtimeModal(false)}>Fechar</Button>
         </Box>
       </Modal>
+
+      {/* Modal de Doação */}
+      <Dialog open={showDonationModal} onClose={() => setShowDonationModal(false)} maxWidth="sm" fullWidth>
+        <DialogTitle sx={{ textAlign: 'center', pb: 1 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 1 }}>
+            <FavoriteIcon sx={{ color: '#FF6B6B', mr: 1, fontSize: 28 }} />
+            <Typography variant="h5">Apoie o Projeto</Typography>
+          </Box>
+          <Typography variant="body2" color="text.secondary">
+            Se este projeto te ajudou, considere fazer uma doação para apoiar o desenvolvimento
+          </Typography>
+        </DialogTitle>
+        <DialogContent>
+          <List>
+            <ListItem button onClick={() => openDonationLink('https://nubank.com.br/cobrar/11dh0n/686a7d58-9cbf-4c90-a6bb-39c21dda7527')}>
+              <ListItemIcon>
+                <PaymentIcon sx={{ color: '#32BCAD' }} />
+              </ListItemIcon>
+              <ListItemText 
+                primary="PIX - Nubank" 
+                secondary="Clique para abrir o link do PIX"
+              />
+            </ListItem>
+            
+            <Divider />
+            
+            <ListItem button onClick={() => openDonationLink('https://www.paypal.com/donate/?hosted_button_id=M5252YJR7KJUN')}>
+              <ListItemIcon>
+                <PaymentIcon sx={{ color: '#0070BA' }} />
+              </ListItemIcon>
+              <ListItemText 
+                primary="PayPal" 
+                secondary="Clique para abrir o link do PayPal"
+              />
+            </ListItem>
+            
+            <Divider />
+            
+            <ListItem button onClick={() => copyToClipboard('GAUSPMTYLI7VVK46GHHAUEF3FCQY4HJ6SS4YTK3BHR5YNI552NL3K2AX')}>
+              <ListItemIcon>
+                <AccountBalanceIcon sx={{ color: '#F7931A' }} />
+              </ListItemIcon>
+              <ListItemText 
+                primary="Pi Network Wallet" 
+                secondary="GAUSPMTYLI7VVK46GHHAUEF3FCQY4HJ6SS4YTK3BHR5YNI552NL3K2AX"
+              />
+            </ListItem>
+            
+            <Divider />
+            
+            <ListItem button onClick={() => copyToClipboard('pedreiro')}>
+              <ListItemIcon>
+                <ContactSupportIcon sx={{ color: '#5865F2' }} />
+              </ListItemIcon>
+              <ListItemText 
+                primary="Discord" 
+                secondary="pedreiro - Clique para copiar o nome de usuário"
+              />
+            </ListItem>
+          </List>
+        </DialogContent>
+        <DialogActions sx={{ justifyContent: 'center', pb: 3 }}>
+          <Button onClick={() => setShowDonationModal(false)} color="primary">
+            Fechar
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   );
 };

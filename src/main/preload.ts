@@ -94,6 +94,12 @@ contextBridge.exposeInMainWorld('electronAPI', {
   // Gerenciamento de notificações de jogadores
   clearNotifiedPlayers: () => ipcRenderer.invoke('clear-notified-players'),
   getNotifiedPlayers: () => ipcRenderer.invoke('get-notified-players'),
+  
+  // Novas funções robustas do Discord
+  validateDiscordWebhook: (webhookUrl: string) => ipcRenderer.invoke('validate-discord-webhook', webhookUrl),
+  sendDiscordMessageWithFallback: (primaryWebhook: string, message: string, fallbackWebhooks: string[]) => 
+    ipcRenderer.invoke('send-discord-message-with-fallback', primaryWebhook, message, fallbackWebhooks),
+  getDiscordSendStats: () => ipcRenderer.invoke('get-discord-send-stats'),
 });
 
 // Declaração de tipos para TypeScript
@@ -150,6 +156,9 @@ declare global {
       sendDiscordWebhookMessage: (webhookUrl: string, message: string) => Promise<any>;
       clearNotifiedPlayers: () => Promise<any>;
       getNotifiedPlayers: () => Promise<any>;
+      validateDiscordWebhook: (webhookUrl: string) => Promise<any>;
+      sendDiscordMessageWithFallback: (primaryWebhook: string, message: string, fallbackWebhooks: string[]) => Promise<any>;
+      getDiscordSendStats: () => Promise<any>;
     };
   }
 } 

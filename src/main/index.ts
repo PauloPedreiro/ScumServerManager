@@ -4,18 +4,59 @@ import { FileManager } from './fileManager';
 import { BackupManager } from './backupManager';
 import * as fs from 'fs';
 import { startVehicleDestructionWatcher } from './vehicleDestructionWatcher';
+import { startChatGlobalWatcher } from './chatGlobalWatcher';
+import { startLoginWatcher } from './loginWatcher';
+import { startAdminLogWatcher } from './adminLogWatcher';
 
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'development';
 }
-// console.log('NODE_ENV (início):', process.env.NODE_ENV);
+
+// Log inicial do processo
+console.log('🚀 [MAIN] Iniciando SCUM Server Manager...');
+console.log('📋 [MAIN] NODE_ENV:', process.env.NODE_ENV);
+console.log('🆔 [MAIN] PID:', process.pid);
+console.log('📁 [MAIN] Diretório atual:', process.cwd());
 
 let mainWindow: BrowserWindow | null = null;
 const fileManager = new FileManager();
 const backupManager = new BackupManager();
 
-// Iniciar monitoramento automático de destruição de veículos
-startVehicleDestructionWatcher(fileManager).catch(() => {});
+// Flag para controlar se os watchers já foram iniciados
+let watchersStarted = false;
+
+// Função para iniciar watchers de forma segura
+async function startWatchers() {
+  if (watchersStarted) {
+    console.log('⚠️ [MAIN] Watchers já foram iniciados, pulando...');
+    return;
+  }
+
+  console.log('🔍 [MAIN] Iniciando watchers...');
+  
+  try {
+    // Iniciar monitoramento automático de destruição de veículos
+    console.log('🚗 [MAIN] Iniciando VehicleDestructionWatcher...');
+    await startVehicleDestructionWatcher(fileManager);
+    
+    // Iniciar monitoramento automático de chat global
+    console.log('💬 [MAIN] Iniciando ChatGlobalWatcher...');
+    await startChatGlobalWatcher(fileManager);
+    
+    // Iniciar monitoramento automático de login para painel de players online
+    console.log('👥 [MAIN] Iniciando LoginWatcher...');
+    await startLoginWatcher(fileManager);
+    
+    // Iniciar monitoramento automático de logs admin
+    console.log('🔍 [MAIN] Iniciando AdminLogWatcher...');
+    await startAdminLogWatcher(fileManager);
+    
+    watchersStarted = true;
+    console.log('✅ [MAIN] Todos os watchers iniciados com sucesso!');
+  } catch (error) {
+    console.error('❌ [MAIN] Erro ao iniciar watchers:', error);
+  }
+}
 
 function createWindow(): void {
   const preloadPath = path.join(__dirname, 'preload.js');
@@ -57,26 +98,44 @@ function createWindow(): void {
 
   mainWindow.once('ready-to-show', () => {
     mainWindow?.show();
+    console.log('🪟 [MAIN] Janela principal criada e exibida');
+    
+    // Iniciar watchers após a janela estar pronta
+    startWatchers().catch(error => {
+      console.error('❌ [MAIN] Erro ao iniciar watchers após criação da janela:', error);
+    });
   });
 
   mainWindow.on('closed', () => {
+    console.log('🪟 [MAIN] Janela principal fechada');
     mainWindow = null;
   });
 }
 
 // Eventos da aplicação
-app.whenReady().then(createWindow);
+app.whenReady().then(() => {
+  console.log('✅ [MAIN] Electron app ready, criando janela...');
+  createWindow();
+});
 
 app.on('window-all-closed', () => {
+  console.log('🔄 [MAIN] Todas as janelas fechadas');
   if (process.platform !== 'darwin') {
+    console.log('🛑 [MAIN] Encerrando aplicação...');
     app.quit();
   }
 });
 
 app.on('activate', () => {
+  console.log('🔄 [MAIN] App ativado');
   if (BrowserWindow.getAllWindows().length === 0) {
+    console.log('🪟 [MAIN] Recriando janela...');
     createWindow();
   }
+});
+
+app.on('before-quit', () => {
+  console.log('🛑 [MAIN] Aplicação será encerrada...');
 });
 
 // IPC Handlers para comunicação com o renderer process
@@ -566,5 +625,36 @@ ipcMain.handle('get-notified-players', async () => {
     const errMsg = error instanceof Error ? error.message : String(error);
     console.error('Erro ao obter jogadores notificados:', errMsg);
     return [];
+  }
+});
+
+// Novos handlers robustos do Discord
+ipcMain.handle('validate-discord-webhook', async (event, webhookUrl: string) => {
+  try {
+    return await fileManager.validateDiscordWebhook(webhookUrl);
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao validar webhook do Discord:', errMsg);
+    return { valid: false, error: errMsg };
+  }
+});
+
+ipcMain.handle('send-discord-message-with-fallback', async (event, primaryWebhook: string, message: string, fallbackWebhooks: string[]) => {
+  try {
+    return await fileManager.sendDiscordMessageWithFallback(primaryWebhook, message, fallbackWebhooks);
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao enviar mensagem com fallback:', errMsg);
+    return { success: false, error: errMsg };
+  }
+});
+
+ipcMain.handle('get-discord-send-stats', async () => {
+  try {
+    return await fileManager.getDiscordSendStats();
+  } catch (error) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Erro ao obter estatísticas do Discord:', errMsg);
+    return { total: 0, success: 0, failed: 0, error: errMsg };
   }
 }); 

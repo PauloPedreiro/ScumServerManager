@@ -31,6 +31,7 @@ export declare class FileManager {
     private cacheFile;
     private appConfigFile;
     private lastNotifiedSteamId;
+    private discordRateLimit;
     constructor();
     saveServerCache(serverPath: string, config: ServerConfig, configDir: string): Promise<void>;
     loadServerCache(): Promise<ServerCache | null>;
@@ -89,5 +90,20 @@ export declare class FileManager {
     }>;
     clearNotifiedPlayers(): Promise<void>;
     getNotifiedPlayers(): Promise<string[]>;
+    validateDiscordWebhook(webhookUrl: string): Promise<{
+        valid: boolean;
+        error?: string;
+    }>;
+    sendDiscordMessageWithFallback(primaryWebhook: string, message: string, fallbackWebhooks?: string[]): Promise<{
+        success: boolean;
+        error?: string;
+        usedFallback?: boolean;
+    }>;
+    getDiscordSendStats(): Promise<{
+        total: number;
+        success: number;
+        failed: number;
+        lastError?: string;
+    }>;
 }
 //# sourceMappingURL=fileManager.d.ts.map

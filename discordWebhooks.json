@@ -1,4 +1,7 @@
 {
   "logNovosPlayers": "https://discord.com/api/webhooks/1390198682955153530/B9qjmGjhCgmOgHTgwUba1oX7OVlrT5Ed_hGlOwesJlo1Pj9t57L-at9FnLR-aHJIWpsc",
-  "logDestruicaoVeiculos": "https://discord.com/api/webhooks/1390473159831982170/9EO5rtbBRZ4_v87pDVfu7zB87902YOfwEABO1y-j1icfshtkMK1muSwJaY5CyOG4NydG"
+  "logDestruicaoVeiculos": "https://discord.com/api/webhooks/1390835009899991080/kPgD84WkW6ys9T-c2uyJbwS4dykVvFI1BQd8KKFDxIYnZm8rkadCtkT4iLSkW57RQzGX",
+  "chatGlobal": "https://discord.com/api/webhooks/1390771114837282988/Fkn0UgOR_N6lj7QqpUw27JjMpWHhxDLBIsctqIRZrCVg3YJ_wee0AScz4ZNS6l5D7knG",
+  "painelPlayersOn": "https://discord.com/api/webhooks/1390880955564032040/bPqOm6vXrek2TJK9l7l9p6nv4V6gDWf6pKKV1RfRfCIo08axB47xKupKJHvAE4iJ0WiD",
+  "logsAdm": "https://discord.com/api/webhooks/1391111878020694066/rAGXtN7BoDs0Ct0hqCIvimfAzkjjaKYeYZs-0HGfja_5_FLD2t1hYIBYdb0Ul_14rPXq"
 }
